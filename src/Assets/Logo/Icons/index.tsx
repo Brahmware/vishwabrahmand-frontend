@@ -1,0 +1,1 @@
+export { ReactComponent as TranslationIcon } from './translation-icon.svg';
