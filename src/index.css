@@ -4,6 +4,17 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: url(../public/static/cursor/cursor.svg), auto;
+}
+
+* {
+  line-height: 1.125 !important;
+}
+
+ul {
+  list-style-type: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 a:link {
@@ -46,4 +57,8 @@ code {
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.cursor-copy {
+  cursor: url(../public/static/cursor/cursor-copy.svg), auto;
 }

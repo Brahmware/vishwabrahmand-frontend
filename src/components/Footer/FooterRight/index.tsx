@@ -31,9 +31,9 @@ const FooterRight = () => {
     <FooterRightWrapper >
       <Localization />
       <Typography
+        className="cursor-copy"
         fontWeight={theme.customWeight.sectionTitle}
         onClick={handleCopyToClipboard}
-        sx={{ cursor: 'pointer' }} // Add cursor pointer
       >
         namaste@vishwabrahmand.com
       </Typography>

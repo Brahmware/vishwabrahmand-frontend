@@ -1,4 +1,5 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, Palette } from '@mui/material/styles';
+import { TypographyOptions } from '@mui/material/styles/createTypography';
 
 declare module '@mui/material/styles' {
   interface Theme {
@@ -13,7 +14,7 @@ declare module '@mui/material/styles' {
       navbar: string;
       sectionTitle: string;
       paragraphTitle: string;
-      body: string;
+      paragraphBody: string;
     };
     customWeight: {
       navbar: number;
@@ -24,6 +25,7 @@ declare module '@mui/material/styles' {
     customHeights: {
       navBarHeight: string;
       footerHeight: string;
+      loadingBoxHeight: string;
     };
     bodyProps: {
       maxWidth: string,
@@ -37,6 +39,7 @@ declare module '@mui/material/styles' {
     };
 
     customSpaces: {
+      xs: string,
       sm: string,
       md: string,
       lg: string,
@@ -56,6 +59,19 @@ declare module '@mui/material/styles' {
     textSelectionVarient: {
       varient_bhashma_on_white: object,
       varient_matmaila_on_bhashma: object,
+    };
+
+    typography: {
+      // ... existing typography properties ...
+      body2: {
+        lineHeight: number;
+      };
+    };
+
+    props: {
+      MuiTypography: {
+        display: string
+      }
     }
   }
 
@@ -70,14 +86,20 @@ declare module '@mui/material/styles' {
     customFontWeight?: Theme['customFontWeight'];
     textSelectionVarient?: Theme['textSelectionVarient'];
     bodyProps?: Theme['bodyProps'];
+    typography?: TypographyOptions | ((palette: Palette) => TypographyOptions);
+    props?: {
+      MuiTypography?: {
+        display?: string
+      }
+    }
   }
 }
 
 const customSizes = {
   navbar: '1.295em',
   sectionTitle: '3.75em',
-  paragraphTitle: '1em',
-  body: '1em',
+  paragraphTitle: '1.125em',
+  paragraphBody: '0.75em',
 };
 
 const customColors = {
@@ -114,6 +136,7 @@ const customPadding = {
 };
 
 const customSpaces = {
+  xs: '0.5em',
   sm: '1em',
   md: '1.75em',
   lg: '3em',
@@ -122,6 +145,7 @@ const customSpaces = {
 const customHeights = {
   navBarHeight: '5.65em',
   footerHeight: '10em',
+  loadingBoxHeight: '5em',
 };
 
 const bodyProps = {
@@ -132,17 +156,17 @@ const bodyProps = {
 
 const palette = {
   primary: {
-    main: '#707070',
+    main: customColors.bhasma,
   },
   secondary: {
-    main: '#FF4136',
+    main: customColors.rakthalal,
   },
   text: {
-    primary: '#707070',
-    secondary: '#C8C8C8',
+    primary: customColors.bhasma,
+    secondary: customColors.matmaila,
   },
   background: {
-    default: '#FFFFFF',
+    default: customColors.white,
   },
 };
 
@@ -171,7 +195,7 @@ const components = {
     styleOverrides: {
       root: {
         ...bodyProps,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: customColors.white,
         boxShadow: 'none',
         fontWeight: customWeight.navbar,
         height: customHeights.navBarHeight,
@@ -188,10 +212,20 @@ const components = {
 };
 
 const typography = {
-  fontFamily: 'Montserrat, sans-serif'
+  fontFamily: 'Montserrat, sans-serif',
+  body2: {
+    lineHeight: 1.125,
+  },
 };
 
+const props = {
+  MuiTypography: {
+    display: 'block',
+  },
+}
+
 const theme = createTheme({
+  props,
   palette,
   customColors,
   customSizes,
