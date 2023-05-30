@@ -29,6 +29,7 @@ const BrandsCard = styled(Card)(({ theme }) => ({
   alignItems: 'center',
   padding: `${theme.customSpaces.lg} ${theme.customSpaces.md}`,
   borderBottom: `1px solid ${theme.customColors.matmaila}`,
+  borderRadius: 0,
 }));
 
 const ArrowLink = styled('a')(({ theme }) => ({
@@ -66,7 +67,7 @@ const PaginationContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  marginTop: theme.customSpaces.md,
+  marginTop: `calc(-1 * ${theme.customSpaces.md})`,
 }));
 
 const BrandsPage = () => {
@@ -137,7 +138,7 @@ const BrandsPage = () => {
             ))}
             {brandsData.length > brandsPerPage && (
               <PaginationContainer>
-                <Box sx={{ my: theme.customSpaces.sm, flexGrow: 1 }}>
+                <Box sx={{ my: theme.customSpaces.sm, flexGrow: 1, position: 'relative' }}>
                   <Typography variant="body2" sx={{ display: 'inline-block', marginRight: '8px' }}>
                     Display per page:
                   </Typography>
