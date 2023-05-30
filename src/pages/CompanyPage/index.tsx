@@ -7,11 +7,12 @@ import KeyDocumentsSection from './KeyDocuments';
 const CompanyPageWrapper = styled(Box)(({ theme }) => ({
     ...theme.bodyProps,
     width: '100%',
-    padding: `0 ${theme.customPadding.md}`,
+    padding: `${theme.customPadding.xl} ${theme.customPadding.sm}`,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'start',
     justifyContent: 'center',
+    gap: theme.customSpaces.xl
 }));
 
 const CompanyPage = () => {

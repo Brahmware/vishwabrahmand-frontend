@@ -8,16 +8,21 @@ const StyledLink = styled(Link)(({ theme }) => ({
   alignItems: 'center',
 }));
 
+const ThemedToolbar = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: theme.customSpaces.md
+}))
+
 const Navbar = () => {
 
   return (
-    <AppBar position="sticky">
-      <Toolbar>
-        <Box display="flex" alignItems="center" flexGrow={1}>
-          <StyledLink to="/">
-            <Logo />
-          </StyledLink>
-        </Box>
+    <AppBar position="sticky" sx={{justifyContent: 'center'}}>
+      <ThemedToolbar>
+        <StyledLink to="/">
+          <Logo />
+        </StyledLink>
         <Box className="nav__panel">
           <NavbarButton to="/company" >
             Company
@@ -29,7 +34,7 @@ const Navbar = () => {
             Press
           </NavbarButton>
         </Box>
-      </Toolbar>
+      </ThemedToolbar>
     </AppBar>
   );
 };

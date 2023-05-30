@@ -20,8 +20,8 @@ const AboutSection = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await companyPageData.getAboutData();
-        setAboutData(data as AboutData);
+        const { aboutData } = await companyPageData.getAboutData();
+        setAboutData(aboutData);
         setIsLoading(false);
       } catch (error) {
         // Handle error here

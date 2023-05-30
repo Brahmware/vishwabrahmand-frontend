@@ -15,6 +15,9 @@ declare module '@mui/material/styles' {
       sectionTitle: string;
       paragraphTitle: string;
       paragraphBody: string;
+      socialIcon: string;
+      leaderCard: string;
+      borderRadius: string;
     };
     customWeight: {
       navbar: number;
@@ -36,12 +39,15 @@ declare module '@mui/material/styles' {
       sm: string,
       md: string,
       lg: string,
+      xl: string,
     };
 
     customSpaces: {
+      xxs: string,
       xs: string,
       sm: string,
       md: string,
+      xl: string,
       lg: string,
     };
 
@@ -72,7 +78,19 @@ declare module '@mui/material/styles' {
       MuiTypography: {
         display: string
       }
-    }
+    };
+
+    breakpoints: {
+      values: {
+        xs: number;
+        sm: number;
+        md: number;
+        lg: number;
+        xl: number;
+        xxl: number;
+        uhd: number;
+      };
+    };
   }
 
 
@@ -91,7 +109,18 @@ declare module '@mui/material/styles' {
       MuiTypography?: {
         display?: string
       }
-    }
+    };
+    breakpoints?: {
+      values?: {
+        xs?: number;
+        sm?: number;
+        md?: number;
+        lg?: number;
+        xl?: number;
+        xxl?: number;
+        uhd?: number;
+      };
+    };
   }
 }
 
@@ -100,6 +129,9 @@ const customSizes = {
   sectionTitle: '3.75em',
   paragraphTitle: '1.125em',
   paragraphBody: '0.75em',
+  socialIcon: '0.85em',
+  leaderCard: '10em',
+  borderRadius: '0.33em',
 };
 
 const customColors = {
@@ -133,13 +165,16 @@ const customPadding = {
   sm: '1em',
   md: '1.75em',
   lg: '3em',
+  xl: '4.5em'
 };
 
 const customSpaces = {
+  xxs: 'calc(1.75em / 8)',
   xs: '0.5em',
   sm: '1em',
   md: '1.75em',
   lg: '3em',
+  xl: '4.5em',
 };
 
 const customHeights = {
@@ -222,6 +257,18 @@ const props = {
   MuiTypography: {
     display: 'block',
   },
+};
+
+const breakpoints = {
+  values: {
+    xs: 0,
+    sm: 600,
+    md: 960,
+    lg: 1280,
+    xl: 1920,
+    xxl: 1920,
+    uhd: 3840,
+  }
 }
 
 const theme = createTheme({
@@ -238,6 +285,7 @@ const theme = createTheme({
   bodyProps,
   typography,
   components,
+  breakpoints,
 });
 
 export default theme;
