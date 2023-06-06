@@ -17,7 +17,7 @@ const Footer = () => {
     <Box sx={{
       ...theme.bodyProps,
       padding: 0, px:
-        theme.customPadding.md
+        theme.customPadding.sm
     }}>
       <StyledBox>
         <Brand />
