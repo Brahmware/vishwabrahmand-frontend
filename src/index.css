@@ -4,7 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url(../public/static/cursor/cursor.svg), auto;
+  /* cursor: url(../public/static/cursor/cursor.svg), auto; */
 }
 
 * {
@@ -27,6 +27,7 @@ a:visited {
 
 a:hover {
   text-decoration: none;
+  /* cursor: url(../public/static/cursor/cursor-copy.svg), auto; */
 }
 
 a:active {

@@ -35,6 +35,9 @@ declare module '@mui/material/styles' {
       padding: string,
       margin: string,
     };
+    itemBodyProps: {
+      padding: string,
+    };
     customPadding: {
       sm: string,
       md: string,
@@ -103,6 +106,7 @@ declare module '@mui/material/styles' {
     customSpaces?: Theme['customSpaces'];
     customFontWeight?: Theme['customFontWeight'];
     textSelectionVarient?: Theme['textSelectionVarient'];
+    itemBodyProps?: Theme['itemBodyProps'];
     bodyProps?: Theme['bodyProps'];
     typography?: TypographyOptions | ((palette: Palette) => TypographyOptions);
     props?: {
@@ -181,6 +185,10 @@ const customHeights = {
   navBarHeight: '5.65em',
   footerHeight: '10em',
   loadingBoxHeight: '5em',
+};
+
+const itemBodyProps = {
+  padding: `${customPadding.xl} ${customPadding.sm} 0`,
 };
 
 const bodyProps = {
@@ -282,6 +290,7 @@ const theme = createTheme({
   customSpaces,
   customFontWeight,
   textSelectionVarient,
+  itemBodyProps,
   bodyProps,
   typography,
   components,

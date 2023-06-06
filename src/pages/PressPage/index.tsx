@@ -1,24 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import {
   Box,
-  Card,
   styled,
-  useTheme,
-  Typography,
-  Select,
-  MenuItem,
-  Pagination,
 } from '@mui/material';
 import Section, { SectionTitle } from '../../components/common/section';
 import { NewsCard, pressPageData } from '../../__mocks__/pages/presspage';
 import { NoDataParagraph } from '../../components/common/paragraph';
 import LoadingComponent from '../../components/common/loading';
 import NewsCardComponent from './NewsCard';
+import Pagination from '../../components/common/pagination';
 
 const PressPageWrapper = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
   width: '100%',
-  padding: `${theme.customPadding.xl} ${theme.customPadding.sm}`,
+  padding: theme.itemBodyProps.padding,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'start',
@@ -26,13 +21,21 @@ const PressPageWrapper = styled(Box)(({ theme }) => ({
   gap: theme.customSpaces.xl,
 }));
 
+const NewsCards = styled(Box)(({ theme }) => ({
+  ...theme.bodyProps,
+  width: '100%',
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  justifyContent: 'start',
+  gap: theme.customSpaces.md,
+}));
+
 const PressPage = () => {
   const [newsData, setNewsData] = useState<NewsCard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [newsPerPage, setNewsPerPage] = useState(5); // Number of news to show per page
-
-  const theme = useTheme();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,7 +53,7 @@ const PressPage = () => {
     fetchData();
   }, []);
 
-  const handleChangePage = (event: React.ChangeEvent<unknown>, newPage: number) => {
+  const handleChangePage = (_event: React.ChangeEvent<unknown>, newPage: number) => {
     setPage(newPage);
   };
 
@@ -72,27 +75,21 @@ const PressPage = () => {
           </NoDataParagraph>
         ) : newsData && newsData.length > 0 ? (
           <>
-            {newsData.slice(startIndex, endIndex).map((newsCard, index) => (
-              <NewsCardComponent />
-            ))}
-            {newsData.length > newsPerPage && (
-              <Box sx={{ my: theme.customSpaces.sm, display: 'flex', alignItems: 'center' }}>
-                <Typography variant="body2" sx={{ marginRight: '8px' }}>
-                  Display per page:
-                </Typography>
-                <Select value={newsPerPage} onChange={handleChangeNewsPerPage}>
-                  <MenuItem value={5}>5</MenuItem>
-                  <MenuItem value={10}>10</MenuItem>
-                  <MenuItem value={20}>20</MenuItem>
-                </Select>
-                <Pagination
-                  count={Math.ceil(newsData.length / newsPerPage)} // Calculate the total number of pages
-                  page={page}
-                  onChange={handleChangePage}
-                  sx={{ marginLeft: 'auto' }}
-                />
-              </Box>
-            )}
+            <NewsCards>
+              {newsData.slice(startIndex, endIndex).map((newsCard, index) => (
+                <React.Fragment key={index}>
+                  <NewsCardComponent cardData={newsCard} />
+                </React.Fragment>
+              ))}
+            </NewsCards>
+            <Pagination
+              itemsData={newsData}
+              itemsPerPage={newsPerPage}
+              page={page}
+              handleChangePage={handleChangePage}
+              handleChangeItemsPerPage={handleChangeNewsPerPage}
+
+            />
           </>
         ) : (
           <NoDataParagraph>No data found</NoDataParagraph>

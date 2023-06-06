@@ -72,7 +72,6 @@ const Pagination = (
     handleChangeItemsPerPage: any,
     itemsPerPage: number,
     page: number,
-    setBrandsPerPage: any,
     handleChangePage: any,
   }
 ) => {

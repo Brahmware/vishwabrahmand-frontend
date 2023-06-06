@@ -10,7 +10,7 @@ import Pagination from '../../components/common/pagination';
 const BrandsPageWrapper = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
   width: '100%',
-  padding: `${theme.customPadding.xl} ${theme.customPadding.sm} 0`,
+  padding: theme.itemBodyProps.padding,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'start',
@@ -44,7 +44,7 @@ const BrandsPage = () => {
     fetchData();
   }, []);
 
-  const handleChangePage = (event: React.ChangeEvent<unknown>, newPage: number) => {
+  const handleChangePage = (_event: React.ChangeEvent<unknown>, newPage: number) => {
     setPage(newPage);
   };
 
@@ -88,7 +88,6 @@ const BrandsPage = () => {
               page={page}
               handleChangeItemsPerPage={handleChangeBrandsPerPage}
               handleChangePage={handleChangePage}
-              setBrandsPerPage={setBrandsPerPage}
             />
           </>
         ) : (
