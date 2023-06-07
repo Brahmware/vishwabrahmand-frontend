@@ -30,7 +30,7 @@ const NewsCards = styled(Box)(({ theme }) => ({
 }));
 
 const PressPage = () => {
-  const [newsData, setNewsData] = useState<NewsCard[]>([]); // Specify the type of `newsData` as `NewsCard[]`
+  const [newsData, setNewsData] = useState<NewsCard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasMore, setHasMore] = useState(true);
   const [page, setPage] = useState(1);
