@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Brahmware",
+    "areaOfService": "Technology Development",
+    "imageURL": "https://www.svgrepo.com/show/233209/circle-oval.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "youtube": "janesmith_youtube",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Brahmcast",
+    "areaOfService": "Studio",
+    "imageURL": "https://www.svgrepo.com/show/233264/circle-oval.svg",
+    "socialHandles": {
+      "facebook": "michaeljohnson_facebook",
+      "twitter": "michaeljohnson_twitter",
+      "youtube": "michaeljohnson_youtube",
+      "instagram": "michaeljohnson_instagram"
+    }
+  },
+  {
+    "name": "Indian Media Syndicate",
+    "areaOfService": "Media Production Network",
+    "imageURL": "https://www.svgrepo.com/show/233238/circle-oval.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "youtube": "maryjohnson_youtube",
+      "instagram": "maryjohnson_instagram"
+    }
+  }
+]
