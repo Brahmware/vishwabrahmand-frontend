@@ -9,7 +9,12 @@ const NavLink = styled(Link)(({ theme }) => ({
   textTransform: 'none',
   fontWeight: theme.customWeight.navbar,
   fontSize: theme.customSizes.navbar,
-  textDecoration: 'none'
+  textDecoration: 'none',
+  transition: 'color 0.3s ease-in-out',
+
+  '&:hover': {
+    color: theme.customColors.matmaila,
+  }
 }));
 
 const NavbarButton = ({
@@ -26,7 +31,14 @@ const NavbarButton = ({
   return (
     <NavLink
       to={to}
-      sx={{ color: isActive ? theme.customColors.rakthalal : theme.customColors.bhasma }}
+      sx={isActive ?
+        {
+          color: theme.customColors.rakthalal,
+          '&:hover': {
+            color: theme.customColors.rakthalal,
+          },
+        } : {}
+      }
     >
       {children}
     </NavLink>

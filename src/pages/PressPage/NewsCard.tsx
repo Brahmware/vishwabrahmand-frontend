@@ -16,6 +16,10 @@ const NewsCardWrapper = styled(Card)(({ theme }) => ({
 
   '&:hover': {
     borderBottom: `1px solid ${theme.customColors.rakthalal}`,
+
+    '& .news-image': {
+      filter: 'none',
+    },
   },
 }));
 
@@ -33,6 +37,8 @@ const NewsImageComponent = styled(CardMedia)<
   objectFit: 'cover',
   padding: 0,
   margin: 0,
+  filter: 'grayscale(100%)',
+  transition: 'filter 0.3s ease-in-out',
 }));
 
 const NewsTextComponent = styled(Box)(({ theme }) => ({
@@ -70,7 +76,12 @@ const NewsCardComponent = ({
   return (
     <StyledLink to={cardData?.newsLink || '/'}>
       <NewsCardWrapper elevation={0}>
-        <NewsImageComponent component="img" image={cardData?.image} alt="News Image" />
+        <NewsImageComponent
+          className="news-image"
+          component="img"
+          image={cardData?.image}
+          alt="News Image"
+        />
         <NewsTextComponent>
           <PublicationDate as="h5">
             {cardData?.pubDate}
