@@ -19,7 +19,7 @@ const ContentWrapper = (
   }
 ) => {
   return (
-    <ContentPositioning>
+    <ContentPositioning id="content-wrapper">
       {children}
     </ContentPositioning>
   )
