@@ -17,8 +17,7 @@ const BrandsPageWrapper = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
 }));
 
-const UnderlinedSectionTitle = styled(SectionTitle)(({ theme }) => ({
-  borderBottom: `1px solid ${theme.customColors.matmaila}`,
+const ThemedSectionTitle = styled(SectionTitle)(({ theme }) => ({
   paddingBottom: theme.customSpaces.xxs,
 }));
 
@@ -61,7 +60,7 @@ const BrandsPage = () => {
   return (
     <BrandsPageWrapper>
       <Section>
-        <UnderlinedSectionTitle>Company Brands</UnderlinedSectionTitle>
+        <ThemedSectionTitle>Company Brands</ThemedSectionTitle>
         {isLoading ? (
           <NoDataParagraph>
             <LoadingComponent loaderType="box" />

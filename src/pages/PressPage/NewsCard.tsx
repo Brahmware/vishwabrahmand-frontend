@@ -11,7 +11,7 @@ const NewsCardWrapper = styled(Card)(({ theme }) => ({
   alignItems: 'center',
   padding: `${theme.customPadding.sm} 0`,
   borderRadius: 0,
-  borderBottom: `1px solid ${theme.customColors.matmaila}`,
+  borderBottom: `1px solid ${theme.customColors.border}`,
   transition: 'border-bottom 0.3s ease-in-out',
 
   '&:hover': {

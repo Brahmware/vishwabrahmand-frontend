@@ -76,7 +76,7 @@ const BrandCard = ({
     <BrandsCard
       elevation={0}
       key={index}
-      sx={{ borderBottom: isLast ? 'none' : `1px solid ${theme.customColors.matmaila}` }}
+      sx={{ borderBottom: isLast ? 'none' : `1px solid ${theme.customColors.border}` }}
     >
       <BrandLogo
         image={brandData.image}

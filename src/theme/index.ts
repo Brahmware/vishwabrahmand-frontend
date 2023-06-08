@@ -9,6 +9,7 @@ declare module '@mui/material/styles' {
       rakthalal: string;
       matmaila: string;
       slogan: string;
+      border: string;
     };
     customSizes: {
       navbar: string;
@@ -39,6 +40,7 @@ declare module '@mui/material/styles' {
       padding: string,
     };
     customPadding: {
+      xs: string,
       sm: string,
       md: string,
       lg: string,
@@ -151,6 +153,7 @@ const customColors = {
   rakthalal: '#FF4136',
   matmaila: '#C8C8C8',
   slogan: '#DDDDDD',
+  border: 'rgba(0, 0, 0, 0.1)',
 };
 
 
@@ -179,6 +182,7 @@ const timing = {
 };
 
 const customPadding = {
+  xs: '0.5em',
   sm: '1em',
   md: '1.75em',
   lg: '3em',

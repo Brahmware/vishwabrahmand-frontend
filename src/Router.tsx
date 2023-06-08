@@ -8,6 +8,7 @@ import BrandsPage from './pages/BrandsPage';
 import PressPage from './pages/PressPage';
 import Footer from './components/Footer';
 import CursorLocationProvider from './components/common/cursorLocationProvider';
+import ContentWrapper from './components/ContentWrapper';
 
 const Router = () => {
   return (
@@ -16,13 +17,15 @@ const Router = () => {
         <CssBaseline />
         <CursorLocationProvider />
         <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/company" element={<CompanyPage />} />
-          <Route path="/brands" element={<BrandsPage />} />
-          <Route path="/press" element={<PressPage />} />
-        </Routes>
-        <Footer />
+        <ContentWrapper >
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/company" element={<CompanyPage />} />
+            <Route path="/brands" element={<BrandsPage />} />
+            <Route path="/press" element={<PressPage />} />
+          </Routes>
+          <Footer />
+        </ContentWrapper>
       </ThemeProvider>
     </BrowserRouter>
   );

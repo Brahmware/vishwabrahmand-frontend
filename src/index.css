@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  height: 100Vh;
+  overflow: hidden;
   font-family: 'Montserrat', sans-serif;
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -87,4 +89,32 @@ code {
 
 .cursor-copy {
   cursor: url(../public/static/cursor/cursor-copy.svg), auto !important;
+}
+
+/* Managing Scroll Bar */
+*::-webkit-scrollbar {
+  width: 0.5em;
+  /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  /* color of the tracking area */
+  background: var(--color-matmaila));
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-rakthalal);
+  /* color of the scroll thumb */
+  /* roundness of the scroll thumb */
+  resize: both;
+  /* enables resizing of the scroll thumb by the user */
+  border: 0.1px solid var(--color-rakthalal);
+  /* creates padding around scroll thumb */
+}
+
+// Scrollbar for mozilla
+* {
+  scrollbar-color: var(--color-rakthalal) var(--color-matmaila));
+  /* thumb and track color */
+  scrollbar-width: ;
 }

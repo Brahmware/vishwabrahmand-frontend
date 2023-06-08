@@ -1,7 +1,14 @@
-import { AppBar, Box, Toolbar, styled } from "@mui/material";
+import { AppBar as MuiAppBar, Box, Toolbar, styled } from "@mui/material";
 import { Link } from "react-router-dom";
 import NavbarButton from "./NavbarButton";
 import Logo from "../../Assets/Logo";
+
+const AppBar = styled(MuiAppBar)(({ theme }) => ({
+  justifyContent: 'center',
+  height: 'max-content',
+  position: 'sticky',
+  borderBottom: `1px solid rgba(0,0,0, 0.1)`,
+}));
 
 const StyledLink = styled(Link)(({ theme }) => ({
   display: 'flex',
@@ -18,7 +25,7 @@ const ThemedToolbar = styled(Box)(({ theme }) => ({
 const Navbar = () => {
 
   return (
-    <AppBar position="sticky" sx={{justifyContent: 'center'}}>
+    <AppBar>
       <ThemedToolbar>
         <StyledLink to="/">
           <Logo />
