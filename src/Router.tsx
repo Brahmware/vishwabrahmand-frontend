@@ -7,12 +7,14 @@ import HomePage from './pages/HomePage';
 import BrandsPage from './pages/BrandsPage';
 import PressPage from './pages/PressPage';
 import Footer from './components/Footer';
+import CursorLocationProvider from './components/common/cursorLocationProvider';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <CursorLocationProvider />
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -24,6 +26,6 @@ const Router = () => {
       </ThemeProvider>
     </BrowserRouter>
   );
-}
+};
 
 export default Router;

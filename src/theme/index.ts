@@ -65,6 +65,12 @@ declare module '@mui/material/styles' {
       black: number
     };
 
+    timing: {
+      short: number,
+      medium: number,
+      long: number,
+    };
+
     textSelectionVarient: {
       varient_bhashma_on_white: object,
       varient_matmaila_on_bhashma: object,
@@ -105,6 +111,7 @@ declare module '@mui/material/styles' {
     customPadding?: Theme['customPadding'];
     customSpaces?: Theme['customSpaces'];
     customFontWeight?: Theme['customFontWeight'];
+    timing?: Theme['timing'];
     textSelectionVarient?: Theme['textSelectionVarient'];
     itemBodyProps?: Theme['itemBodyProps'];
     bodyProps?: Theme['bodyProps'];
@@ -163,6 +170,12 @@ const customWeight = {
   sectionTitle: 700,
   paragraphTitle: 600,
   body: 300,
+};
+
+const timing = {
+  short: 300,
+  medium: 600,
+  long: 1200,
 };
 
 const customPadding = {
@@ -289,6 +302,7 @@ const theme = createTheme({
   customPadding,
   customSpaces,
   customFontWeight,
+  timing,
   textSelectionVarient,
   itemBodyProps,
   bodyProps,
