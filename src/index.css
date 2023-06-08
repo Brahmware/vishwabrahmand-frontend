@@ -112,7 +112,7 @@ code {
   /* creates padding around scroll thumb */
 }
 
-// Scrollbar for mozilla
+/* Scrollbar for mozilla */
 * {
   scrollbar-color: var(--color-rakthalal) var(--color-matmaila));
   /* thumb and track color */
