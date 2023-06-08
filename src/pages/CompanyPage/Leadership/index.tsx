@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Card, CardContent, CardMedia, Link, Typography, styled, Grid, Skeleton, useTheme } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Link, Typography, styled, Skeleton, useTheme } from "@mui/material";
 import Section, { SectionTitle } from "../../../components/common/section";
 import { FacebookIcon, TwitterIcon, YoutubeIcon, InstagramIcon } from "../../../Assets/Logo/Icons";
 import { Leaders, companyPageData } from "../../../__mocks__/pages/companypage";
@@ -103,13 +103,6 @@ const SkeletonLeaderCardMedia = styled(CardMedia)(({ theme }) => ({
   aspectRatio: "1/1",
   borderRadius: theme.customSizes.borderRadius,
   marginBottom: theme.customSpaces.xs,
-}));
-
-const SkeletonText = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.grey[500],
-  height: theme.customSizes.skeletonTextHeight,
-  width: "80%",
-  margin: `${theme.customSpaces.xs} auto`,
 }));
 
 const LeadershipSection = () => {

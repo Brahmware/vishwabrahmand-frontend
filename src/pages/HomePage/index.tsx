@@ -1,5 +1,4 @@
 import { Box, Typography, styled } from '@mui/material';
-import Footer from '../../components/Footer';
 
 const HomePageWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',

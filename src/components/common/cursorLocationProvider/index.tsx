@@ -1,5 +1,5 @@
 import { styled, useTheme } from '@mui/material';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Indicator = styled('div')(({ theme }) => ({
   position: 'absolute',
@@ -11,21 +11,7 @@ const Indicator = styled('div')(({ theme }) => ({
   transform: 'translate(-50%, -50%)',
   pointerEvents: 'none',
   display: 'none',
-
-  animationName: 'indicator',
-  animationDuration: `${theme.timing.medium}ms`,
-
-  '@keyframes indicator': {
-    '0%': {
-      transform: 'translate(-50%, -50%) scale(5)',
-      opacity: 1,
-    },
-    '100%': {
-      transform: 'translate(-50%, -50%) scale(1)',
-      opacity: 0,
-    }
-  }
-
+  animation: theme.animations.pinch,
 }));
 
 const CursorLocationProvider: React.FC = () => {
@@ -69,7 +55,7 @@ const CursorLocationProvider: React.FC = () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [handleKeyDown]);
 
   return <Indicator ref={circleRef} />;
 };

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { AppBar as MuiAppBar, Box, styled, useTheme } from '@mui/material';
+import { AppBar as MuiAppBar, Box, styled } from '@mui/material';
 import { Link } from 'react-router-dom';
 import NavbarButton from './NavbarButton';
 import Logo from '../../Assets/Logo';
@@ -28,7 +28,6 @@ const ThemedToolbar = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
-  const theme = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {

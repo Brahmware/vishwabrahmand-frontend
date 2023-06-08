@@ -106,6 +106,7 @@ declare module '@mui/material/styles' {
 
     animations: {
       pulse: string;
+      pinch: string;
     };
 
     grayScales: {
@@ -328,6 +329,7 @@ const breakpoints = {
 
 const animations = {
   pulse: 'pulse 2s ease-in-out infinite',
+  pinch: 'pinch 600ms ease-in',
 };
 
 const theme = createTheme({

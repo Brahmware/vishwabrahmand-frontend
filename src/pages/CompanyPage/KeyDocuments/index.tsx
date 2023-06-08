@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import Section, { SectionTitle } from '../../../components/common/section'
 import { KeyDocuments, companyPageData } from '../../../__mocks__/pages/companypage';
 import { Box, Skeleton, styled, useTheme } from '@mui/material';
-import LoadingComponent from '../../../components/common/loading';
 
 const SectionContentWrapper = styled('ul')(({ theme }) => ({
   display: "flex",
