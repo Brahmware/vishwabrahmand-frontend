@@ -1,5 +1,5 @@
 import { styled, useTheme } from '@mui/material';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 
 const Indicator = styled('div')(({ theme }) => ({
   position: 'absolute',
@@ -19,18 +19,19 @@ const CursorLocationProvider: React.FC = () => {
   const circleRef = useRef<HTMLDivElement | null>(null);
   const theme = useTheme();
 
-  const handleMouseMove = (event: MouseEvent) => {
+  const handleMouseMove = useCallback((event: MouseEvent) => {
     const { clientX, clientY } = event;
     cursorPositionRef.current = { x: clientX, y: clientY };
-  };
+  }, []);
 
-  const handleKeyDown = (event: KeyboardEvent) => {
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (event.ctrlKey) {
       showIndicator();
     }
-  };
+    // eslint-disable-next-line
+  }, []);
 
-  const showIndicator = () => {
+  const showIndicator = useCallback(() => {
     const circle = circleRef.current;
     if (circle) {
       circle.style.display = 'block';
@@ -38,14 +39,11 @@ const CursorLocationProvider: React.FC = () => {
       circle.style.left = `${x}px`;
       circle.style.top = `${y}px`;
 
-      setTimeout(
-        () => {
-          circle.style.display = 'none';
-        },
-        theme.timing.medium * 0.9
-      );
+      setTimeout(() => {
+        circle.style.display = 'none';
+      }, theme.timing.medium * 0.9);
     }
-  };
+  }, [theme.timing.medium]);
 
   useEffect(() => {
     document.addEventListener('mousemove', handleMouseMove);
@@ -55,7 +53,7 @@ const CursorLocationProvider: React.FC = () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleKeyDown]);
+  }, [handleMouseMove, handleKeyDown]);
 
   return <Indicator ref={circleRef} />;
 };
