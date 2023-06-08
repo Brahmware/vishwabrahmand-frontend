@@ -1,4 +1,4 @@
-import { Box, Typography, styled, useTheme } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 import { ReactNode } from "react";
 
 export const ParagraphTitle = styled(Typography)(({ theme }) => ({
@@ -34,8 +34,9 @@ export const ListItemParagraph = styled('li')(({ theme }) => ({
   listStyleType: 'none',
   position: 'relative',
   paddingLeft: '1em',
-  display: 'flex', // Add display flex to align items
-  alignItems: 'center', // Align items to center vertically
+  display: 'flex',
+  alignItems: 'center',
+  
   "&::before": {
     content: "''",
     position: 'absolute',
