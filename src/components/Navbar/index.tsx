@@ -5,7 +5,7 @@ import Logo from "../../Assets/Logo";
 
 const AppBar = styled(MuiAppBar)(({ theme }) => ({
   justifyContent: 'center',
-  height: 'max-content',
+  height: theme.customHeights.navBarHeight,
   position: 'sticky',
   borderBottom: `1px solid rgba(0,0,0, 0.1)`,
 }));

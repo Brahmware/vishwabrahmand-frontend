@@ -199,7 +199,7 @@ const customSpaces = {
 };
 
 const customHeights = {
-  navBarHeight: '5.65em',
+  navBarHeight: '4.5em',
   footerHeight: '10em',
   loadingBoxHeight: '5em',
 };
