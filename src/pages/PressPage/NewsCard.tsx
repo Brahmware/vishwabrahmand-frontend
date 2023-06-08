@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia, Typography, styled } from "@mui/material";
+import { Box, Card, CardMedia, Skeleton, Typography, styled } from "@mui/material";
 import { NewsCard } from "../../__mocks__/pages/presspage";
 import { Link } from "react-router-dom";
 
@@ -38,6 +38,8 @@ const NewsImageComponent = styled(CardMedia)<
   padding: 0,
   margin: 0,
   filter: 'grayscale(100%)',
+  borderRadius: '0.2em',
+  overflow: 'hidden',
   transition: 'filter 0.3s ease-in-out',
 }));
 
@@ -96,3 +98,44 @@ const NewsCardComponent = ({
 };
 
 export default NewsCardComponent;
+
+export const NewsCardSkeleton = () => {
+  return (
+    <NewsCardWrapper elevation={0}>
+      <NewsImageComponent
+        className="news-image"
+        component={""}
+        alt={""}
+      >
+        <Skeleton variant="rectangular" width="100%" height="100%" />
+      </NewsImageComponent>
+      <NewsTextComponent>
+        <PublicationDate as="h5" sx={{ width: '100%' }}>
+          <Skeleton
+            variant="text"
+            width={`calc(30% + ${Math.random() * 10}%)`}
+          />
+        </PublicationDate>
+        <Headline
+          as="h2"
+          sx={{
+            height: '2em',
+            width: '100%',
+            position: 'relative',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <p style={{ opacity: 0, padding: 0 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <Skeleton
+            variant="text"
+            width="100%"
+            height="2em"
+            sx={{ position: 'absolute' }}
+          />
+        </Headline>
+      </NewsTextComponent>
+    </NewsCardWrapper>
+  );
+}

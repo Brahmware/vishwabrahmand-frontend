@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { Box, Card, CardContent, CardMedia, Link, Typography, styled, Grid } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Link, Typography, styled, Skeleton, useTheme } from "@mui/material";
 import Section, { SectionTitle } from "../../../components/common/section";
-import LoadingComponent from "../../../components/common/loading";
 import { companyPageData, Allies } from "../../../__mocks__/pages/companypage";
 import { FacebookIcon, TwitterIcon, YoutubeIcon, InstagramIcon } from "../../../Assets/Logo/Icons";
 
@@ -83,6 +82,63 @@ const AreaOfService = styled(Typography)(({ theme }) => ({
   color: theme.customColors.rakthalal,
 }));
 
+const SkeletonCard = styled(Card)(({ theme }) => ({
+  maxWidth: "100%",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+}));
+
+const SkeletonCardContent = styled(CardContent)(({ theme }) => ({
+  padding: theme.customSpaces.md,
+  flex: "1 0 auto",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  alignItems: "center",
+}));
+
+const SkeletonCardMedia = styled(CardMedia)(({ theme }) => ({
+  width: "100%",
+  aspectRatio: "1/1",
+  borderRadius: theme.customSizes.borderRadius,
+  marginBottom: theme.customSpaces.xs,
+}));
+
+
+const LoadingSkeleton = () => {
+
+  const theme = useTheme();
+
+  return (
+    <>
+      {[...Array(4)].map((_, index) => (
+        <SkeletonCard key={index} elevation={0}>
+          <SkeletonCardMedia>
+            <Skeleton variant="rectangular" width="100%" height="100%" sx={{ borderRadius: "0.5em" }} />
+          </SkeletonCardMedia>
+          <SkeletonCardContent>
+            <Skeleton width={`calc(20% + ${Math.random() * 20}%)`} height="10" />
+            <Skeleton width={`calc(60% + ${Math.random() * 20}%)`} height="10" />
+            <InformationWrapper>
+              <SocialIconWrapper>
+                {[...Array(4)].map((_, index) => (
+                  <Skeleton
+                    key={index}
+                    variant="circular"
+                    width={theme.customSizes.socialIcon}
+                    height={theme.customSizes.socialIcon}
+                  />
+                ))}
+              </SocialIconWrapper>
+            </InformationWrapper>
+          </SkeletonCardContent>
+        </SkeletonCard>
+      ))}
+    </>
+  );
+};
+
 const AlliesSection = () => {
   const [alliesData, setBrandsData] = useState<Allies>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -106,9 +162,9 @@ const AlliesSection = () => {
     <Section>
       <SectionTitle>Allies</SectionTitle>
       {isLoading ? (
-        <Box display="flex" justifyContent="center">
-          <LoadingComponent loaderType="box" />
-        </Box>
+        <SectionContentWrapper>
+          <LoadingSkeleton />
+        </SectionContentWrapper>
       ) : (
         <SectionContentWrapper>
           {alliesData.map((brand, index) => (

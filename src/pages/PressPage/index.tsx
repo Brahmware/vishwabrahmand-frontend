@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Box, styled } from '@mui/material';
 import Section, { SectionTitle } from '../../components/common/section';
-import { NewsCard } from '../../__mocks__/pages/presspage'; // Assuming `NewsCard` is exported from `presspageData.js`
-import { NoDataParagraph } from '../../components/common/paragraph';
+import { NewsCard } from '../../__mocks__/pages/presspage'; 
 import LoadingComponent from '../../components/common/loading';
-import NewsCardComponent from './NewsCard';
+import NewsCardComponent, { NewsCardSkeleton } from './NewsCard';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { pressPageData } from '../../__mocks__/pages/presspage';
 
@@ -77,9 +76,11 @@ const PressPage = () => {
       <Section>
         <SectionTitle>Press Releases</SectionTitle>
         {isLoading && newsData.length === 0 ? (
-          <NoDataParagraph>
-            <LoadingComponent loaderType="box" />
-          </NoDataParagraph>
+          <NewsCards sx={{ pb: '5em' }}>
+            {[...Array(6)].map((_, index) => (
+              <NewsCardSkeleton key={index} />
+            ))}
+          </NewsCards>
         ) : (
           <>
             <InfiniteScroll

@@ -25,7 +25,7 @@ export const pressPageData = {
           const paginatedData = pressReleases.slice(startIndex, endIndex);
           resolve({ pressReleases: paginatedData });
         }
-      }, 1000);
+      }, 3000);
     });
   },
 };

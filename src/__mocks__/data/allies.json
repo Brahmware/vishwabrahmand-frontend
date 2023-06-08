@@ -1,7 +1,7 @@
 [
   {
-    "name": "Brahmware",
-    "areaOfService": "Technology Development",
+    "name": "Unreal Engine",
+    "areaOfService": "Game Engine Development",
     "imageURL": "https://www.svgrepo.com/show/233209/circle-oval.svg",
     "socialHandles": {
       "facebook": "janesmith_facebook",
@@ -11,8 +11,8 @@
     }
   },
   {
-    "name": "Brahmcast",
-    "areaOfService": "Studio",
+    "name": "DRDO",
+    "areaOfService": "Defense Research",
     "imageURL": "https://www.svgrepo.com/show/233264/circle-oval.svg",
     "socialHandles": {
       "facebook": "michaeljohnson_facebook",
@@ -22,8 +22,19 @@
     }
   },
   {
-    "name": "Indian Media Syndicate",
-    "areaOfService": "Media Production Network",
+    "name": "Tata Technologies",
+    "areaOfService": "Automobile Engineering",
+    "imageURL": "https://www.svgrepo.com/show/233238/circle-oval.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "youtube": "maryjohnson_youtube",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "Government of India",
+    "areaOfService": "Governance",
     "imageURL": "https://www.svgrepo.com/show/233238/circle-oval.svg",
     "socialHandles": {
       "facebook": "maryjohnson_facebook",
