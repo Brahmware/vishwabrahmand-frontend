@@ -3,8 +3,7 @@ import { Box, styled } from '@mui/material';
 import Section, { SectionTitle } from '../../components/common/section';
 import { Brand, brandsPageData } from '../../__mocks__/pages/brandspage';
 import { NoDataParagraph } from '../../components/common/paragraph';
-import LoadingComponent from '../../components/common/loading';
-import BrandCard from './Brand';
+import BrandCard, { BrandCardSkeleton } from './Brand';
 import Pagination from '../../components/common/pagination';
 
 const BrandsPageWrapper = styled(Box)(({ theme }) => ({
@@ -56,15 +55,16 @@ const BrandsPage = () => {
   const startIndex = (page - 1) * brandsPerPage;
   const endIndex = startIndex + brandsPerPage;
 
-  //console.log (startIndex, endIndex)
   return (
     <BrandsPageWrapper>
       <Section>
         <ThemedSectionTitle>Company Brands</ThemedSectionTitle>
         {isLoading ? (
-          <NoDataParagraph>
-            <LoadingComponent loaderType="box" />
-          </NoDataParagraph>
+          <>
+            {[...Array(brandsPerPage)].map((_, index) => (
+              <BrandCardSkeleton key={index} />
+            ))}
+          </>
         ) : brandsData && brandsData.length > 0 ? (
           <>
             {brandsData.slice(startIndex, endIndex).map((brandData, index) => (
@@ -79,8 +79,7 @@ const BrandsPage = () => {
                   }
                 />
               </React.Fragment>
-            )
-            )}
+            ))}
             <Pagination
               itemsData={brandsData}
               itemsPerPage={brandsPerPage}
@@ -97,4 +96,4 @@ const BrandsPage = () => {
   );
 };
 
-export default BrandsPage;
+export default BrandsPage

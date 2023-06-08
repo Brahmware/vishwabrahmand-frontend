@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Typography } from "@mui/material";
+import { Typography, Skeleton } from "@mui/material";
 
 import Article, { SectionTitle } from "../../../components/common/section";
 import Paragraph, {
@@ -37,9 +37,12 @@ const AboutSection = () => {
     <Article component="article">
       <SectionTitle>About</SectionTitle>
       {isLoading ? (
-        <NoDataParagraph>
-          <LoadingComponent loaderType="box" />
-        </NoDataParagraph>
+        <>
+          <Skeleton animation="wave" height={20} width="80%" />
+          <Skeleton animation="wave" height={100} width="100%" />
+          <Skeleton animation="wave" height={10} width="70%" />
+          <Skeleton animation="wave" height={100} width="90%" />
+        </>
       ) : aboutData && aboutData.length > 0 ? (
         aboutData.map((paragraph, index) => (
           <Paragraph key={index}>

@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Box, Card, CardContent, CardMedia, Link, Typography, styled, Grid } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Link, Typography, styled, Grid, Skeleton, useTheme } from "@mui/material";
 import Section, { SectionTitle } from "../../../components/common/section";
-import LoadingComponent from "../../../components/common/loading";
-import { companyPageData, Leaders } from "../../../__mocks__/pages/companypage";
 import { FacebookIcon, TwitterIcon, YoutubeIcon, InstagramIcon } from "../../../Assets/Logo/Icons";
+import { Leaders, companyPageData } from "../../../__mocks__/pages/companypage";
 
 type CardMediaProps = {
   image: string;
@@ -83,14 +82,40 @@ const LeaderDesignation = styled(Typography)(({ theme }) => ({
   color: theme.customColors.rakthalal,
 }));
 
+const SkeletonCard = styled(Card)(({ theme }) => ({
+  maxWidth: "100%", // Updated property
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+}));
+
+const SkeletonCardContent = styled(CardContent)(({ theme }) => ({
+  padding: theme.customSpaces.md,
+  flex: "1 0 auto",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  alignItems: "center",
+}));
+
+const SkeletonLeaderCardMedia = styled(CardMedia)(({ theme }) => ({
+  width: "100%",
+  aspectRatio: "1/1",
+  borderRadius: theme.customSizes.borderRadius,
+  marginBottom: theme.customSpaces.xs,
+}));
+
 const LeadershipSection = () => {
+  
+  const theme = useTheme();
+
   const [leadersData, setLeadersData] = useState<Leaders>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { leadersData }: { leadersData: Leaders } = await companyPageData.getAboutData();
+        const { leadersData } = await companyPageData.getAboutData();
         setLeadersData(leadersData);
         setIsLoading(false);
       } catch (error) {
@@ -102,14 +127,41 @@ const LeadershipSection = () => {
     fetchData();
   }, []);
 
-  return (
-    <Section>
-      <SectionTitle>Leadership</SectionTitle>
-      {isLoading ? (
-        <Box display="flex" justifyContent="center">
-          <LoadingComponent loaderType="box" />
-        </Box>
-      ) : (
+  const renderContent = () => {
+    if (isLoading) {
+      // Render skeleton loading cards
+      const skeletonCards = Array.from({ length: 8 }, (_, index) => (
+        <SkeletonCard key={index} elevation={0}>
+          <SkeletonLeaderCardMedia>
+            <Skeleton variant="rectangular" width="100%" height="100%" sx={{ borderRadius: '0.5em' }} />
+          </SkeletonLeaderCardMedia>
+          <SkeletonCardContent>
+            <Skeleton width="30%" height="10" />
+            <Skeleton width="50%" height="10" />
+            <InformationWrapper>
+              <SocialIconWrapper>
+                {Array.from({ length: 4 }, (_, index) => (
+                  <Skeleton
+                    key={index}
+                    variant="circular"
+                    width={theme.customSizes.socialIcon}
+                    height={theme.customSizes.socialIcon}
+                  />
+                ))}
+              </SocialIconWrapper>
+            </InformationWrapper>
+          </SkeletonCardContent>
+        </SkeletonCard>
+      ));
+
+      return (
+        <SectionContentWrapper>
+          {skeletonCards}
+        </SectionContentWrapper>
+      );
+    } else {
+      // Render actual leader cards
+      return (
         <SectionContentWrapper>
           {leadersData.map((leader, index) => (
             <LeaderCard key={index} elevation={0}>
@@ -137,7 +189,14 @@ const LeadershipSection = () => {
             </LeaderCard>
           ))}
         </SectionContentWrapper>
-      )}
+      );
+    }
+  };
+
+  return (
+    <Section>
+      <SectionTitle>Leadership</SectionTitle>
+      {renderContent()}
     </Section>
   );
 };

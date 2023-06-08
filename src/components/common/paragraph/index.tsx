@@ -58,7 +58,6 @@ export const ListParagraph = (
     children: ReactNode
   }
 ) => {
-  const theme = useTheme();
   return (
     <Paragraph component='ul' sx={{ gap: '0.05em' }}>
       {children}
@@ -68,6 +67,9 @@ export const ListParagraph = (
 
 export const NoDataParagraph = styled(Box)(({ theme }) => ({
   width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   margin: `${theme.customSpaces.sm} 0`,
 }));
 

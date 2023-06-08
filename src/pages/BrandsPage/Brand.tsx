@@ -1,6 +1,5 @@
-import React from 'react';
 import { Brand } from '../../__mocks__/pages/brandspage';
-import { Box, Card, CardMedia, Typography, styled, useTheme } from '@mui/material';
+import { Box, Card, CardMedia, Skeleton, Typography, styled, useTheme } from '@mui/material';
 import { RightArrowIcon } from '../../Assets/Logo/Icons';
 
 const BrandsCard = styled(Card)(({ theme }) => ({
@@ -52,7 +51,7 @@ const BrandLogo = styled(CardMedia)(({ theme }) => ({
 
 const BrandDescriptionWrapper = styled(Box)(({ theme }) => ({
   margin: theme.customSpaces.md,
-  /* flexGrow: 1, */
+  flexGrow: 1,
   display: 'block'
 }));
 
@@ -80,8 +79,10 @@ const BrandCard = ({
     >
       <BrandLogo
         image={brandData.image}
-        title={brandData.name} 
-      />
+        title={brandData.name}
+      >
+        <Skeleton variant={'rectangular'} height={'10em'} />
+      </BrandLogo>
       <BrandDescriptionWrapper>
         <BrandName>{brandData.name}</BrandName>
         <BrandDescription>{brandData.description}</BrandDescription>
@@ -96,3 +97,39 @@ const BrandCard = ({
 };
 
 export default BrandCard;
+
+export const BrandCardSkeleton = () => {
+  const theme = useTheme();
+
+  return (
+    <BrandsCard elevation={0} sx={{ borderBottom: `1px solid ${theme.customColors.border}` }}>
+      <BrandLogo>
+        <Skeleton variant={'rectangular'} height={'10em'} />
+      </BrandLogo>
+      <BrandDescriptionWrapper>
+        <BrandName>
+          <Box sx={{ width: '10em' }}>
+            <Typography>
+              <Skeleton />
+            </Typography>
+          </Box>
+        </BrandName>
+        <BrandDescription>
+          <Box sx={{ width: '10em' }}>
+            <Typography>
+              <Skeleton />
+            </Typography>
+          </Box>
+        </BrandDescription>
+      </BrandDescriptionWrapper>
+      <ArrowLink href={''}>
+        <ArrowIcon
+          sx={{
+            filter: theme.grayScales.g_100,
+            animation: theme.animations.pulse,
+          }}
+        />
+      </ArrowLink>
+    </BrandsCard>
+  );
+};

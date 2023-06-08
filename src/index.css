@@ -1,9 +1,9 @@
-body, #root {
+body,
+#root {
   margin: 0;
   height: 100Vh;
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
-  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: url(../public/static/cursor/cursor.svg), auto;
@@ -117,4 +117,18 @@ code {
   scrollbar-color: var(--color-rakthalal) var(--color-matmaila));
   /* thumb and track color */
   scrollbar-width: ;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.125;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0.125;
+  }
 }

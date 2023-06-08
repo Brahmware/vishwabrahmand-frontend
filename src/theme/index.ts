@@ -19,6 +19,7 @@ declare module '@mui/material/styles' {
       socialIcon: string;
       leaderCard: string;
       borderRadius: string;
+      skeletonTextHeight: string;
     };
     customWeight: {
       navbar: number;
@@ -102,11 +103,27 @@ declare module '@mui/material/styles' {
         uhd: number;
       };
     };
+
+    animations: {
+      pulse: string;
+    };
+
+    grayScales: {
+      g_100: string;
+      g_80: string;
+      g_60: string;
+      g_40: string;
+      g_20: string;
+      g_10: string;
+      g_5: string;
+      g_0: string;
+    }
   }
 
 
   interface ThemeOptions {
     customColors?: Theme['customColors'];
+    grayScales?: Theme['grayScales'];
     customSizes?: Theme['customSizes'];
     customWeight?: Theme['customWeight'];
     customHeights?: Theme['customHeights'];
@@ -134,6 +151,7 @@ declare module '@mui/material/styles' {
         uhd?: number;
       };
     };
+    animations?: Theme['animations'];
   }
 }
 
@@ -145,6 +163,7 @@ const customSizes = {
   socialIcon: '0.85em',
   leaderCard: '10em',
   borderRadius: '0.33em',
+  skeletonTextHeight: '1em',
 };
 
 const customColors = {
@@ -154,6 +173,17 @@ const customColors = {
   matmaila: '#C8C8C8',
   slogan: '#DDDDDD',
   border: 'rgba(0, 0, 0, 0.1)',
+};
+
+const grayScales = {
+  g_100: 'grayscale(100%)',
+  g_80: 'grayscale(80%)',
+  g_60: 'grayscale(60%)',
+  g_40: 'grayscale(40%)',
+  g_20: 'grayscale(20%)',
+  g_10: 'grayscale(10%)',
+  g_5: 'grayscale(5%)',
+  g_0: 'grayscale(0%)',
 };
 
 
@@ -294,12 +324,17 @@ const breakpoints = {
     xxl: 1920,
     uhd: 3840,
   }
-}
+};
+
+const animations = {
+  pulse: 'pulse 2s ease-in-out infinite',
+};
 
 const theme = createTheme({
   props,
   palette,
   customColors,
+  grayScales,
   customSizes,
   customWeight,
   customHeights,
@@ -313,6 +348,7 @@ const theme = createTheme({
   typography,
   components,
   breakpoints,
+  animations,
 });
 
 export default theme;

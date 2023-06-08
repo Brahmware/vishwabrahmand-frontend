@@ -1,0 +1,465 @@
+.container {
+  display: block;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+}
+.baton {
+  display: block;
+  height: 2px;
+  width: 70px;
+  background-color: var(--color-matmaila);
+  animation: scale 1.25s infinite linear;
+  transform-origin: 0;
+  transform: rotate(-10deg);
+}
+.baton:before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 5px;
+  background-color: var(--color-rakthalal);
+  position: absolute;
+  top: -2px;
+  border-radius: 5px;
+}
+.baton:after {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 5px;
+  background-color: var(--color-rakthalal);
+  position: absolute;
+  top: -2px;
+  right: 0;
+  border-radius: 5px;
+}
+.metronome {
+  transform-origin: 0;
+  animation: metronome 1.25s infinite linear;
+}
+@keyframes metronome {
+  0% {
+    transform: rotate(-25deg);
+ }
+  50% {
+    transform: rotate(25deg);
+ }
+  100% {
+    transform: rotate(-25deg);
+ }
+}
+@keyframes scale {
+  0% {
+    transform: scaleX(1);
+ }
+  25% {
+    transform: scaleX(0.74);
+ }
+  50% {
+    transform: scaleX(1);
+ }
+  75% {
+    transform: scaleX(1.16);
+ }
+  100% {
+    transform: scaleX(1);
+ }
+}
+/* Generate baton classes */
+.baton-0 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(0deg);
+}
+.baton-0 .baton, .baton-0 .baton:after, .baton-0 .metronome {
+  animation-delay: 0s;
+}
+.baton-1 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(10deg);
+}
+.baton-1 .baton, .baton-1 .baton:after, .baton-1 .metronome {
+  animation-delay: -0.14s;
+}
+.baton-2 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(20deg);
+}
+.baton-2 .baton, .baton-2 .baton:after, .baton-2 .metronome {
+  animation-delay: -0.28s;
+}
+.baton-3 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(30deg);
+}
+.baton-3 .baton, .baton-3 .baton:after, .baton-3 .metronome {
+  animation-delay: -0.42s;
+}
+.baton-4 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(40deg);
+}
+.baton-4 .baton, .baton-4 .baton:after, .baton-4 .metronome {
+  animation-delay: -0.56s;
+}
+.baton-5 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(50deg);
+}
+.baton-5 .baton, .baton-5 .baton:after, .baton-5 .metronome {
+  animation-delay: -0.7s;
+}
+.baton-6 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(60deg);
+}
+.baton-6 .baton, .baton-6 .baton:after, .baton-6 .metronome {
+  animation-delay: -0.84s;
+}
+.baton-7 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(70deg);
+}
+.baton-7 .baton, .baton-7 .baton:after, .baton-7 .metronome {
+  animation-delay: -0.98s;
+}
+.baton-8 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(80deg);
+}
+.baton-8 .baton, .baton-8 .baton:after, .baton-8 .metronome {
+  animation-delay: -1.12s;
+}
+.baton-9 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
+.baton-9 .baton, .baton-9 .baton:after, .baton-9 .metronome {
+  animation-delay: -1.26s;
+}
+.baton-10 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(100deg);
+}
+.baton-10 .baton, .baton-10 .baton:after, .baton-10 .metronome {
+  animation-delay: -1.4s;
+}
+.baton-11 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(110deg);
+}
+.baton-11 .baton, .baton-11 .baton:after, .baton-11 .metronome {
+  animation-delay: -1.54s;
+}
+.baton-12 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(120deg);
+}
+.baton-12 .baton, .baton-12 .baton:after, .baton-12 .metronome {
+  animation-delay: -1.68s;
+}
+.baton-13 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(130deg);
+}
+.baton-13 .baton, .baton-13 .baton:after, .baton-13 .metronome {
+  animation-delay: -1.82s;
+}
+.baton-14 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(140deg);
+}
+.baton-14 .baton, .baton-14 .baton:after, .baton-14 .metronome {
+  animation-delay: -1.96s;
+}
+.baton-15 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(150deg);
+}
+.baton-15 .baton, .baton-15 .baton:after, .baton-15 .metronome {
+  animation-delay: -2.1s;
+}
+.baton-16 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(160deg);
+}
+.baton-16 .baton, .baton-16 .baton:after, .baton-16 .metronome {
+  animation-delay: -2.24s;
+}
+.baton-17 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(170deg);
+}
+.baton-17 .baton, .baton-17 .baton:after, .baton-17 .metronome {
+  animation-delay: -2.38s;
+}
+.baton-18 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(180deg);
+}
+.baton-18 .baton, .baton-18 .baton:after, .baton-18 .metronome {
+  animation-delay: -2.52s;
+}
+.baton-19 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(190deg);
+}
+.baton-19 .baton, .baton-19 .baton:after, .baton-19 .metronome {
+  animation-delay: -2.66s;
+}
+.baton-20 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(200deg);
+}
+.baton-20 .baton, .baton-20 .baton:after, .baton-20 .metronome {
+  animation-delay: -2.8s;
+}
+.baton-21 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(210deg);
+}
+.baton-21 .baton, .baton-21 .baton:after, .baton-21 .metronome {
+  animation-delay: -2.94s;
+}
+.baton-22 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(220deg);
+}
+.baton-22 .baton, .baton-22 .baton:after, .baton-22 .metronome {
+  animation-delay: -3.08s;
+}
+.baton-23 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(230deg);
+}
+.baton-23 .baton, .baton-23 .baton:after, .baton-23 .metronome {
+  animation-delay: -3.22s;
+}
+.baton-24 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(240deg);
+}
+.baton-24 .baton, .baton-24 .baton:after, .baton-24 .metronome {
+  animation-delay: -3.36s;
+}
+.baton-25 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(250deg);
+}
+.baton-25 .baton, .baton-25 .baton:after, .baton-25 .metronome {
+  animation-delay: -3.5s;
+}
+.baton-26 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(260deg);
+}
+.baton-26 .baton, .baton-26 .baton:after, .baton-26 .metronome {
+  animation-delay: -3.64s;
+}
+.baton-27 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(270deg);
+}
+.baton-27 .baton, .baton-27 .baton:after, .baton-27 .metronome {
+  animation-delay: -3.78s;
+}
+.baton-28 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(280deg);
+}
+.baton-28 .baton, .baton-28 .baton:after, .baton-28 .metronome {
+  animation-delay: -3.92s;
+}
+.baton-29 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(290deg);
+}
+.baton-29 .baton, .baton-29 .baton:after, .baton-29 .metronome {
+  animation-delay: -4.06s;
+}
+.baton-30 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(300deg);
+}
+.baton-30 .baton, .baton-30 .baton:after, .baton-30 .metronome {
+  animation-delay: -4.2s;
+}
+.baton-31 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(310deg);
+}
+.baton-31 .baton, .baton-31 .baton:after, .baton-31 .metronome {
+  animation-delay: -4.34s;
+}
+.baton-32 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(320deg);
+}
+.baton-32 .baton, .baton-32 .baton:after, .baton-32 .metronome {
+  animation-delay: -4.48s;
+}
+.baton-33 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(330deg);
+}
+.baton-33 .baton, .baton-33 .baton:after, .baton-33 .metronome {
+  animation-delay: -4.62s;
+}
+.baton-34 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(340deg);
+}
+.baton-34 .baton, .baton-34 .baton:after, .baton-34 .metronome {
+  animation-delay: -4.76s;
+}
+.baton-35 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  transform-origin: 100%;
+  transform: rotate(350deg);
+}
+.baton-35 .baton, .baton-35 .baton:after, .baton-35 .metronome {
+  animation-delay: -4.9s;
+}
