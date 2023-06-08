@@ -30,6 +30,7 @@ const NavbarButton = ({
 
   return (
     <NavLink
+      className='cursor-pointer'
       to={to}
       sx={isActive ?
         {

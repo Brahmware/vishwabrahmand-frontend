@@ -48,7 +48,7 @@ a:hover {
 }
 
 button:hover {
-  cursor: url(../public/static/cursor/cursor-pointer.svg), auto !important;
+  cursor: url(../public/static/cursor/cursor-pointer.svg), auto;
 }
 
 a:active {
@@ -81,6 +81,10 @@ code {
   /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
+.cursor-pointer {
+  cursor: url(../public/static/cursor/cursor-pointer.svg), auto !important;
+}
+
 .cursor-copy {
-  cursor: url(../public/static/cursor/cursor-copy.svg), auto;
+  cursor: url(../public/static/cursor/cursor-copy.svg), auto !important;
 }
