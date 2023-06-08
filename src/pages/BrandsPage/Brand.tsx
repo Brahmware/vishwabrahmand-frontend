@@ -107,20 +107,14 @@ export const BrandCardSkeleton = () => {
         <Skeleton variant={'rectangular'} height={'10em'} />
       </BrandLogo>
       <BrandDescriptionWrapper>
-        <BrandName>
-          <Box sx={{ width: '10em' }}>
-            <Typography>
-              <Skeleton />
-            </Typography>
-          </Box>
-        </BrandName>
-        <BrandDescription>
-          <Box sx={{ width: '10em' }}>
-            <Typography>
-              <Skeleton />
-            </Typography>
-          </Box>
-        </BrandDescription>
+        <Skeleton
+          height='1.5em'
+          width={`calc(20% + ${Math.random() * 10}%)`}
+        />
+        <Skeleton
+          height={`calc(6em + ${Math.random() * 3}em)`}
+          width='100%'
+        />
       </BrandDescriptionWrapper>
       <ArrowLink href={''}>
         <ArrowIcon

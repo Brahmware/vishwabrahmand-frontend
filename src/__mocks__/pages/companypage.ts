@@ -72,7 +72,7 @@ export const companyPageData = {
 
           resolve({ aboutData, leadersData, alliesData, keyDocumentsData });
         }
-      }, 3000); // Simulating a delay of 3 seconds
+      }, 300000); // Simulating a delay of 3 seconds
     });
   },
 };

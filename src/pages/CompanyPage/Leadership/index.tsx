@@ -141,8 +141,8 @@ const LeadershipSection = () => {
             <Skeleton variant="rectangular" width="100%" height="100%" sx={{ borderRadius: "0.5em" }} />
           </SkeletonLeaderCardMedia>
           <SkeletonCardContent>
-            <Skeleton width="30%" height="10" />
-            <Skeleton width="50%" height="10" />
+            <Skeleton width={`calc(20% + ${Math.random() * 20}%)`} height="10" />
+            <Skeleton width={`calc(60% + ${Math.random() * 20}%)`} height="10" />
             <InformationWrapper>
               <SocialIconWrapper>
                 {Array.from({ length: 4 }, (_, index) => (

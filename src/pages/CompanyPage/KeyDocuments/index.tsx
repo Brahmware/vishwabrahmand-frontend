@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Section, { SectionTitle } from '../../../components/common/section'
 import { KeyDocuments, companyPageData } from '../../../__mocks__/pages/companypage';
-import { Box, styled, useTheme } from '@mui/material';
+import { Box, Skeleton, styled, useTheme } from '@mui/material';
 import LoadingComponent from '../../../components/common/loading';
 
 const SectionContentWrapper = styled('ul')(({ theme }) => ({
@@ -17,6 +17,13 @@ const SectionContentWrapper = styled('ul')(({ theme }) => ({
 
 const DocumentLink = styled('a')(({ theme }) => ({
   color: theme.customColors.rakthalal,
+}));
+
+const SkeletonWrapper = styled(Box)(({ theme }) => ({
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: theme.customSpaces.sm,
 }));
 
 const KeyDocumentsSection = () => {
@@ -41,12 +48,21 @@ const KeyDocumentsSection = () => {
   }, []);
 
   return (
-    <Section sx={{gap: theme.customSpaces.lg}}>
+    <Section sx={{ gap: theme.customSpaces.lg }}>
       <SectionTitle>Key Documents</SectionTitle>
       {isLoading ? (
-        <Box display="flex" justifyContent="center">
-          <LoadingComponent loaderType="box" />
-        </Box>
+        <SkeletonWrapper>
+          {
+            Array.from(Array(3).keys()).map((index) => (
+              <Skeleton
+                key={index}
+                variant="text"
+                height={theme.customSizes.skeletonTextHeight}
+                width={`calc(20% + ${Math.random()} * 20%)`}
+              />
+            ))
+          }
+        </SkeletonWrapper>
       ) : (
         <SectionContentWrapper>
           {keyDocumentsData.map((keyDocument, index) => (

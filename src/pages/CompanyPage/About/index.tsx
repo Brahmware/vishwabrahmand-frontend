@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Typography, Skeleton } from "@mui/material";
+import { Typography, Skeleton, styled, Box } from "@mui/material";
 
 import Article, { SectionTitle } from "../../../components/common/section";
 import Paragraph, {
@@ -7,11 +7,16 @@ import Paragraph, {
   BlockedParagraph,
   ListItemParagraph,
   ListParagraph,
-  NoDataParagraph,
 } from "../../../components/common/paragraph";
 
 import { AboutData, companyPageData } from "../../../__mocks__/pages/companypage";
-import LoadingComponent from "../../../components/common/loading";
+
+const SkeletonWrapper = styled(Box)(({ theme }) => ({
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  gap: theme.customSpaces.sm,
+}));
 
 const AboutSection = () => {
   const [aboutData, setAboutData] = useState<AboutData>([]);
@@ -37,12 +42,28 @@ const AboutSection = () => {
     <Article component="article">
       <SectionTitle>About</SectionTitle>
       {isLoading ? (
-        <>
-          <Skeleton animation="wave" height={20} width="80%" />
-          <Skeleton animation="wave" height={100} width="100%" />
-          <Skeleton animation="wave" height={10} width="70%" />
-          <Skeleton animation="wave" height={100} width="90%" />
-        </>
+        <SkeletonWrapper>
+          <Skeleton
+            animation="wave"
+            height={20}
+            width={`calc(60% + ${Math.random() * 20}%)`}
+          />
+          <Skeleton
+            animation="wave"
+            height={100}
+            width="100%"
+          />
+          <Skeleton
+            animation="wave"
+            height={10}
+            width={`calc(40% + ${Math.random() * 20}%)`}
+          />
+          <Skeleton
+            animation="wave"
+            height={100}
+            width={`calc(70% + ${Math.random() * 20}%)`}
+          />
+        </SkeletonWrapper>
       ) : aboutData && aboutData.length > 0 ? (
         aboutData.map((paragraph, index) => (
           <Paragraph key={index}>
