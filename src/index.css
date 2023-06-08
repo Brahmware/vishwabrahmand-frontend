@@ -5,10 +5,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: url(../public/static/cursor/cursor.svg), auto;
+
+  /* defining theme colors */
+  --color-white: #FFFFFF;
+  --color-bhasma: #707070;
+  ;
 }
 
 * {
   line-height: 1.125 !important;
+}
+
+*::selection {
+  background: var(--color-bhasma);
+  color: var(--color-white);
 }
 
 ul {
