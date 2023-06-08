@@ -19,14 +19,14 @@ const SocialIcon = styled(Link)(({ theme }) => ({
 
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(10em, 1fr))", // Updated property
+  gridTemplateColumns: "repeat(auto-fit, minmax(10em, 1fr))",
   gap: theme.customSpaces.md,
   marginTop: theme.customSpaces.md,
-  justifyItem: "space-between",
+  justifyItems: "space-between",
 }));
 
 const LeaderCard = styled(Card)({
-  maxWidth: "100%", // Updated property
+  maxWidth: "100%",
   height: "100%",
   display: "flex",
   flexDirection: "column",
@@ -83,7 +83,7 @@ const LeaderDesignation = styled(Typography)(({ theme }) => ({
 }));
 
 const SkeletonCard = styled(Card)(({ theme }) => ({
-  maxWidth: "100%", // Updated property
+  maxWidth: "100%",
   height: "100%",
   display: "flex",
   flexDirection: "column",
@@ -105,10 +105,15 @@ const SkeletonLeaderCardMedia = styled(CardMedia)(({ theme }) => ({
   marginBottom: theme.customSpaces.xs,
 }));
 
-const LeadershipSection = () => {
-  
-  const theme = useTheme();
+const SkeletonText = styled(Box)(({ theme }) => ({
+  backgroundColor: theme.palette.grey[500],
+  height: theme.customSizes.skeletonTextHeight,
+  width: "80%",
+  margin: `${theme.customSpaces.xs} auto`,
+}));
 
+const LeadershipSection = () => {
+  const theme = useTheme();
   const [leadersData, setLeadersData] = useState<Leaders>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -133,7 +138,7 @@ const LeadershipSection = () => {
       const skeletonCards = Array.from({ length: 8 }, (_, index) => (
         <SkeletonCard key={index} elevation={0}>
           <SkeletonLeaderCardMedia>
-            <Skeleton variant="rectangular" width="100%" height="100%" sx={{ borderRadius: '0.5em' }} />
+            <Skeleton variant="rectangular" width="100%" height="100%" sx={{ borderRadius: "0.5em" }} />
           </SkeletonLeaderCardMedia>
           <SkeletonCardContent>
             <Skeleton width="30%" height="10" />
