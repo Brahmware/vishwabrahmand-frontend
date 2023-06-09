@@ -51,7 +51,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <AppBar className={isScrolled ? 'scrolled' : ''}>
+    <AppBar className={isScrolled ? 'scrolled noselect' : 'noselect'}>
       <ThemedToolbar>
         <StyledLink to="/">
           <Logo />

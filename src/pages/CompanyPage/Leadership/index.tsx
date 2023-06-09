@@ -11,6 +11,15 @@ type CardMediaProps = {
 
 const SocialIcon = styled(Link)(({ theme }) => ({
   color: theme.palette.text.primary,
+  transition: theme.transitions.create("filter", {
+    duration: theme.transitions.duration.standard,
+  }),
+  filter: "grayscale(100%)",
+  
+  "&:hover": {
+    filter: "grayscale(0%)",
+  },
+
   "& svg": {
     height: theme.customSizes.socialIcon,
     width: theme.customSizes.socialIcon,

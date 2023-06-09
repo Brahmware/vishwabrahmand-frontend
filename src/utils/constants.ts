@@ -1,0 +1,1 @@
+export const COMPANY_NAME = 'Vishwa Brahmand Pvt. Ltd.';

@@ -93,15 +93,30 @@ declare module '@mui/material/styles' {
     };
 
     breakpoints: {
-      values: {
-        xs: number;
-        sm: number;
-        md: number;
-        lg: number;
-        xl: number;
-        xxl: number;
-        uhd: number;
-      };
+      down: (key: keyof Theme['breakpoints']) => string;
+      up: (key: keyof Theme['breakpoints']) => string;
+      between: (start: keyof Theme['breakpoints'], end: keyof Theme['breakpoints']) => string;
+      only: (key: keyof Theme['breakpoints']) => string;
+      width: (key: keyof Theme['breakpoints']) => number;
+      xxs: number;
+      xs: number;
+      sm: number;
+      md: number;
+      lg: number;
+      xl: number;
+      xxl: number;
+      uhd: number;
+    };
+
+    mediaQueries: {
+      xxs: string;
+      xs: string;
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
+      uhd: string;
     };
 
     animations: {
@@ -142,16 +157,16 @@ declare module '@mui/material/styles' {
       }
     };
     breakpoints?: {
-      values?: {
-        xs?: number;
-        sm?: number;
-        md?: number;
-        lg?: number;
-        xl?: number;
-        xxl?: number;
-        uhd?: number;
-      };
+      xxs?: number;
+      xs?: number;
+      sm?: number;
+      md?: number;
+      lg?: number;
+      xl?: number;
+      xxl?: number;
+      uhd?: number;
     };
+    mediaQueries?: Theme['mediaQueries'];
     animations?: Theme['animations'];
   }
 }
@@ -161,7 +176,7 @@ const customSizes = {
   sectionTitle: '3.75em',
   paragraphTitle: '1.125em',
   paragraphBody: '0.75em',
-  socialIcon: '0.85em',
+  socialIcon: '1em',
   leaderCard: '10em',
   borderRadius: '0.33em',
   skeletonTextHeight: '1em',
@@ -316,15 +331,25 @@ const props = {
 };
 
 const breakpoints = {
-  values: {
-    xs: 0,
-    sm: 600,
-    md: 960,
-    lg: 1280,
-    xl: 1920,
-    xxl: 1920,
-    uhd: 3840,
-  }
+  xxs: 320,
+  xs: 375,
+  sm: 480,
+  md: 960,
+  lg: 1280,
+  xl: 1920,
+  xxl: 2560,
+  uhd: 3840,
+};
+
+const mediaQueries = {
+  xxs: `@media (max-width: ${breakpoints.xxs}px)`,
+  xs: `@media (max-width: ${breakpoints.xs}px)`,
+  sm: `@media (max-width: ${breakpoints.sm}px)`,
+  md: `@media (max-width: ${breakpoints.md}px)`,
+  lg: `@media (max-width: ${breakpoints.lg}px)`,
+  xl: `@media (max-width: ${breakpoints.xl}px)`,
+  xxl: `@media (max-width: ${breakpoints.xxl}px)`,
+  uhd: `@media (max-width: ${breakpoints.uhd}px)`,
 };
 
 const animations = {
@@ -350,6 +375,7 @@ const theme = createTheme({
   typography,
   components,
   breakpoints,
+  mediaQueries,
   animations,
 });
 

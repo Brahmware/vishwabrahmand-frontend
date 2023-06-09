@@ -1,6 +1,17 @@
-import { Box, Typography, styled, useTheme, Snackbar, Slide, Theme } from "@mui/material";
+import {
+  Box,
+  Typography,
+  styled,
+  useTheme,
+  Snackbar,
+  Slide,
+  Theme,
+  useMediaQuery,
+} from "@mui/material";
 import { useState } from "react";
 import Localization from "./Localization";
+import { Mail as EmailIcon } from "@mui/icons-material";
+import IconButton from "../../common/buttons/IconButton";
 
 interface FooterRightWrapperProps {
   theme: Theme;
@@ -13,6 +24,11 @@ const FooterRightWrapper = styled(Box)<FooterRightWrapperProps>(({ theme }) => (
   justifyContent: 'center',
   alignItems: 'center',
   gap: theme.customSpaces.lg,
+
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column-reverse',
+    gap: theme.customSpaces.sm,
+  },
 }));
 
 const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
@@ -28,6 +44,17 @@ const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
     borderRadius: '2em',
     fontWeight: theme.customFontWeight.medium,
   }
+}));
+
+const CustomIconButton = styled(IconButton)(({ theme }) => ({
+  position: 'absolute',
+  top: 0,
+  transform: 'translateY(-50%)',
+}));
+
+const CustomEmailString = styled(Typography)(({ theme }) => ({
+  fontWeight: theme.customWeight.sectionTitle,
+  cursor: 'pointer',
 }));
 
 const FooterRight = () => {
@@ -54,13 +81,26 @@ const FooterRight = () => {
   return (
     <FooterRightWrapper theme={theme}>
       <Localization />
-      <Typography
-        className="cursor-copy"
-        fontWeight={theme.customWeight.sectionTitle}
-        onClick={handleCopyToClipboard}
-      >
-        namaste@vishwabrahmand.com
-      </Typography>
+      {
+        !useMediaQuery(theme.mediaQueries.sm) ? (
+          <CustomEmailString
+            className="cursor-copy"
+            fontWeight={theme.customWeight.sectionTitle}
+            onClick={handleCopyToClipboard}
+            aria-label="Copy Email to Clipboard"
+          >
+            namaste@vishwabrahmand.com
+          </CustomEmailString>
+        ) : (
+          <CustomIconButton
+            className="cursor-copy"
+            onClick={handleCopyToClipboard}
+            aria-label="Copy Email to Clipboard"
+          >
+            <EmailIcon />
+          </CustomIconButton>
+        )
+      }
       <StyledSnackbar
         open={isSnackbarOpen}
         autoHideDuration={theme.timing.long}

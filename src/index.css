@@ -6,7 +6,7 @@ body,
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url(../public/static/cursor/cursor.svg), auto;
+  /* cursor: url(../public/static/cursor/cursor.svg), auto; */
 
   /* defining theme colors */
   --color-white: #FFFFFF;
@@ -45,13 +45,13 @@ button:hover {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   cursor: url(../public/static/cursor/cursor-link.svg), auto;
 }
-
-button:hover {
+ */
+/* button:hover {
   cursor: url(../public/static/cursor/cursor-pointer.svg), auto;
-}
+} */
 
 a:active {
   text-decoration: none;
@@ -70,53 +70,39 @@ code {
 
 .noselect {
   -webkit-touch-callout: none;
-  /* iOS Safari */
   -webkit-user-select: none;
-  /* Safari */
   -khtml-user-select: none;
-  /* Konqueror HTML */
   -moz-user-select: none;
-  /* Old versions of Firefox */
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
   user-select: none;
-  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
-
-.cursor-pointer {
-  cursor: url(../public/static/cursor/cursor-pointer.svg), auto !important;
-}
-
-.cursor-copy {
-  cursor: url(../public/static/cursor/cursor-copy.svg), auto !important;
 }
 
 /* Managing Scroll Bar */
-*::-webkit-scrollbar {
-  width: 0.5em;
-  /* width of the entire scrollbar */
+#content-wrapper::-webkit-scrollbar {
+  width: 0.75em;
 }
 
-*::-webkit-scrollbar-track {
-  /* color of the tracking area */
+#content-wrapper::-webkit-scrollbar:horizontal{
+  height: 0.25em;
+}
+
+#content-wrapper::-webkit-scrollbar-track {
   background: var(--color-matmaila));
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: var(--color-rakthalal);
-  /* color of the scroll thumb */
-  /* roundness of the scroll thumb */
-  resize: both;
-  /* enables resizing of the scroll thumb by the user */
-  border: 0.1px solid var(--color-rakthalal);
-  /* creates padding around scroll thumb */
+#content-wrapper::-webkit-scrollbar-thumb {
+  background-color: 'rgba(0, 0, 0, 0)';
+  border-right: 0.25em solid var(--color-rakthalal);
 }
 
-/* Scrollbar for mozilla */
-* {
+#content-wrapper {
   scrollbar-color: var(--color-rakthalal) var(--color-matmaila));
   /* thumb and track color */
   scrollbar-width: ;
+}
+
+#content-wrapper.more-width::-webkit-scrollbar-thumb {
+  border-right: 0.75em solid var(--color-rakthalal);
 }
 
 @keyframes pulse {
