@@ -4,7 +4,8 @@ const HomePageWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  height: `calc(100vh - calc(100vh - 100%) - ${theme.customHeights.navBarHeight} - ${theme.customHeights.footerHeight})`,
+  height: `calc(100vh - ${theme.customHeights.navBarHeight} - ${theme.customHeights.footerHeight})`,
+  maxHeight: '100%',
 }));
 
 const HighlightSpan = styled(Typography)(({ theme }) => ({
