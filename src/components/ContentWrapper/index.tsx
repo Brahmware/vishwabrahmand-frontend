@@ -8,7 +8,6 @@ const ContentPositioning = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'start',
   width: '100%',
-  height: `calc(100% - ${theme.customHeights.navBarHeight})`,
   overflow: 'auto',
   overflowX: 'hidden',
 }));
@@ -20,7 +19,7 @@ const ContentWrapper = ({
 }) => {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const contentWrapper = document.getElementById('content-wrapper');
+      const contentWrapper = document.body;
       const distanceToRightEdge = window.innerWidth - e.pageX;
 
       if (contentWrapper && distanceToRightEdge < 15) {
@@ -38,7 +37,7 @@ const ContentWrapper = ({
   }, []);
 
   return (
-    <ContentPositioning id="content-wrapper">
+    <ContentPositioning>
       {children}
     </ContentPositioning>
   );

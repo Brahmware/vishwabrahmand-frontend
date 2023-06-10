@@ -2,7 +2,7 @@ import { styled, useTheme } from '@mui/material';
 import { useEffect, useRef, useCallback } from 'react';
 
 const Indicator = styled('div')(({ theme }) => ({
-  position: 'absolute',
+  position: 'fixed',
   width: '1em',
   height: '1em',
   borderRadius: '50%',
