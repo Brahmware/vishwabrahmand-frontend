@@ -3,6 +3,7 @@ import { AppBar as MuiAppBar, Box, styled } from '@mui/material';
 import { Link } from 'react-router-dom';
 import NavbarButton from './NavbarButton';
 import Logo from '../../Assets/Logo';
+import HamburgerMenu from './HamburgerMenu';
 
 const AppBar = styled(MuiAppBar)(({ theme }) => ({
   justifyContent: 'center',
@@ -25,6 +26,16 @@ const ThemedToolbar = styled(Box)(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'space-between',
   gap: theme.customSpaces.md,
+}));
+
+export const NavPanel = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: theme.customSpaces.md,
+  [theme.breakpoints.down('md')]: {
+    display: 'none !important',
+  },
 }));
 
 const Navbar = () => {
@@ -56,11 +67,12 @@ const Navbar = () => {
         <StyledLink to="/">
           <Logo />
         </StyledLink>
-        <Box className="nav__panel">
+        <NavPanel className="nav__panel">
           <NavbarButton to="/company">Company</NavbarButton>
           <NavbarButton to="/brands">Brands</NavbarButton>
           <NavbarButton to="/press">Press</NavbarButton>
-        </Box>
+        </NavPanel>
+        <HamburgerMenu />
       </ThemedToolbar>
     </AppBar>
   );

@@ -6,7 +6,6 @@ import {
   Snackbar,
   Slide,
   Theme,
-  useMediaQuery,
 } from "@mui/material";
 import { useState } from "react";
 import Localization from "./Localization";
@@ -46,15 +45,25 @@ const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
   }
 }));
 
-const CustomIconButton = styled(IconButton)(({ theme }) => ({
-  position: 'absolute',
-  top: 0,
-  transform: 'translateY(-50%)',
-}));
 
 const CustomEmailString = styled(Typography)(({ theme }) => ({
   fontWeight: theme.customWeight.sectionTitle,
   cursor: 'pointer',
+
+  [theme.breakpoints.down('sm')]: {
+    display: 'none',
+  },
+}));
+
+const CustomIconButton = styled(IconButton)(({ theme }) => ({
+  position: 'absolute',
+  top: 0,
+  transform: 'translateY(-50%)',
+  display: 'none',
+
+  [theme.breakpoints.down('sm')]: {
+    display: 'flex',
+  },
 }));
 
 const FooterRight = () => {
@@ -81,26 +90,21 @@ const FooterRight = () => {
   return (
     <FooterRightWrapper theme={theme}>
       <Localization />
-      {
-        !useMediaQuery(theme.mediaQueries.sm) ? (
-          <CustomEmailString
-            className="cursor-copy"
-            fontWeight={theme.customWeight.sectionTitle}
-            onClick={handleCopyToClipboard}
-            aria-label="Copy Email to Clipboard"
-          >
-            namaste@vishwabrahmand.com
-          </CustomEmailString>
-        ) : (
-          <CustomIconButton
-            className="cursor-copy"
-            onClick={handleCopyToClipboard}
-            aria-label="Copy Email to Clipboard"
-          >
-            <EmailIcon />
-          </CustomIconButton>
-        )
-      }
+      <CustomEmailString
+        className="cursor-copy"
+        fontWeight={theme.customWeight.sectionTitle}
+        onClick={handleCopyToClipboard}
+        aria-label="Copy Email to Clipboard"
+      >
+        namaste@vishwabrahmand.com
+      </CustomEmailString>
+      <CustomIconButton
+        className="cursor-copy"
+        onClick={handleCopyToClipboard}
+        aria-label="Copy Email to Clipboard"
+      >
+        <EmailIcon />
+      </CustomIconButton>
       <StyledSnackbar
         open={isSnackbarOpen}
         autoHideDuration={theme.timing.long}
