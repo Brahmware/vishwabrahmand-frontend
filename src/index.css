@@ -1,3 +1,14 @@
+html {
+  height: stretch;
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: stretch;
+  min-height: -webkit-fill-available;
+}
+
 body,
 #root {
   margin: 0;
@@ -82,7 +93,7 @@ code {
   width: 0.75em;
 }
 
-#content-wrapper::-webkit-scrollbar:horizontal{
+#content-wrapper::-webkit-scrollbar:horizontal {
   height: 0.25em;
 }
 
