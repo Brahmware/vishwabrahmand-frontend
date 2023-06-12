@@ -1,25 +1,24 @@
-import { Box, IconButton, styled } from '@mui/material';
+import { Box, IconButton, styled, useTheme } from '@mui/material';
 import { BoxProps } from '@mui/system';
 import { Fragment, useState } from 'react';
 import NavbarButton from './NavbarButton';
-import { Twirl as HamburgerIcon } from 'hamburger-react';
+import { Spin as HamburgerIcon } from 'hamburger-react';
+import { useWindowHeight } from '../../utils/useWindowHeight';
 
 interface MenuNavListProps extends BoxProps {
   open?: boolean;
+  windowHeight?: number;
 };
 
 const HamburgerIconButton = styled(IconButton)(({ theme }) => ({
   display: 'none',
-  border: `3.5px solid ${theme.customColors.bhasma}`,
   backgroundColor: theme.customColors.white,
   color: theme.customColors.bhasma,
-  padding: '0.25em',
-  transform: 'scale(70%) translateX(30%)',
+  padding: 0,
   transition: `all ${theme.timing.short}ms ease`,
 
   '&:hover': {
     backgroundColor: theme.customColors.white,
-    border: `3.5px solid ${theme.customColors.rakthalal}`,
     color: theme.customColors.rakthalal,
   },
 
@@ -29,7 +28,7 @@ const HamburgerIconButton = styled(IconButton)(({ theme }) => ({
 
 }));
 
-const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open }) => ({
+const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open, windowHeight }) => ({
   display: 'flex',
   width: '100%',
   position: 'absolute',
@@ -39,9 +38,9 @@ const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open }) => ({
   gap: theme.customSpaces.md,
   padding: open ? `${theme.customPadding.sm} ${theme.customPadding.md}` : 0,
   borderBottom: open ? `1px solid ${theme.customColors.lightBorder}` : 0,
-  backgroundColor: `${theme.customColors.white}aa`,
+  backgroundColor: `${theme.customColors.white}dd`,
   color: theme.customColors.bhasma,
-  backdropFilter: 'blur(5px)',
+  backdropFilter: 'blur(10px)',
   overflow: 'hidden',
   height: open ? theme.customHeights.navPanelHeight : 0,
   transition: `
@@ -54,36 +53,53 @@ const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open }) => ({
   },
 
   [theme.breakpoints.down('sm')]: {
-    display: 'none !important',
+    height: open ? `calc(${windowHeight}px - ${theme.customHeights.navBarHeight})` : 0,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: theme.customSpaces.lg,
   },
 }));
 
 const HamburgerMenu = () => {
+
+  const theme = useTheme();
+
   const [open, setOpen] = useState(false);
 
-  const handleClick = () => {
-    setOpen(!open);
-  };
+  const windowHeight = useWindowHeight();
+
+  console.log(windowHeight);
 
   return (
     <Fragment>
       <HamburgerIconButton
-        onClick={handleClick}
         aria-label="menu"
         aria-controls="menu"
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        disableRipple
       >
-        <HamburgerIcon 
-          size={32}
+        <HamburgerIcon
+          rounded
+          size={25}
           distance='sm'
           easing='ease-in'
           toggled={open}
+          onToggle={ toggled => toggled ? setOpen(true) : setOpen(false)}
+          label='Show menu'
+          color={
+            open ? 
+            theme.customColors.rakthalal: 
+            theme.customColors.bhasma
+          }
         />
       </HamburgerIconButton>
 
-      <MenuNavList className="nav__panel" open={open}>
+      <MenuNavList
+        className="nav__panel"
+        open={open}
+        windowHeight={windowHeight}
+      >
         <NavbarButton to="/company">Company</NavbarButton>
         <NavbarButton to="/brands">Brands</NavbarButton>
         <NavbarButton to="/press">Press</NavbarButton>
