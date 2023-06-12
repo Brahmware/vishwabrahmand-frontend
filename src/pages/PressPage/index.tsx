@@ -29,6 +29,7 @@ const PressPageWrapper = styled(Box)(({ theme }) => ({
 
 const NewsCards = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
+  padding: 0,
   width: '100%',
   display: 'flex',
   flexWrap: 'wrap',
@@ -97,7 +98,7 @@ const PressPage = () => {
               next={fetchMoreNews}
               hasMore={hasMore}
               loader={<LoadingComponent loaderType='box' />}
-              endMessage={<p>No more news to load</p>}
+              endMessage={<p>No more articles to load</p>}
               scrollableTarget="root"
             >
               <NewsCards>

@@ -42,7 +42,7 @@ const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open, windowheight }
   borderBottom: open ? `1px solid ${theme.customColors.lightBorder}` : 0,
   backgroundColor: `${theme.customColors.white}dd`,
   color: theme.customColors.bhasma,
-  backdropFilter: 'blur(10px)',
+  backdropFilter: 'blur(16px)',
   overflow: 'hidden',
   height: open ? theme.customHeights.navPanelHeight : 0,
   transition: `
@@ -71,8 +71,6 @@ const HamburgerMenu = () => {
 
   const windowHeight = useWindowHeight();
 
-  console.log(windowHeight);
-
   return (
     <Fragment>
       <HamburgerIconButton
@@ -87,12 +85,12 @@ const HamburgerMenu = () => {
           distance='sm'
           easing='ease-in'
           toggled={open}
-          onToggle={ toggled => toggled ? setOpen(true) : setOpen(false)}
+          onToggle={toggled => toggled ? setOpen(true) : setOpen(false)}
           label='Show menu'
           color={
-            open ? 
-            theme.customColors.rakthalal: 
-            theme.customColors.bhasma
+            open ?
+              theme.customColors.rakthalal :
+              theme.customColors.bhasma
           }
         />
       </HamburgerIconButton>
@@ -102,9 +100,9 @@ const HamburgerMenu = () => {
         open={open}
         windowheight={windowHeight}
       >
-        <NavbarButton to="/company">Company</NavbarButton>
-        <NavbarButton to="/brands">Brands</NavbarButton>
-        <NavbarButton to="/press">Press</NavbarButton>
+        <NavbarButton to="/company" menuToggleState={open} menuToggleFn={setOpen}>Company</NavbarButton>
+        <NavbarButton to="/brands" menuToggleState={open} menuToggleFn={setOpen}>Brands</NavbarButton>
+        <NavbarButton to="/press" menuToggleState={open} menuToggleFn={setOpen}>Press</NavbarButton>
       </MenuNavList>
     </Fragment>
   );

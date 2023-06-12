@@ -18,8 +18,6 @@ export const pressPageData = {
           reject(new Error("Failed to fetch about data."));
         } else {
           
-          console.log("startIndex", startIndex);
-
           const pressReleases: NewsCard[] = news;
 
           const paginatedData = pressReleases.slice(startIndex, endIndex);

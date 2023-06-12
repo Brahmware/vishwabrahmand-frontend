@@ -1,5 +1,5 @@
-import { styled, useTheme } from '@mui/material';
-import { ReactNode } from 'react';
+import { styled, useMediaQuery, useTheme } from '@mui/material';
+import { Dispatch, ReactNode, SetStateAction } from 'react';
 import { Link, useMatch } from 'react-router-dom';
 
 const NavLink = styled(Link)(({ theme }) => ({
@@ -18,14 +18,19 @@ const NavLink = styled(Link)(({ theme }) => ({
 
 const NavbarButton = ({
   to,
-  children
+  menuToggleFn,
+  menuToggleState,
+  children,
 }: {
   to: string,
-  children: ReactNode
+  menuToggleFn?: Dispatch<SetStateAction<boolean>>,
+  menuToggleState?: boolean,
+  children: ReactNode,
 }) => {
   const theme = useTheme();
   const match = useMatch(to);
   const isActive = match !== null;
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <NavLink
@@ -39,6 +44,11 @@ const NavbarButton = ({
           },
         } : {}
       }
+      onClick={() => {
+        if(isMobile) {
+          menuToggleFn && menuToggleFn(!menuToggleState);
+        }
+      }}
     >
       {children}
     </NavLink>
