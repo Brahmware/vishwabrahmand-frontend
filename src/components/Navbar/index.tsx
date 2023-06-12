@@ -12,6 +12,10 @@ const AppBar = styled(MuiAppBar)(({ theme }) => ({
   borderBottom: `1px solid ${theme.customColors.lightBorder}`,
   transition: 'border-color 0.3s ease',
   zIndex: 5,
+
+  [theme.breakpoints.down('md')]: {
+    margin: 0,
+  },
 }));
 
 const StyledLink = styled(Link)({
