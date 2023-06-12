@@ -9,7 +9,7 @@ export type NewsCard = {
 };
 
 export const pressPageData = {
-  getPressReleases: async (triggerError = false, startIndex = 0, endIndex = 10): Promise<{
+  getPressReleases: async (triggerError = false, startIndex = 0, endIndex = 12): Promise<{
     pressReleases: NewsCard[];
   }> => {
     return new Promise((resolve, reject) => {

@@ -15,6 +15,7 @@ declare module '@mui/material/styles' {
     customSizes: {
       navbar: string;
       sectionTitle: string;
+      sectionTitleMobile: string;
       paragraphTitle: string;
       paragraphBody: string;
       socialIcon: string;
@@ -176,6 +177,7 @@ declare module '@mui/material/styles' {
 const customSizes = {
   navbar: '1.295em',
   sectionTitle: '3.75em',
+  sectionTitleMobile: '2.75em',
   paragraphTitle: '1.125em',
   paragraphBody: '0.75em',
   socialIcon: '1em',

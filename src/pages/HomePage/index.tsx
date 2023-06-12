@@ -1,7 +1,13 @@
-import { Box, Typography, styled } from '@mui/material';
+import { Box, BoxProps, Typography, styled } from '@mui/material';
+import { useWindowHeight } from '../../utils/useWindowHeight';
 
-const HomePageWrapper = styled(Box)(({ theme }) => ({
-  display: 'flex',
+interface HomePageWrapperProps extends BoxProps {
+  windowheight?: number;
+};
+
+const HomePageWrapper = styled(Box)<HomePageWrapperProps>(({ theme, windowheight }) => ({
+  height: `calc(${windowheight}px - ${theme.customHeights.navBarHeight})`,
+  display: 'grid',
   alignItems: 'center',
   justifyContent: 'center',
 }));
@@ -14,8 +20,11 @@ const HighlightSpan = styled(Typography)(({ theme }) => ({
 }));
 
 const HomePage = () => {
+
+  const windowHeight = useWindowHeight();
+
   return (
-    <HomePageWrapper>
+    <HomePageWrapper windowheight={windowHeight}>
       <HighlightSpan>Universe is all we see.</HighlightSpan>
     </HomePageWrapper>
   );

@@ -1,8 +1,20 @@
-import { styled } from "@mui/material";
+import { Typography, styled } from "@mui/material";
 import "./loader.css";
 
 const Container = styled("div")(({ theme }) => ({
   transform: "scale(0.5)",
+}));
+
+const LoadingText = styled(Typography)(({ theme }) => ({
+  color: theme.palette.text.primary,
+  textAlign: "center",
+  fontSize: "1.5rem",
+  fontWeight: 500,
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  animation: theme.animations.pulse,
 }));
 
 
@@ -44,6 +56,9 @@ const SquareCircleLoader = () => (
     <div className="baton-33"><div className="metronome"><div className="baton"></div></div></div>
     <div className="baton-34"><div className="metronome"><div className="baton"></div></div></div>
     <div className="baton-35"><div className="metronome"><div className="baton"></div></div></div>
+    <LoadingText variant="h6" className="noselect">
+      Loading...
+    </LoadingText>
   </Container>
 )
 

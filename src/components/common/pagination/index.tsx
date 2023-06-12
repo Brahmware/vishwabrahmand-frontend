@@ -14,6 +14,12 @@ const PaginationContainer = styled(Box)(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   marginTop: `calc(-1 * ${theme.customSpaces.md})`,
+
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column-reverse',
+    alignItems: 'center',
+  },
+  
 }));
 
 const PaginationSelect = styled(Box)(({ theme }) => ({
@@ -93,6 +99,8 @@ const Pagination = (
             onChange={handleChangeItemsPerPage}
             size='small'
             variant='outlined'
+            placeholder='Select'
+            
           >
             {
               pageOptions.map((value, index) => (

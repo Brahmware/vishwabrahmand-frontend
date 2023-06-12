@@ -6,6 +6,7 @@ import LoadingComponent from '../../components/common/loading';
 import NewsCardComponent, { NewsCardSkeleton } from './NewsCard';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { pressPageData } from '../../__mocks__/pages/presspage';
+import SquareCircleLoader from '../../components/common/loading/SquareInCircleLoader';
 
 const PressPageWrapper = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
@@ -16,6 +17,14 @@ const PressPageWrapper = styled(Box)(({ theme }) => ({
   alignItems: 'start',
   justifyContent: 'center',
   gap: theme.customSpaces.xl,
+
+  '& .infinite-scroll-component': {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: theme.customSpaces.md,
+  },
 }));
 
 const NewsCards = styled(Box)(({ theme }) => ({
@@ -24,7 +33,7 @@ const NewsCards = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexWrap: 'wrap',
   alignItems: 'center',
-  justifyContent: 'start',
+  justifyContent: 'center',
   gap: theme.customSpaces.md,
 }));
 
@@ -52,7 +61,7 @@ const PressPage = () => {
 
   const fetchMoreNews = async () => {
     try {
-      const newsPerPage = 10; // Number of news cards per page
+      const newsPerPage = 12; // Number of news cards per page
       const nextPage = page + 1;
       const start = (nextPage - 1) * newsPerPage;
       const end = nextPage * newsPerPage;
@@ -87,7 +96,7 @@ const PressPage = () => {
               dataLength={newsData.length}
               next={fetchMoreNews}
               hasMore={hasMore}
-              loader={<LoadingComponent loaderType="box" />}
+              loader={<LoadingComponent loaderType='box' />}
               endMessage={<p>No more news to load</p>}
               scrollableTarget="root"
             >
