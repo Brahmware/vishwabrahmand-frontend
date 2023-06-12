@@ -9,6 +9,12 @@ const BrandsCard = styled(Card)(({ theme }) => ({
   alignItems: 'center',
   padding: `${theme.customSpaces.lg} ${theme.customSpaces.md}`,
   borderRadius: 0,
+  
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+
 }));
 
 const ArrowLink = styled('a')(({ theme }) => ({
@@ -18,8 +24,21 @@ const ArrowLink = styled('a')(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   textDecoration: 'none',
+  position: 'relative',
+  '& svg': {
+    transition: 'transform 0.3s ease-in-out',
+    margin: 0,
+  },
+
   '&:hover': {
-    color: theme.customColors.bhasma,
+    '& svg': {
+      transform: 'rotate(45deg)'
+    }
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    /* position: 'absolute', */
+    bottom: 0,
   },
 }));
 
