@@ -5,7 +5,6 @@ body,
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* cursor: url(../public/static/cursor/cursor.svg), auto; */
 
   /* defining theme colors */
   --color-white: #FFFFFF;

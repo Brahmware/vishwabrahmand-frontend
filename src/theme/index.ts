@@ -10,6 +10,7 @@ declare module '@mui/material/styles' {
       matmaila: string;
       slogan: string;
       border: string;
+      lightBorder: string;
     };
     customSizes: {
       navbar: string;
@@ -29,6 +30,7 @@ declare module '@mui/material/styles' {
     };
     customHeights: {
       navBarHeight: string;
+      navPanelHeight: string;
       footerHeight: string;
       loadingBoxHeight: string;
     };
@@ -189,6 +191,7 @@ const customColors = {
   matmaila: '#C8C8C8',
   slogan: '#DDDDDD',
   border: 'rgba(0, 0, 0, 0.1)',
+  lightBorder: 'rgba(0, 0, 0, 0.05)',
 };
 
 const grayScales = {
@@ -246,6 +249,7 @@ const customSpaces = {
 
 const customHeights = {
   navBarHeight: '4.5em',
+  navPanelHeight: '3em',
   footerHeight: '10em',
   loadingBoxHeight: '5em',
 };

@@ -9,11 +9,9 @@ const AppBar = styled(MuiAppBar)(({ theme }) => ({
   justifyContent: 'center',
   height: theme.customHeights.navBarHeight,
   position: 'sticky',
-  borderBottom: '1px solid rgba(0, 0, 0, 0.025)',
+  borderBottom: `1px solid ${theme.customColors.lightBorder}`,
   transition: 'border-color 0.3s ease',
-  '&.scrolled': {
-    borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
-  },
+  zIndex: 5,
 }));
 
 const StyledLink = styled(Link)({
@@ -43,13 +41,13 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const contentWrapper = document.getElementById('content-wrapper');
+      const contentWrapper = document.getElementById('root');
       if (contentWrapper) {
         setIsScrolled(contentWrapper.scrollTop > 1);
       }
     };
 
-    const contentWrapper = document.getElementById('content-wrapper');
+    const contentWrapper = document.getElementById('root');
     if (contentWrapper) {
       contentWrapper.addEventListener('scroll', handleScroll);
     }

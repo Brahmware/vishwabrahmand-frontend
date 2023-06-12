@@ -1,36 +1,53 @@
-import MenuIcon from '@mui/icons-material/Menu';
-import {
-  Box,
-  IconButton,
-  Menu,
-  styled
-} from '@mui/material';
+import { Box, IconButton, styled } from '@mui/material';
+import { BoxProps } from '@mui/system';
 import { Fragment, useState } from 'react';
 import NavbarButton from './NavbarButton';
+import { Twirl as HamburgerIcon } from 'hamburger-react';
 
-const HamburderIconButton = styled(IconButton)(({ theme }) => ({
+interface MenuNavListProps extends BoxProps {
+  open?: boolean;
+};
+
+const HamburgerIconButton = styled(IconButton)(({ theme }) => ({
   display: 'none',
-  border: `2px solid ${theme.customColors.bhasma}`,
+  border: `3.5px solid ${theme.customColors.bhasma}`,
   backgroundColor: theme.customColors.white,
   color: theme.customColors.bhasma,
-  padding: theme.customSpaces.xxs,
-  transition: 'all 0.3s ease',
-  zIndex: 2,
+  padding: '0.25em',
+  transform: 'scale(70%) translateX(30%)',
+  transition: `all ${theme.timing.short}ms ease`,
 
   '&:hover': {
     backgroundColor: theme.customColors.white,
-    border: `2px solid ${theme.customColors.rakthalal}`,
+    border: `3.5px solid ${theme.customColors.rakthalal}`,
     color: theme.customColors.rakthalal,
   },
 
   [theme.breakpoints.down('md')]: {
     display: 'flex',
   },
+
 }));
 
-const ResponsiveMenu = styled(Menu)(({ theme }) => ({
-
-  transform: 'translate(0.75em, -3.25em)',
+const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open }) => ({
+  display: 'flex',
+  width: '100%',
+  position: 'absolute',
+  top: theme.customHeights.navBarHeight,
+  alignItems: 'start',
+  justifyContent: 'center',
+  gap: theme.customSpaces.md,
+  padding: open ? `${theme.customPadding.sm} ${theme.customPadding.md}` : 0,
+  borderBottom: open ? `1px solid ${theme.customColors.lightBorder}` : 0,
+  backgroundColor: `${theme.customColors.white}aa`,
+  color: theme.customColors.bhasma,
+  backdropFilter: 'blur(5px)',
+  overflow: 'hidden',
+  height: open ? theme.customHeights.navPanelHeight : 0,
+  transition: `
+    all ${theme.timing.short}ms ease-in,
+    border ${theme.timing.short}ms ease-in
+  `,
 
   [theme.breakpoints.up('md')]: {
     display: 'none !important',
@@ -38,71 +55,41 @@ const ResponsiveMenu = styled(Menu)(({ theme }) => ({
 
   [theme.breakpoints.down('sm')]: {
     display: 'none !important',
-  }
-}));
-
-const MenuContentWrapper = styled(Box)({
-  height: '100%',
-  width: '100%',
-  position: 'relative',
-  zIndex: 1
-});
-
-const MenuNavList = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'start',
-  justifyContent: 'center',
-  gap: theme.customSpaces.md,
-  height: '20em',
-  width: '16em',
-  padding: `${theme.customPadding.sm} ${theme.customPadding.md}`,
-  backgroundColor: theme.customColors.white,
-  color: theme.customColors.bhasma,
-
+  },
 }));
 
 const HamburgerMenu = () => {
+  const [open, setOpen] = useState(false);
 
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
+  const handleClick = () => {
+    setOpen(!open);
   };
 
   return (
     <Fragment>
-      <HamburderIconButton
+      <HamburgerIconButton
         onClick={handleClick}
         aria-label="menu"
         aria-controls="menu"
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
+        disableRipple
       >
-        <MenuIcon />
-      </HamburderIconButton>
-      <ResponsiveMenu
-        id="menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{ 'aria-labelledby': 'menu' }}
-        placeholder='Menu'
-        elevation={2}
-      >
-        <MenuContentWrapper>
-          <MenuNavList className="nav__panel">
-            <NavbarButton to="/company">Company</NavbarButton>
-            <NavbarButton to="/brands">Brands</NavbarButton>
-            <NavbarButton to="/press">Press</NavbarButton>
-          </MenuNavList>
-        </MenuContentWrapper>
-      </ResponsiveMenu>
-    </Fragment>
-  )
-}
+        <HamburgerIcon 
+          size={32}
+          distance='sm'
+          easing='ease-in'
+          toggled={open}
+        />
+      </HamburgerIconButton>
 
-export default HamburgerMenu
+      <MenuNavList className="nav__panel" open={open}>
+        <NavbarButton to="/company">Company</NavbarButton>
+        <NavbarButton to="/brands">Brands</NavbarButton>
+        <NavbarButton to="/press">Press</NavbarButton>
+      </MenuNavList>
+    </Fragment>
+  );
+};
+
+export default HamburgerMenu;

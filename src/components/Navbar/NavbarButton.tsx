@@ -5,7 +5,6 @@ import { Link, useMatch } from 'react-router-dom';
 const NavLink = styled(Link)(({ theme }) => ({
   ...theme.textSelectionVarient.varient_bhashma_on_white,
   color: theme.customColors.bhasma,
-  backgroundColor: theme.customColors.white,
   textTransform: 'none',
   fontWeight: theme.customWeight.navbar,
   fontSize: theme.customSizes.navbar,
