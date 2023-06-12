@@ -53,7 +53,7 @@ const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open, windowheight }
   },
 
   [theme.breakpoints.down('sm')]: {
-    with: '100vw',
+    width: '100vw',
     height: open ? `calc(${windowheight}px - ${theme.customHeights.navBarHeight})` : 0,
     flexDirection: 'column',
     alignItems: 'center',

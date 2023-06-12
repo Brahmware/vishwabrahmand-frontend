@@ -15,6 +15,7 @@ const AppBar = styled(MuiAppBar)(({ theme }) => ({
 
   [theme.breakpoints.down('md')]: {
     margin: 0,
+    padding: `0 ${theme.customPadding.sm}`,
   },
 }));
 

@@ -10,6 +10,11 @@ const ContentPositioning = styled('div')(({ theme }) => ({
   width: '100%',
   overflow: 'auto',
   overflowX: 'hidden',
+
+  [theme.breakpoints.down('lg')]: {
+    padding: `0 ${theme.customPadding.md}`,
+    margin: 0,
+  },
 }));
 
 const ContentWrapper = ({
