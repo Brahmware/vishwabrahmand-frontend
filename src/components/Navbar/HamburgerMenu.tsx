@@ -7,7 +7,7 @@ import { useWindowHeight } from '../../utils/useWindowHeight';
 
 interface MenuNavListProps extends BoxProps {
   open?: boolean;
-  windowHeight?: number;
+  windowheight?: number;
 };
 
 const HamburgerIconButton = styled(IconButton)(({ theme }) => ({
@@ -28,7 +28,7 @@ const HamburgerIconButton = styled(IconButton)(({ theme }) => ({
 
 }));
 
-const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open, windowHeight }) => ({
+const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open, windowheight }) => ({
   display: 'flex',
   width: '100%',
   position: 'absolute',
@@ -53,7 +53,8 @@ const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open, windowHeight }
   },
 
   [theme.breakpoints.down('sm')]: {
-    height: open ? `calc(${windowHeight}px - ${theme.customHeights.navBarHeight})` : 0,
+    with: '100vw',
+    height: open ? `calc(${windowheight}px - ${theme.customHeights.navBarHeight})` : 0,
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
@@ -98,7 +99,7 @@ const HamburgerMenu = () => {
       <MenuNavList
         className="nav__panel"
         open={open}
-        windowHeight={windowHeight}
+        windowheight={windowHeight}
       >
         <NavbarButton to="/company">Company</NavbarButton>
         <NavbarButton to="/brands">Brands</NavbarButton>
