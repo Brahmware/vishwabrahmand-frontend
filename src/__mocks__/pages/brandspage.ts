@@ -19,7 +19,7 @@ export const brandsPageData = {
         } else {
           resolve({ brands });
         }
-      }, 300000);
+      }, 3000);
     });
   },
 };

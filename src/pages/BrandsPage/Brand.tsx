@@ -211,8 +211,9 @@ export const BrandCardSkeleton = ({
 }: {
   isLast?: boolean;
 }) => {
-  const theme = useTheme();
-  console.log(isLast);
+  
+  const theme = useTheme(); 
+
   return (
     <BrandsCard
       elevation={0}
