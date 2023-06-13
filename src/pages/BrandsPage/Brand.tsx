@@ -4,6 +4,7 @@ import { RightArrowIcon } from '../../Assets/Logo/Icons';
 
 const BrandsCard = styled(Card)(({ theme }) => ({
   ...theme.bodyProps,
+  position: 'relative',
   width: '100%',
   display: 'flex',
   alignItems: 'center',
@@ -37,8 +38,10 @@ const ArrowLink = styled('a')(({ theme }) => ({
   },
 
   [theme.breakpoints.down('sm')]: {
-    /* position: 'absolute', */
+    position: 'absolute',
     bottom: 0,
+    transform: 'translateY(50%)',
+    zIndex: 5,
   },
 }));
 
@@ -53,6 +56,11 @@ const BrandName = styled(Typography)(({ theme }) => ({
   fontSize: '1.125em',
   color: theme.customColors.bhasma,
   paddingBottom: theme.customSpaces.md,
+
+  [theme.breakpoints.down('sm')]: {
+    textAlign: 'center',
+  },
+
 }));
 
 const BrandDescription = styled(Typography)(({ theme }) => ({
@@ -71,7 +79,7 @@ const BrandLogo = styled(CardMedia)(({ theme }) => ({
 const BrandDescriptionWrapper = styled(Box)(({ theme }) => ({
   margin: theme.customSpaces.md,
   flexGrow: 1,
-  display: 'block'
+  display: 'block',
 }));
 
 const BrandCard = ({
