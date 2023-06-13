@@ -22,12 +22,17 @@ const BrandsCard = styled(Card)<BrandsCardProps>(({ theme, lastcard, arrowhovere
   borderBottom: lastcard ? 'none' : getBorderBottom(theme, arrowhovered)
   ,
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
+    padding: `${theme.customSpaces.md} ${theme.customSpaces.sm}`,
+    borderBottom: getBorderBottom(theme, arrowhovered),
+    marginBottom: lastcard ? 0 : theme.customSpaces.sm,
     flexDirection: 'column',
+  },
+
+  [theme.breakpoints.down('sm')]: {
     alignItems: 'center',
     padding: `${theme.customPadding.sm} 0`,
-    borderBottom: getBorderBottom(theme, arrowhovered),
-    marginBottom: lastcard? theme.customSpaces.lg : theme.customSpaces.sm,
+    marginBottom: lastcard ? theme.customSpaces.lg : theme.customSpaces.sm,
   },
 
 }));
@@ -58,7 +63,7 @@ const ArrowLink = styled('a')<ArrowLinkProps>(({ theme, arrowhovered }) => ({
     transform: arrowhovered ? 'rotate(45deg)' : 'rotate(0deg)',
   },
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     position: 'absolute',
     bottom: 0,
     transform: 'translateY(50%)'
@@ -95,8 +100,8 @@ const BrandName = styled(Typography)<BrandNameProps>(({ theme, arrowhovered }) =
   fontSize: '1.125em',
   transition: 'color 0.3s ease-in-out',
   color: arrowhovered ? theme.customColors.rakthalal : theme.customColors.bhasma,
-  paddingBottom: theme.customSpaces.md,
-  display: 'block',
+  display: 'inline-block',
+  paddingBottom: theme.customPadding.sm,
 
   [theme.breakpoints.down('sm')]: {
     textAlign: 'center',
@@ -126,11 +131,16 @@ const BrandLogo = styled(CardMedia)(({ theme }) => ({
 
 const BrandDescriptionWrapper = styled(Box)(({ theme }) => ({
   margin: theme.customSpaces.md,
+  width: '100%',
   flexGrow: 1,
-  display: 'block',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'flex-start',
 
   [theme.breakpoints.down('sm')]: {
     margin: `${theme.customSpaces.lg} 0`,
+    alignItems: 'center',
   },
 }));
 
@@ -164,7 +174,7 @@ const BrandCard = ({
         <Skeleton variant={'rectangular'} height={'10em'} />
       </BrandLogo>
       <BrandDescriptionWrapper>
-        <BrandName 
+        <BrandName
           as='a'
           arrowhovered={isArrowHovered}
           href={brandData.website}
@@ -178,7 +188,7 @@ const BrandCard = ({
         <BrandDescription>{brandData.description}</BrandDescription>
       </BrandDescriptionWrapper>
       {brandData?.website && (
-        <ArrowLink 
+        <ArrowLink
           href={brandData.website}
           target='_blank'
           rel='noopener noreferrer'
@@ -196,11 +206,21 @@ const BrandCard = ({
 
 export default BrandCard;
 
-export const BrandCardSkeleton = () => {
+export const BrandCardSkeleton = ({
+  isLast
+}: {
+  isLast?: boolean;
+}) => {
   const theme = useTheme();
-
+  console.log(isLast);
   return (
-    <BrandsCard elevation={0} sx={{ borderBottom: `1px solid ${theme.customColors.border}` }}>
+    <BrandsCard
+      elevation={0}
+      sx={{
+        borderBottom: `1px solid ${theme.customColors.border}`,
+        marginBottom: isLast ? `${theme.customSpaces.xl} !important` : 0,
+      }}
+    >
       <BrandLogo>
         <Skeleton variant={'rectangular'} height={'10em'} />
       </BrandLogo>

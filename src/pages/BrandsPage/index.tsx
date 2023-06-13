@@ -62,7 +62,7 @@ const BrandsPage = () => {
         {isLoading ? (
           <>
             {[...Array(brandsPerPage)].map((_, index) => (
-              <BrandCardSkeleton key={index} />
+              <BrandCardSkeleton key={index} isLast={index === [...Array(brandsPerPage)].length - 1} />
             ))}
           </>
         ) : brandsData && brandsData.length > 0 ? (
