@@ -9,7 +9,6 @@ const NewsCardWrapper = styled(Card)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  margin: `${theme.customPadding.xs} 0`,
   padding: 0,
   borderRadius: 0,
   borderBottom: `1px solid ${theme.customColors.border}`,
@@ -21,6 +20,11 @@ const NewsCardWrapper = styled(Card)(({ theme }) => ({
     '& .news-image': {
       filter: 'none',
     },
+  },
+
+  [theme.breakpoints.down('md')]: {
+    maxWidth: '100%',
+    aspectRatio: '16/12',
   },
 }));
 
@@ -34,14 +38,17 @@ const NewsImageComponent = styled(CardMedia)<
 }) => ({
   ...theme.bodyProps,
   width: '100%',
-  aspectRatio: '16/9',
+  aspectRatio: '16/12',
   objectFit: 'cover',
   padding: 0,
   margin: 0,
   filter: 'grayscale(100%)',
-  borderRadius: '0.2em',
+  borderRadius: 0,
   overflow: 'hidden',
   transition: 'filter 0.3s ease-in-out',
+  [theme.breakpoints.down('md')]: {
+    width: 'calc(100vw - 5em)',
+  },
 }));
 
 const NewsTextComponent = styled(Box)(({ theme }) => ({
@@ -51,6 +58,11 @@ const NewsTextComponent = styled(Box)(({ theme }) => ({
   alignItems: 'start',
   justifyContent: 'center',
   gap: theme.customSpaces.sm,
+
+  [theme.breakpoints.between('sm', 'md')]: {
+    marginLeft: 0,
+    
+  },
 }));
 
 const PublicationDate = styled(Typography)(({ theme }) => ({
@@ -69,6 +81,8 @@ const StyledLink = styled(Link)(({ theme }) => ({
   textDecoration: 'none',
   width: 'max-content',
   height: 'max-content',
+  margin: `${theme.customPadding.xs} 0`,
+  padding: 0,
 }));
 
 const NewsCardComponent = ({

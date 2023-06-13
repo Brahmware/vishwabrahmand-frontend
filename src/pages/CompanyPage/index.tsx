@@ -7,7 +7,7 @@ import KeyDocumentsSection from './KeyDocuments';
 const CompanyPageWrapper = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
   width: '100%',
-  padding: `${theme.customPadding.xl} ${theme.customPadding.sm}`,
+  padding: theme.itemBodyProps.padding,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'start',

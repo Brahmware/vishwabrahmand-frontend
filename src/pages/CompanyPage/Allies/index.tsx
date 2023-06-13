@@ -3,19 +3,12 @@ import { Box, Card, CardContent, CardMedia, Link, Typography, styled, Skeleton, 
 import Section, { SectionTitle } from "../../../components/common/section";
 import { companyPageData, Allies } from "../../../__mocks__/pages/companypage";
 import { FacebookIcon, TwitterIcon, YoutubeIcon, InstagramIcon } from "../../../Assets/Logo/Icons";
+import { SocialIcon } from "../../../components/common/SocialIcon";
 
 type CardMediaProps = {
   image: string;
   alt: string;
 };
-
-const SocialIcon = styled(Link)(({ theme }) => ({
-  color: theme.palette.text.primary,
-  "& svg": {
-    height: theme.customSizes.socialIcon,
-    width: theme.customSizes.socialIcon,
-  },
-}));
 
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
@@ -174,17 +167,33 @@ const AlliesSection = () => {
                 <AllyName> {brand.name} </AllyName>
                 <AreaOfService> {brand.areaOfService} </AreaOfService>
                 <InformationWrapper>
-                  <SocialIconWrapper>
-                    <SocialIcon href={brand.socialHandles.facebook} target="_blank" rel="noopener noreferrer">
+                <SocialIconWrapper>
+                    <SocialIcon
+                      href={brand.socialHandles.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <FacebookIcon />
                     </SocialIcon>
-                    <SocialIcon href={brand.socialHandles.twitter} target="_blank" rel="noopener noreferrer">
+                    <SocialIcon
+                      href={brand.socialHandles.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <TwitterIcon />
                     </SocialIcon>
-                    <SocialIcon href={brand.socialHandles.youtube} target="_blank" rel="noopener noreferrer">
+                    <SocialIcon
+                      href={brand.socialHandles.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <YoutubeIcon />
                     </SocialIcon>
-                    <SocialIcon href={brand.socialHandles.instagram} target="_blank" rel="noopener noreferrer">
+                    <SocialIcon
+                      href={brand.socialHandles.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <InstagramIcon />
                     </SocialIcon>
                   </SocialIconWrapper>

@@ -6,7 +6,6 @@ import LoadingComponent from '../../components/common/loading';
 import NewsCardComponent, { NewsCardSkeleton } from './NewsCard';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { pressPageData } from '../../__mocks__/pages/presspage';
-import SquareCircleLoader from '../../components/common/loading/SquareInCircleLoader';
 
 const PressPageWrapper = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,

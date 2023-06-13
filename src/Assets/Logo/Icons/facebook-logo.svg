@@ -1,2 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#1877F2" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/></svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="780.26719" height="776.73528" viewBox="0 0 780.26719 776.73528">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-364.40002" y1="515.14863" x2="-364.40002" y2="496.20263" gradientTransform="translate(14976.00098 -19726.46518) scale(40 39.7778)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0062e0"/>
+      <stop offset="1" stop-color="#19afff"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="M337.57839,785.95726V510.91236H240.045V401.67543h97.5334V315.84556c0-97.5334,62.42161-152.15187,152.15186-152.15187,27.30983,0,58.52,3.90158,85.82987,7.80315v99.48359H524.84323c-46.81651,0-58.52,23.40826-58.52,54.61847v76.07653H569.70835L552.15186,510.91236H466.32319v275.0449l.02,1.59232C651.65665,754.388,790.1336,594.792,790.1336,401.67543c0-214.57348-175.56012-390.1336-390.1336-390.1336S9.8664,187.10195,9.8664,401.67543c0,193.1166,142.38848,353.44008,327.70194,386.60168Z" transform="translate(-9.8664 -11.54183)"/>
+</svg>
