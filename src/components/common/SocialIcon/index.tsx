@@ -1,5 +1,4 @@
 import { styled } from "@mui/material";
-import { Link } from "react-router-dom";
 
 interface SocialIconProps {
   href?: string;
@@ -13,10 +12,10 @@ export const SocialIcon = styled('a')<SocialIconProps>(({ theme }) => ({
   transition: theme.transitions.create("filter", {
     duration: theme.transitions.duration.standard,
   }),
-  filter: "grayscale(100%)",
+  filter: theme.grayScales.g_100,
   
   "&:hover": {
-    filter: "grayscale(0%)",
+    filter: theme.grayScales.g_0,
   },
 
   "& svg": {

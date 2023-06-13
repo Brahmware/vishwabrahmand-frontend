@@ -12,7 +12,14 @@ body,
   --color-rakthalal: #FF4136;
   --color-matmaila: #C8C8C8;
   --color-slogan: #DDDDDD;
-  ;
+
+  /* difining scroll width */
+  --scroll-width-open: 0.5em;
+  --scroll-width-close: 0.25em;
+}
+
+.home {
+  margin-right: var(--scroll-width-open) !important;
 }
 
 * {
@@ -69,7 +76,7 @@ code {
 
 /* Managing Scroll Bar */
 body::-webkit-scrollbar {
-  width: 0.5em;
+  width: var(--scroll-width-open);
 }
 
 body::-webkit-scrollbar:horizontal {

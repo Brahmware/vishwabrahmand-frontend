@@ -8,7 +8,7 @@ const ContentPositioning = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'start',
   width: '100%',
-  overflow: 'auto',
+  overflow: 'hidden',
   overflowX: 'hidden',
 
   [theme.breakpoints.down('lg')]: {

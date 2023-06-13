@@ -5,9 +5,15 @@ import { Brand, brandsPageData } from '../../__mocks__/pages/brandspage';
 import { NoDataParagraph } from '../../components/common/paragraph';
 import BrandCard, { BrandCardSkeleton } from './Brand';
 import Pagination from '../../components/common/pagination';
+import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 
-const BrandsPageWrapper = styled(Box)(({ theme }) => ({
+interface BrandsPageWrapperProps {
+  containerminheight?: number;
+};
+
+const BrandsPageWrapper = styled(Box)<BrandsPageWrapperProps>(({ theme, containerminheight }) => ({
   ...theme.bodyProps,
+  minHeight: `${containerminheight}px`,
   width: '100%',
   padding: theme.itemBodyProps.padding,
   display: 'flex',
@@ -21,6 +27,9 @@ const ThemedSectionTitle = styled(SectionTitle)(({ theme }) => ({
 }));
 
 const BrandsPage = () => {
+
+  const containerMinHeight = useContainerMinHeight();
+
   const [brandsData, setBrandsData] = useState<Brand[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
@@ -56,7 +65,7 @@ const BrandsPage = () => {
   const endIndex = startIndex + brandsPerPage;
 
   return (
-    <BrandsPageWrapper>
+    <BrandsPageWrapper containerminheight={containerMinHeight}>
       <Section>
         <ThemedSectionTitle>Company Brands</ThemedSectionTitle>
         {isLoading ? (

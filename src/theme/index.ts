@@ -258,7 +258,10 @@ const customHeights = {
 };
 
 const itemBodyProps = {
-  padding: `${customPadding.xl} 0`,
+  padding: `
+    ${customPadding.xl} 0
+    ${customPadding.md} 0
+  `,
 };
 
 const bodyProps = {

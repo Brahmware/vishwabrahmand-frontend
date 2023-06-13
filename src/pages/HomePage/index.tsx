@@ -1,12 +1,17 @@
 import { Box, BoxProps, Typography, styled } from '@mui/material';
-import { useWindowHeight } from '../../utils/useWindowHeight';
+import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
+import { useEffect } from 'react';
 
 interface HomePageWrapperProps extends BoxProps {
-  windowheight?: number;
+  containerminheight?: number;
 };
 
-const HomePageWrapper = styled(Box)<HomePageWrapperProps>(({ theme, windowheight }) => ({
-  height: `calc(${windowheight}px - ${theme.customHeights.navBarHeight})`,
+const HomePageWrapper = styled(Box)<HomePageWrapperProps>(
+  ({ 
+    theme, 
+    containerminheight
+  }) => ({
+  height: `${containerminheight}px`,
   display: 'grid',
   alignItems: 'center',
   justifyContent: 'center',
@@ -21,10 +26,18 @@ const HighlightSpan = styled(Typography)(({ theme }) => ({
 
 const HomePage = () => {
 
-  const windowHeight = useWindowHeight();
+  const containerMinHeight = useContainerMinHeight();
+
+  useEffect(() => {
+    document.getElementById('root')?.classList.add('home');
+
+    return () => {
+      document.getElementById('root')?.classList.remove('home');
+    }
+  }, []);
 
   return (
-    <HomePageWrapper windowheight={windowHeight}>
+    <HomePageWrapper containerminheight={containerMinHeight}>
       <HighlightSpan>Universe is all we see.</HighlightSpan>
     </HomePageWrapper>
   );

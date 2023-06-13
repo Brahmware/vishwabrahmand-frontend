@@ -3,9 +3,15 @@ import AboutSection from './About';
 import LeadershipSection from './Leadership';
 import AlliesSection from './Allies';
 import KeyDocumentsSection from './KeyDocuments';
+import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 
-const CompanyPageWrapper = styled(Box)(({ theme }) => ({
+interface CompanyPageWrapperProps {
+  containerminheight?: number;
+};
+
+const CompanyPageWrapper = styled(Box)<CompanyPageWrapperProps>(({ theme, containerminheight }) => ({
   ...theme.bodyProps,
+  minHeight: `${containerminheight}px`,
   width: '100%',
   padding: theme.itemBodyProps.padding,
   display: 'flex',
@@ -16,8 +22,11 @@ const CompanyPageWrapper = styled(Box)(({ theme }) => ({
 }));
 
 const CompanyPage = () => {
+
+  const containerMinHeight = useContainerMinHeight();
+
   return (
-    <CompanyPageWrapper>
+    <CompanyPageWrapper containerminheight={containerMinHeight}>
       <AboutSection />
       <LeadershipSection />
       <AlliesSection />

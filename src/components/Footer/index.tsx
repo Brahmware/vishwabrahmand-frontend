@@ -22,7 +22,6 @@ const FooterWrapper = styled((props: FooterWrapperProps & React.HTMLAttributes<H
   },
 
   [theme.breakpoints.down('sm')]: {
-    marginTop: theme.customSpaces.md,
     padding: `
       ${theme.customPadding.lg} 0
       ${theme.customPadding.lg} ${theme.customPadding.xs}

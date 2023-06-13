@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Box, styled } from '@mui/material';
 import Section, { SectionTitle } from '../../components/common/section';
-import { NewsCard } from '../../__mocks__/pages/presspage'; 
+import { NewsCard } from '../../__mocks__/pages/presspage';
 import LoadingComponent from '../../components/common/loading';
 import NewsCardComponent, { NewsCardSkeleton } from './NewsCard';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { pressPageData } from '../../__mocks__/pages/presspage';
+import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 
-const PressPageWrapper = styled(Box)(({ theme }) => ({
+interface PressPageWrapperProps {
+  containerMinHeight?: number;
+};
+
+const PressPageWrapper = styled(Box)<PressPageWrapperProps>(({ theme, containerMinHeight }) => ({
   ...theme.bodyProps,
+  minHeight: `${containerMinHeight}px`,
   width: '100%',
   padding: theme.itemBodyProps.padding,
   display: 'flex',
@@ -38,6 +44,7 @@ const NewsCards = styled(Box)(({ theme }) => ({
 }));
 
 const PressPage = () => {
+  const containerMinHeight = useContainerMinHeight();
   const [newsData, setNewsData] = useState<NewsCard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasMore, setHasMore] = useState(true);
@@ -81,7 +88,7 @@ const PressPage = () => {
   };
 
   return (
-    <PressPageWrapper>
+    <PressPageWrapper containerMinHeight={containerMinHeight}>
       <Section>
         <SectionTitle>Press Releases</SectionTitle>
         {isLoading && newsData.length === 0 ? (
