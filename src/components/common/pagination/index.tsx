@@ -28,7 +28,7 @@ const PaginationSelect = styled(Box)(({ theme }) => ({
   justifyContent: 'start',
   margin: `${theme.customSpaces.sm} 0`,
   flexGrow: 1,
-  gap: theme.customSpaces.md,
+  gap: theme.customSpaces.xs,
 
   '& .MuiInputBase-root': {
     height: '2.5em !important',

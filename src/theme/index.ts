@@ -125,6 +125,7 @@ declare module '@mui/material/styles' {
     animations: {
       pulse: string;
       pinch: string;
+      wiggly: string;
     };
 
     grayScales: {
@@ -177,7 +178,7 @@ declare module '@mui/material/styles' {
 const customSizes = {
   navbar: '1.295em',
   sectionTitle: '3.75em',
-  sectionTitleMobile: '2.75em',
+  sectionTitleMobile: '2.5em',
   paragraphTitle: '1.125em',
   paragraphBody: '0.75em',
   socialIcon: '1em',
@@ -361,6 +362,7 @@ const mediaQueries = {
 const animations = {
   pulse: 'pulse 2s ease-in-out infinite',
   pinch: 'pinch 600ms ease-in',
+  wiggly: 'wiggly 1200ms ease-in-out infinite',
 };
 
 const theme = createTheme({

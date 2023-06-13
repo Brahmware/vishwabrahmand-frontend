@@ -1,8 +1,15 @@
 import { Brand } from '../../__mocks__/pages/brandspage';
 import { Box, Card, CardMedia, Skeleton, Typography, styled, useTheme } from '@mui/material';
 import { RightArrowIcon } from '../../Assets/Logo/Icons';
+import { useState } from 'react';
+import getBorderBottom from '../../utils/borderBottom';
 
-const BrandsCard = styled(Card)(({ theme }) => ({
+interface BrandsCardProps {
+  lastcard?: boolean;
+  arrowhovered?: boolean;
+};
+
+const BrandsCard = styled(Card)<BrandsCardProps>(({ theme, lastcard, arrowhovered }) => ({
   ...theme.bodyProps,
   position: 'relative',
   width: '100%',
@@ -10,15 +17,29 @@ const BrandsCard = styled(Card)(({ theme }) => ({
   alignItems: 'center',
   padding: `${theme.customSpaces.lg} ${theme.customSpaces.md}`,
   borderRadius: 0,
-  
+  overflow: 'unset',
+  transition: 'border 0.3s ease-in-out',
+  borderBottom: lastcard ? 'none' : getBorderBottom(theme, arrowhovered)
+  ,
+
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
     alignItems: 'center',
+    padding: `${theme.customPadding.sm} 0`,
+    borderBottom: getBorderBottom(theme, arrowhovered),
+    marginBottom: lastcard? theme.customSpaces.lg : theme.customSpaces.sm,
   },
 
 }));
 
-const ArrowLink = styled('a')(({ theme }) => ({
+interface ArrowLinkProps {
+  href?: string;
+  target?: string;
+  rel?: string;
+  arrowhovered?: boolean;
+}
+
+const ArrowLink = styled('a')<ArrowLinkProps>(({ theme, arrowhovered }) => ({
   padding: theme.customSpaces.md,
   color: theme.customColors.rakthalal,
   display: 'flex',
@@ -26,22 +47,21 @@ const ArrowLink = styled('a')(({ theme }) => ({
   alignItems: 'center',
   textDecoration: 'none',
   position: 'relative',
+  background: `radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8044643882943803) 50%, rgba(255,255,255,0) 100%)`,
+  backdropFilter: 'blur(2px)',
+  borderRadius: '50%',
+  pointerEvents: 'none',
+
   '& svg': {
     transition: 'transform 0.3s ease-in-out',
     margin: 0,
-  },
-
-  '&:hover': {
-    '& svg': {
-      transform: 'rotate(45deg)'
-    }
+    transform: arrowhovered ? 'rotate(45deg)' : 'rotate(0deg)',
   },
 
   [theme.breakpoints.down('sm')]: {
     position: 'absolute',
     bottom: 0,
-    transform: 'translateY(50%)',
-    zIndex: 5,
+    transform: 'translateY(50%)'
   },
 }));
 
@@ -49,13 +69,34 @@ const ArrowIcon = styled(RightArrowIcon)(({ theme }) => ({
   color: theme.customColors.rakthalal,
   width: '2.25em',
   marginLeft: theme.customSpaces.xs,
+  pointerEvents: 'all',
 }));
 
-const BrandName = styled(Typography)(({ theme }) => ({
+const ArrowIconSkeletonWrapper = styled(Box)(({ theme }) => ({
+  animation: theme.animations.wiggly,
+  height: 'max-content',
+  width: 'max-content',
+  margin: 0,
+  padding: 0,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+}));
+
+interface BrandNameProps {
+  arrowhovered?: boolean;
+  href?: string;
+  target?: string;
+  rel?: string;
+}
+
+const BrandName = styled(Typography)<BrandNameProps>(({ theme, arrowhovered }) => ({
   fontWeight: theme.customFontWeight.semiBold,
   fontSize: '1.125em',
-  color: theme.customColors.bhasma,
+  transition: 'color 0.3s ease-in-out',
+  color: arrowhovered ? theme.customColors.rakthalal : theme.customColors.bhasma,
   paddingBottom: theme.customSpaces.md,
+  display: 'block',
 
   [theme.breakpoints.down('sm')]: {
     textAlign: 'center',
@@ -67,6 +108,13 @@ const BrandDescription = styled(Typography)(({ theme }) => ({
   fontWeight: theme.customFontWeight.regular,
   fontSize: '0.75em',
   color: theme.customColors.bhasma,
+  display: 'block',
+  cursor: 'default',
+  textAlign: 'justify',
+
+  [theme.breakpoints.down('sm')]: {
+    textAlign: 'center',
+  },
 }));
 
 const BrandLogo = styled(CardMedia)(({ theme }) => ({
@@ -80,6 +128,10 @@ const BrandDescriptionWrapper = styled(Box)(({ theme }) => ({
   margin: theme.customSpaces.md,
   flexGrow: 1,
   display: 'block',
+
+  [theme.breakpoints.down('sm')]: {
+    margin: `${theme.customSpaces.lg} 0`,
+  },
 }));
 
 const BrandCard = ({
@@ -91,18 +143,19 @@ const BrandCard = ({
   index?: number;
   isLast?: boolean;
 }) => {
-  const theme = useTheme();
 
-  // Check if brandData is valid
+  const [isArrowHovered, setIsArrowHovered] = useState(false);
+
   if (!brandData) {
-    return <></>;
+    return <>Sorry! No data available</>;
   }
 
   return (
     <BrandsCard
       elevation={0}
       key={index}
-      sx={{ borderBottom: isLast ? 'none' : `1px solid ${theme.customColors.border}` }}
+      lastcard={isLast}
+      arrowhovered={isArrowHovered}
     >
       <BrandLogo
         image={brandData.image}
@@ -111,12 +164,30 @@ const BrandCard = ({
         <Skeleton variant={'rectangular'} height={'10em'} />
       </BrandLogo>
       <BrandDescriptionWrapper>
-        <BrandName>{brandData.name}</BrandName>
+        <BrandName 
+          as='a'
+          arrowhovered={isArrowHovered}
+          href={brandData.website}
+          target='_blank'
+          rel='noopener noreferrer'
+          onMouseEnter={() => setIsArrowHovered(true)}
+          onMouseLeave={() => setIsArrowHovered(false)}
+        >
+          {brandData.name}
+        </BrandName>
         <BrandDescription>{brandData.description}</BrandDescription>
       </BrandDescriptionWrapper>
       {brandData?.website && (
-        <ArrowLink href={brandData.website}>
-          <ArrowIcon />
+        <ArrowLink 
+          href={brandData.website}
+          target='_blank'
+          rel='noopener noreferrer'
+          arrowhovered={isArrowHovered}
+        >
+          <ArrowIcon
+            onMouseEnter={() => setIsArrowHovered(true)}
+            onMouseLeave={() => setIsArrowHovered(false)}
+          />
         </ArrowLink>
       )}
     </BrandsCard>
@@ -144,12 +215,14 @@ export const BrandCardSkeleton = () => {
         />
       </BrandDescriptionWrapper>
       <ArrowLink href={''}>
-        <ArrowIcon
-          sx={{
-            filter: theme.grayScales.g_100,
-            animation: theme.animations.pulse,
-          }}
-        />
+        <ArrowIconSkeletonWrapper>
+          <ArrowIcon
+            sx={{
+              filter: theme.grayScales.g_100,
+              animation: theme.animations.pulse,
+            }}
+          />
+        </ArrowIconSkeletonWrapper>
       </ArrowLink>
     </BrandsCard>
   );

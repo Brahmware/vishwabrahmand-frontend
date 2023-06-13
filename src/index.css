@@ -94,28 +94,5 @@ body.more-width::-webkit-scrollbar-thumb {
   border-right: 0.75em solid var(--color-rakthalal);
 }
 
-@keyframes pulse {
-  0% {
-    opacity: 0.125;
-  }
-
-  50% {
-    opacity: 0.25;
-  }
-
-  100% {
-    opacity: 0.125;
-  }
-}
-
-@keyframes pinch {
-  0% {
-    transform: translate(-50%, -50%) scale(5);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-}
+/* Importing Animations */
+@import "./theme/animations.css";
