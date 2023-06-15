@@ -28,14 +28,14 @@ const BrandsCard = styled(Card)<BrandsCardProps>(({ theme, lastcard, arrowhovere
   [theme.breakpoints.down('md')]: {
     padding: `${theme.customSpaces.md} ${theme.customSpaces.sm}`,
     borderBottom: getBorderBottom(theme, arrowhovered),
-    marginBottom: lastcard ? 0 : theme.customSpaces.sm,
+    marginBottom: theme.customSpaces.md,
     flexDirection: 'column',
   },
 
   [theme.breakpoints.down('sm')]: {
     alignItems: 'center',
     padding: `${theme.customPadding.sm} 0`,
-    marginBottom: lastcard ? theme.customSpaces.lg : theme.customSpaces.sm,
+    marginBottom: theme.customSpaces.lg,
   },
 
 }));

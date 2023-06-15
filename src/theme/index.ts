@@ -42,6 +42,7 @@ declare module '@mui/material/styles' {
     };
     itemBodyProps: {
       padding: string,
+      margin: string,
     };
     customPadding: {
       xs: string,
@@ -262,6 +263,7 @@ const itemBodyProps = {
     ${customPadding.xl} 0
     ${customPadding.md} 0
   `,
+  margin: '2em',
 };
 
 const bodyProps = {

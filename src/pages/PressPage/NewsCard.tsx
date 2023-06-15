@@ -61,7 +61,7 @@ const NewsTextComponent = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.between('sm', 'md')]: {
     marginLeft: 0,
-    
+
   },
 }));
 
@@ -114,43 +114,55 @@ const NewsCardComponent = ({
 
 export default NewsCardComponent;
 
+const NewsCardSkeletonWrapper = styled(Box)(({ theme }) => ({
+  textDecoration: 'none',
+  width: 'max-content',
+  height: 'max-content',
+  margin: `${theme.customPadding.xs} 0`,
+  padding: 0,
+}));
+
 export const NewsCardSkeleton = () => {
   return (
-    <NewsCardWrapper elevation={0}>
-      <NewsImageComponent
-        className="news-image"
-        component={""}
-        alt={""}
-      >
-        <Skeleton variant="rectangular" width="100%" height="100%" />
-      </NewsImageComponent>
-      <NewsTextComponent>
-        <PublicationDate as="h5" sx={{ width: '100%' }}>
-          <Skeleton
-            variant="text"
-            width={`calc(30% + ${Math.random() * 10}%)`}
-          />
-        </PublicationDate>
-        <Headline
-          as="h2"
-          sx={{
-            height: '2em',
-            width: '100%',
-            position: 'relative',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
+    <NewsCardSkeletonWrapper>
+      <NewsCardWrapper elevation={0}>
+        <NewsImageComponent
+          className="news-image"
+          component={""}
+          alt={""}
         >
-          <p style={{ opacity: 0, padding: 0 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <Skeleton
-            variant="text"
-            width="100%"
-            height="2em"
-            sx={{ position: 'absolute' }}
-          />
-        </Headline>
-      </NewsTextComponent>
-    </NewsCardWrapper>
+          <Skeleton variant="rectangular" width="100%" height="100%" />
+        </NewsImageComponent>
+        <NewsTextComponent>
+          <PublicationDate as="h5" sx={{ width: '100%' }}>
+            <Skeleton
+              variant="text"
+              width={`calc(30% + ${Math.random() * 10}%)`}
+            />
+          </PublicationDate>
+          <Headline
+            as="h2"
+            sx={{
+              height: '2em',
+              width: '100%',
+              position: 'relative',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <p style={{ opacity: 0, padding: 0 }}>{
+              new Array(60).fill(0).map(() => ('*'))
+            }</p>
+            <Skeleton
+              variant="text"
+              width="100%"
+              height="2em"
+              sx={{ position: 'absolute' }}
+            />
+          </Headline>
+        </NewsTextComponent>
+      </NewsCardWrapper>
+    </NewsCardSkeletonWrapper>
   );
 }
