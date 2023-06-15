@@ -13,7 +13,8 @@ const PaginationContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  marginTop: `calc(-1 * ${theme.customSpaces.md})`,
+  width: '100%',
+  marginTop: 'auto',
 
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column-reverse',
@@ -100,7 +101,6 @@ const Pagination = (
             size='small'
             variant='outlined'
             placeholder='Select'
-            
           >
             {
               pageOptions.map((value, index) => (

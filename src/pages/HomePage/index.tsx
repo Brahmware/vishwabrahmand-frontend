@@ -1,28 +1,28 @@
-import { Box, BoxProps, Typography, styled } from '@mui/material';
+import { Box, BoxProps, CardMedia, CardMediaProps, Typography, styled } from '@mui/material';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { useEffect } from 'react';
-
+import SpaceFiller from './SpaceFiller';
+import MaskingImageComponent from './Mask';
+import Background from './Background';
 interface HomePageWrapperProps extends BoxProps {
   containerminheight?: number;
 };
 
 const HomePageWrapper = styled(Box)<HomePageWrapperProps>(
-  ({ 
-    theme, 
+  ({
+    theme,
     containerminheight
   }) => ({
-  height: `${containerminheight}px`,
-  display: 'grid',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
+    position: 'relative',
+    width: '100vw',
+    height: `${containerminheight}px`,
+    display: 'grid',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridTemplateRows: 'repeat(12, 1fr)',
+  })
+);
 
-const HighlightSpan = styled(Typography)(({ theme }) => ({
-  ...theme.textSelectionVarient.varient_bhashma_on_white,
-  fontWeight: theme.customWeight.sectionTitle,
-  fontSize: theme.customSizes.sectionTitle,
-  color: theme.customColors.slogan,
-}));
+
 
 const HomePage = () => {
 
@@ -38,7 +38,9 @@ const HomePage = () => {
 
   return (
     <HomePageWrapper containerminheight={containerMinHeight}>
-      <HighlightSpan>Universe is all we see.</HighlightSpan>
+      {/* <SpaceFiller /> */}
+      <Background />
+      <MaskingImageComponent />
     </HomePageWrapper>
   );
 };

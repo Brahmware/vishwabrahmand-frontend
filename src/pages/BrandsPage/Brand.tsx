@@ -19,8 +19,11 @@ const BrandsCard = styled(Card)<BrandsCardProps>(({ theme, lastcard, arrowhovere
   borderRadius: 0,
   overflow: 'unset',
   transition: 'border 0.3s ease-in-out',
-  borderBottom: lastcard ? 'none' : getBorderBottom(theme, arrowhovered)
-  ,
+  borderBottom: lastcard ? 'none' : getBorderBottom(theme, arrowhovered),
+
+  '&:hover': {
+    borderBottom: getBorderBottom(theme, true),
+  },
 
   [theme.breakpoints.down('md')]: {
     padding: `${theme.customSpaces.md} ${theme.customSpaces.sm}`,

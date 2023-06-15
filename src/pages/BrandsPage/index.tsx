@@ -19,7 +19,7 @@ const BrandsPageWrapper = styled(Box)<BrandsPageWrapperProps>(({ theme, containe
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'start',
-  justifyContent: 'center',
+  justifyContent: 'start',
 }));
 
 const ThemedSectionTitle = styled(SectionTitle)(({ theme }) => ({
@@ -66,41 +66,43 @@ const BrandsPage = () => {
 
   return (
     <BrandsPageWrapper containerminheight={containerMinHeight}>
-      <Section>
-        <ThemedSectionTitle>Company Brands</ThemedSectionTitle>
-        {isLoading ? (
-          <>
-            {[...Array(brandsPerPage)].map((_, index) => (
-              <BrandCardSkeleton key={index} isLast={index === [...Array(brandsPerPage)].length - 1} />
-            ))}
-          </>
-        ) : brandsData && brandsData.length > 0 ? (
-          <>
-            {brandsData.slice(startIndex, endIndex).map((brandData, index) => (
-              <React.Fragment key={index}>
-                <BrandCard
-                  brandData={brandData}
-                  isLast={
-                    index === Math.min(
-                      brandsPerPage,
-                      brandsData.slice(startIndex, endIndex).length
-                    ) - 1
-                  }
-                />
-              </React.Fragment>
-            ))}
-            <Pagination
-              itemsData={brandsData}
-              itemsPerPage={brandsPerPage}
-              page={page}
-              handleChangeItemsPerPage={handleChangeBrandsPerPage}
-              handleChangePage={handleChangePage}
-            />
-          </>
-        ) : (
-          <NoDataParagraph>No data found</NoDataParagraph>
-        )}
-      </Section>
+      <ThemedSectionTitle>Company Brands</ThemedSectionTitle>
+      {isLoading ? (
+        <>
+          {[...Array(brandsPerPage)].map((_, index) => (
+            <BrandCardSkeleton key={index} isLast={index === [...Array(brandsPerPage)].length - 1} />
+          ))}
+        </>
+      ) : brandsData && brandsData.length > 0 ? (
+        <>
+          {brandsData.slice(startIndex, endIndex).map((brandData, index) => (
+            <React.Fragment key={index}>
+              <BrandCard
+                brandData={brandData}
+                isLast={
+                  index === Math.min(
+                    brandsPerPage,
+                    brandsData.slice(startIndex, endIndex).length
+                  ) - 1
+                }
+              />
+            </React.Fragment>
+          ))}
+          <Box sx={{
+            width: '100%',
+            flexGrow: 1,
+          }} />
+          <Pagination
+            itemsData={brandsData}
+            itemsPerPage={brandsPerPage}
+            page={page}
+            handleChangeItemsPerPage={handleChangeBrandsPerPage}
+            handleChangePage={handleChangePage}
+          />
+        </>
+      ) : (
+        <NoDataParagraph>No data found</NoDataParagraph>
+      )}
     </BrandsPageWrapper>
   );
 };

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider, styled } from '@mui/material';
 import theme from './theme';
 import Navbar from './components/Navbar';
 import CompanyPage from './pages/CompanyPage';
