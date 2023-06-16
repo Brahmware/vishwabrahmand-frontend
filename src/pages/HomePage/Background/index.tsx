@@ -1,32 +1,69 @@
-import { CardMedia, CardMediaProps, styled } from '@mui/material';
+import { Box, BoxProps, CardMedia, CardMediaProps, styled } from '@mui/material';
 import React from 'react'
+import { useSvgComponentDimensions } from '../../../utils/useSvgComponentDimensions';
 
-interface BackgroundImageProps extends CardMediaProps {
-  component: string;
-  image: string;
+
+const ImageWrapper = styled(Box)<BoxProps>(({ theme }) => ({
+  gridColumn: '1 / 13',
+  gridRow: '1 / 13',
+  zIndex: 2,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  minWidth: theme.breakpoints.xxs,
+  minHeight: theme.breakpoints.xxs,
+  position: 'relative',
+}));
+
+
+interface BGImageProps extends CardMediaProps {
+  component?: React.ElementType;
   alt: string;
-  sx?: any;
+  containerdimension?: {
+    width: number;
+    height: number;
+  };
+  animationduration?: number;
+  opacity?: number;
 };
 
 
-const BackgroundImage = styled(CardMedia)<BackgroundImageProps>(
-  ({ theme }) => ({
-    position: 'absolute',
-    gridColumn: '1 / 13',
-    width: '100vw',
-    height: '100%',
-    objectFit: 'cover',
-    zIndex: 1,
-  })
-);
+const BGImage = styled(CardMedia)<BGImageProps>(({ theme, containerdimension, animationduration, opacity }) => ({
+  position: 'absolute',
+  width: containerdimension?.width,
+  height: containerdimension?.height,
+  padding: theme.customPadding.xs,
+  margin: '0px',
+  objectFit: 'cover',
+  borderRadius: '50%',
+  animation: `rotation ${animationduration ? animationduration : 600}s infinite linear`,
+  opacity: opacity ? opacity : 1,
+
+  [theme.breakpoints.up('md')]: {
+    transform: 'scale(1.3333)',
+  },
+}));
 
 const Background = () => {
+
+  const maskDimensions = useSvgComponentDimensions('mask');
+
+
   return (
-    <BackgroundImage
-      component="img"
-      image="https://nightsky.jpl.nasa.gov/images/news/HDP_896.jpg"
-      alt="Home"
-    />
+    <>
+      <ImageWrapper>
+        <BGImage
+          containerdimension={maskDimensions}
+          component="img"
+          image="/images/homepage-background.jpg"
+          alt="mask"
+          animationduration={600}
+        />
+      </ImageWrapper>
+    </>
   )
 }
 

@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 import CursorLocationProvider from './components/common/cursorLocationProvider';
 import ContentWrapper from './components/ContentWrapper';
 
+
+
 const Router = () => {
   return (
     <BrowserRouter>

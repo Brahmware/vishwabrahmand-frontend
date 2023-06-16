@@ -13,6 +13,8 @@ const FooterWrapper = styled((props: FooterWrapperProps & React.HTMLAttributes<H
   width: '100%',
   padding: `0 ${theme.customPadding.xs}`,
   borderTop: `1px solid ${theme.customColors.border}`,
+  zIndex: 3,
+  backgroundColor: theme.customColors.white,
 
   [theme.breakpoints.down('md')]: {
     padding: `

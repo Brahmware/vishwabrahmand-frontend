@@ -1,7 +1,6 @@
 import { Box, BoxProps, CardMedia, CardMediaProps, Typography, styled } from '@mui/material';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { useEffect } from 'react';
-import SpaceFiller from './SpaceFiller';
 import MaskingImageComponent from './Mask';
 import Background from './Background';
 interface HomePageWrapperProps extends BoxProps {
@@ -38,7 +37,6 @@ const HomePage = () => {
 
   return (
     <HomePageWrapper containerminheight={containerMinHeight}>
-      {/* <SpaceFiller /> */}
       <Background />
       <MaskingImageComponent />
     </HomePageWrapper>

@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 export const useSvgComponentDimensions = (componentId: string) => {
   const [componentDimensions, setComponentDimensions] = useState({
-    width: 0,
-    height: 0,
+    width: 10,
+    height: 10,
   });
 
   useEffect(() => {
