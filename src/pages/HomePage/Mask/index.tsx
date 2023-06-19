@@ -1,7 +1,6 @@
 import React from 'react';
 import { styled, useTheme } from '@mui/material';
 import { Mask } from '../../../Assets/graphics';
-import anime, { AnimeInstance } from 'animejs';
 import MaskText from './MaskText';
 import Eye from './Eye';
 import Eyelid from './Eyelid';
@@ -30,6 +29,8 @@ const eyePosition = {
 const MaskingImageComponent: React.FC = () => {
 
   const theme = useTheme();
+
+
 
   return (
     <h1 className='noselect' style={{
