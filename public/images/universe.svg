@@ -1,0 +1,26 @@
+<svg height="100%" width="100%" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
+      <image xlink:href="https://cdn.pixabay.com/photo/2011/12/15/11/37/galaxy-11188_1280.jpg"
+        width="100%" height="100%"></image>
+    </pattern>
+  </defs>
+  <path class="cls-2"
+    d="
+              M249,208.5a60.22889,60.22889,0,0,1-7.33472-7.25,78.58027,78.58027,0,0,1-13.45652-21.75,76.59875,76.59875,0,0,1-5.79343-29,74.23931,74.23931,0,0,1,5.58015-29,76.75746,
+              76.75746,0,0,1,7.87094-14.5,78.13847,78.13847,0,0,1,5.68422-7.25A59.717,59.717,0,0,1,249,92.5a.79592.79592,0,0,1,1,0,59.71779,59.71779,
+              0,0,1,7.44937,7.25,78.1434,78.1434,0,0,1,5.68421,7.25,76.75916,76.75916,0,0,1,7.87094,14.5,74.2397,74.2397,0,0,1,5.58017,29,76.59971,
+              76.59971,0,0,1-5.79343,29,78.58081,78.58081,0,0,1-13.45654,21.75A60.22889,60.22889,0,0,1,250,208.5.7875.7875,0,0,1,249,208.5Z
+            "
+    transform="scale(2) translate(-125, -155)"
+    style="
+    /* transform: translate(-19em, -20em) scale(0.3); */
+" fill="url(#pattern)"
+    stroke="#DDDDDD" stroke-width="4.5"></path>
+  <g class="texts">
+    <text x="50%" y="7.3em" class="css-13e2jij">The</text>
+    <text x="50%" y="5.25em" fill="url(#pattern)" class="css-13ipboe">universe</text>
+    <text x="50%" y="10.10em" class="css-13e2jij">is all</text>
+    <text x="50%" y="6.575em" fill="url(#pattern)" class="css-13ipboe">we see.</text>
+  </g>
+</svg>

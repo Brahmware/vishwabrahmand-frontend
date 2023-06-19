@@ -127,6 +127,7 @@ declare module '@mui/material/styles' {
       pulse: string;
       pinch: string;
       wiggly: string;
+      eyeBlink: string;
     };
 
     grayScales: {
@@ -368,6 +369,7 @@ const animations = {
   pulse: 'pulse 2s ease-in-out infinite',
   pinch: 'pinch 600ms ease-in',
   wiggly: 'wiggly 1200ms ease-in-out infinite',
+  eyeBlink: 'eye__blink 1s ease-in-out infinite',
 };
 
 const theme = createTheme({

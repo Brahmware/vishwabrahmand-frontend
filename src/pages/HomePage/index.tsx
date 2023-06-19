@@ -18,6 +18,8 @@ const HomePageWrapper = styled(Box)<HomePageWrapperProps>(
     display: 'grid',
     gridTemplateColumns: 'repeat(12, 1fr)',
     gridTemplateRows: 'repeat(12, 1fr)',
+    alignItems: 'center',
+    justifyContent: 'center',
   })
 );
 
@@ -37,7 +39,7 @@ const HomePage = () => {
 
   return (
     <HomePageWrapper containerminheight={containerMinHeight}>
-      <Background />
+      {/* <Background /> */}
       <MaskingImageComponent />
     </HomePageWrapper>
   );
