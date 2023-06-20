@@ -355,14 +355,14 @@ const breakpoints = {
 };
 
 const mediaQueries = {
-  xxs: `@media (max-width: ${breakpoints.xxs}px)`,
-  xs: `@media (max-width: ${breakpoints.xs}px)`,
-  sm: `@media (max-width: ${breakpoints.sm}px)`,
-  md: `@media (max-width: ${breakpoints.md}px)`,
-  lg: `@media (max-width: ${breakpoints.lg}px)`,
-  xl: `@media (max-width: ${breakpoints.xl}px)`,
-  xxl: `@media (max-width: ${breakpoints.xxl}px)`,
-  uhd: `@media (max-width: ${breakpoints.uhd}px)`,
+  xxs: `@media (min-width: 0px) and (max-width: ${breakpoints.xxs}px)`,
+  xs: `@media (min-width: ${breakpoints.xxs + 0.01}px) and (max-width: ${breakpoints.xs}px)`,
+  sm: `@media (min-width: ${breakpoints.xs + 0.01}px) and (max-width: ${breakpoints.sm}px)`,
+  md: `@media (min-width: ${breakpoints.sm + 0.01}px) and (max-width: ${breakpoints.md}px)`,
+  lg: `@media (min-width: ${breakpoints.md + 0.01}px) and (max-width: ${breakpoints.lg}px)`,
+  xl: `@media (min-width: ${breakpoints.lg + 0.01}px) and (max-width: ${breakpoints.xl}px)`,
+  xxl: `@media (min-width: ${breakpoints.xl + 0.01}px) and (max-width: ${breakpoints.xxl}px)`,
+  uhd: `@media (min-width: ${breakpoints.xxl + 0.01}px)`,
 };
 
 const animations = {

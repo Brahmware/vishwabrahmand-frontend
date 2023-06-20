@@ -1,6 +1,6 @@
 import { styled } from '@mui/material';
 import React from 'react';
-import { eyePosition } from './Eye';
+import { eyePosition } from '.';
 
 const StyledPath = styled('path')(({ theme }) => ({
   fill: theme.customColors.slogan,
@@ -314,7 +314,7 @@ const StyledPath = styled('path')(({ theme }) => ({
     },
 
     /* A bit of gap */
-    
+
     '33%': {
       d: 'path("M250,83.71973c-3.13123,2.27954-33.73523,25.39453-33.704,66.27783.03113,40.80615,30.55493,63.86023,33.704,66.15283-3.4574-2.67151-32.48657-25.922-32.52173-66.14209C217.443,109.6991,246.55994,86.37769,250,83.71973Z")',
     },
@@ -622,8 +622,14 @@ const StyledPath = styled('path')(({ theme }) => ({
   },
 }));
 
-const Eyelid: React.FC = () => {
-  return (<StyledPath {...eyePosition} />)
+const Eyelid = (
+  {
+    transform = eyePosition.transform,
+  }: {
+    transform?: string,
+  }
+) => {
+  return (<StyledPath transform={transform} />)
 };
 
 export default Eyelid;
