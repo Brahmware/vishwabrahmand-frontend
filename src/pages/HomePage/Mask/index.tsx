@@ -4,6 +4,7 @@ import MaskText from './MaskText';
 import Eye from '../../../components/Eye';
 import AllEyes from '../../../components/Eye/AllEyes';
 import { useContainerMinHeight } from '../../../utils/useContainerMinHeight';
+import Widescreen from '../Widescreen';
 
 interface StyledH1Props {
   containerHeight: number;
@@ -43,12 +44,14 @@ const MaskingImageComponent: React.FC = () => {
   return (
     <>
       <StyledH1 className='noselect' containerHeight={containerHeight}>
-        <svg xmlns="http://www.w3.org/2000/svg" height={`${containerHeight}`} width="100vw" viewBox={`0 0 500 300`}>
+        {/* <svg xmlns="http://www.w3.org/2000/svg" height={`${containerHeight}`} width="100vw" viewBox={`0 0 500 300`}>
           <defs>
             <pattern id="pattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
-              <image xlinkHref='https://cdn.pixabay.com/photo/2011/12/15/11/37/galaxy-11188_1280.jpg' width="100%" height="100%" />
+              <image xlinkHref='/images/transparent_picture.png' width="100%" height="100%" />
             </pattern>
           </defs>
+          <rect id='mask' x="0" y="0" width="100%" height="100%" fill="#fff" />
+          <image xlinkHref='https://cdn.pixabay.com/photo/2011/12/15/11/37/galaxy-11188_1280.jpg' width="100%" height="100%" />
           {
             (extraExtraSmall || extraSmall || small) && (
               <>
@@ -64,7 +67,8 @@ const MaskingImageComponent: React.FC = () => {
               </>
             )
           }
-        </svg>
+        </svg> */}
+        <Widescreen />
       </StyledH1>
       <h1 style={{ display: 'none' }}>
         The universe is all we see.
