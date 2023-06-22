@@ -1,7 +1,8 @@
-import React from 'react';
-import { styled } from '@mui/material';
+import React, { useEffect } from 'react';
+import { styled, useTheme } from '@mui/material';
 import { useContainerMinHeight } from '../../../utils/useContainerMinHeight';
 import Widescreen from './Widescreen';
+import Narrowscreen from './Narrowscreen';
 
 interface StyledH1Props {
   containerheight: number;
@@ -20,11 +21,41 @@ const StyledH1 = styled('h1')<StyledH1Props>(({ theme, containerheight }) => ({
   alignItems: 'center',
   fontSize: '1em',
   lineHeight: '0em',
+  minWidth: '320px',
+
+  [theme.breakpoints.down('sm')]: {
+    '& > svg': {
+      transform: 'scale(1.25)',
+    },
+  },
 
 }));
 
 
 const MaskingImageComponent: React.FC = () => {
+
+  const theme = useTheme();
+
+  const [element, setElement] = React.useState(
+    window.innerWidth < theme.breakpoints.md ?
+      React.createElement(Narrowscreen) :
+      React.createElement(Widescreen)
+  );
+
+  useEffect(() => {
+
+    const handleResize = () => {
+      window.innerWidth < theme.breakpoints.md ?
+        setElement(<Narrowscreen />) :
+        setElement(<Widescreen />);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, [theme.breakpoints.md]);
 
   return (
     <>
@@ -32,7 +63,7 @@ const MaskingImageComponent: React.FC = () => {
         className='noselect scrollable'
         containerheight={useContainerMinHeight()}
       >
-        <Widescreen />
+        {element}
       </StyledH1>
       <h1 style={{ display: 'none' }}>
         The universe is all we see.

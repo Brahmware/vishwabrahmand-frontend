@@ -6,17 +6,30 @@ interface Dimensions {
 const getOptimizedDimension = (
   {
     svgDimensions,
-    maskDimensions
+    maskDimensions,
+    type = 'max'
   }: {
     svgDimensions: Dimensions,
-    maskDimensions: Dimensions
+    maskDimensions: Dimensions,
+    type?: 'min' | 'max'
   }
 ) => {
-  const svgDimensionsMax = Math.max(svgDimensions.height, svgDimensions.width);
-  const maskDimensionsMax = Math.max(maskDimensions.height, maskDimensions.width);
-  const offset = 10;
+  const offset = type === 'max' ? 10 : 5;
 
-  return Math.min(svgDimensionsMax, maskDimensionsMax) - offset;
+  let svgDimensionsOpt;
+  let maskDimensionsOpt;
+  
+  if (type === 'max') {
+    svgDimensionsOpt = Math.max(svgDimensions.height, svgDimensions.width);
+    maskDimensionsOpt = Math.max(maskDimensions.height, maskDimensions.width);
+  } else {
+    svgDimensionsOpt = Math.min(svgDimensions.height, svgDimensions.width);
+    maskDimensionsOpt = Math.min(maskDimensions.height, maskDimensions.width);
+  }
+
+  console.log(svgDimensions, maskDimensions);
+
+  return Math.min(svgDimensionsOpt, maskDimensionsOpt) - offset;
 };
 
 export default getOptimizedDimension;

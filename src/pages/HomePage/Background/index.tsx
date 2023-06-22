@@ -43,20 +43,23 @@ const BGImage = styled(CardMedia)<BGImageProps>(({ theme }) => ({
 
 const Background = (
   {
-    className
+    className,
+    screenType = 'widescreen',
   }: {
     className?: string
+    screenType?: 'widescreen' | 'narrowscreen'
   }
 ) => {
 
   return (
     <BgImageWrapper
-      className={className}
+      className={className + ' bgimage'}
       elevation={0}
       optimizeddimensions={
         getOptimizedDimension({
           svgDimensions: useSvgComponentDimensions('uni__svg'),
           maskDimensions: useSvgComponentDimensions('mask'),
+          type: screenType === 'widescreen' ? 'max' : 'min',
         })
       }
       rotation={useRotate()}

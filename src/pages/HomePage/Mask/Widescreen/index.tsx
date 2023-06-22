@@ -1,7 +1,8 @@
 import React from 'react';
-import { styled, useTheme } from '@mui/material'
+import { styled, useTheme } from '@mui/material';
 import Eyelid from '../../../../components/Eye/Eyelid';
 import Background from '../../Background';
+import useDelayedRerender from '../../../../utils/useDelayedRerender';
 
 const StyledSvg = styled('svg')(({ theme }) => ({
   height: '100%',
@@ -17,11 +18,18 @@ const Widescreen = () => {
 
   const theme = useTheme();
 
+  const shouldRender = useDelayedRerender();
+
+  if (!shouldRender) {
+    return null;
+  }
+
   return (
     <React.Fragment>
       <Background className='widescreen'/>
       <StyledSvg
         id="uni__svg"
+        className='widescreen'
         data-name="The universe is all we see."
         xmlns="http://www.w3.org/2000/svg"
         width="900"
