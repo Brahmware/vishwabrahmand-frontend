@@ -1,6 +1,5 @@
 import { Box, BoxProps, styled } from '@mui/material';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
-import { useEffect } from 'react';
 import MaskingImageComponent from './Mask';
 import { useAddRootClass } from '../../utils/useAddRootClass';
 interface HomePageWrapperProps extends BoxProps {

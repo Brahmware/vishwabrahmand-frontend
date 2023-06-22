@@ -7,5 +7,5 @@ export const useAddRootClass = (className: string) => {
     return () => {
       document.getElementById('root')?.classList.remove(className);
     }
-  }, []);
+  }, [className]);
 }
