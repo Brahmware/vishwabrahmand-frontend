@@ -6,6 +6,7 @@ import { NoDataParagraph } from '../../components/common/paragraph';
 import BrandCard, { BrandCardSkeleton } from './Brand';
 import Pagination from '../../components/common/pagination';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
+import { useAddRootClass } from '../../utils/useAddRootClass';
 
 interface BrandsPageWrapperProps {
   containerminheight?: number;
@@ -27,8 +28,6 @@ const ThemedSectionTitle = styled(SectionTitle)(({ theme }) => ({
 }));
 
 const BrandsPage = () => {
-
-  const containerMinHeight = useContainerMinHeight();
 
   const [brandsData, setBrandsData] = useState<Brand[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -64,8 +63,9 @@ const BrandsPage = () => {
   const startIndex = (page - 1) * brandsPerPage;
   const endIndex = startIndex + brandsPerPage;
 
+  useAddRootClass('brands-page');
   return (
-    <BrandsPageWrapper containerminheight={containerMinHeight}>
+    <BrandsPageWrapper containerminheight={useContainerMinHeight()}>
       <ThemedSectionTitle>Company Brands</ThemedSectionTitle>
       {isLoading ? (
         <>

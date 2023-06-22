@@ -7,6 +7,7 @@ import NewsCardComponent, { NewsCardSkeleton } from './NewsCard';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { pressPageData } from '../../__mocks__/pages/presspage';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
+import { useAddRootClass } from '../../utils/useAddRootClass';
 
 interface PressPageWrapperProps {
   containerMinHeight?: number;
@@ -44,7 +45,7 @@ const NewsCards = styled(Box)(({ theme }) => ({
 }));
 
 const PressPage = () => {
-  const containerMinHeight = useContainerMinHeight();
+
   const [newsData, setNewsData] = useState<NewsCard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasMore, setHasMore] = useState(true);
@@ -77,18 +78,19 @@ const PressPage = () => {
       if (pressReleases.length > 0) {
         setNewsData((prevNewsData) => [...prevNewsData, ...pressReleases]);
         setPage(nextPage);
-        setHasMore(true); // Set `hasMore` to true when there are more pages to fetch
+        setHasMore(true); 
       } else {
-        setHasMore(false); // Set `hasMore` to false when there are no more pages to fetch
+        setHasMore(false);
       }
     } catch (error) {
-      // Handle error here
+      // Handling error here
       console.error('Error fetching more news:', error);
     }
   };
 
+  useAddRootClass('press-page');
   return (
-    <PressPageWrapper containerMinHeight={containerMinHeight}>
+    <PressPageWrapper containerMinHeight={useContainerMinHeight()}>
       <Section>
         <SectionTitle>Press Releases</SectionTitle>
         {isLoading && newsData.length === 0 ? (

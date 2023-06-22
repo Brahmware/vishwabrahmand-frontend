@@ -2,6 +2,7 @@ import { Box, BoxProps, styled } from '@mui/material';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { useEffect } from 'react';
 import MaskingImageComponent from './Mask';
+import { useAddRootClass } from '../../utils/useAddRootClass';
 interface HomePageWrapperProps extends BoxProps {
   containerminheight?: number;
 };
@@ -25,19 +26,9 @@ const HomePageWrapper = styled(Box)<HomePageWrapperProps>(
 
 const HomePage = () => {
 
-  const containerMinHeight = useContainerMinHeight();
-
-  useEffect(() => {
-
-    document.getElementById('root')?.classList.add('home-page');
-
-    return () => {
-      document.getElementById('root')?.classList.remove('home-page');
-    }
-  }, []);
-
+  useAddRootClass('home-page');
   return (
-    <HomePageWrapper containerminheight={containerMinHeight}>
+    <HomePageWrapper containerminheight={useContainerMinHeight()}>
       <MaskingImageComponent />
     </HomePageWrapper>
   );

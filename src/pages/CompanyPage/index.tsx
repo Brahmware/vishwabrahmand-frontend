@@ -4,6 +4,7 @@ import LeadershipSection from './Leadership';
 import AlliesSection from './Allies';
 import KeyDocumentsSection from './KeyDocuments';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
+import { useAddRootClass } from '../../utils/useAddRootClass';
 
 interface CompanyPageWrapperProps {
   containerminheight?: number;
@@ -23,10 +24,9 @@ const CompanyPageWrapper = styled(Box)<CompanyPageWrapperProps>(({ theme, contai
 
 const CompanyPage = () => {
 
-  const containerMinHeight = useContainerMinHeight();
-
+  useAddRootClass('company-page');
   return (
-    <CompanyPageWrapper containerminheight={containerMinHeight}>
+    <CompanyPageWrapper containerminheight={useContainerMinHeight()}>
       <AboutSection />
       <LeadershipSection />
       <AlliesSection />
