@@ -34,6 +34,7 @@ declare module '@mui/material/styles' {
       navPanelHeight: string;
       footerHeight: string;
       loadingBoxHeight: string;
+      newsHeadlineHeight: string;
     };
     bodyProps: {
       maxWidth: string,
@@ -50,6 +51,7 @@ declare module '@mui/material/styles' {
       md: string,
       lg: string,
       xl: string,
+      xxl: string,
     };
 
     customSpaces: {
@@ -263,7 +265,8 @@ const customPadding = {
   sm: '1em',
   md: '1.75em',
   lg: '3em',
-  xl: '4.5em'
+  xl: '4.5em',
+  xxl: '5em',
 };
 
 const customSpaces = {
@@ -280,6 +283,7 @@ const customHeights = {
   navPanelHeight: '3em',
   footerHeight: '10em',
   loadingBoxHeight: '5em',
+  newsHeadlineHeight: '2em',
 };
 
 const itemBodyProps = {

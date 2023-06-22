@@ -68,6 +68,7 @@ const NewsTextComponent = styled(Box)(({ theme }) => ({
 const PublicationDate = styled(Typography)(({ theme }) => ({
   ...theme.typography.body2,
   color: theme.customColors.rakthalal,
+  width: '100%',
   margin: 0,
 }));
 
@@ -75,6 +76,12 @@ const Headline = styled(Typography)(({ theme }) => ({
   ...theme.typography.body2,
   color: theme.customColors.bhasma,
   margin: 0,
+  height: theme.customHeights.newsHeadlineHeight,
+  width: '100%',
+  position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
@@ -134,23 +141,13 @@ export const NewsCardSkeleton = () => {
           <Skeleton variant="rectangular" width="100%" height="100%" />
         </NewsImageComponent>
         <NewsTextComponent>
-          <PublicationDate as="h5" sx={{ width: '100%' }}>
+          <PublicationDate as="h5">
             <Skeleton
               variant="text"
               width={`calc(30% + ${Math.random() * 10}%)`}
             />
           </PublicationDate>
-          <Headline
-            as="h2"
-            sx={{
-              height: '2em',
-              width: '100%',
-              position: 'relative',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
+          <Headline as="h2">
             <p style={{ opacity: 0, padding: 0 }}>{
               new Array(60).fill(0).map(() => ('*'))
             }</p>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, styled } from '@mui/material';
+import { Box, styled, useTheme } from '@mui/material';
 import Section, { SectionTitle } from '../../components/common/section';
 import { NewsCard } from '../../__mocks__/pages/presspage';
 import LoadingComponent from '../../components/common/loading';
@@ -8,14 +8,15 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { pressPageData } from '../../__mocks__/pages/presspage';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { useAddRootClass } from '../../utils/useAddRootClass';
+import config from '../../config';
 
 interface PressPageWrapperProps {
-  containerMinHeight?: number;
+  containerminheight?: number;
 };
 
-const PressPageWrapper = styled(Box)<PressPageWrapperProps>(({ theme, containerMinHeight }) => ({
+const PressPageWrapper = styled(Box)<PressPageWrapperProps>(({ theme, containerminheight }) => ({
   ...theme.bodyProps,
-  minHeight: `${containerMinHeight}px`,
+  minHeight: `${containerminheight}px`,
   width: '100%',
   padding: theme.itemBodyProps.padding,
   display: 'flex',
@@ -46,6 +47,8 @@ const NewsCards = styled(Box)(({ theme }) => ({
 
 const PressPage = () => {
 
+  const theme = useTheme();
+
   const [newsData, setNewsData] = useState<NewsCard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasMore, setHasMore] = useState(true);
@@ -69,7 +72,7 @@ const PressPage = () => {
 
   const fetchMoreNews = async () => {
     try {
-      const newsPerPage = 12; // Number of news cards per page
+      const newsPerPage = config.defaultNewsPerPage; // Number of news cards per page
       const nextPage = page + 1;
       const start = (nextPage - 1) * newsPerPage;
       const end = nextPage * newsPerPage;
@@ -90,11 +93,11 @@ const PressPage = () => {
 
   useAddRootClass('press-page');
   return (
-    <PressPageWrapper containerMinHeight={useContainerMinHeight()}>
+    <PressPageWrapper containerminheight={useContainerMinHeight()}>
       <Section>
         <SectionTitle>Press Releases</SectionTitle>
         {isLoading && newsData.length === 0 ? (
-          <NewsCards sx={{ pb: '5em' }}>
+          <NewsCards sx={{ pb: theme.customPadding.xxl }}>
             {[...Array(6)].map((_, index) => (
               <NewsCardSkeleton key={index} />
             ))}

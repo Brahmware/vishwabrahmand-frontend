@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   Card,
   CardMedia,
@@ -8,6 +8,7 @@ import {
 } from '@mui/material';
 import { useSvgComponentDimensions } from '../../../utils/useSvgComponentDimensions';
 import getOptimizedDimension from '../../../utils/getOptimizedDimensions';
+import useRotate from '../../../utils/useRotate';
 
 interface BgImageWrapperProps extends CardProps {
   optimizeddimensions: number;
@@ -41,39 +42,18 @@ const BGImage = styled(CardMedia)<BGImageProps>(({ theme }) => ({
 }));
 
 const Background = () => {
-  const [rotation, setRotation] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = (event: WheelEvent) => {
-      const scrollDelta = event.deltaY;
-      const rotationDelta = scrollDelta / 20; // Adjust the rotation sensitivity as needed
-      setRotation((prevRotation) => prevRotation + rotationDelta);
-    };
-
-    const handleTouchMove = (event: TouchEvent) => {
-      if (event.touches.length > 0) {
-        const touchDelta = event.touches[0].clientY - event.touches[0].screenY;
-        const rotationDelta = touchDelta / 20; // Adjust the rotation sensitivity as needed
-        setRotation((prevRotation) => prevRotation + rotationDelta);
-      }
-    };
-
-    window.addEventListener('wheel', handleScroll);
-    window.addEventListener('touchmove', handleTouchMove);
-
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-      window.removeEventListener('touchmove', handleTouchMove);
-    };
-  }, []);
-
-  const optimizedDimensions = getOptimizedDimension({
-    svgDimensions: useSvgComponentDimensions('uni__svg'),
-    maskDimensions: useSvgComponentDimensions('mask'),
-  });
 
   return (
-    <BgImageWrapper elevation={0} optimizeddimensions={optimizedDimensions} rotation={rotation}>
+    <BgImageWrapper
+      elevation={0}
+      optimizeddimensions={
+        getOptimizedDimension({
+          svgDimensions: useSvgComponentDimensions('uni__svg'),
+          maskDimensions: useSvgComponentDimensions('mask'),
+        })
+      }
+      rotation={useRotate()}
+    >
       <BGImage
         component="img"
         src="/images/homepage-background.jpg"

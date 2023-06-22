@@ -4,15 +4,15 @@ import { useContainerMinHeight } from '../../../utils/useContainerMinHeight';
 import Widescreen from './Widescreen';
 
 interface StyledH1Props {
-  containerHeight: number;
+  containerheight: number;
 }
 
-const StyledH1 = styled('h1')<StyledH1Props>(({ theme, containerHeight }) => ({
+const StyledH1 = styled('h1')<StyledH1Props>(({ theme, containerheight }) => ({
   gridColumn: '1 / 13',
   gridRow: '1 / 13',
   zIndex: 2,
   width: '100%',
-  height: containerHeight + 'px',
+  height: containerheight + 'px',
   margin: 0,
   padding: '0 5em',
   display: 'flex',
@@ -30,7 +30,7 @@ const MaskingImageComponent: React.FC = () => {
     <>
       <StyledH1
         className='noselect'
-        containerHeight={useContainerMinHeight()}
+        containerheight={useContainerMinHeight()}
       >
         <Widescreen />
       </StyledH1>

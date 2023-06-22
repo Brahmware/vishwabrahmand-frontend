@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Box, styled } from '@mui/material';
-import Section, { SectionTitle } from '../../components/common/section';
+import { SectionTitle } from '../../components/common/section';
 import { Brand, brandsPageData } from '../../__mocks__/pages/brandspage';
 import { NoDataParagraph } from '../../components/common/paragraph';
 import BrandCard, { BrandCardSkeleton } from './Brand';
 import Pagination from '../../components/common/pagination';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { useAddRootClass } from '../../utils/useAddRootClass';
+import config from '../../config';
 
 interface BrandsPageWrapperProps {
   containerminheight?: number;
@@ -31,8 +32,8 @@ const BrandsPage = () => {
 
   const [brandsData, setBrandsData] = useState<Brand[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [page, setPage] = useState(1);
-  const [brandsPerPage, setBrandsPerPage] = useState(5); // Number of brands to show per page
+  const [page, setPage] = useState(config.defaultStartPage);
+  const [brandsPerPage, setBrandsPerPage] = useState(config.defaultNumberOfBrandsPerPage);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -56,7 +57,7 @@ const BrandsPage = () => {
 
   const handleChangeBrandsPerPage = (event: { target: { value: any } }) => {
     setBrandsPerPage(Number(event.target.value));
-    setPage(1); // Reset the page to 1 when changing the number of brands per page
+    setPage(config.defaultStartPage); // Reset the page to 1 when changing the number of brands per page
   };
 
   // Calculate the start and end index of the brands to show based on the current page
