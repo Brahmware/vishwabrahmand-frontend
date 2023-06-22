@@ -19,7 +19,7 @@ const Widescreen = () => {
 
   return (
     <React.Fragment>
-      <Background />
+      <Background className='widescreen'/>
       <StyledSvg
         id="uni__svg"
         data-name="The universe is all we see."

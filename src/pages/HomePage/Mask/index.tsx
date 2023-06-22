@@ -29,7 +29,7 @@ const MaskingImageComponent: React.FC = () => {
   return (
     <>
       <StyledH1
-        className='noselect'
+        className='noselect scrollable'
         containerheight={useContainerMinHeight()}
       >
         <Widescreen />

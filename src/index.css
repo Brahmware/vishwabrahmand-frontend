@@ -106,5 +106,11 @@ body.more-width::-webkit-scrollbar-thumb {
   border-right: 0.75em solid var(--color-rakthalal);
 }
 
+/* Grabbing pointer */
+
+.scrollable {
+  cursor: all-scroll !important;
+}
+
 /* Importing Animations */
 @import "./theme/animations.css";

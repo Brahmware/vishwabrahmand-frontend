@@ -41,10 +41,17 @@ const BGImage = styled(CardMedia)<BGImageProps>(({ theme }) => ({
   animation: theme.animations.rotating,
 }));
 
-const Background = () => {
+const Background = (
+  {
+    className
+  }: {
+    className?: string
+  }
+) => {
 
   return (
     <BgImageWrapper
+      className={className}
       elevation={0}
       optimizeddimensions={
         getOptimizedDimension({
