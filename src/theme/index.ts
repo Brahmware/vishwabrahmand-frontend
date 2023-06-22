@@ -112,6 +112,20 @@ declare module '@mui/material/styles' {
       uhd: number;
     };
 
+    heightBreakpoints: {
+      down: (key: keyof Theme['heightBreakpoints']) => string;
+      up: (key: keyof Theme['heightBreakpoints']) => string;
+      between: (start: keyof Theme['heightBreakpoints'], end: keyof Theme['heightBreakpoints']) => string;
+      only: (key: keyof Theme['heightBreakpoints']) => string;
+      height: (key: keyof Theme['heightBreakpoints']) => number;
+      mobile: number,
+      tablet: number,
+      laptop: number,
+      desktop: number,
+      largeDesktop: number,
+      uhd: number,
+    };
+
     mediaQueries: {
       xxs: string;
       xs: string;
@@ -172,6 +186,14 @@ declare module '@mui/material/styles' {
       xl?: number;
       xxl?: number;
       uhd?: number;
+    };
+    heightBreakpoints?: {
+      mobile?: number,
+      tablet?: number,
+      laptop?: number,
+      desktop?: number,
+      largeDesktop?: number,
+      uhd?: number,
     };
     mediaQueries?: Theme['mediaQueries'];
     animations?: Theme['animations'];
@@ -355,6 +377,16 @@ const breakpoints = {
   uhd: 3840,
 };
 
+const heightBreakpoints = {
+  mobile: 480,
+  tablet: 768,
+  laptop: 1024,
+  desktop: 1280,
+  largeDesktop: 1440,
+  uhd: 2160,
+};
+
+
 const mediaQueries = {
   xxs: `@media (min-width: 0px) and (max-width: ${breakpoints.xxs}px)`,
   xs: `@media (min-width: ${breakpoints.xxs + 0.01}px) and (max-width: ${breakpoints.xs}px)`,
@@ -392,6 +424,7 @@ const theme = createTheme({
   typography,
   components,
   breakpoints,
+  heightBreakpoints,
   mediaQueries,
   animations,
 });
