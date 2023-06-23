@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { AppBar as MuiAppBar, Box, styled } from '@mui/material';
 import { Link } from 'react-router-dom';
 import NavbarButton from './NavbarButton';

@@ -1,90 +1,46 @@
 [
   {
-    "name": "Jane Smith",
-    "designation": "CTO",
-    "imageURL": "https://images.unsplash.com/photo-1628107861770-88bb123e5388?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1996&q=80",
+    "name": "Prakash Mandal",
+    "designation": "Director, CEO",
+    "imageURL": "/images/leaders/Prakash_Avatars.webp",
     "socialHandles": {
-      "facebook": "janesmith_facebook",
-      "twitter": "janesmith_twitter",
-      "youtube": "janesmith_youtube",
-      "instagram": "janesmith_instagram"
+      "facebook": "https://www.facebook.com/Prakash.Mandal22",
+      "twitter": "https://twitter.com/PrakashBigBrain",
+      "linkedin": "https://www.linkedin.com/in/prakash-mandal-89a04b7b",
+      "instagram": "https://www.instagram.com/prakash.mandal22"
     }
   },
   {
-    "name": "Michael Johnson",
-    "designation": "CFO",
-    "imageURL": "https://images.unsplash.com/photo-1558440762-817cf5f0dbd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    "name": "Sanchayan Bhunia",
+    "designation": "President",
+    "imageURL": "/images/leaders/Sanchayan_Avatars.webp",
     "socialHandles": {
-      "facebook": "michaeljohnson_facebook",
-      "twitter": "michaeljohnson_twitter",
-      "youtube": "michaeljohnson_youtube",
-      "instagram": "michaeljohnson_instagram"
+      "facebook": "https://www.facebook.com/sanchayan.bhunia.1",
+      "twitter": "https://twitter.com/Sanchayan_Bh",
+      "linkedin": "https://www.linkedin.com/in/sanchayan-bhunia",
+      "instagram": "https://www.instagram.com/sanchayan_bhunia"
     }
   },
   {
-    "name": "Mary Johnson",
-    "designation": "CMO",
-    "imageURL": "https://images.unsplash.com/photo-1684272672218-49205e315a03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    "name": "Shashi Bhushan",
+    "designation": "CoS&P",
+    "imageURL": "/images/leaders/Shashi_Avatars.webp",
     "socialHandles": {
-      "facebook": "maryjohnson_facebook",
-      "twitter": "maryjohnson_twitter",
-      "youtube": "maryjohnson_youtube",
-      "instagram": "maryjohnson_instagram"
+      "facebook": "https://www.facebook.com/shashi.b.prasad.10",
+      "twitter": "https://mobile.twitter.com/ShashiB09187374",
+      "linkedin": "https://www.linkedin.com/in/sbp-4a06371a0",
+      "instagram": "https://www.instagram.com/chintu_prd"
     }
   },
   {
-    "name": "Jennifer Lee",
-    "designation": "COO",
-    "imageURL": "https://images.unsplash.com/photo-1520604049744-5501828d30bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80",
-    "socialHandles": {
-      "facebook": "jenniferlee_facebook",
-      "twitter": "jenniferlee_twitter",
-      "youtube": "jenniferlee_youtube",
-      "instagram": "jenniferlee_instagram"
-    }
-  },
-  {
-    "name": "Emily Wilson",
-    "designation": "CIO",
-    "imageURL": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    "socialHandles": {
-      "facebook": "emilywilson_facebook",
-      "twitter": "emilywilson_twitter",
-      "youtube": "emilywilson_youtube",
-      "instagram": "emilywilson_instagram"
-    }
-  },
-  {
-    "name": "John Doe",
-    "designation": "CEO",
-    "imageURL": "https://images.unsplash.com/photo-1524666041070-9d87656c25bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-    "socialHandles": {
-      "facebook": "johndoe_facebook",
-      "twitter": "johndoe_twitter",
-      "youtube": "johndoe_youtube",
-      "instagram": "johndoe_instagram"
-    }
-  },
-  {
-    "name": "Jessica Davis",
+    "name": "Saurav Siddhartha",
     "designation": "CSO",
-    "imageURL": "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1061&q=80",
+    "imageURL": "/images/leaders/Saurav_Avatars.webp",
     "socialHandles": {
-      "facebook": "jessicadavis_facebook",
-      "twitter": "jessicadavis_twitter",
-      "youtube": "jessicadavis_youtube",
-      "instagram": "jessicadavis_instagram"
-    }
-  },
-  {
-    "name": "Sarah Anderson",
-    "designation": "CDO",
-    "imageURL": "https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1944&q=80",
-    "socialHandles": {
-      "facebook": "sarahanderson_facebook",
-      "twitter": "sarahanderson_twitter",
-      "youtube": "sarahanderson_youtube",
-      "instagram": "sarahanderson_instagram"
+      "facebook": "https://www.facebook.com/saurav.siddhartha",
+      "twitter": "https://twitter.com/ssiddhartha93",
+      "linkedin": "https://www.linkedin.com/in/sbp-4a06371a0",
+      "instagram": "https://www.instagram.com/sauravsiddhartha"
     }
   }
 ]

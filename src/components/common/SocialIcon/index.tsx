@@ -13,13 +13,21 @@ export const SocialIcon = styled('a')<SocialIconProps>(({ theme }) => ({
     duration: theme.transitions.duration.standard,
   }),
   filter: theme.grayScales.g_100,
-  
-  "&:hover": {
-    filter: theme.grayScales.g_0,
-  },
 
   "& svg": {
     height: theme.customSizes.socialIcon,
     width: theme.customSizes.socialIcon,
+    transition: theme.transitions.create("transform", {
+      duration: theme.transitions.duration.short,
+    }),
   },
+  
+  "&:hover": {
+    filter: theme.grayScales.g_0,
+
+    "& svg": {
+      transform: "scale(1.1)",
+    },
+  },
+
 }));
