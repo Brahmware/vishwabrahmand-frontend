@@ -1,6 +1,6 @@
 import { Box, IconButton, styled, useTheme } from '@mui/material';
 import { BoxProps } from '@mui/system';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import NavbarButton from './NavbarButton';
 import { Spin as HamburgerIcon } from 'hamburger-react';
 import { useWindowHeight } from '../../utils/useWindowHeight';
@@ -67,7 +67,7 @@ const HamburgerMenu = (
   {
     open,
     setOpen,
-  } : {
+  }: {
     open: boolean;
     setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   }

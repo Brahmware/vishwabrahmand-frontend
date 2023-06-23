@@ -208,7 +208,7 @@ const customSizes = {
   sectionTitleMobile: '2.5em',
   paragraphTitle: '1.125em',
   paragraphBody: '0.75em',
-  socialIcon: '1em',
+  socialIcon: '1.125em',
   leaderCard: '10em',
   borderRadius: '0.33em',
   skeletonTextHeight: '1em',

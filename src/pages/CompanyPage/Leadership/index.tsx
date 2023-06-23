@@ -1,14 +1,9 @@
 import { useEffect, useState } from "react";
-import { Box, Card, CardContent, CardMedia, Link, Typography, styled, Skeleton, useTheme } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useTheme, CardMediaProps } from "@mui/material";
 import Section, { SectionTitle } from "../../../components/common/section";
-import { FacebookIcon, TwitterIcon, YoutubeIcon, InstagramIcon } from "../../../Assets/Logo/Icons";
+import { FacebookIcon, TwitterIcon, LinkedinIcon, InstagramIcon } from "../../../Assets/Logo/Icons";
 import { Leaders, companyPageData } from "../../../__mocks__/pages/companypage";
 import { SocialIcon } from "../../../components/common/SocialIcon";
-
-type CardMediaProps = {
-  image: string;
-  alt: string;
-};
 
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
@@ -18,12 +13,23 @@ const SectionContentWrapper = styled(Box)(({ theme }) => ({
   justifyItems: "space-between",
 }));
 
-const LeaderCard = styled(Card)({
+const LeaderCard = styled(Card)(({ theme }) => ({
   maxWidth: "100%",
   height: "100%",
   display: "flex",
   flexDirection: "column",
-});
+
+  '& img': {
+    transition: "filter, transform 0.3s ease-in",
+  },
+
+  "&:hover": {
+    '& img': {
+      filter: "none",
+      transform: "scale(1.05)",
+    },
+  },
+}));
 
 const LeaderCardContent = styled(CardContent)(({ theme }) => ({
   padding: theme.customSpaces.md,
@@ -33,18 +39,26 @@ const LeaderCardContent = styled(CardContent)(({ theme }) => ({
   justifyContent: "space-between",
 }));
 
-const LeaderCardMedia = styled(
-  ({ ...props }: CardMediaProps) => <CardMedia component="img" {...props} />
-)(({ theme }) => ({
+interface LeaderCardMediaProps extends CardMediaProps {
+  component?: React.ElementType;
+  alt: string;
+  src: string;
+}
+
+const LeaderCardMedia = styled(CardMedia)<LeaderCardMediaProps>(({ theme }) => ({
   width: "100%",
   aspectRatio: "1/1",
-  borderRadius: theme.customSizes.borderRadius,
-  marginBottom: theme.customSpaces.xs,
   filter: "grayscale(100%)",
-  transition: "filter 0.3s ease-in-out",
-  "&:hover": {
-    filter: "none",
-  },
+}));
+
+const LeaderCardMediaImageWrapper = styled(Box)(({ theme }) => ({
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: theme.customSizes.borderRadius,
+  overflow: "hidden",
 }));
 
 const InformationWrapper = styled(Box)(({ theme }) => ({
@@ -156,7 +170,13 @@ const LeadershipSection = () => {
         <SectionContentWrapper>
           {leadersData.map((leader, index) => (
             <LeaderCard key={index} elevation={0}>
-              <LeaderCardMedia image={leader.imageURL} alt={leader.name} />
+              <LeaderCardMediaImageWrapper>
+                <LeaderCardMedia
+                  component="img"
+                  src={leader.imageURL}
+                  alt={leader.name}
+                />
+              </LeaderCardMediaImageWrapper>
               <LeaderCardContent>
                 <LeaderName> {leader.name} </LeaderName>
                 <LeaderDesignation> {leader.designation} </LeaderDesignation>
@@ -177,11 +197,11 @@ const LeadershipSection = () => {
                       <TwitterIcon />
                     </SocialIcon>
                     <SocialIcon
-                      href={leader.socialHandles.youtube}
+                      href={leader.socialHandles.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <YoutubeIcon />
+                      <LinkedinIcon />
                     </SocialIcon>
                     <SocialIcon
                       href={leader.socialHandles.instagram}

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Box, Card, CardContent, CardMedia, Link, Typography, styled, Skeleton, useTheme } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useTheme } from "@mui/material";
 import Section, { SectionTitle } from "../../../components/common/section";
 import { companyPageData, Allies } from "../../../__mocks__/pages/companypage";
-import { FacebookIcon, TwitterIcon, YoutubeIcon, InstagramIcon } from "../../../Assets/Logo/Icons";
+import { FacebookIcon, TwitterIcon, LinkedinIcon, InstagramIcon } from "../../../Assets/Logo/Icons";
 import { SocialIcon } from "../../../components/common/SocialIcon";
 
 type CardMediaProps = {
@@ -183,11 +183,11 @@ const AlliesSection = () => {
                       <TwitterIcon />
                     </SocialIcon>
                     <SocialIcon
-                      href={brand.socialHandles.youtube}
+                      href={brand.socialHandles.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <YoutubeIcon />
+                      <LinkedinIcon />
                     </SocialIcon>
                     <SocialIcon
                       href={brand.socialHandles.instagram}

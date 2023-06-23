@@ -25,16 +25,16 @@ const PressPageWrapper = styled(Box)<PressPageWrapperProps>(({ theme, containerm
   justifyContent: 'center',
   gap: theme.customSpaces.xl,
 
-  '& .infinite-scroll-component': {
+  /* '& .infinite-scroll-component': {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     gap: theme.customSpaces.md,
-  },
+  }, */
 }));
 
-const NewsCards = styled(Box)(({ theme }) => ({
+const NewsCardsPlaceholder = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
   padding: 0,
   width: '100%',
@@ -44,6 +44,20 @@ const NewsCards = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   gap: theme.customSpaces.md,
 }));
+
+
+const NewsCards = styled(InfiniteScroll)(({ theme }) => ({
+  ...theme.bodyProps,
+  padding: 0,
+  width: '100%',
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: theme.customSpaces.md,
+}));
+
+
 
 const PressPage = () => {
 
@@ -81,7 +95,7 @@ const PressPage = () => {
       if (pressReleases.length > 0) {
         setNewsData((prevNewsData) => [...prevNewsData, ...pressReleases]);
         setPage(nextPage);
-        setHasMore(true); 
+        setHasMore(true);
       } else {
         setHasMore(false);
       }
@@ -97,30 +111,26 @@ const PressPage = () => {
       <Section>
         <SectionTitle>Press Releases</SectionTitle>
         {isLoading && newsData.length === 0 ? (
-          <NewsCards sx={{ pb: theme.customPadding.xxl }}>
+          <NewsCardsPlaceholder sx={{ pb: theme.customPadding.xxl }}>
             {[...Array(6)].map((_, index) => (
               <NewsCardSkeleton key={index} />
             ))}
-          </NewsCards>
+          </NewsCardsPlaceholder>
         ) : (
-          <>
-            <InfiniteScroll
-              dataLength={newsData.length}
-              next={fetchMoreNews}
-              hasMore={hasMore}
-              loader={<LoadingComponent loaderType='box' />}
-              endMessage={<p>No more articles to load</p>}
-              scrollableTarget="root"
-            >
-              <NewsCards>
-                {newsData.map((newsCard, index) => (
-                  <React.Fragment key={index}>
-                    <NewsCardComponent cardData={newsCard} />
-                  </React.Fragment>
-                ))}
-              </NewsCards>
-            </InfiniteScroll>
-          </>
+          <NewsCards
+            dataLength={newsData.length}
+            next={fetchMoreNews}
+            hasMore={hasMore}
+            loader={<LoadingComponent loaderType='box' />}
+            endMessage={<p>No more articles to load</p>}
+            scrollableTarget="root"
+          >
+            {newsData.map((newsCard, index) => (
+              <React.Fragment key={index}>
+                <NewsCardComponent cardData={newsCard} />
+              </React.Fragment>
+            ))}
+          </NewsCards>
         )}
       </Section>
     </PressPageWrapper>

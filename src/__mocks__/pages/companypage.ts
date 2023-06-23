@@ -21,7 +21,7 @@ export type Leader = {
   socialHandles: {
     facebook: string;
     twitter: string;
-    youtube: string;
+    linkedin: string;
     instagram: string;
   };
 };
@@ -35,7 +35,7 @@ export type Ally = {
   socialHandles: {
     facebook: string;
     twitter: string;
-    youtube: string;
+    linkedin: string;
     instagram: string;
   };
 };
@@ -72,7 +72,7 @@ export const companyPageData = {
 
           resolve({ aboutData, leadersData, alliesData, keyDocumentsData });
         }
-      }, 3000); // Simulating a delay of 3 seconds
+      }, 200); // Simulating a delay of 3 seconds
     });
   },
 };
