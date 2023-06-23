@@ -1,10 +1,10 @@
 import { Brand } from '../../__mocks__/pages/brandspage';
-import { Box, Card, CardMedia, Skeleton, Typography, styled, useTheme } from '@mui/material';
+import { Box, Card, CardMedia, CardProps, Skeleton, Typography, styled, useTheme } from '@mui/material';
 import { RightArrowIcon } from '../../Assets/Logo/Icons';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import getBorderBottom from '../../utils/borderBottom';
 
-interface BrandsCardProps {
+interface BrandsCardProps extends CardProps{
   lastcard?: boolean;
   arrowhovered?: boolean;
 };
@@ -40,10 +40,7 @@ const BrandsCard = styled(Card)<BrandsCardProps>(({ theme, lastcard, arrowhovere
 
 }));
 
-interface ArrowLinkProps {
-  href?: string;
-  target?: string;
-  rel?: string;
+interface ArrowLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   arrowhovered?: boolean;
 }
 
@@ -174,7 +171,8 @@ const BrandCard = ({
         image={brandData.image}
         title={brandData.name}
       >
-        <Skeleton variant={'rectangular'} height={'10em'} />
+        {/* If image is not available, show skeleton */}
+        <Skeleton variant={'rectangular'} height={'10em'} /> 
       </BrandLogo>
       <BrandDescriptionWrapper>
         <BrandName
