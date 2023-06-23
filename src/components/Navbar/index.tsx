@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import NavbarButton from './NavbarButton';
 import Logo from '../../Assets/Logo';
 import HamburgerMenu from './HamburgerMenu';
+import useIsScrolled from '../../utils/useIsScrolled';
 
 const AppBar = styled(MuiAppBar)(({ theme }) => ({
   justifyContent: 'center',
@@ -42,27 +43,8 @@ export const NavPanel = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const contentWrapper = document.getElementById('root');
-      if (contentWrapper) {
-        setIsScrolled(contentWrapper.scrollTop > 1);
-      }
-    };
-
-    const contentWrapper = document.getElementById('root');
-    if (contentWrapper) {
-      contentWrapper.addEventListener('scroll', handleScroll);
-    }
-
-    return () => {
-      if (contentWrapper) {
-        contentWrapper.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, []);
+  
+  const isScrolled = useIsScrolled();
 
   return (
     <AppBar className={isScrolled ? 'scrolled noselect' : 'noselect'}>
