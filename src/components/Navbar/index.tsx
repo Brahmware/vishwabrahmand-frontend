@@ -45,11 +45,15 @@ export const NavPanel = styled(Box)(({ theme }) => ({
 const Navbar = () => {
   
   const isScrolled = useIsScrolled();
+  const [open, setOpen] = useState(false);
 
   return (
     <AppBar className={isScrolled ? 'scrolled noselect' : 'noselect'}>
       <ThemedToolbar>
-        <StyledLink to="/">
+        <StyledLink 
+          to="/"
+          onClick={() => setOpen(!open)}
+        >
           <Logo />
         </StyledLink>
         <NavPanel className="nav__panel">
@@ -57,7 +61,7 @@ const Navbar = () => {
           <NavbarButton to="/brands">Brands</NavbarButton>
           <NavbarButton to="/press">Press</NavbarButton>
         </NavPanel>
-        <HamburgerMenu />
+        <HamburgerMenu open={open} setOpen={setOpen} />
       </ThemedToolbar>
     </AppBar>
   );

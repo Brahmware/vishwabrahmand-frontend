@@ -13,7 +13,7 @@ const useRotate = (options: UseRotationOptions = {}) => {
     const handleScroll = (event: WheelEvent) => {
       const scrollDelta = event.deltaY;
       const rotationDelta = scrollDelta / rotationSensitivity;
-      setRotation((prevRotation) => prevRotation + rotationDelta);
+      setRotation((prevRotation) => prevRotation - rotationDelta);
     };
 
     const handleTouchMove = (event: TouchEvent) => {
@@ -26,13 +26,21 @@ const useRotate = (options: UseRotationOptions = {}) => {
 
     const handleMouseDown = (event: MouseEvent) => {
       event.preventDefault();
+      const initialX = event.clientX;
       const initialY = event.clientY;
+      const isTopHalf = initialY < window.innerHeight / 2;
+      const isLeftHalf = initialX < window.innerWidth / 2;
+      const directionX = isTopHalf ? 1 : -1;
+      const directionY = isLeftHalf ? -1 : 1;
 
       const handleMouseMove = (event: MouseEvent) => {
-        const mouseY = event.clientY;
-        const mouseDelta = mouseY - initialY;
-        const rotationDelta = mouseDelta / rotationSensitivity;
-        setRotation((prevRotation) => prevRotation + rotationDelta);
+        const currentX = event.clientX;
+        const currentY = event.clientY;
+        const deltaX = currentX - initialX;
+        const deltaY = currentY - initialY;
+        const rotationDeltaX = (deltaX / rotationSensitivity) * directionX;
+        const rotationDeltaY = (deltaY / rotationSensitivity) * directionY;
+        setRotation((prevRotation) => prevRotation + rotationDeltaX + rotationDeltaY);
       };
 
       const handleMouseUp = () => {

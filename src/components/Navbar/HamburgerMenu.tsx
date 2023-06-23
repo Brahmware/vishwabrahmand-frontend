@@ -63,11 +63,17 @@ const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open, windowheight }
   },
 }));
 
-const HamburgerMenu = () => {
+const HamburgerMenu = (
+  {
+    open,
+    setOpen,
+  } : {
+    open: boolean;
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  }
+) => {
 
   const theme = useTheme();
-
-  const [open, setOpen] = useState(false);
 
   const windowHeight = useWindowHeight();
 
