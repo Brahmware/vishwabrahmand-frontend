@@ -1,11 +1,11 @@
-import { Box, Card, CardMedia, Skeleton, Typography, styled } from "@mui/material";
+import { Box, Card, CardMedia, CardMediaProps, Skeleton, Typography, styled } from "@mui/material";
 import { NewsCard } from "../../__mocks__/pages/presspage";
 import { Link } from "react-router-dom";
 
 const NewsCardWrapper = styled(Card)(({ theme }) => ({
   ...theme.bodyProps,
-  maxWidth: '22em',
-  aspectRatio: '1.125/1',
+  maxWidth: '23.75em',
+  aspectRatio: '16/15',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -28,12 +28,12 @@ const NewsCardWrapper = styled(Card)(({ theme }) => ({
   },
 }));
 
-const NewsImageComponent = styled(CardMedia)<
-  {
-    component: string,
-    alt: string,
-  }
->(({
+interface NewsImageComponentProps extends CardMediaProps {
+  component: string;
+  alt: string;
+};
+
+const NewsImageComponent = styled(CardMedia)<NewsImageComponentProps>(({
   theme
 }) => ({
   ...theme.bodyProps,
@@ -77,6 +77,7 @@ const Headline = styled(Typography)(({ theme }) => ({
   color: theme.customColors.bhasma,
   margin: 0,
   height: theme.customHeights.newsHeadlineHeight,
+  fontSize: theme.customSizes.paragraphBody,
   width: '100%',
   position: 'relative',
   display: 'flex',

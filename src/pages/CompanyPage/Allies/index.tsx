@@ -12,21 +12,25 @@ type CardMediaProps = {
 
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(10em, 1fr))", // Updated property
+  gridTemplateColumns: "repeat(auto-fit, minmax(12em, 1fr))", // Updated property
   gap: theme.customSpaces.md,
   marginTop: theme.customSpaces.md,
   justifyItem: "space-between",
 }));
 
-const AlliesCard = styled(Card)({
+const AlliesCard = styled(Card)(({theme}) => ({
   maxWidth: "100%", // Updated property
   height: "100%",
   display: "flex",
   flexDirection: "column",
-});
+  alignItems: "center",
+  border: `1px solid ${theme.customColors.border}`,
+  minWidth: "200px",
+}));
 
 const BrandCardContent = styled(CardContent)(({ theme }) => ({
   padding: theme.customSpaces.md,
+  paddingTop: 0,
   flex: "1 0 auto",
   display: "flex",
   flexDirection: "column",
@@ -36,14 +40,15 @@ const BrandCardContent = styled(CardContent)(({ theme }) => ({
 const AllyCardMedia = styled(
   ({ ...props }: CardMediaProps) => <CardMedia component="img" {...props} />
 )(({ theme }) => ({
-  width: "100%",
+  width: "60%",
   aspectRatio: "1/1",
   borderRadius: theme.customSizes.borderRadius,
-  marginBottom: theme.customSpaces.xs,
-  filter: "grayscale(100%)",
-  transition: "filter 0.3s ease-in-out",
+  filter: theme.grayScales.g_100,
+  opacity: 0.5,
+  transition: "opacity 0.6s ease 0.3s",
   "&:hover": {
     filter: "none",
+    opacity: 1,
   },
 }));
 
@@ -65,7 +70,7 @@ const AllyName = styled(Typography)(({ theme }) => ({
   fontSize: "1em",
   fontWeight: theme.customFontWeight.semiBold,
   textAlign: "center",
-  height: "3em",
+  height: "2em",
 }));
 
 const AreaOfService = styled(Typography)(({ theme }) => ({

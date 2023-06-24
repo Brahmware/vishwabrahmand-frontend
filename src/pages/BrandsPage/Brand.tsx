@@ -4,7 +4,7 @@ import { RightArrowIcon } from '../../Assets/Logo/Icons';
 import React, { useState } from 'react';
 import getBorderBottom from '../../utils/borderBottom';
 
-interface BrandsCardProps extends CardProps{
+interface BrandsCardProps extends CardProps {
   lastcard?: boolean;
   arrowhovered?: boolean;
 };
@@ -111,7 +111,7 @@ const BrandName = styled(Typography)<BrandNameProps>(({ theme, arrowhovered }) =
 
 const BrandDescription = styled(Typography)(({ theme }) => ({
   fontWeight: theme.customFontWeight.regular,
-  fontSize: '0.75em',
+  fontSize: theme.customSizes.paragraphBody,
   color: theme.customColors.bhasma,
   display: 'block',
   cursor: 'default',
@@ -120,6 +120,14 @@ const BrandDescription = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     textAlign: 'center',
   },
+}));
+
+const BrandLogoWrapper = styled(Box)(({ theme }) => ({
+  width: 'max-content',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  border: `1px solid ${theme.customColors.border}`,
 }));
 
 const BrandLogo = styled(CardMedia)(({ theme }) => ({
@@ -167,13 +175,12 @@ const BrandCard = ({
       lastcard={isLast}
       arrowhovered={isArrowHovered}
     >
-      <BrandLogo
-        image={brandData.image}
-        title={brandData.name}
-      >
-        {/* If image is not available, show skeleton */}
-        <Skeleton variant={'rectangular'} height={'10em'} /> 
-      </BrandLogo>
+      <BrandLogoWrapper>
+        <BrandLogo
+          image={brandData.image}
+          title={brandData.name}
+        />
+      </BrandLogoWrapper>
       <BrandDescriptionWrapper>
         <BrandName
           as='a'
@@ -212,8 +219,8 @@ export const BrandCardSkeleton = ({
 }: {
   isLast?: boolean;
 }) => {
-  
-  const theme = useTheme(); 
+
+  const theme = useTheme();
 
   return (
     <BrandsCard

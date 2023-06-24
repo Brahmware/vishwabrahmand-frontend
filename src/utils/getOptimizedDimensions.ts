@@ -27,8 +27,6 @@ const getOptimizedDimension = (
     maskDimensionsOpt = Math.min(maskDimensions.height, maskDimensions.width);
   }
 
-  console.log(svgDimensions, maskDimensions);
-
   return Math.min(svgDimensionsOpt, maskDimensionsOpt) - offset;
 };
 

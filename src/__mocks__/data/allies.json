@@ -1,8 +1,8 @@
 [
   {
-    "name": "Unreal Engine",
+    "name": "Epic Games",
     "areaOfService": "Game Engine Development",
-    "imageURL": "https://www.svgrepo.com/show/233209/circle-oval.svg",
+    "imageURL": "/images/allies/Epic_Games.svg",
     "socialHandles": {
       "facebook": "janesmith_facebook",
       "twitter": "janesmith_twitter",
@@ -13,7 +13,7 @@
   {
     "name": "DRDO",
     "areaOfService": "Defense Research",
-    "imageURL": "https://www.svgrepo.com/show/233264/circle-oval.svg",
+    "imageURL": "/images/allies/DRDO.svg",
     "socialHandles": {
       "facebook": "michaeljohnson_facebook",
       "twitter": "michaeljohnson_twitter",
@@ -24,7 +24,7 @@
   {
     "name": "Tata Technologies",
     "areaOfService": "Automobile Engineering",
-    "imageURL": "https://www.svgrepo.com/show/233238/circle-oval.svg",
+    "imageURL": "/images/allies/Tata_Technologies.svg",
     "socialHandles": {
       "facebook": "maryjohnson_facebook",
       "twitter": "maryjohnson_twitter",
@@ -33,9 +33,108 @@
     }
   },
   {
-    "name": "Government of India",
-    "areaOfService": "Governance",
-    "imageURL": "https://www.svgrepo.com/show/233238/circle-oval.svg",
+    "name": "Sony",
+    "areaOfService": "Electronics",
+    "imageURL": "/images/allies/Sony.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "linkedin": "maryjohnson_linkedin",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "ISRO",
+    "areaOfService": "Space Research",
+    "imageURL": "/images/allies/ISRO.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "linkedin": "maryjohnson_linkedin",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "Antrix",
+    "areaOfService": "Department of Space",
+    "imageURL": "/images/allies/Antrix.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "linkedin": "maryjohnson_linkedin",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "Jio",
+    "areaOfService": "Tele-Communications",
+    "imageURL": "/images/allies/Jio.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "linkedin": "maryjohnson_linkedin",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "IDFC Bank",
+    "areaOfService": "Banking & Finance",
+    "imageURL": "/images/allies/IDFC_Bank.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "linkedin": "maryjohnson_linkedin",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "Reliance",
+    "areaOfService": "Consumer Industries",
+    "imageURL": "/images/allies/Reliance_Industries.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "linkedin": "maryjohnson_linkedin",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "Razorpay",
+    "areaOfService": "Payments Handling",
+    "imageURL": "/images/allies/Razorpay.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "linkedin": "maryjohnson_linkedin",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "Mahindra",
+    "areaOfService": "Transportation & Aerospace",
+    "imageURL": "/images/allies/Mahindra.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "linkedin": "maryjohnson_linkedin",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "ITC",
+    "areaOfService": "FMCG & IT",
+    "imageURL": "/images/allies/ITC.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "linkedin": "maryjohnson_linkedin",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "IISC",
+    "areaOfService": "Research",
+    "imageURL": "/images/allies/IISC.svg",
     "socialHandles": {
       "facebook": "maryjohnson_facebook",
       "twitter": "maryjohnson_twitter",
