@@ -84,7 +84,7 @@ const BrandsPage = () => {
                   index === Math.min(
                     brandsPerPage,
                     brandsData.slice(startIndex, endIndex).length
-                  ) - 1
+                  ) - 1 ? true : false
                 }
               />
             </React.Fragment>
