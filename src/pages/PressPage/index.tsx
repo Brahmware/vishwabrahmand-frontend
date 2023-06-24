@@ -24,14 +24,6 @@ const PressPageWrapper = styled(Box)<PressPageWrapperProps>(({ theme, containerm
   alignItems: 'start',
   justifyContent: 'center',
   gap: theme.customSpaces.xl,
-
-  /* '& .infinite-scroll-component': {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: theme.customSpaces.md,
-  }, */
 }));
 
 const NewsCardsPlaceholder = styled(Box)(({ theme }) => ({

@@ -2,14 +2,14 @@
   {
     "id": "1",
     "name": "Brahmware",
-    "description": "Brahmware, the digital and information technology wing of Vishwa Brahmand, plays a crucial role in driving innovation and efficiency across all brands and daughter companies within the Vishwa Brahmand ecosystem. With a strong commitment to using technology for the betterment of society, Brahmware creates and maintains unified technologies that enable seamless collaboration and digital advancements. Beyond serving internal stakeholders, Brahmware also develops public products on a non-profit basis, leveraging technology to address societal challenges and foster positive change. Join us as we harness the power of technology to transform the world and create a more inclusive and sustainable future for all.",
-    "image": "https://en.wikipedia.org/static/images/icons/wikipedia.png",
+    "description": "Brahmware, Vishwa Brahmand's digital and information technology wing, is critical in driving innovation and efficiency across all brands and daughter companies within the Vishwa Brahmand ecosystem. Brahmware creates and maintains unified technologies that enable seamless collaboration and digital advancements, with a strong commitment to using technology for the betterment of society. Brahmware, in addition to serving internal stakeholders, creates public products on a non-profit basis, leveraging technology to address societal challenges and foster positive change. Join us as we use technology to transform the world and create a more inclusive and sustainable future for everyone.",
+    "image": "/images/our_brands/Brahmware.svg",
     "website": "https://www.brahmware.com"
   },
   {
     "id": "2",
     "name": "Brahmcast",
-    "description": "Welcome to Brahmcast, the pioneering platform that is set to redefine the landscape of media production. Designed to bring creators, studios, and employers together, Brahmcast provides a dynamic space for individuals and businesses to showcase their talents, collaborate on projects, and unlock unparalleled opportunities. Our cutting-edge technology enables creators to sell their skills, studios to rent out their assets, and employers to connect with top-tier talent. With a strong focus on innovation and community-building, Brahmcast is poised to make India the global hub of media production. Join us on this exciting journey and be a part of the revolution at Brahmcast.",
+    "description": "Welcome to Brahmcast, the groundbreaking platform that is set to reshape the media production landscape. Brahmcast is a dynamic space for individuals and businesses to showcase their talents, collaborate on projects, and unlock unparalleled opportunities. It was created to bring creators, studios, and employers together. Our cutting-edge technology enables creators to sell their expertise, studios to rent out their assets, and employers to find top-tier talent. Brahmcast is poised to make India the global hub of media production, with a strong emphasis on innovation and community-building. Join us on this exciting journey and be a part of the Brahmcast revolution.",
     "image": "https://picsum.photos/200",
     "website": "https://www.brahmcast.com"
   },
@@ -17,27 +17,27 @@
     "id": "3",
     "name": "Indian Media Syndicate",
     "description": "Indian Media Syndicate envisions a new era of scientific storytelling and exploration, unearthing Global history, groundbreaking research, and technological advancements. Our dedication to universal intellect breaks linguistic barriers, fostering a global community fueled by curiosity and innovation. We bridge academia, industry, and the public, showcasing India's scientific contributions. Advanced language processing and translation technologies ensure no brilliant idea is lost. By empowering scientists, researchers, and explorers through our media channels, we reshape the future of scientific media. This is a transformative revolution, to rewrite narratives, and propel India toward a future where science and innovation thrive!",
-    "image": "https://picsum.photos/200",
+    "image": "/images/our_brands/IMS.svg",
     "website": "https://www.indianmediasyndicate.com"
   },
   {
     "id": "4",
     "name": "Asamkhya",
-    "description": "Indian Media Syndicate envisions a new era of scientific storytelling and exploration, unearthing Global history, groundbreaking research, and technological advancements. Our dedication to universal intellect breaks linguistic barriers, fostering a global community fueled by curiosity and innovation. We bridge academia, industry, and the public, showcasing India's scientific contributions. Advanced language processing and translation technologies ensure no brilliant idea is lost. By empowering scientists, researchers, and explorers through our media channels, we reshape the future of scientific media. This is a transformative revolution, to rewrite narratives, and propel India toward a future where science and innovation thrive!",
-    "image": "https://picsum.photos/200",
+    "description": "Our pioneering educational organisation believes in the power of “Asamkhya”, or the concept of the uncountable. We specialise in teaching maths and science using this limitless principle as a lens. Asamkhya represents the infinite potential of numbers and scientific phenomena, challenging traditional learning boundaries. We hope to inspire students to explore the infinite depths of knowledge through our dedicated team of passionate educators. We foster curiosity, critical thinking, and a profound appreciation for the interconnectedness of the universe by delving into mathematical concepts and scientific principles. Join us on an educational journey that embraces the uncountable's limitless possibilities, broadening horizons and unleashing true intellectual growth.",
+    "image": "/images/our_brands/Asamkhya.svg",
     "website": "https://www.asamkhya.org"
   },
   {
     "id": "5",
     "name": "Indus ʘne",
-    "description": "Indian Media Syndicate envisions a new era of scientific storytelling and exploration, unearthing Global history, groundbreaking research, and technological advancements. Our dedication to universal intellect breaks linguistic barriers, fostering a global community fueled by curiosity and innovation. We bridge academia, industry, and the public, showcasing India's scientific contributions. Advanced language processing and translation technologies ensure no brilliant idea is lost. By empowering scientists, researchers, and explorers through our media channels, we reshape the future of scientific media. This is a transformative revolution, to rewrite narratives, and propel India toward a future where science and innovation thrive!",
+    "description": "Indus.one celebrates collective intelligence by creating a platform for interaction, cooperation, and constructive societal transformation. With diverse features, users can share research, exchange ideas, and discuss topics like climate action, education, and sustainability. Our peer-to-peer model encourages problem-solving by linking people with common interests. Using our user-friendly interface, you can create events, mobilise audiences, and fund jumpstart initiatives. Indus.one is a change agent who bridges the gap between problems and answers. Join our community, where ideas bloom, collaboration flourishes, and breakthrough solutions emerge. Let us work together to create a brighter future.",
     "image": "https://picsum.photos/200",
     "website": "https://www.indus.one"
   },
   {
     "id": "6",
     "name": "Indotalia",
-    "description": "Indian Media Syndicate envisions a new era of scientific storytelling and exploration, unearthing Global history, groundbreaking research, and technological advancements. Our dedication to universal intellect breaks linguistic barriers, fostering a global community fueled by curiosity and innovation. We bridge academia, industry, and the public, showcasing India's scientific contributions. Advanced language processing and translation technologies ensure no brilliant idea is lost. By empowering scientists, researchers, and explorers through our media channels, we reshape the future of scientific media. This is a transformative revolution, to rewrite narratives, and propel India toward a future where science and innovation thrive!",
+    "description": "Indotalia is a dynamic company dedicated to the development and maintenance of investment tourism in India. Indotalia provides a unique blend of business opportunities and cultural experiences, opening the door to India's vast investment potential. Indotalia aims to attract global investors and foster fruitful partnerships by highlighting India's rich heritage, diverse sectors, and investment-friendly environment. Indotalia provides a platform for international investors to explore India's vibrant markets and unlock its vast potential through curated tours, immersive experiences, and expert guidance. Join us on this exciting journey as we pave the way for Indian investment tourism and economic growth.",
     "image": "https://picsum.photos/200",
     "website": "https://www.indotalia.com"
   }
