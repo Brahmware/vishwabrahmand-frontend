@@ -83,6 +83,7 @@ declare module '@mui/material/styles' {
     textSelectionVarient: {
       varient_bhashma_on_white: object,
       varient_matmaila_on_bhashma: object,
+      varient_rakthalal_on_white: object,
     };
 
     typography: {
@@ -332,6 +333,12 @@ const textSelectionVarient = {
     '&::selection': {
       background: customColors.bhasma,
       color: customColors.matmaila
+    }
+  },
+  varient_rakthalal_on_white: {
+    '&::selection': {
+      background: customColors.rakthalal,
+      color: customColors.white
     }
   },
 }

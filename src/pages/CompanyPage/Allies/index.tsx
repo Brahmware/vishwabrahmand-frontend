@@ -74,6 +74,7 @@ const AllyName = styled(Typography)(({ theme }) => ({
 }));
 
 const AreaOfService = styled(Typography)(({ theme }) => ({
+  ...theme.textSelectionVarient.varient_rakthalal_on_white,
   fontSize: "0.65em",
   textAlign: "center",
   fontWeight: theme.customFontWeight.medium,
