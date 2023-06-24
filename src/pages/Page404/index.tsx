@@ -1,5 +1,5 @@
 import { Box, BoxProps, Typography, styled } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { Link } from 'react-router-dom';
 import { SectionTitle } from '../../components/common/section';
@@ -79,21 +79,79 @@ const ArrowIcon = styled(RightArrowIconThick)(({ theme }) => ({
 const Page404: React.FC = () => {
 
   useAddRootClass('page-404');
+  
+  const [text404, setText404] = useState('');
+  const [textLink, setTextLink] = useState('');
+  
+  useEffect(() => {
+    const characters = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890-=+<>,./?[{()}]!@#$%^&*~`\\|'.split('');
 
-  const characters = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890-=+<>,./?[{()}]!@#$%^&*~`\\|'.split('');
+    const setCharAt = (str: string, index: number, chr: string) => {
+      if (index > str.length - 1) return str;
+      return str.substr(0, index) + chr + str.substr(index + 1);
+    };
+    
+    
+    const string404 = 'Page not found.'; // Replace with your actual 404 text
+    const stringLink = 'Go to Home Page'; // Replace with your actual link text
+    const total404 = string404.length;
+    const totalLink = stringLink.length;
 
-  const string404 = 'Page not found.'; // Replace with your actual 404 text
-  const stringLink = 'Go to Home Page'; // Replace with your actual link text
+    let progress404 = 0;
+    let progressLink = 0;
 
-  const scrambled404 = useTextScrambler(string404, characters, 1000 / 60);
-  const scrambledLink = useTextScrambler(stringLink, characters, 1000 / 60);
+    const scrambleInterval = setInterval(() => {
+      let scrambled404 = string404;
+      let scrambledLink = stringLink;
+
+      for (let i = 0; i < total404; i++) {
+        if (i >= progress404) {
+          scrambled404 = setCharAt(
+            scrambled404,
+            i,
+            characters[Math.round(Math.random() * (characters.length - 1))]
+          );
+        }
+      }
+
+      for (let i = 0; i < totalLink; i++) {
+        if (i >= progressLink) {
+          scrambledLink = setCharAt(
+            scrambledLink,
+            i,
+            characters[Math.round(Math.random() * (characters.length - 1))]
+          );
+        }
+      }
+
+      setText404(scrambled404);
+      setTextLink(scrambledLink);
+    }, 1000 / 60);
+
+    setTimeout(() => {
+      const revealInterval = setInterval(() => {
+        if (progress404 < total404) {
+          progress404++;
+        } else if (progressLink < totalLink) {
+          progressLink++;
+        } else {
+          clearInterval(revealInterval);
+          clearInterval(scrambleInterval);
+        }
+      }, 50);
+    }, 1000);
+
+    return () => {
+      clearInterval(scrambleInterval);
+    };
+  }, []);
 
   return (
     <Page404Wrapper containerheight={useContainerMinHeight()}>
       <Image404 className='noselect'>404</Image404>
-      <SectionTitle>{scrambled404}</SectionTitle>
+      <SectionTitle>{text404}</SectionTitle>
       <ArrowLink to="/" replace>
-        {scrambledLink}
+        {textLink}
         <ArrowIcon />
       </ArrowLink>
     </Page404Wrapper>

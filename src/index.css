@@ -23,7 +23,8 @@ body{
 }
 
 .home-page,
-.page-404 {
+.page-404,
+.news-article {
   padding: 0 var(--scroll-width-open) !important;
 }
 
