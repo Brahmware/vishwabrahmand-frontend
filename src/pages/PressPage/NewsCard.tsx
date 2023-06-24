@@ -66,6 +66,7 @@ const NewsTextComponent = styled(Box)(({ theme }) => ({
 }));
 
 const PublicationDate = styled(Typography)(({ theme }) => ({
+  ...theme.textSelectionVarient.varient_rakthalal_on_white,
   ...theme.typography.body2,
   color: theme.customColors.rakthalal,
   width: '100%',

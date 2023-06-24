@@ -44,7 +44,7 @@ interface ArrowLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   arrowhovered?: boolean;
 }
 
-const ArrowLink = styled('a')<ArrowLinkProps>(({ theme, arrowhovered }) => ({
+export const ArrowLink = styled('a')<ArrowLinkProps>(({ theme, arrowhovered }) => ({
   padding: theme.customSpaces.md,
   color: theme.customColors.rakthalal,
   display: 'flex',
@@ -70,7 +70,7 @@ const ArrowLink = styled('a')<ArrowLinkProps>(({ theme, arrowhovered }) => ({
   },
 }));
 
-const ArrowIcon = styled(RightArrowIcon)(({ theme }) => ({
+export const ArrowIcon = styled(RightArrowIcon)(({ theme }) => ({
   color: theme.customColors.rakthalal,
   width: '2.25em',
   marginLeft: theme.customSpaces.xs,
@@ -96,6 +96,7 @@ interface BrandNameProps {
 }
 
 const BrandName = styled(Typography)<BrandNameProps>(({ theme, arrowhovered }) => ({
+  ...theme.textSelectionVarient.varient_rakthalal_on_white,
   fontWeight: theme.customFontWeight.semiBold,
   fontSize: '1.125em',
   transition: 'color 0.3s ease-in-out',

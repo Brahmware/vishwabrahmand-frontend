@@ -12,9 +12,11 @@ const SectionContentWrapper = styled('ul')(({ theme }) => ({
   color: theme.customColors.rakthalal,
   textDecoration: "underline",
   fontWeight: theme.customFontWeight.medium,
+  
 }));
 
 const DocumentLink = styled('a')(({ theme }) => ({
+  ...theme.textSelectionVarient.varient_rakthalal_on_white,
   color: theme.customColors.rakthalal,
 }));
 

@@ -83,6 +83,7 @@ const LeaderName = styled(Typography)(({ theme }) => ({
 }));
 
 const LeaderDesignation = styled(Typography)(({ theme }) => ({
+  ...theme.textSelectionVarient.varient_rakthalal_on_white,
   fontSize: "0.65em",
   textAlign: "center",
   fontWeight: theme.customFontWeight.medium,
