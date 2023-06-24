@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { SectionTitle } from '../../components/common/section';
 import useTextScrambler from '../../utils/useTextScrambler';
 import { RightArrowIconThick } from '../../Assets/Logo/Icons';
+import { useAddRootClass } from '../../utils/useAddRootClass';
 
 interface Page404WrapperProps extends BoxProps {
   containerheight?: number;
@@ -76,6 +77,9 @@ const ArrowIcon = styled(RightArrowIconThick)(({ theme }) => ({
 }));
 
 const Page404: React.FC = () => {
+
+  useAddRootClass('page-404');
+
   const characters = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890-=+<>,./?[{()}]!@#$%^&*~`\\|'.split('');
 
   const string404 = 'Page not found.'; // Replace with your actual 404 text
