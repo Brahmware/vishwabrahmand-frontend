@@ -1,4 +1,4 @@
-import { Box, BoxProps, Card, Typography, styled } from '@mui/material';
+import { Box, BoxProps, Typography, styled } from '@mui/material';
 import React from 'react';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { Link } from 'react-router-dom';
