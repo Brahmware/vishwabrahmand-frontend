@@ -3,6 +3,7 @@ import { useEffect, useRef, useCallback } from 'react';
 
 const Indicator = styled('div')(({ theme }) => ({
   position: 'fixed',
+  zIndex: 9999,
   width: '1em',
   height: '1em',
   borderRadius: '50%',

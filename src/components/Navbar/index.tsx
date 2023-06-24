@@ -10,9 +10,13 @@ const AppBar = styled(MuiAppBar)(({ theme }) => ({
   justifyContent: 'center',
   height: theme.customHeights.navBarHeight,
   position: 'sticky',
-  borderBottom: `1px solid ${theme.customColors.lightBorder}`,
+  borderBottom: `1px solid rgba(0, 0, 0, 0.0125)`,
   transition: 'border-color 0.3s ease',
   zIndex: 5,
+  
+  '&.scrolled': {
+    borderBottom: `1px solid ${theme.customColors.lightBorder}`,
+  },
 
   [theme.breakpoints.down('md')]: {
     margin: 0,
@@ -48,7 +52,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar className={isScrolled ? 'scrolled noselect' : 'noselect'}>
+    <AppBar className={`noselect ${isScrolled ? 'scrolled' : ''}`}>
       <ThemedToolbar>
         <StyledLink 
           to="/"

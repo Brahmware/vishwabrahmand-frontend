@@ -104,7 +104,7 @@ const PressPage = () => {
         <SectionTitle>Press Releases</SectionTitle>
         {isLoading && newsData.length === 0 ? (
           <NewsCardsPlaceholder sx={{ pb: theme.customPadding.xxl }}>
-            {[...Array(6)].map((_, index) => (
+            {[...Array(12)].map((_, index) => (
               <NewsCardSkeleton key={index} />
             ))}
           </NewsCardsPlaceholder>

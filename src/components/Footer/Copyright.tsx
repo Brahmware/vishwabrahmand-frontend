@@ -14,6 +14,10 @@ const CopyrightWrapper = styled(Box)(({ theme }) => ({
 	},
 }));
 
+const NoWrapTypography = styled(Typography)(({ theme }) => ({
+	whiteSpace: 'nowrap',
+}));
+
 const Copyright = () => {
 
 	const theme = useTheme();
@@ -21,8 +25,8 @@ const Copyright = () => {
 
 	return (
 		<CopyrightWrapper>
-			<Typography fontWeight={theme.customFontWeight.regular}>Copyright © {thisYear}</Typography>
-			<Typography className="noselect" fontWeight={theme.customFontWeight.bold}>{COMPANY_NAME}</Typography>
+			<NoWrapTypography fontWeight={theme.customFontWeight.regular}>Copyright © {thisYear}</NoWrapTypography>
+			<NoWrapTypography className="noselect" fontWeight={theme.customFontWeight.bold}>{COMPANY_NAME}</NoWrapTypography>
 		</CopyrightWrapper>
 	)
 }

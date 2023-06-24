@@ -19,7 +19,7 @@ const BrandsCard = styled(Card)<BrandsCardProps>(({ theme, lastcard, arrowhovere
   borderRadius: 0,
   overflow: 'unset',
   transition: 'border 0.3s ease-in-out',
-  borderBottom: lastcard ? 'none' : getBorderBottom(theme, arrowhovered),
+  borderBottom: lastcard ? 'none !important' : getBorderBottom(theme, arrowhovered),
 
   '&:hover': {
     borderBottom: getBorderBottom(theme, true),
@@ -127,6 +127,7 @@ const BrandLogoWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  borderRadius: theme.customSizes.borderRadius,
   border: `1px solid ${theme.customColors.border}`,
 }));
 

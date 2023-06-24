@@ -1,67 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
-interface DragDirection {
-  left: boolean;
-  right: boolean;
-}
-
-const useIsScrolled = (): [boolean, DragDirection] => {
+const useIsScrolled = (): boolean => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [dragDirection, setDragDirection] = useState<DragDirection>({
-    left: false,
-    right: false,
-  });
 
   useEffect(() => {
     const handleScroll = () => {
-      const contentWrapper = document.getElementById('root');
-      if (contentWrapper) {
-        setIsScrolled(contentWrapper.scrollTop > 10);
-      }
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setIsScrolled(scrollTop > 0);
     };
 
-    const handleTouchStart = (event: TouchEvent) => {
-      const touchX = event.touches[0].clientX;
-
-      const handleTouchMove = (event: TouchEvent) => {
-        const currentTouchX = event.touches[0].clientX;
-        const deltaX = currentTouchX - touchX;
-
-        setDragDirection({
-          left: deltaX < 0,
-          right: deltaX > 0,
-        });
-      };
-
-      const handleTouchEnd = () => {
-        setDragDirection({
-          left: false,
-          right: false,
-        });
-
-        window.removeEventListener('touchmove', handleTouchMove);
-        window.removeEventListener('touchend', handleTouchEnd);
-      };
-
-      window.addEventListener('touchmove', handleTouchMove);
-      window.addEventListener('touchend', handleTouchEnd);
-    };
-
-    const contentWrapper = document.getElementById('root');
-    if (contentWrapper) {
-      contentWrapper.addEventListener('scroll', handleScroll);
-      contentWrapper.addEventListener('touchstart', handleTouchStart);
-    }
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      if (contentWrapper) {
-        contentWrapper.removeEventListener('scroll', handleScroll);
-        contentWrapper.removeEventListener('touchstart', handleTouchStart);
-      }
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  return [isScrolled, dragDirection];
+  return isScrolled;
 };
 
 export default useIsScrolled;

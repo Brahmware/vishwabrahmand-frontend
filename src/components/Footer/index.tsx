@@ -38,6 +38,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+  gap: theme.customSpaces.lg,
 
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column-reverse',
