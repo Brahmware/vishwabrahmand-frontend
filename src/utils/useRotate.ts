@@ -11,35 +11,60 @@ const useRotate = (options: UseRotationOptions = {}) => {
 
   useEffect(() => {
     const handleScroll = (event: WheelEvent) => {
-      const scrollDelta = event.deltaY;
-      const rotationDelta = scrollDelta / rotationSensitivity;
-      setRotation((prevRotation) => prevRotation - rotationDelta);
+      let scrollDelta = event.deltaY;
+      let rotationDelta = scrollDelta / rotationSensitivity;
+      let initialX = event.clientX;
+      let isLeftHalf = initialX < window.innerWidth / 2;
+      setRotation((prevRotation) => (isLeftHalf ? prevRotation - rotationDelta : prevRotation + rotationDelta));
     };
 
     const handleTouchMove = (event: TouchEvent) => {
       if (event.touches.length > 0) {
-        const touchDelta = event.touches[0].clientY - event.touches[0].screenY;
-        const rotationDelta = touchDelta / rotationSensitivity;
-        setRotation((prevRotation) => prevRotation + rotationDelta);
+        let initialX = event.touches[0].clientX;
+        let initialY = event.touches[0].clientY;
+
+        const handleTouchMoveInternal = (event: TouchEvent) => {
+          let currentX = event.touches[0].clientX;
+          let currentY = event.touches[0].clientY;
+          let deltaX = currentX - initialX;
+          let deltaY = currentY - initialY;
+          let rotationDeltaX = (deltaX / rotationSensitivity);
+          let rotationDeltaY = (deltaY / rotationSensitivity);
+
+          let isTopHalf = currentY < window.innerHeight / 2;
+          let isLeftHalf = currentX < window.innerWidth / 2;
+          let directionX = isTopHalf ? 1 : -1;
+          let directionY = isLeftHalf ? -1 : 1;
+
+          setRotation((prevRotation) => prevRotation + rotationDeltaX * directionX + rotationDeltaY * directionY);
+        };
+
+        const handleTouchEnd = () => {
+          window.removeEventListener('touchmove', handleTouchMoveInternal);
+          window.removeEventListener('touchend', handleTouchEnd);
+        };
+
+        window.addEventListener('touchmove', handleTouchMoveInternal);
+        window.addEventListener('touchend', handleTouchEnd);
       }
     };
 
     const handleMouseDown = (event: MouseEvent) => {
       event.preventDefault();
-      const initialX = event.clientX;
-      const initialY = event.clientY;
-      const isTopHalf = initialY < window.innerHeight / 2;
-      const isLeftHalf = initialX < window.innerWidth / 2;
-      const directionX = isTopHalf ? 1 : -1;
-      const directionY = isLeftHalf ? -1 : 1;
+      let initialX = event.clientX;
+      let initialY = event.clientY;
+      let isTopHalf = initialY < window.innerHeight / 2;
+      let isLeftHalf = initialX < window.innerWidth / 2;
+      let directionX = isTopHalf ? 1 : -1;
+      let directionY = isLeftHalf ? -1 : 1;
 
       const handleMouseMove = (event: MouseEvent) => {
-        const currentX = event.clientX;
-        const currentY = event.clientY;
-        const deltaX = currentX - initialX;
-        const deltaY = currentY - initialY;
-        const rotationDeltaX = (deltaX / rotationSensitivity) * directionX;
-        const rotationDeltaY = (deltaY / rotationSensitivity) * directionY;
+        let currentX = event.clientX;
+        let currentY = event.clientY;
+        let deltaX = currentX - initialX;
+        let deltaY = currentY - initialY;
+        let rotationDeltaX = (deltaX / rotationSensitivity) * directionX;
+        let rotationDeltaY = (deltaY / rotationSensitivity) * directionY;
         setRotation((prevRotation) => prevRotation + rotationDeltaX + rotationDeltaY);
       };
 
@@ -53,12 +78,12 @@ const useRotate = (options: UseRotationOptions = {}) => {
     };
 
     window.addEventListener('wheel', handleScroll);
-    window.addEventListener('touchmove', handleTouchMove);
+    window.addEventListener('touchstart', handleTouchMove);
     window.addEventListener('mousedown', handleMouseDown);
 
     return () => {
       window.removeEventListener('wheel', handleScroll);
-      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchstart', handleTouchMove);
       window.removeEventListener('mousedown', handleMouseDown);
     };
   }, [rotationSensitivity]);
