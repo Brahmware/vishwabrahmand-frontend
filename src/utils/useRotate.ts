@@ -8,8 +8,12 @@ interface UseRotationOptions {
 const useRotate = (options: UseRotationOptions = {}) => {
   const { rotationSensitivity = config.defaultRotationSensitivity } = options;
   const [rotation, setRotation] = useState(0);
+  const target = document.getElementById('home-page-graphics-wrapper');
 
   useEffect(() => {
+
+    if(!target) return;
+    
     const handleScroll = (event: WheelEvent) => {
       let scrollDelta = event.deltaY;
       let rotationDelta = scrollDelta / rotationSensitivity;
@@ -40,12 +44,12 @@ const useRotate = (options: UseRotationOptions = {}) => {
         };
 
         const handleTouchEnd = () => {
-          window.removeEventListener('touchmove', handleTouchMoveInternal);
-          window.removeEventListener('touchend', handleTouchEnd);
+          target.removeEventListener('touchmove', handleTouchMoveInternal);
+          target.removeEventListener('touchend', handleTouchEnd);
         };
 
-        window.addEventListener('touchmove', handleTouchMoveInternal);
-        window.addEventListener('touchend', handleTouchEnd);
+        target.addEventListener('touchmove', handleTouchMoveInternal);
+        target.addEventListener('touchend', handleTouchEnd);
       }
     };
 
@@ -69,24 +73,24 @@ const useRotate = (options: UseRotationOptions = {}) => {
       };
 
       const handleMouseUp = () => {
-        window.removeEventListener('mousemove', handleMouseMove);
-        window.removeEventListener('mouseup', handleMouseUp);
+        target.removeEventListener('mousemove', handleMouseMove);
+        target.removeEventListener('mouseup', handleMouseUp);
       };
 
-      window.addEventListener('mousemove', handleMouseMove);
-      window.addEventListener('mouseup', handleMouseUp);
+      target.addEventListener('mousemove', handleMouseMove);
+      target.addEventListener('mouseup', handleMouseUp);
     };
 
-    window.addEventListener('wheel', handleScroll);
-    window.addEventListener('touchstart', handleTouchMove);
-    window.addEventListener('mousedown', handleMouseDown);
+    target.addEventListener('wheel', handleScroll);
+    target.addEventListener('touchstart', handleTouchMove);
+    target.addEventListener('mousedown', handleMouseDown);
 
     return () => {
-      window.removeEventListener('wheel', handleScroll);
-      window.removeEventListener('touchstart', handleTouchMove);
-      window.removeEventListener('mousedown', handleMouseDown);
+      target.removeEventListener('wheel', handleScroll);
+      target.removeEventListener('touchstart', handleTouchMove);
+      target.removeEventListener('mousedown', handleMouseDown);
     };
-  }, [rotationSensitivity]);
+  }, [rotationSensitivity, target]);
 
   return rotation;
 };

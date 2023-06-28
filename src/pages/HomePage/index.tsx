@@ -28,7 +28,10 @@ const HomePage = () => {
 
   useAddRootClass('home-page');
   return (
-    <HomePageWrapper containerminheight={useContainerMinHeight()}>
+    <HomePageWrapper
+      id='home-page-graphics-wrapper'
+      containerminheight={useContainerMinHeight()}
+    >
       <MaskingImageComponent />
     </HomePageWrapper>
   );
