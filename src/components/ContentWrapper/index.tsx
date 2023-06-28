@@ -8,8 +8,6 @@ const ContentPositioning = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'start',
   width: '100%',
-  overflow: 'hidden',
-  overflowX: 'hidden',
 
   [theme.breakpoints.down('lg')]: {
     padding: `0 ${theme.customPadding.md}`,

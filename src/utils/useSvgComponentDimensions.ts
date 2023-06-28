@@ -22,7 +22,7 @@ export const useSvgComponentDimensions = (componentId: string) => {
       if (component) {
         setComponentDimensions({
           width: component.getBoundingClientRect().width,
-        height: component.getBoundingClientRect().height,
+          height: component.getBoundingClientRect().height,
         });
       }
     });

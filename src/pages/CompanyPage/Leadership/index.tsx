@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useTheme, CardMediaProps } from "@mui/material";
 import Section, { SectionTitle } from "../../../components/common/section";
-import { FacebookIcon, TwitterIcon, LinkedinIcon, InstagramIcon } from "../../../Assets/Logo/Icons";
 import { Leaders, companyPageData } from "../../../__mocks__/pages/companypage";
-import { SocialIcon } from "../../../components/common/SocialIcon";
+import SocialButtons from "../../../components/common/SocialButtons";
 
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
@@ -182,36 +181,7 @@ const LeadershipSection = () => {
                 <LeaderName> {leader.name} </LeaderName>
                 <LeaderDesignation> {leader.designation} </LeaderDesignation>
                 <InformationWrapper>
-                  <SocialIconWrapper>
-                    <SocialIcon
-                      href={leader.socialHandles.facebook}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FacebookIcon />
-                    </SocialIcon>
-                    <SocialIcon
-                      href={leader.socialHandles.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <TwitterIcon />
-                    </SocialIcon>
-                    <SocialIcon
-                      href={leader.socialHandles.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <LinkedinIcon />
-                    </SocialIcon>
-                    <SocialIcon
-                      href={leader.socialHandles.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <InstagramIcon />
-                    </SocialIcon>
-                  </SocialIconWrapper>
+                  <SocialButtons socialHandles={leader.socialHandles} />
                 </InformationWrapper>
               </LeaderCardContent>
             </LeaderCard>

@@ -24,5 +24,5 @@ export const useContainerMinHeight = () => {
     };
   }, []);
 
-  return containerMinHeight;
+  return containerMinHeight < 320 ? 320 : containerMinHeight;
 }

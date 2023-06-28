@@ -6,6 +6,12 @@ export type NewsCard = {
   pubDate: string;
   image: string;
   newsLink: string;
+  lang?: string;
+  contentLink?: string;
+  downlodable?: {
+    fileName: string;
+    file: string;
+  };
 };
 
 export const pressPageData = {
@@ -26,4 +32,18 @@ export const pressPageData = {
       }, 200);
     });
   },
+};
+
+export const getSpecificPressRelease = async (id: string): Promise<NewsCard> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const pressReleases: NewsCard[] = news;
+      const pressRelease = pressReleases.find((pressRelease) => pressRelease.id === id);
+      if (pressRelease) {
+        resolve(pressRelease);
+      } else {
+        reject(new Error("Failed to fetch about data."));
+      }
+    }, 200);
+  });
 };

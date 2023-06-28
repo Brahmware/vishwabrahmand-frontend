@@ -13,7 +13,6 @@ import NewsArticle from './template/NewsArticle';
 import Page404 from './pages/Page404';
 
 
-
 const Router = () => {
   return (
     <BrowserRouter>

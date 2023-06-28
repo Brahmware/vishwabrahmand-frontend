@@ -1,41 +1,59 @@
-import { Box, BoxProps, styled } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import { useAddRootClass } from '../../utils/useAddRootClass';
-import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
+import ArticleHead from './ArticleHead';
+import ArticleBody from './ArticleBody';
+import RecentArticles from './ArticleBody/RecentArticles';
+import { useParams } from 'react-router-dom';
+import { NewsCard, getSpecificPressRelease } from '../../__mocks__/pages/presspage';
+import { useEffect, useState } from 'react';
 
-interface NewsArticleWrapperProps extends BoxProps {
-  containerheight?: number;
-};
-
-const NewsArticleWrapper = styled(Box)<NewsArticleWrapperProps>(({ theme, containerheight }) => ({
-  position: 'relative',
-  width: '100vw',
-  height: `${containerheight || 1080}px`,
+const NewsArticleWrapper = styled(Box)(({ theme }) => ({
+  ...theme.bodyProps,
+  padding: 0,
+  height: '100%',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  overflow: 'hidden',
-  backgroundColor: theme.palette.background.default,
-  gap: theme.customSpaces.lg,
 
-  [theme.breakpoints.down('md')]: {
-    fontSize: '0.875rem',
-  },
-
-  [theme.breakpoints.down('sm')]: {
-    fontSize: '0.75rem',
+  '& *': {
+    lineHeight: '1.33 !important',
   },
 }));
+
 
 const NewsArticle = () => {
 
   useAddRootClass('news-article');
 
+  const { articleId } = useParams();
+
+  const [article, setArticle] = useState({} as NewsCard);
+
+  useEffect(() => {
+    const getArticle = async () => {
+      try {
+        const article = await getSpecificPressRelease(articleId || '');
+        setArticle(article);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getArticle();
+  }, [articleId]);
+
   return (
-    <NewsArticleWrapper
-      containerheight={useContainerMinHeight()}
-    >
-      NewsArticle
+    <NewsArticleWrapper as='article'>
+      <ArticleHead
+        headline={article.headline}
+        pubDate={article.pubDate}
+        headerImage={article.image}
+      />
+      <ArticleBody 
+        contentLink={article.contentLink} 
+        downlodable={article.downlodable}
+      />
+      <RecentArticles />
     </NewsArticleWrapper>
   )
 }

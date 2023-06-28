@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useTheme } from "@mui/material";
 import Section, { SectionTitle } from "../../../components/common/section";
 import { companyPageData, Allies } from "../../../__mocks__/pages/companypage";
-import { FacebookIcon, TwitterIcon, LinkedinIcon, InstagramIcon } from "../../../Assets/Logo/Icons";
-import { SocialIcon } from "../../../components/common/SocialIcon";
+import SocialButtons, { SocialIconWrapper } from "../../../components/common/SocialButtons";
 
 type CardMediaProps = {
   image: string;
@@ -18,7 +17,7 @@ const SectionContentWrapper = styled(Box)(({ theme }) => ({
   justifyItem: "space-between",
 }));
 
-const AlliesCard = styled(Card)(({theme}) => ({
+const AlliesCard = styled(Card)(({ theme }) => ({
   maxWidth: "100%", // Updated property
   height: "100%",
   display: "flex",
@@ -37,9 +36,11 @@ const BrandCardContent = styled(CardContent)(({ theme }) => ({
   justifyContent: "space-between",
 }));
 
-const AllyCardMedia = styled(
-  ({ ...props }: CardMediaProps) => <CardMedia component="img" {...props} />
-)(({ theme }) => ({
+interface AllyCardMediaProps extends CardMediaProps {
+  component: "img" | "video" | "iframe" | "picture" | "svg";
+}
+
+const AllyCardMedia = styled(CardMedia)<AllyCardMediaProps>(({ theme }) => ({
   width: "60%",
   aspectRatio: "1/1",
   borderRadius: theme.customSizes.borderRadius,
@@ -59,12 +60,6 @@ const InformationWrapper = styled(Box)(({ theme }) => ({
   gap: theme.customSpaces.sm,
 }));
 
-const SocialIconWrapper = styled(Box)(({ theme }) => ({
-  marginTop: theme.customSpaces.sm,
-  display: "flex",
-  justifyContent: "center",
-  gap: theme.customSpaces.md,
-}));
 
 const AllyName = styled(Typography)(({ theme }) => ({
   fontSize: "1em",
@@ -168,41 +163,16 @@ const AlliesSection = () => {
         <SectionContentWrapper>
           {alliesData.map((brand, index) => (
             <AlliesCard key={index} elevation={0}>
-              <AllyCardMedia image={brand.imageURL} alt={brand.name} />
+              <AllyCardMedia
+                component="img"
+                image={brand.imageURL}
+                alt={brand.name}
+              />
               <BrandCardContent>
                 <AllyName> {brand.name} </AllyName>
                 <AreaOfService> {brand.areaOfService} </AreaOfService>
                 <InformationWrapper>
-                <SocialIconWrapper>
-                    <SocialIcon
-                      href={brand.socialHandles.facebook}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FacebookIcon />
-                    </SocialIcon>
-                    <SocialIcon
-                      href={brand.socialHandles.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <TwitterIcon />
-                    </SocialIcon>
-                    <SocialIcon
-                      href={brand.socialHandles.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <LinkedinIcon />
-                    </SocialIcon>
-                    <SocialIcon
-                      href={brand.socialHandles.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <InstagramIcon />
-                    </SocialIcon>
-                  </SocialIconWrapper>
+                  <SocialButtons socialHandles={brand.socialHandles} />
                 </InformationWrapper>
               </BrandCardContent>
             </AlliesCard>

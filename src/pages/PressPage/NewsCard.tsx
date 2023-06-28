@@ -79,6 +79,7 @@ const Headline = styled(Typography)(({ theme }) => ({
   margin: 0,
   height: theme.customHeights.newsHeadlineHeight,
   fontSize: theme.customSizes.paragraphBody,
+  lineHeight: '1.33 !important',
   width: '100%',
   position: 'relative',
   display: 'flex',

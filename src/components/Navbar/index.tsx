@@ -7,20 +7,31 @@ import HamburgerMenu from './HamburgerMenu';
 import useIsScrolled from '../../utils/useIsScrolled';
 
 const AppBar = styled(MuiAppBar)(({ theme }) => ({
+  backgroundColor: 'transparent',
   justifyContent: 'center',
+  alignItems: 'center',
   height: theme.customHeights.navBarHeight,
   position: 'sticky',
-  borderBottom: `1px solid rgba(0, 0, 0, 0.0125)`,
   transition: 'border-color 0.3s ease',
   zIndex: 5,
   
-  '&.scrolled': {
-    borderBottom: `1px solid ${theme.customColors.lightBorder}`,
-  },
-
+  
   [theme.breakpoints.down('md')]: {
     margin: 0,
     padding: `0 ${theme.customPadding.sm}`,
+  },
+}));
+
+const AppbarBackground = styled(Box)(({ theme }) => ({
+  width: '100vw',
+  height: theme.customHeights.navBarHeight,
+  position: 'absolute',
+  zIndex: -1,
+  backgroundColor: theme.customColors.white,
+  borderBottom: `1px solid rgba(0, 0, 0, 0.025)`,
+  transition: 'border-color 0.3s ease',
+  '&.scrolled': {
+    borderBottom: `1px solid ${theme.customColors.lightBorder}`,
   },
 }));
 
@@ -30,6 +41,7 @@ const StyledLink = styled(Link)({
 });
 
 const ThemedToolbar = styled(Box)(({ theme }) => ({
+  width: '100%',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -47,20 +59,24 @@ export const NavPanel = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
-  
+
   const isScrolled = useIsScrolled();
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar className={`noselect ${isScrolled ? 'scrolled' : ''}`}>
+    <AppBar >
+      <AppbarBackground className={`noselect ${isScrolled ? 'scrolled' : ''}`}/>
       <ThemedToolbar>
-        <StyledLink 
+        <StyledLink
           to="/"
           onClick={() => setOpen(!open)}
         >
           <Logo />
         </StyledLink>
-        <NavPanel className="nav__panel">
+        <NavPanel 
+          className="nav__panel"
+          id='nav__panel'
+        >
           <NavbarButton to="/company">Company</NavbarButton>
           <NavbarButton to="/brands">Brands</NavbarButton>
           <NavbarButton to="/press">Press</NavbarButton>
