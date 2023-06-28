@@ -1,6 +1,6 @@
 import { Box, styled, IconButton } from '@mui/material';
 import { FacebookIcon, TwitterIcon, InstagramIcon, WhatsappIcon, ShareIcon } from '../../../../../Assets/Logo/Icons';
-import DialogueBox from './DialogueBox';
+import DialogueBox, { PlatformDetails } from './DialogueBox';
 import { useState } from 'react';
 
 interface SharableButtonContentWrapperProps {
@@ -26,6 +26,8 @@ const SharableButtonContentWrapper = styled(Box)<SharableButtonContentWrapperPro
   },
 }));
 
+
+
 const ShareableButtons: React.FC = () => {
   const handleHover = (event: React.MouseEvent<HTMLButtonElement>) => {
     const target = event.currentTarget;
@@ -33,21 +35,34 @@ const ShareableButtons: React.FC = () => {
   };
 
   const handleMouseOut = (event: React.MouseEvent<HTMLButtonElement>) => {
+    if(open) return;
     const target = event.currentTarget;
     target.classList.add('nohover');
   };
 
   const [open, setOpen] = useState(false);
-  const [shareOnPlatform, setShareOnPlatform] = useState('');
+  const [shareOnPlatform, setShareOnPlatform] = useState({} as PlatformDetails);
 
   const handleClose = () => {
     setOpen(false);
+    const target = document.getElementById(shareOnPlatform.id);
+    if (target) {
+      target.classList.add('nohover');
+    };
   };
 
   const handleMouseClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const target = event.currentTarget;
     const shareOnPlatform = target.getAttribute('data-share-on-platform');
-    setShareOnPlatform(shareOnPlatform || '');
+    if (!shareOnPlatform) return;
+  
+    setShareOnPlatform(
+      {
+        platform: shareOnPlatform,
+        platformIcon: target.children[0] as unknown as JSX.Element,
+        id: target.id
+      }
+    );
     console.log(target.classList);
     setOpen(true);
   };
@@ -55,6 +70,7 @@ const ShareableButtons: React.FC = () => {
   return (
     <SharableButtonContentWrapper>
       <IconButton
+        id='facebook'
         className='nohover'
         color="primary"
         size="medium"
@@ -66,6 +82,7 @@ const ShareableButtons: React.FC = () => {
         <FacebookIcon />
       </IconButton>
       <IconButton
+        id='twitter'
         className='nohover'
         color="primary"
         size="medium"
@@ -77,6 +94,7 @@ const ShareableButtons: React.FC = () => {
         <TwitterIcon />
       </IconButton>
       <IconButton
+        id='whatsapp'
         className='nohover'
         color="primary"
         size="medium"
@@ -88,6 +106,7 @@ const ShareableButtons: React.FC = () => {
         <WhatsappIcon />
       </IconButton>
       <IconButton
+        id='instagram'
         className='nohover'
         color="primary"
         size="medium"
@@ -99,6 +118,7 @@ const ShareableButtons: React.FC = () => {
         <InstagramIcon />
       </IconButton>
       <IconButton
+        id='link-share'
         className='nohover'
         color="primary"
         size="medium"
@@ -112,7 +132,7 @@ const ShareableButtons: React.FC = () => {
       <DialogueBox
         open={open}
         handleClose={handleClose}
-        shareOnPlatform={shareOnPlatform}
+        platformDetails={shareOnPlatform}
       />
     </SharableButtonContentWrapper>
   );

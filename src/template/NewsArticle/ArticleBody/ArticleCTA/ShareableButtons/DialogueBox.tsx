@@ -1,4 +1,11 @@
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, styled } from "@mui/material";
+import { useEffect } from "react";
+
+export interface PlatformDetails {
+  platform: string;
+  platformIcon: JSX.Element;
+  id: string;
+};
 
 const ShareingDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialog-paper': {
@@ -33,13 +40,23 @@ const DialogueBox = (
   {
     open,
     handleClose,
-    shareOnPlatform
+    platformDetails
   }: {
     open: boolean,
     handleClose: () => void,
-    shareOnPlatform: string
+    platformDetails: PlatformDetails
   }
 ) => {
+  const target = document.getElementById(platformDetails.id);
+
+  useEffect(() => {
+    if (open) {
+      if (target) {
+        target.classList.remove('nohover');
+      }
+    }
+  }, [open, platformDetails.id, target]);
+
   return (
     <ShareingDialog
       open={open}
@@ -48,10 +65,10 @@ const DialogueBox = (
       aria-labelledby="sharing-dialog-title"
       aria-describedby="sharing-dialog-description"
     >
-      <DialogueTitleError>Error Sharing on {shareOnPlatform}</DialogueTitleError>
+      <DialogueTitleError>Error Sharing on {platformDetails.platform}</DialogueTitleError>
       <DialogueContentError>
         We sincerely apologize for the inconvenience caused.
-        Please note that sharing on <strong>{shareOnPlatform}</strong> is currently undergoing maintenance.
+        Please note that sharing on <strong>{platformDetails.platform}</strong> is currently undergoing maintenance.
         We are working diligently to resolve the issue and restore full functionality as soon as possible.
         Thank you for your patience and understanding.
       </DialogueContentError>
