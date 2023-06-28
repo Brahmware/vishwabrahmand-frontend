@@ -17,6 +17,11 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
 
   '& h1, & h2, & h3, & h4, & h5, & h6': {
     margin: `${theme.customSpaces.md} 0`,
+
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'left',
+      fontSize: '1.25rem',
+    },
   },
 
   '& p': {
@@ -34,11 +39,13 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
 
   '& .left-aligned-image': {
     float: 'left',
+    maxWidth: '40%',
     padding: `${theme.customPadding.md} ${theme.customPadding.md} ${theme.customPadding.md} 0`,
   },
 
   '& .right-aligned-image': {
     float: 'right',
+    maxWidth: '40%',
     padding: `${theme.customPadding.md} 0 ${theme.customPadding.md} ${theme.customPadding.md}`,
   },
 
@@ -48,10 +55,14 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
     padding: `${theme.customPadding.sm} 0`,
   },
 
-  [theme.breakpoints.down('md')]: {
-    '& img': {
+  [theme.breakpoints.down('sm')]: {
+    '& .left-aligned-image, & .right-aligned-image': {
+      maxWidth: 'unset',
+      width: '100%',
+      display: 'block',
+      margin: 'auto',
       padding: `${theme.customPadding.sm} 0`,
-    },
+    }
   },
 }));
 

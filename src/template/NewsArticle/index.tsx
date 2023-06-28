@@ -2,10 +2,10 @@ import { Box, styled } from '@mui/material';
 import { useAddRootClass } from '../../utils/useAddRootClass';
 import ArticleHead from './ArticleHead';
 import ArticleBody from './ArticleBody';
-import RecentArticles from './ArticleBody/RecentArticles';
 import { useParams } from 'react-router-dom';
 import { NewsCard, getSpecificPressRelease } from '../../__mocks__/pages/presspage';
 import { useEffect, useState } from 'react';
+import RecentArticles from './RecentArticles';
 
 const NewsArticleWrapper = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
@@ -15,6 +15,7 @@ const NewsArticleWrapper = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
+  paddingBottom: theme.customSpaces.xl,
 
   '& *': {
     lineHeight: '1.33 !important',

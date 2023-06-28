@@ -20,7 +20,7 @@ const ArticleBodyWrapper = styled(Box)<ArticleBodyWrapperProps>(({ theme, navpan
   justifyContent: 'space-between',
   margin: 0,
   position: 'relative',
-  gap: theme.customSpaces.lg,
+  gap: theme.customSpaces.md,
 }));
 
 const ArticleBody = (

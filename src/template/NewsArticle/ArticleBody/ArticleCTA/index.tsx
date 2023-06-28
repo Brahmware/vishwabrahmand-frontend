@@ -27,6 +27,19 @@ const ArticleCTABody = styled(Box)<ArticleCTABodyProps>(({ theme, translation = 
   justifyContent: 'center',
   textAlign: 'center',
 
+  [theme.breakpoints.down('md')]: {
+    transform: 'translateY(0)',
+    marginTop: 0,
+    maxWidth: '24em',
+    width: '100%',
+    minWidth: 'unset',
+    justifySelf: 'center',
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    
+  },
+
 }));
 
 

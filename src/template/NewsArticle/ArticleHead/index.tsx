@@ -19,6 +19,10 @@ const NewsHeadlineView = styled(Box)<NewsHeadlineViewProps>(({ theme, containerh
   alignItems: 'center',
   overflowY: 'hidden',
   gap: theme.customSpaces.md,
+
+  [theme.breakpoints.down('md')]: {
+    height: 'calc(100dvh - 4.5em)',
+  },
 }));
 
 interface HeadImageWrapperProps extends BoxProps {
@@ -37,6 +41,10 @@ const HeadImageWrapper = styled(Box)<HeadImageWrapperProps>(({ theme, containerh
   justifyContent: 'end',
   overflowY: 'hidden',
   zIndex: -1,
+
+  [theme.breakpoints.down('md')]: {
+    height: 'calc(100dvh - 4.5em)',
+  },
 }));
 
 interface HeadImageProps extends CardMediaProps {
@@ -71,6 +79,10 @@ const NewsHeadline = styled(Typography)(({ theme }) => ({
   lineHeight: '1.2',
   color: theme.customColors.white,
   zIndex: 1,
+
+  [theme.breakpoints.down('md')]: {
+    fontSize: '2rem',
+  },
 }));
 
 const PublishingDate = styled(Typography)(({ theme }) => ({
