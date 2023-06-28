@@ -65,9 +65,10 @@ const useTextScrambler = (
     return () => {
       clearInterval(scrambleInterval);
     };
+  
+    // eslint-disable-next-line
   }, []);
 
-  // eslint-disable-next-line
   return { text404, textLink, characters };
 };
 

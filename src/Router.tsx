@@ -11,6 +11,7 @@ import CursorLocationProvider from './components/common/cursorLocationProvider';
 import ContentWrapper from './components/ContentWrapper';
 import NewsArticle from './template/NewsArticle';
 import Page404 from './pages/Page404';
+import ScrollBarWrapper from './components/scrollbar';
 
 
 const Router = () => {
@@ -19,18 +20,20 @@ const Router = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <CursorLocationProvider />
-        <Navbar />
-        <ContentWrapper >
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="company" element={<CompanyPage />} />
-            <Route path="brands" element={<BrandsPage />} />
-            <Route path="press" element={<PressPage />} />
-            <Route path="press/:articleId" element={<NewsArticle />} />
-            <Route path="*" element={<Page404 />} />
-          </Routes>
-          <Footer />
-        </ContentWrapper>
+        <ScrollBarWrapper>
+          <Navbar />
+          <ContentWrapper >
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="company" element={<CompanyPage />} />
+              <Route path="brands" element={<BrandsPage />} />
+              <Route path="press" element={<PressPage />} />
+              <Route path="press/:articleId" element={<NewsArticle />} />
+              <Route path="*" element={<Page404 />} />
+            </Routes>
+            <Footer />
+          </ContentWrapper>
+        </ScrollBarWrapper>
       </ThemeProvider>
     </BrowserRouter>
   );

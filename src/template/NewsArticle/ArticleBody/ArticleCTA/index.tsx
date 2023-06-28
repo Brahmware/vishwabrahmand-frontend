@@ -18,7 +18,7 @@ const ArticleCTABody = styled(Box)<ArticleCTABodyProps>(({ theme, translation = 
   left: 0,
   right: 0,
   backgroundColor: '#F6F6F6',
-  transform: `translateY(${Math.min(7.5 * 16, translation)}px)`,
+  transform: `translateY(${Math.min(6.25 * 16, translation)}px)`,
   fontSize: '1em',
 
   display: 'flex',

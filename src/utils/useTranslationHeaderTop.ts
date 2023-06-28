@@ -5,8 +5,12 @@ const useTranslationHeaderTop = (targetElementId: string) => {
   const theme = useTheme();
   const [translation, setTranslation] = useState(0);
   const headerHeight = parseFloat(theme.customSizes.navbar) * 16; // Adjusted for header height
+  const scrollBarWrapper = document.getElementById('scrollbar-component')?.childNodes[0] as HTMLElement;
 
   useEffect(() => {
+
+    if (!scrollBarWrapper) return;
+
     const handleScroll = () => {
       const targetElement = document.getElementById(targetElementId);
       const rect = targetElement?.getBoundingClientRect();
@@ -19,12 +23,12 @@ const useTranslationHeaderTop = (targetElementId: string) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    scrollBarWrapper.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      scrollBarWrapper.removeEventListener('scroll', handleScroll);
     };
-  }, [targetElementId, headerHeight]);
+  }, [targetElementId, headerHeight, scrollBarWrapper]);
 
   return translation;
 };

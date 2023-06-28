@@ -6,7 +6,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* width: 100vw; */
 }
 
 body{
@@ -20,19 +19,13 @@ body{
   --color-slogan: #DDDDDD;
 
   /* difining scroll width */
-  --scroll-width-open: 0.5em;
-  --scroll-width-close: 0.25em;
+  --scroll-width-open: 0;
+  --scroll-width-close: 0;
 }
 
 #root {
-  /* padding-left: var(--scroll-width-open) !important; */
   position: relative;
 }
-
-/* .home-page,
-.page-404 {
-  padding: 0 var(--scroll-width-open) !important;
-} */
 
 * {
   line-height: 1.125 !important;
