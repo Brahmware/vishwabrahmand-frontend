@@ -18,6 +18,7 @@ const HomePageWrapper = styled(Box)<HomePageWrapperProps>(
     gridTemplateRows: 'repeat(12, 1fr)',
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'hidden',
   })
 );
 
