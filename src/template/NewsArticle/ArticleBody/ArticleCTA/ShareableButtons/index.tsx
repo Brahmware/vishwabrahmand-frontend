@@ -1,5 +1,7 @@
 import { Box, styled, IconButton } from '@mui/material';
-import { FacebookIcon, TwitterIcon, InstagramIcon, WhatsappIcon, ShareIcon } from '../../../../Assets/Logo/Icons';
+import { FacebookIcon, TwitterIcon, InstagramIcon, WhatsappIcon, ShareIcon } from '../../../../../Assets/Logo/Icons';
+import DialogueBox from './DialogueBox';
+import { useState } from 'react';
 
 interface SharableButtonContentWrapperProps {
   nohover?: boolean;
@@ -11,7 +13,7 @@ const SharableButtonContentWrapper = styled(Box)<SharableButtonContentWrapperPro
   justifyContent: 'space-evenly',
   width: '100%',
   height: '100%',
-  
+
   '& .nohover svg': {
     '& *': {
       fill: theme.customColors.bhasma,
@@ -35,6 +37,21 @@ const ShareableButtons: React.FC = () => {
     target.classList.add('nohover');
   };
 
+  const [open, setOpen] = useState(false);
+  const [shareOnPlatform, setShareOnPlatform] = useState('');
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleMouseClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const target = event.currentTarget;
+    const shareOnPlatform = target.getAttribute('data-share-on-platform');
+    setShareOnPlatform(shareOnPlatform || '');
+    console.log(target.classList);
+    setOpen(true);
+  };
+
   return (
     <SharableButtonContentWrapper>
       <IconButton
@@ -43,6 +60,8 @@ const ShareableButtons: React.FC = () => {
         size="medium"
         onMouseOver={handleHover}
         onMouseOut={handleMouseOut}
+        onClick={handleMouseClick}
+        data-share-on-platform='Facebook'
       >
         <FacebookIcon />
       </IconButton>
@@ -52,6 +71,8 @@ const ShareableButtons: React.FC = () => {
         size="medium"
         onMouseOver={handleHover}
         onMouseOut={handleMouseOut}
+        onClick={handleMouseClick}
+        data-share-on-platform='Twitter'
       >
         <TwitterIcon />
       </IconButton>
@@ -61,6 +82,8 @@ const ShareableButtons: React.FC = () => {
         size="medium"
         onMouseOver={handleHover}
         onMouseOut={handleMouseOut}
+        onClick={handleMouseClick}
+        data-share-on-platform='Whatsapp'
       >
         <WhatsappIcon />
       </IconButton>
@@ -70,6 +93,8 @@ const ShareableButtons: React.FC = () => {
         size="medium"
         onMouseOver={handleHover}
         onMouseOut={handleMouseOut}
+        onClick={handleMouseClick}
+        data-share-on-platform='Instagram'
       >
         <InstagramIcon />
       </IconButton>
@@ -79,9 +104,16 @@ const ShareableButtons: React.FC = () => {
         size="medium"
         onMouseOver={handleHover}
         onMouseOut={handleMouseOut}
+        onClick={handleMouseClick}
+        data-share-on-platform='Link share'
       >
         <ShareIcon />
       </IconButton>
+      <DialogueBox
+        open={open}
+        handleClose={handleClose}
+        shareOnPlatform={shareOnPlatform}
+      />
     </SharableButtonContentWrapper>
   );
 };
