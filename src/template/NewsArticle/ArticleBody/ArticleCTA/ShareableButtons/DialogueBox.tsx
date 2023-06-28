@@ -1,18 +1,32 @@
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, styled } from "@mui/material";
 
+const ShareingDialog = styled(Dialog)(({ theme }) => ({
+  '& .MuiDialog-paper': {
+    borderRadius: 0,
+  },
+}));
+
 const DialogueTitleError = styled(DialogTitle)(({ theme }) => ({
+  fontSize: '1.5rem',
   fontWeight: theme.customFontWeight.semiBold,
   color: theme.customColors.matmaila,
 }));
 
 const DialogueContentError = styled(DialogContent)(({ theme }) => ({
-  color: theme.customColors.rakthalal,
+  color: theme.customColors.bhasma,
+  fontSize: '0.875rem',
   textAlign: 'justify',
   textAlignLast: 'start',
 
   [theme.breakpoints.down('md')]: {
     textAlign: 'start',
   },
+}));
+
+const DialogueButton = styled(Button)(({ theme }) => ({
+  borderRadius: 0,
+  fontSize: '0.875rem',
+  fontWeight: theme.customFontWeight.regular,
 }));
 
 const DialogueBox = (
@@ -27,7 +41,7 @@ const DialogueBox = (
   }
 ) => {
   return (
-    <Dialog
+    <ShareingDialog
       open={open}
       onClose={handleClose}
       disableScrollLock
@@ -42,9 +56,16 @@ const DialogueBox = (
         Thank you for your patience and understanding.
       </DialogueContentError>
       <DialogActions>
-        <Button onClick={handleClose}>Close</Button>
+        <DialogueButton
+          disableElevation
+          onClick={handleClose}
+          variant="contained"
+          color="secondary"
+        >
+          Close
+        </DialogueButton>
       </DialogActions>
-    </Dialog>
+    </ShareingDialog>
   )
 }
 
