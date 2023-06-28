@@ -21,6 +21,7 @@ const ScrollBarWrapper = (
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  if(theme.breakpoints.md > window.innerWidth) return (<>{children}</>)
 
   return (
     <Scrollbars
