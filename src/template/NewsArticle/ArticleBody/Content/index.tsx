@@ -23,6 +23,15 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
     fontSize: '0.9rem',
   },
 
+  '& #first-paragraph-press-release-content::first-letter': {
+    color: theme.customColors.rakthalal,
+    float: 'left',
+    fontSize: '2.5rem',
+    fontWeight: theme.customFontWeight.bold,
+    lineHeight: '1.33rem',
+    margin: '0.5rem 0.33rem 0.33rem 0',
+  },
+
   [theme.breakpoints.down('md')]: {
     '& img': {
       padding: `${theme.customPadding.sm} 0`,
@@ -52,7 +61,7 @@ const Content = ({ contentLink }: { contentLink?: string }) => {
   const contentRef = useCallback((node: HTMLElement | null): void => {
     if (node !== null && xmlContent) {
       const listOfNodes = node.querySelectorAll('*');
-      // get only the images
+
       const images = Array.from(listOfNodes).filter((node) => node.nodeName === 'IMG');
       images.forEach((image) => {
         const computedStyle = window.getComputedStyle(image);
@@ -69,6 +78,14 @@ const Content = ({ contentLink }: { contentLink?: string }) => {
             break;
         }
       });
+
+      // ad an id to the first paragraph
+
+      const firstParagraph = Array.from(listOfNodes).find((node) => node.nodeName === 'P');
+      if (firstParagraph) {
+        firstParagraph.setAttribute('id', 'first-paragraph-press-release-content');
+      }
+
     }
   }, [xmlContent]);
 
