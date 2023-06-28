@@ -67,7 +67,8 @@ const useTextScrambler = (
     };
   }, []);
 
-  return { text404, textLink };
+  // eslint-disable-next-line
+  return { text404, textLink, characters };
 };
 
 export default useTextScrambler;

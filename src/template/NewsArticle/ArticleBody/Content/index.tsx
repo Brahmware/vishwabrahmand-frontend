@@ -17,6 +17,11 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
 
   '& h1, & h2, & h3, & h4, & h5, & h6': {
     margin: `${theme.customSpaces.md} 0`,
+
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'left',
+      fontSize: '1.25rem',
+    },
   },
 
   '& p': {
@@ -32,10 +37,32 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
     margin: '0.5rem 0.33rem 0.33rem 0',
   },
 
-  [theme.breakpoints.down('md')]: {
-    '& img': {
+  '& .left-aligned-image': {
+    float: 'left',
+    maxWidth: '40%',
+    padding: `${theme.customPadding.md} ${theme.customPadding.md} ${theme.customPadding.md} 0`,
+  },
+
+  '& .right-aligned-image': {
+    float: 'right',
+    maxWidth: '40%',
+    padding: `${theme.customPadding.md} 0 ${theme.customPadding.md} ${theme.customPadding.md}`,
+  },
+
+  '& .center-aligned-image': {
+    display: 'block',
+    margin: 'auto',
+    padding: `${theme.customPadding.sm} 0`,
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    '& .left-aligned-image, & .right-aligned-image': {
+      maxWidth: 'unset',
+      width: '100%',
+      display: 'block',
+      margin: 'auto',
       padding: `${theme.customPadding.sm} 0`,
-    },
+    }
   },
 }));
 
@@ -68,13 +95,13 @@ const Content = ({ contentLink }: { contentLink?: string }) => {
 
         switch (computedStyle.cssFloat) {
           case 'left':
-            image.setAttribute('style', 'margin-right: 2rem; margin-bottom: 2rem; margin-top: 2rem;');
+            image.setAttribute('class', 'left-aligned-image');
             break;
           case 'right':
-            image.setAttribute('style', 'margin-left: 2rem; margin-bottom: 2rem; margin-top: 2rem;');
+            image.setAttribute('class', 'right-aligned-image');
             break;
           default:
-            image.setAttribute('style', 'margin-bottom: 2rem; margin-top: 2rem;');
+            image.setAttribute('class', 'center-aligned-image');
             break;
         }
       });
