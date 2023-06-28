@@ -19,6 +19,7 @@ const NewsHeadlineView = styled(Box)<NewsHeadlineViewProps>(({ theme, containerh
   alignItems: 'center',
   overflowY: 'hidden',
   gap: theme.customSpaces.md,
+  transition: 'height 0.3s ease',
 
   [theme.breakpoints.down('md')]: {
     height: 'calc(100dvh - 4.5em)',
