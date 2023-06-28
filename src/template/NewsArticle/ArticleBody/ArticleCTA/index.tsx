@@ -37,7 +37,7 @@ const ArticleCtaGroup = styled(Box)(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   gap: theme.customSpaces.sm,
-  
+
   '&.downloadable__content': {
     padding: `${theme.customSpaces.md} ${theme.customSpaces.lg}`,
   },
@@ -58,7 +58,7 @@ const ArticleCtaDivider = styled(Divider)(({ theme }) => ({
 const ArticleCTA = (
   {
     downlodable
-  } : {
+  }: {
     downlodable?: NewsCard['downlodable'];
   }
 ) => {
@@ -66,23 +66,23 @@ const ArticleCTA = (
 
   return (
     <ArticleCTABody translation={translation}>
+      <ArticleCtaGroup className='shareable__content'>
+        <Typography>Share this NEWS</Typography>
+        <ShareableButtons />
+      </ArticleCtaGroup>
       {
         downlodable && (
           <Fragment>
+            <ArticleCtaDivider />
             <ArticleCtaGroup className='downloadable__content' >
               <DocumentTitle component='h1'>
                 {downlodable.fileName}
               </DocumentTitle>
               <DownloadDocumentButton file={downlodable} />
             </ArticleCtaGroup>
-            <ArticleCtaDivider />
           </Fragment>
         )
       }
-      <ArticleCtaGroup className='shareable__content'>
-        <Typography>Share this NEWS</Typography>
-        <ShareableButtons />
-      </ArticleCtaGroup>
     </ArticleCTABody>
   );
 };
