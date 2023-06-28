@@ -5,32 +5,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  /* width: 100vw; */
 }
 
 body{
-  width: 100%;
   overflow-x: hidden;
   /* defining theme colors */
   --color-white: #FFFFFF;
   --color-bhasma: #707070;
+  --color-kaala: #707071;
   --color-rakthalal: #FF4136;
   --color-matmaila: #C8C8C8;
   --color-slogan: #DDDDDD;
 
   /* difining scroll width */
-  --scroll-width-open: 0.33em;
+  --scroll-width-open: 0.5em;
   --scroll-width-close: 0.25em;
 }
 
 #root {
-  padding-left: var(--scroll-width-open) !important;
+  /* padding-left: var(--scroll-width-open) !important; */
   position: relative;
 }
 
-.home-page,
+/* .home-page,
 .page-404 {
   padding: 0 var(--scroll-width-open) !important;
-}
+} */
 
 * {
   line-height: 1.125 !important;
@@ -90,25 +92,19 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar:horizontal {
-  height: 0.25em;
+  height: var(--scroll-width-open);
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--color-matmaila));
+  background: var(--color-slogan);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: 'rgba(0, 0, 0, 0)';
-  border-right: 0.15em solid var(--color-rakthalal);
-}
-
-body {
-  scrollbar-color: var(--color-rakthalal) var(--color-matmaila));
-  scrollbar-width: ;
+  background-color: var(--color-bhasma);
 }
 
 body.more-width::-webkit-scrollbar-thumb {
-  border-right: 0.75em solid var(--color-rakthalal);
+  background-color: var(--color-rakthalal);
 }
 
 /* Grabbing pointer */

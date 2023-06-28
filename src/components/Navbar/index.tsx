@@ -69,7 +69,7 @@ const Navbar = () => {
       <ThemedToolbar>
         <StyledLink
           to="/"
-          onClick={() => setOpen(!open)}
+          onClick={() => open && setOpen(!open)}
         >
           <Logo />
         </StyledLink>
