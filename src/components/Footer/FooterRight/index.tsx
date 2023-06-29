@@ -60,9 +60,9 @@ const CustomIconButton = styled(IconButton)(({ theme }) => ({
   top: 0,
   transform: 'translateY(-50%)',
   fontSize: '1.125rem',
-  gap: theme.customSpaces.xs,
+  gap: '1rem',
   borderRadius: '2em',
-  padding: `${theme.customSpaces.xs} ${theme.customSpaces.sm}`,
+  padding: `${theme.customSpaces.xxs} ${theme.customSpaces.sm}`,
   fontWeight: theme.customFontWeight.regular,
   display: 'none',
 
