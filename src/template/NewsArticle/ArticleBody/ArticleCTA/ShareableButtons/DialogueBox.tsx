@@ -8,6 +8,9 @@ export interface PlatformDetails {
 };
 
 const ShareingDialog = styled(Dialog)(({ theme }) => ({
+
+  backdropFilter: 'blur(2px)',
+
   '& .MuiDialog-paper': {
     borderRadius: 0,
   },
