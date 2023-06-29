@@ -63,6 +63,7 @@ const CustomIconButton = styled(IconButton)(({ theme }) => ({
   gap: theme.customSpaces.xs,
   borderRadius: '2em',
   padding: `${theme.customSpaces.xs} ${theme.customSpaces.sm}`,
+  fontWeight: theme.customFontWeight.regular,
   display: 'none',
 
   [theme.breakpoints.down('sm')]: {
@@ -107,8 +108,8 @@ const FooterRight = () => {
         onClick={handleCopyToClipboard}
         aria-label="Copy Email to Clipboard"
       >
-        Click to Copy
         <EmailIcon />
+        Click to Copy
       </CustomIconButton>
       <StyledSnackbar
         open={isSnackbarOpen}
