@@ -7,11 +7,11 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
   wordBreak: 'break-word',
   textAlignLast: 'start',
 
-  '& h1:first-child, & h2:first-child, & h3:first-child, & h4:first-child, & h5:first-child, & h6:first-child': {
+  '& h1:first-of-type, & h2:first-of-type, & h3:first-of-type, & h4:first-of-type, & h5:first-of-type, & h6:first-of-type': {
     marginTop: 0,
   },
-
-  '& h1:last-child, & h2:last-child, & h3:last-child, & h4:last-child, & h5:last-child, & h6:last-child': {
+  
+  '& h1:last-of-type, & h2:last-of-type, & h3:last-of-type, & h4:last-of-type, & h5:last-of-type, & h6:last-of-type': {
     marginBottom: 0,
   },
 

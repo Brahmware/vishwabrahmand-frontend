@@ -46,9 +46,12 @@ const NewsImageComponent = styled(CardMedia)<NewsImageComponentProps>(({
   borderRadius: 0,
   overflow: 'hidden',
   transition: 'filter 0.3s ease-in-out',
+
   [theme.breakpoints.down('md')]: {
     width: 'calc(100vw - 5em)',
+    aspectRatio: 'unset',
   },
+
 }));
 
 const NewsTextComponent = styled(Box)(({ theme }) => ({
@@ -61,7 +64,6 @@ const NewsTextComponent = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.between('sm', 'md')]: {
     marginLeft: 0,
-
   },
 }));
 
