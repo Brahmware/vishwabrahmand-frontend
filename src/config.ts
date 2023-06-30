@@ -9,6 +9,18 @@ const config = {
   page404Link: 'Go back to home page',
   page404LinkUrl: '/',
   loadDelay: 1000 / 60,
+  bgWallpapers: [
+    '/images/homepage/homepage-background-1.webp',
+    '/images/homepage/homepage-background-2.webp',
+    '/images/homepage/homepage-background-3.webp',
+    '/images/homepage/homepage-background-4.webp',
+    '/images/homepage/homepage-background-5.webp',
+    '/images/homepage/homepage-background-6.webp',
+    '/images/homepage/homepage-background-7.webp',
+    '/images/homepage/homepage-background-8.webp',
+    '/images/homepage/homepage-background-9.webp',
+    '/images/homepage/homepage-background-10.webp',
+  ]
 };
 
 export default config;

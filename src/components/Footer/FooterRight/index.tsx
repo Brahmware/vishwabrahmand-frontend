@@ -9,8 +9,8 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import Localization from "./Localization";
-import { Mail as EmailIcon } from "@mui/icons-material";
 import IconButton from "../../common/buttons/IconButton";
+import { EmailIcon } from "../../../Assets/Logo/Icons";
 
 interface FooterRightWrapperProps {
   theme: Theme;
@@ -60,11 +60,22 @@ const CustomIconButton = styled(IconButton)(({ theme }) => ({
   top: 0,
   transform: 'translateY(-50%)',
   fontSize: '1.125rem',
-  gap: '1rem',
+  gap: theme.customSpaces.xs,
   borderRadius: '2em',
-  padding: `${theme.customSpaces.xxs} ${theme.customSpaces.sm}`,
+  padding: `0.35rem ${theme.customSpaces.xs}`,
   fontWeight: theme.customFontWeight.regular,
   display: 'none',
+
+  '& svg path': {
+    transition: 'fill 0.3s ease-in-out',
+    fill: theme.customColors.bhasma,
+  },
+
+  '&:hover': {
+    '& svg path': {
+      fill: theme.customColors.rakthalal,
+    }
+  },
 
   [theme.breakpoints.down('sm')]: {
     display: 'flex',
@@ -108,7 +119,10 @@ const FooterRight = () => {
         onClick={handleCopyToClipboard}
         aria-label="Copy Email to Clipboard"
       >
-        <EmailIcon />
+        <EmailIcon 
+          height='1.25rem'
+          width='1.25rem'
+        />
         Click to Copy
       </CustomIconButton>
       <StyledSnackbar
