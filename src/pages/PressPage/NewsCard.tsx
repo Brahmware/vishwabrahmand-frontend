@@ -50,6 +50,7 @@ const NewsImageComponent = styled(CardMedia)<NewsImageComponentProps>(({
   [theme.breakpoints.down('md')]: {
     width: 'calc(100vw - 5em)',
     aspectRatio: 'unset',
+    filter: 'none',
   },
 
 }));

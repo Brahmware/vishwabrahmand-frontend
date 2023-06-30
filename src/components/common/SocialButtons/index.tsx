@@ -19,6 +19,7 @@ export const SocialIconWrapper = styled(Box)(({ theme }) => ({
     width: theme.customSizes.socialIcon,
     height: theme.customSizes.socialIcon,
   },
+  
 }));
 
 const SocialButtons = (

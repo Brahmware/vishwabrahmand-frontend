@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useTheme } from "@mui/material";
 import Section, { SectionTitle } from "../../../components/common/section";
-import { companyPageData, Allies } from "../../../__mocks__/pages/companypage";
+import { companyPageData, Ally } from "../../../__mocks__/pages/companypage";
 import SocialButtons, { SocialIconWrapper } from "../../../components/common/SocialButtons";
 
 type CardMediaProps = {
@@ -48,6 +48,11 @@ const AllyCardMedia = styled(CardMedia)<AllyCardMediaProps>(({ theme }) => ({
   opacity: 0.5,
   transition: "opacity 0.6s ease 0.3s",
   "&:hover": {
+    filter: "none",
+    opacity: 1,
+  },
+
+  [theme.breakpoints.down("md")]: {
     filter: "none",
     opacity: 1,
   },
@@ -134,13 +139,13 @@ const LoadingSkeleton = () => {
 };
 
 const AlliesSection = () => {
-  const [alliesData, setBrandsData] = useState<Allies>([]);
+  const [alliesData, setBrandsData] = useState<Ally[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { alliesData }: { alliesData: Allies } = await companyPageData.getAboutData();
+        const { alliesData }: { alliesData: Ally[] } = await companyPageData.getAboutData();
         setBrandsData(alliesData);
         setIsLoading(false);
       } catch (error) {

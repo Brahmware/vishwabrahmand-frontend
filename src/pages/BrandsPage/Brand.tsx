@@ -3,6 +3,7 @@ import { Box, Card, CardMedia, CardProps, Skeleton, Typography, styled, useTheme
 import { RightArrowIcon } from '../../Assets/Logo/Icons';
 import React, { useState } from 'react';
 import getBorderBottom from '../../utils/borderBottom';
+import SocialButtons from '../../components/common/SocialButtons';
 
 interface BrandsCardProps extends CardProps {
   lastcard?: boolean;
@@ -196,6 +197,7 @@ const BrandCard = ({
           {brandData.name}
         </BrandName>
         <BrandDescription>{brandData.description}</BrandDescription>
+        <SocialButtons socialHandles={brandData.socialHandles} />
       </BrandDescriptionWrapper>
       {brandData?.website && (
         <ArrowLink
