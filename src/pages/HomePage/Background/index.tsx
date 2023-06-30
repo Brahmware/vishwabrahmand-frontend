@@ -35,11 +35,15 @@ const BgImageWrapper = styled(Card)<BgImageWrapperProps>(
     zIndex: 1,
     transform: `rotate(${rotation}deg)`,
     transition: `transform ${theme.timing.medium}ms ease 10ms`,
+    background: 'black'
   })
 );
 
 const BGImage = styled(CardMedia)<BGImageProps>(({ theme }) => ({
   animation: theme.animations.rotating,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
 }));
 
 const randomIndex = Math.floor(Math.random() * config.bgWallpapers.length);
