@@ -1,31 +1,41 @@
-import { useTheme } from '@mui/material'
-import React from 'react'
-import Scrollbars from 'react-custom-scrollbars-2'
+import { useTheme } from '@mui/material';
+import React, { useEffect, useRef, useState } from 'react';
+import Scrollbars from 'react-custom-scrollbars-2';
+import { useLocation } from 'react-router-dom';
 
-const ScrollBarWrapper = (
-  {
-    children
-  }: {
-    children: React.ReactNode
-  } & React.ComponentProps<typeof Scrollbars>
-) => {
+interface ScrollBarWrapperProps extends React.ComponentProps<typeof Scrollbars> {
+  children: React.ReactNode;
+}
 
+const ScrollBarWrapper: React.FC<ScrollBarWrapperProps> = ({ children, ...scrollbarProps }) => {
   const theme = useTheme();
-  const [height, setHeight] = React.useState(window.innerHeight);
+  const [height, setHeight] = useState(window.innerHeight);
+  const location = useLocation();
+  const scrollbarRef = useRef<Scrollbars>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setHeight(window.innerHeight);
-    }
+    };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  if(theme.breakpoints.md > window.innerWidth) return (<>{children}</>)
+  useEffect(() => {
+    const handleScrollToTop = () => {
+      if (scrollbarRef.current) {
+        scrollbarRef.current.scrollToTop();
+      }
+    };
+
+    handleScrollToTop();
+  }, [location.pathname]);
+
+  if (theme.breakpoints.md > window.innerWidth) return <>{children}</>;
 
   return (
     <Scrollbars
-      id='scrollbar-component'
+      id="scrollbar-component"
       autoHide
       autoHideTimeout={1000}
       autoHideDuration={200}
@@ -58,10 +68,12 @@ const ScrollBarWrapper = (
           }}
         />
       )}
+      ref={scrollbarRef}
+      {...scrollbarProps}
     >
       {children}
     </Scrollbars>
-  )
-}
+  );
+};
 
-export default ScrollBarWrapper
+export default ScrollBarWrapper;

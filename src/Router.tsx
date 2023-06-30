@@ -13,7 +13,6 @@ import NewsArticle from './template/NewsArticle';
 import Page404 from './pages/Page404';
 import ScrollBarWrapper from './components/scrollbar';
 
-
 const Router = () => {
   return (
     <BrowserRouter>
