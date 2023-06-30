@@ -63,7 +63,6 @@ const ShareableButtons: React.FC = () => {
         id: target.id
       }
     );
-    console.log(target.classList);
     setOpen(true);
   };
 
