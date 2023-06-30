@@ -23,6 +23,8 @@ const StyledSplide = styled(Splide)(({ theme }) => ({
   
 }));
 
+const arrowPath = 'M15.71 3.854 13.685 5.951 28.153 19.923 13.858 34.074 15.91 36.146 32.315 19.904 15.71 3.854z';
+
 const options: SplideProps["options"] = {
   type: 'loop',
   perPage: 3,
@@ -32,7 +34,7 @@ const options: SplideProps["options"] = {
   snap: true,
   pagination: false,
   arrows: true,
-  arrowPath: 'M15.71 3.854 13.685 5.951 28.153 19.923 13.858 34.074 15.91 36.146 32.315 19.904 15.71 3.854z',
+  arrowPath,
   autoplay: true,
   pauseOnHover: true,
   interval: 5000,
