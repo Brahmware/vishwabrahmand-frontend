@@ -33,7 +33,7 @@ const options: SplideProps["options"] = {
   pagination: false,
   arrows: true,
   arrowPath: 'M15.71 3.854 13.685 5.951 28.153 19.923 13.858 34.074 15.91 36.146 32.315 19.904 15.71 3.854z',
-  //autoplay: true,
+  autoplay: true,
   pauseOnHover: true,
   interval: 5000,
   gap: '1rem',
