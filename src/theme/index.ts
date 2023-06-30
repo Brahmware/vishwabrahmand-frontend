@@ -147,6 +147,7 @@ declare module '@mui/material/styles' {
       eyeBlink: string;
       rotating: string;
       shapeShift: string;
+      snapRotate: string;
     };
 
     grayScales: {
@@ -417,6 +418,7 @@ const animations = {
   eyeBlink: 'eye__blink 1s ease-in-out infinite',
   rotating: 'rotation 120s infinite linear',
   shapeShift: 'shape__shift 10s linear infinite',
+  snapRotate: 'snap__rotate 600ms ease-in-out',
 };
 
 const theme = createTheme({
