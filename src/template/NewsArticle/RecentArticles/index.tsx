@@ -7,6 +7,8 @@ import RecentArticleCarousel from './RecentArticleCarousel';
 
 
 const RecentArticlesSection = styled(Section)(({ theme }) => ({
+  ...theme.bodyProps,
+  paddingTop: 0,
   marginTop: theme.customSpaces.xl,
 }));
 

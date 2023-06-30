@@ -13,16 +13,11 @@ const StyledSplide = styled(Splide)(({ theme }) => ({
     transition: 'all 0.3s ease-in-out',
 
     '& path': {
-      d: 'path("M15.71 3.854 13.685 5.951 28.153 19.923 13.858 34.074 15.91 36.146 32.315 19.904 15.71 3.854z")',
       fill: theme.customColors.bhasma,
     },
 
     '&::before': {
       color: `${theme.customColors.white}dd`,
-    },
-
-    [theme.breakpoints.down('md')]: {
-      fontSize: '1rem',
     },
   },
   
@@ -36,16 +31,20 @@ const options: SplideProps["options"] = {
   drag: 'free',
   snap: true,
   pagination: false,
-  autoplay: true,
+  arrows: true,
+  arrowPath: 'M15.71 3.854 13.685 5.951 28.153 19.923 13.858 34.074 15.91 36.146 32.315 19.904 15.71 3.854z',
+  //autoplay: true,
   pauseOnHover: true,
-  interval: 6000,
+  interval: 5000,
   gap: '1rem',
   breakpoints: {
     900: {
       perPage: 2,
+      arrows: false,
     },
     768: {
       perPage: 1,
+      arrows: false,
     },
   },
 }

@@ -37,7 +37,6 @@ const ArticleBody = (
   const navPanelWidth = useGetDimension('nav__panel').width;
 
   const [contentLoading, setContentLoading] = useState(true);
-  console.log('contentLoading:', contentLoading);
 
   return (
     <ArticleBodyWrapper
