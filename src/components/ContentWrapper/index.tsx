@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { styled } from '@mui/material';
+import { useScrollToTop } from '../../utils/useScrollToTop';
 
 const ContentPositioning = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -38,6 +39,8 @@ const ContentWrapper = ({
       document.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
+
+  useScrollToTop();
 
   return (
     <ContentPositioning>
