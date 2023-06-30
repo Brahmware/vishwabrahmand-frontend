@@ -102,12 +102,12 @@ const NewsCardComponent = ({
 }) => {
   return (
     <StyledLink to={cardData?.newsLink || '/'}>
-      <NewsCardWrapper elevation={0}>
+      <NewsCardWrapper className="news__card-wrapper" elevation={0}>
         <NewsImageComponent
           className="news-image"
           component="img"
           image={cardData?.image}
-          alt="News Image"
+          alt={cardData?.headline || 'news image'}
         />
         <NewsTextComponent>
           <PublicationDate as="h5">

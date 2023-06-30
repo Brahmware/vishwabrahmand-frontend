@@ -5,6 +5,7 @@ import {
   useSvgComponentDimensions as useGetDimension
 } from '../../../utils/useSvgComponentDimensions';
 import { NewsCard } from '../../../__mocks__/pages/presspage';
+import { useState } from 'react';
 
 interface ArticleBodyWrapperProps extends BoxProps {
   navpanelwidth?: number;
@@ -35,13 +36,19 @@ const ArticleBody = (
 
   const navPanelWidth = useGetDimension('nav__panel').width;
 
+  const [contentLoading, setContentLoading] = useState(true);
+  console.log('contentLoading:', contentLoading);
+
   return (
     <ArticleBodyWrapper
       id='article-body'
       navpanelwidth={navPanelWidth}
     >
-      <Content contentLink={contentLink} />
-      <ArticleCTA downlodable={downlodable} />
+      <Content contentLink={contentLink} setContentLoading={setContentLoading} />
+      {
+        !contentLoading &&
+        <ArticleCTA downlodable={downlodable} />
+      }
     </ArticleBodyWrapper>
   )
 }

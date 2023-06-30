@@ -26,7 +26,7 @@ export const useSvgComponentDimensions = (componentId: string) => {
         });
       }
     });
-  }, []);
+  }, [componentId]);
 
   return componentDimensions;
 }

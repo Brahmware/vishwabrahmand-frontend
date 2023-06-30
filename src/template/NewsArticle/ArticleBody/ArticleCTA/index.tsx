@@ -1,5 +1,4 @@
 import { Box, BoxProps, Divider, Typography, styled } from '@mui/material';
-import useTranslationHeaderTop from '../../../../utils/useTranslationHeaderTop';
 import DocumentTitle from './DocumentTitle';
 import DownloadDocumentButton from './DownloadDocumentButton';
 import ShareableButtons from './ShareableButtons';
@@ -10,15 +9,14 @@ interface ArticleCTABodyProps extends BoxProps {
   translation?: number;
 };
 
-const ArticleCTABody = styled(Box)<ArticleCTABodyProps>(({ theme, translation = 0 }) => ({
+const ArticleCTABody = styled(Box)<ArticleCTABodyProps>(({ theme }) => ({
   width: '100%',
   marginTop: theme.customSpaces.lg,
   position: 'sticky',
-  top: 0,
+  top: '6.25em',
   left: 0,
   right: 0,
   backgroundColor: '#F6F6F6',
-  transform: `translateY(${Math.min(6.25 * 16, translation)}px)`,
   fontSize: '1em',
 
   display: 'flex',
@@ -37,7 +35,7 @@ const ArticleCTABody = styled(Box)<ArticleCTABodyProps>(({ theme, translation = 
   },
 
   [theme.breakpoints.down('sm')]: {
-    
+
   },
 
 }));
@@ -75,10 +73,9 @@ const ArticleCTA = (
     downlodable?: NewsCard['downlodable'];
   }
 ) => {
-  const translation = useTranslationHeaderTop('article-body');
 
   return (
-    <ArticleCTABody translation={translation}>
+    <ArticleCTABody >
       <ArticleCtaGroup className='shareable__content'>
         <Typography>Share this NEWS</Typography>
         <ShareableButtons />

@@ -66,7 +66,15 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 
-const Content = ({ contentLink }: { contentLink?: string }) => {
+const Content = (
+  {
+    contentLink,
+    setContentLoading,
+  }: {
+    contentLink?: string;
+    setContentLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  }
+) => {
 
   const [xmlContent, setXmlContent] = useState<string>('');
 
@@ -76,6 +84,7 @@ const Content = ({ contentLink }: { contentLink?: string }) => {
       const response = await fetch(contentLink);
       const xmlData = await response.text();
       setXmlContent(xmlData);
+      setContentLoading(false);
     } catch (error) {
       console.error('Error fetching XML content:', error);
     }
