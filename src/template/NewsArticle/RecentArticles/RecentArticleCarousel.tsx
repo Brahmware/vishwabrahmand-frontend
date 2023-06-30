@@ -7,7 +7,7 @@ const StyledSplide = styled(Splide)(({ theme }) => ({
   '& .splide__arrow--prev, & .splide__arrow--next': {
     backgroundColor: theme.customColors.white,
     fontSize: '1.25rem',
-    transform: 'translateY(-3rem)',
+    transform: 'translateY(-4rem)',
     opacity: 0.25,
     border: `1.5px solid ${theme.customColors.bhasma}`,
     transition: 'all 0.3s ease-in-out',
