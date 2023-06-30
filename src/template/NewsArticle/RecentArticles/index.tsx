@@ -4,6 +4,7 @@ import { Box, styled } from '@mui/material';
 import NewsCardComponent from '../../../pages/PressPage/NewsCard';
 import { NewsCard, pressPageData } from '../../../__mocks__/pages/presspage';
 import RecentArticleCarousel from './RecentArticleCarousel';
+import { useParams } from 'react-router-dom';
 
 
 const RecentArticlesSection = styled(Section)(({ theme }) => ({
@@ -15,12 +16,15 @@ const RecentArticlesSection = styled(Section)(({ theme }) => ({
 const RecentArticles = () => {
   const [newsData, setNewsData] = useState<NewsCard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { articleId: currentArticleId } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const { pressReleases } = await pressPageData.getPressReleases();
-        setNewsData(pressReleases);
+        const otherReleases = pressReleases.filter((release) => release.id !== currentArticleId);
+        
+        setNewsData(otherReleases);
         setIsLoading(false);
       } catch (error) {
         console.log(error);
