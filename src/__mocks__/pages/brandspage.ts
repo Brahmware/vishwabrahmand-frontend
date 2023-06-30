@@ -6,6 +6,12 @@ export type Brand = {
   description: string;
   image: string;
   website: string;
+  socialHandles: {
+    facebook: string;
+    twitter: string;
+    linkedin: string;
+    instagram: string;
+  };
 };
 
 export const brandsPageData = {

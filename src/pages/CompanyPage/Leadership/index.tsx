@@ -48,6 +48,10 @@ const LeaderCardMedia = styled(CardMedia)<LeaderCardMediaProps>(({ theme }) => (
   width: "100%",
   aspectRatio: "1/1",
   filter: "grayscale(100%)",
+
+  [theme.breakpoints.down("md")]: {
+    filter: "none",
+  },
 }));
 
 const LeaderCardMediaImageWrapper = styled(Box)(({ theme }) => ({
