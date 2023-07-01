@@ -22,6 +22,7 @@ declare module '@mui/material/styles' {
       leaderCard: string;
       borderRadius: string;
       skeletonTextHeight: string;
+      newsCardMaxWidth: string;
     };
     customWeight: {
       navbar: number;
@@ -215,6 +216,7 @@ const customSizes = {
   leaderCard: '10em',
   borderRadius: '0.33em',
   skeletonTextHeight: '1em',
+  newsCardMaxWidth: '23.75em',
 };
 
 const customColors = {

@@ -26,7 +26,7 @@ const PressPageWrapper = styled(Box)<PressPageWrapperProps>(({ theme, containerm
   gap: theme.customSpaces.xl,
 }));
 
-const NewsCardsPlaceholder = styled(Box)(({ theme }) => ({
+export const NewsCardsPlaceholder = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
   padding: 0,
   width: '100%',

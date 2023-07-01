@@ -9,7 +9,7 @@ import {
 import { useSvgComponentDimensions } from '../../../utils/useSvgComponentDimensions';
 import getOptimizedDimension from '../../../utils/getOptimizedDimensions';
 import useRotate from '../../../utils/useRotate';
-import config from '../../../config';
+import useRandomBackgroundImage from '../../../utils/useRandomBackground';
 
 interface BgImageWrapperProps extends CardProps {
   optimizeddimensions: number;
@@ -46,9 +46,6 @@ const BGImage = styled(CardMedia)<BGImageProps>(({ theme }) => ({
   backgroundRepeat: 'no-repeat',
 }));
 
-const randomIndex = Math.floor(Math.random() * config.bgWallpapers.length);
-const bgImageWrapper = config.bgWallpapers[randomIndex];
-
 const Background = (
   {
     className,
@@ -58,7 +55,6 @@ const Background = (
     screenType?: 'widescreen' | 'narrowscreen'
   }
 ) => {
-
 
   return (
     <BgImageWrapper
@@ -75,7 +71,7 @@ const Background = (
     >
       <BGImage
         component="img"
-        src={bgImageWrapper}
+        src={useRandomBackgroundImage()}
         alt="image of the observable universe"
       />
     </BgImageWrapper>

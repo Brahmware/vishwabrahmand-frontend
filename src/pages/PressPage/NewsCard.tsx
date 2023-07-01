@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NewsCardWrapper = styled(Card)(({ theme }) => ({
   ...theme.bodyProps,
-  maxWidth: '23.75em',
+  maxWidth: theme.customSizes.newsCardMaxWidth,
   aspectRatio: '16/15',
   display: 'flex',
   flexDirection: 'column',
