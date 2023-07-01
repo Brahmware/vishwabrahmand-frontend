@@ -11,14 +11,14 @@ type CardMediaProps = {
 
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(12em, 1fr))", // Updated property
+  gridTemplateColumns: "repeat(auto-fit, minmax(12em, 1fr))",
   gap: theme.customSpaces.md,
   marginTop: theme.customSpaces.md,
   justifyItem: "space-between",
 }));
 
 const AlliesCard = styled(Card)(({ theme }) => ({
-  maxWidth: "100%", // Updated property
+  maxWidth: "100%",
   height: "100%",
   display: "flex",
   flexDirection: "column",

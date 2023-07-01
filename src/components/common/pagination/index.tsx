@@ -110,7 +110,7 @@ const Pagination = (
           </StyledSelect>
         </PaginationSelect>
         <TablePagination
-          count={Math.ceil(itemsData.length / itemsPerPage)} // Calculate the total number of pages
+          count={Math.ceil(itemsData.length / itemsPerPage)}
           page={page}
           variant='outlined'
           color='primary'

@@ -88,7 +88,6 @@ declare module '@mui/material/styles' {
     };
 
     typography: {
-      // ... existing typography properties ...
       body2: {
         lineHeight: number;
       };

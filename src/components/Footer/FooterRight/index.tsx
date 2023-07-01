@@ -92,7 +92,7 @@ const FooterRight = () => {
     navigator.clipboard.writeText(textToCopy)
       .then(() => {
         console.log('Text copied to clipboard:', textToCopy);
-        setIsSnackbarOpen(true); // Show the Snackbar
+        setIsSnackbarOpen(true); 
       })
       .catch((error) => {
         console.error('Error while copying Email to clipboard:', error);
@@ -100,7 +100,7 @@ const FooterRight = () => {
   };
 
   const handleCloseSnackbar = () => {
-    setIsSnackbarOpen(false); // Hide the Snackbar
+    setIsSnackbarOpen(false); 
   };
 
   return (

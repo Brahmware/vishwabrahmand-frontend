@@ -63,11 +63,10 @@ const PressPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { pressReleases }: { pressReleases: NewsCard[] } = await pressPageData.getPressReleases(); // Update the type of `pressReleases`
+        const { pressReleases }: { pressReleases: NewsCard[] } = await pressPageData.getPressReleases();
         setNewsData(pressReleases);
         setIsLoading(false);
       } catch (error) {
-        // Handle error here
         console.error('Error fetching news data:', error);
         setIsLoading(false);
       }
@@ -78,7 +77,7 @@ const PressPage = () => {
 
   const fetchMoreNews = async () => {
     try {
-      const newsPerPage = config.defaultNewsPerPage; // Number of news cards per page
+      const newsPerPage = config.defaultNewsPerPage;
       const nextPage = page + 1;
       const start = (nextPage - 1) * newsPerPage;
       const end = nextPage * newsPerPage;
@@ -92,7 +91,6 @@ const PressPage = () => {
         setHasMore(false);
       }
     } catch (error) {
-      // Handling error here
       console.error('Error fetching more news:', error);
     }
   };

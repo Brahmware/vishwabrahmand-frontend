@@ -42,7 +42,6 @@ const BrandsPage = () => {
         setBrandsData(brands);
         setIsLoading(false);
       } catch (error) {
-        // Handle error here
         console.error("Error fetching brands data:", error);
         setIsLoading(false);
       }
@@ -57,10 +56,9 @@ const BrandsPage = () => {
 
   const handleChangeBrandsPerPage = (event: { target: { value: any } }) => {
     setBrandsPerPage(Number(event.target.value));
-    setPage(config.defaultStartPage); // Reset the page to 1 when changing the number of brands per page
+    setPage(config.defaultStartPage); 
   };
 
-  // Calculate the start and end index of the brands to show based on the current page
   const startIndex = (page - 1) * brandsPerPage;
   const endIndex = startIndex + brandsPerPage;
 

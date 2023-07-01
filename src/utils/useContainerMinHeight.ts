@@ -1,5 +1,3 @@
-// get the minimum height of the container use to display the content
-
 import { useEffect, useState } from 'react';
 
 export const useContainerMinHeight = () => {
