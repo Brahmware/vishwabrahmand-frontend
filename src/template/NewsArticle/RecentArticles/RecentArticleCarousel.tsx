@@ -53,7 +53,7 @@ const options: SplideProps["options"] = {
 
 const RecentArticleCarousel = ({ slides }: { slides: React.ReactNode[] }) => {
 
-  const key = slides.length * Math.random() * 1000; // Generate a unique key based on the slides array length
+  const key = slides.length * Math.random() * 1000;
 
   return (
     <StyledSplide key={key} options={options}>
@@ -101,7 +101,7 @@ const skeletonOptions: SplideProps["options"] = {
 
 export const RecentArticleCarouselSkeleton = ({ slides }: { slides: React.ReactNode[] }) => {
 
-  const key = slides.length * Math.random() * 1000; // Generate a unique key based on the slides array length
+  const key = slides.length * Math.random() * 1000;
 
   return (
     <StyledSkeletonSplide key={key} options={skeletonOptions}>

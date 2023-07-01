@@ -138,7 +138,6 @@ const LeadershipSection = () => {
 
   const renderContent = () => {
     if (isLoading) {
-      // Render skeleton loading cards
       const skeletonCards = Array.from({ length: 8 }, (_, index) => (
         <SkeletonCard key={index} elevation={0}>
           <SkeletonLeaderCardMedia>
@@ -169,7 +168,6 @@ const LeadershipSection = () => {
         </SectionContentWrapper>
       );
     } else {
-      // Render actual leader cards
       return (
         <SectionContentWrapper>
           {leadersData.map((leader, index) => (

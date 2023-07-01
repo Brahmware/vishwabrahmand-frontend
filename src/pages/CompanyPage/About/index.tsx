@@ -29,7 +29,6 @@ const AboutSection = () => {
         setAboutData(aboutData);
         setIsLoading(false);
       } catch (error) {
-        // Handle error here
         console.error("Error fetching about data:", error);
         setIsLoading(false);
       }

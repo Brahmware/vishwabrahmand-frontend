@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material';
 const useTranslationHeaderTop = (targetElementId: string) => {
   const theme = useTheme();
   const [translation, setTranslation] = useState(0);
-  const headerHeight = parseFloat(theme.customSizes.navbar) * 16; // Adjusted for header height
+  const headerHeight = parseFloat(theme.customSizes.navbar) * 16; // 16px = 1rem
   const scrollBarWrapper = document.getElementById('scrollbar-component')?.childNodes[0] as HTMLElement;
 
   useEffect(() => {
