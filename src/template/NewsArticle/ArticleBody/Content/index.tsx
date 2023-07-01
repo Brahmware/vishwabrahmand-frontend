@@ -114,16 +114,14 @@ const Content = (
             break;
         }
       });
-
-      // ad an id to the first paragraph
-
+      
       const firstParagraph = Array.from(listOfNodes).find((node) => node.nodeName === 'P');
       if (firstParagraph) {
         firstParagraph.setAttribute('id', 'first-paragraph-press-release-content');
       }
 
     }
-  }, [xmlContent]);
+  }, [xmlContent, setContentLoading]);
 
   return (
     <ContentWrapper ref={contentRef} dangerouslySetInnerHTML={{ __html: xmlContent }} />

@@ -65,3 +65,49 @@ const RecentArticleCarousel = ({ slides }: { slides: React.ReactNode[] }) => {
 }
 
 export default RecentArticleCarousel;
+
+
+const StyledSkeletonSplide = styled(StyledSplide)(({ theme }) => ({
+  '& .splide__arrow--prev, & .splide__arrow--next': {
+    animation: theme.animations.pulse,
+  },
+
+  '& .news-image': {
+    '& span': {
+      height: '16em',
+
+      [theme.breakpoints.down('md')]: {
+        height: '24em !important',
+      },
+    },
+  },
+}));
+
+const skeletonOptions: SplideProps["options"] = {
+  ...options,
+  interval: 1000,
+  autoWidth: true,
+  breakpoints: {
+    1200: {
+      perPage: 2,
+      arrows: false,
+    },
+    768: {
+      perPage: 1,
+      arrows: false,
+    },
+  },
+}
+
+export const RecentArticleCarouselSkeleton = ({ slides }: { slides: React.ReactNode[] }) => {
+
+  const key = slides.length * Math.random() * 1000; // Generate a unique key based on the slides array length
+
+  return (
+    <StyledSkeletonSplide key={key} options={skeletonOptions}>
+      {slides.map((slide, index) => (
+        <SplideSlide key={index}>{slide}</SplideSlide>
+      ))}
+    </StyledSkeletonSplide>
+  )
+};
