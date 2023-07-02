@@ -10,7 +10,7 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
   '& h1:first-of-type, & h2:first-of-type, & h3:first-of-type, & h4:first-of-type, & h5:first-of-type, & h6:first-of-type': {
     marginTop: 0,
   },
-  
+
   '& h1:last-of-type, & h2:last-of-type, & h3:last-of-type, & h4:last-of-type, & h5:last-of-type, & h6:last-of-type': {
     marginBottom: 0,
   },
@@ -88,6 +88,8 @@ const Content = (
     } catch (error) {
       console.error('Error fetching XML content:', error);
     }
+    
+    // eslint-disable-next-line
   }, [contentLink]);
 
   useEffect(() => {
@@ -114,13 +116,14 @@ const Content = (
             break;
         }
       });
-      
+
       const firstParagraph = Array.from(listOfNodes).find((node) => node.nodeName === 'P');
       if (firstParagraph) {
         firstParagraph.setAttribute('id', 'first-paragraph-news-release-content');
       }
 
     }
+    // eslint-disable-next-line
   }, [xmlContent, setContentLoading]);
 
   return (

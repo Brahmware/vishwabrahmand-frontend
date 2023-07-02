@@ -1,5 +1,4 @@
 import { Box, Typography, styled, useTheme } from "@mui/material"
-import { COMPANY_NAME } from "../../utils/constants";
 import { useTranslation } from "react-i18next";
 
 const CopyrightWrapper = styled(Box)(({ theme }) => ({
