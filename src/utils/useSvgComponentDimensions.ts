@@ -14,6 +14,7 @@ export const useSvgComponentDimensions = (componentId: string) => {
         height: component.getBoundingClientRect().height,
       });
     }
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -26,6 +27,7 @@ export const useSvgComponentDimensions = (componentId: string) => {
         });
       }
     });
+
   }, [componentId]);
 
   return componentDimensions;
