@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Section, { SectionTitle } from '../../../components/common/section'
 import { KeyDocuments, companyPageData } from '../../../__mocks__/pages/companypage';
 import { Box, Skeleton, styled, useTheme } from '@mui/material';
+import {useTranslation} from "react-i18next";
 
 const SectionContentWrapper = styled('ul')(({ theme }) => ({
   display: "flex",
@@ -33,6 +34,7 @@ const KeyDocumentsSection = () => {
   const [keyDocumentsData, setKeyDocumentsData] = useState<KeyDocuments>([]);
   const [isLoading, setIsLoading] = useState(true);
   const theme = useTheme();
+  const {t} = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,7 +53,7 @@ const KeyDocumentsSection = () => {
 
   return (
     <Section sx={{ gap: theme.customSpaces.lg }}>
-      <SectionTitle>Key Documents</SectionTitle>
+      <SectionTitle>{t("__ABOUT_PAGE_KEY_DOCUMENTS_TITLE")}</SectionTitle>
       {isLoading ? (
         <SkeletonWrapper>
           {

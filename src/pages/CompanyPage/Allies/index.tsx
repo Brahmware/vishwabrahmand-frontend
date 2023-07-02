@@ -3,6 +3,7 @@ import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useThe
 import Section, { SectionTitle } from "../../../components/common/section";
 import { companyPageData, Ally } from "../../../__mocks__/pages/companypage";
 import SocialButtons, { SocialIconWrapper } from "../../../components/common/SocialButtons";
+import { useTranslation } from "react-i18next";
 
 type CardMediaProps = {
   image: string;
@@ -141,6 +142,7 @@ const LoadingSkeleton = () => {
 const AlliesSection = () => {
   const [alliesData, setBrandsData] = useState<Ally[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -159,7 +161,7 @@ const AlliesSection = () => {
 
   return (
     <Section>
-      <SectionTitle>Allies</SectionTitle>
+      <SectionTitle>{t("__ABOUT_PAGE_ALLIES_TITLE")}</SectionTitle>
       {isLoading ? (
         <SectionContentWrapper>
           <LoadingSkeleton />

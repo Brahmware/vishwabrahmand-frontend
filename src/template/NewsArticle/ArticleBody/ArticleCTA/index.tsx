@@ -2,8 +2,9 @@ import { Box, BoxProps, Divider, Typography, styled } from '@mui/material';
 import DocumentTitle from './DocumentTitle';
 import DownloadDocumentButton from './DownloadDocumentButton';
 import ShareableButtons from './ShareableButtons';
-import { NewsCard } from '../../../../__mocks__/pages/presspage';
+import { NewsCard } from '../../../../__mocks__/pages/newspage';
 import { Fragment } from 'react';
+import {useTranslation} from 'react-i18next';
 
 interface ArticleCTABodyProps extends BoxProps {
   translation?: number;
@@ -74,10 +75,12 @@ const ArticleCTA = (
   }
 ) => {
 
+  const {t} = useTranslation();
+
   return (
     <ArticleCTABody >
       <ArticleCtaGroup className='shareable__content'>
-        <Typography>Share this NEWS</Typography>
+        <Typography>{t("__NEWS_ARTICLE_SHARE_CTA_TITLE")}</Typography>
         <ShareableButtons />
       </ArticleCtaGroup>
       {

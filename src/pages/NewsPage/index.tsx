@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Box, styled, useTheme } from '@mui/material';
 import Section, { SectionTitle } from '../../components/common/section';
-import { NewsCard } from '../../__mocks__/pages/presspage';
 import LoadingComponent from '../../components/common/loading';
 import NewsCardComponent, { NewsCardSkeleton } from './NewsCard';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import { pressPageData } from '../../__mocks__/pages/presspage';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { useAddRootClass } from '../../utils/useAddRootClass';
 import config from '../../config';
+import { useTranslation } from 'react-i18next';
+import { NewsCard, newsPageData } from '../../__mocks__/pages/newspage';
 
-interface PressPageWrapperProps {
+interface NewsPageWrapperProps {
   containerminheight?: number;
 };
 
-const PressPageWrapper = styled(Box)<PressPageWrapperProps>(({ theme, containerminheight }) => ({
+const NewsPageWrapper = styled(Box)<NewsPageWrapperProps>(({ theme, containerminheight }) => ({
   ...theme.bodyProps,
   minHeight: `${containerminheight}px`,
   width: '100%',
@@ -51,9 +51,10 @@ const NewsCards = styled(InfiniteScroll)(({ theme }) => ({
 
 
 
-const PressPage = () => {
+const NewsPage = () => {
 
   const theme = useTheme();
+  const { t } = useTranslation();
 
   const [newsData, setNewsData] = useState<NewsCard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -63,8 +64,8 @@ const PressPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { pressReleases }: { pressReleases: NewsCard[] } = await pressPageData.getPressReleases();
-        setNewsData(pressReleases);
+        const { newsReleases }: { newsReleases: NewsCard[] } = await newsPageData.getNewsReleases();
+        setNewsData(newsReleases);
         setIsLoading(false);
       } catch (error) {
         console.error('Error fetching news data:', error);
@@ -82,9 +83,9 @@ const PressPage = () => {
       const start = (nextPage - 1) * newsPerPage;
       const end = nextPage * newsPerPage;
 
-      const { pressReleases }: { pressReleases: NewsCard[] } = await pressPageData.getPressReleases(false, start, end);
-      if (pressReleases.length > 0) {
-        setNewsData((prevNewsData) => [...prevNewsData, ...pressReleases]);
+      const { newsReleases }: { newsReleases: NewsCard[] } = await newsPageData.getNewsReleases(false, start, end);
+      if (newsReleases.length > 0) {
+        setNewsData((prevNewsData) => [...prevNewsData, ...newsReleases]);
         setPage(nextPage);
         setHasMore(true);
       } else {
@@ -95,11 +96,11 @@ const PressPage = () => {
     }
   };
 
-  useAddRootClass('press-page');
+  useAddRootClass('news-page');
   return (
-    <PressPageWrapper containerminheight={useContainerMinHeight()}>
+    <NewsPageWrapper containerminheight={useContainerMinHeight()}>
       <Section>
-        <SectionTitle>Press Releases</SectionTitle>
+        <SectionTitle>{t("__NEWS_PAGE_NEWS_TITLE")}</SectionTitle>
         {isLoading && newsData.length === 0 ? (
           <NewsCardsPlaceholder sx={{ pb: theme.customPadding.xxl }}>
             {[...Array(12)].map((_, index) => (
@@ -112,7 +113,7 @@ const PressPage = () => {
             next={fetchMoreNews}
             hasMore={hasMore}
             loader={<LoadingComponent loaderType='box' />}
-            endMessage={<p>No more articles to load</p>}
+            endMessage={<p>{t("__NOTHING_TO_DISPLAY")}</p>}
             scrollableTarget="root"
           >
             {newsData.map((newsCard, index) => (
@@ -123,8 +124,8 @@ const PressPage = () => {
           </NewsCards>
         )}
       </Section>
-    </PressPageWrapper>
+    </NewsPageWrapper>
   );
 };
 
-export default PressPage;
+export default NewsPage;

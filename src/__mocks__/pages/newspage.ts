@@ -14,9 +14,9 @@ export type NewsCard = {
   };
 };
 
-export const pressPageData = {
-  getPressReleases: async (triggerError = false, startIndex = 0, endIndex = 36): Promise<{
-    pressReleases: NewsCard[];
+export const newsPageData = {
+  getNewsReleases: async (triggerError = false, startIndex = 0, endIndex = 36): Promise<{
+    newsReleases: NewsCard[];
   }> => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -24,23 +24,23 @@ export const pressPageData = {
           reject(new Error("Failed to fetch about data."));
         } else {
           
-          const pressReleases: NewsCard[] = news;
+          const newsReleases: NewsCard[] = news;
 
-          const paginatedData = pressReleases.slice(startIndex, endIndex);
-          resolve({ pressReleases: paginatedData });
+          const paginatedData = newsReleases.slice(startIndex, endIndex);
+          resolve({ newsReleases: paginatedData });
         }
       }, 200);
     });
   },
 };
 
-export const getSpecificPressRelease = async (id: string): Promise<NewsCard> => {
+export const getSpecificNewsRelease = async (id: string): Promise<NewsCard> => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const pressReleases: NewsCard[] = news;
-      const pressRelease = pressReleases.find((pressRelease) => pressRelease.id === id);
-      if (pressRelease) {
-        resolve(pressRelease);
+      const newsReleases: NewsCard[] = news;
+      const newsRelease = newsReleases.find((newsRelease) => newsRelease.id === id);
+      if (newsRelease) {
+        resolve(newsRelease);
       } else {
         reject(new Error("Failed to fetch about data."));
       }

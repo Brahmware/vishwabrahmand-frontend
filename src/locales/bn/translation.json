@@ -1,0 +1,57 @@
+{
+  "__TRANSLATION_MENU_HEADER": "আপনার ভাষা চয়ন করুন",
+
+  "__TRANSLATION_MENU_SANSKRIT": "संस्कृत",
+  "__TRANSLATION_MENU_HINDI": "हिंदी",
+  "__TRANSLATION_MENU_BENGALI": "বাংলা",
+  "__TRANSLATION_MENU_ODIA": "ଓଡ଼ିଆ",
+  "__TRANSLATION_MENU_TELUGU": "తెలుగు",
+  "__TRANSLATION_MENU_TAMIL": "தமிழ்",
+  "__TRANSLATION_MENU_MALAYALAM": "മലയാളം",
+  "__TRANSLATION_MENU_KANNADA": "ಕನ್ನಡ",
+  "__TRANSLATION_MENU_ENGLISH": "English",
+
+  "__MENU_CLOSE": "সমাপ্ত",
+  
+  "__NOTHING_TO_DISPLAY": "কিছু প্রদর্শনের জন্য নেই।",
+  "__NO_DATA_TO_DISPLAY": "কোন তথ্য নেই।",
+  "__DISPLAY_PER_PAGE": "প্রতি পৃষ্ঠায় প্রদর্শন:",
+
+
+
+  "__NAVBAR_COMPANY": "প্রতিষ্ঠান",
+  "__NAVBAR_BRANDS": "পণ্যচিহ্ন",
+  "__NAVBAR_PRESS": "সংবাদ",
+
+  "__FOOTER_COPYRIGHT": "কপিরাইট © {{year}}",
+  "__FOOTER_COMPANY_NAME": "বিশ্ব ব্রহ্মাণ্ড প্রাইভেট লিমিটেড",
+  "__FOOTER_CONTACT_COPY_BUTTON": "কপি করুন",
+  "__FOOTER_CONTACT_COPY_BUTTON_MESSAGE": "ইমেইল কপি করা হয়েছে",
+  "__FOOTER_TRANSLATION_MENU_BUTTON": "বাংলা",
+
+
+
+  "__ABOUT_PAGE_ABOUT_TITLE": "প্রাতিষ্ঠান",
+
+  "__ABOUT_PAGE_LEADERSHIP_TITLE": "প্নেতৃত্ব",
+
+  "__ABOUT_PAGE_ALLIES_TITLE": "সহযোগী",
+
+  "__ABOUT_PAGE_KEY_DOCUMENTS_TITLE": "মূল নথি",
+
+
+
+  "__BRANDS_PAGE_BRANDS_TITLE": "বানিজ্যিক পণ্যচিহ্ন",
+
+
+
+  "__NEWS_PAGE_NEWS_TITLE": "প্রকাশিত সংবাদ",
+
+
+
+  "__NEWS_ARTICLE_SHARE_CTA_TITLE": "এই সংবাদটি প্রচার করুন",
+  "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "{{socialMediaName}} এ প্রচারে ত্রুটি",
+  "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "সৃষ্ট অসুবিধার জন্য আমরা আন্তরিকভাবে দুঃখিত। অনুগ্রহ করে মনে রাখবেন যে {{socialMediaName}} এ শেয়ার করা বর্তমানে রক্ষণাবেক্ষণের মধ্য দিয়ে চলছে। আমরা সমস্যাটির সমাধান করতে এবং যত তাড়াতাড়ি সম্ভব সম্পূর্ণ কার্যকারিতা পুনরুদ্ধার করার জন্য আন্তরিকভাবে কাজ করছি। আপনার ধৈর্য ও বোঝার জন্য আপনাকে ধন্যবাদ।",
+
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "সাম্প্রতিক কিছু সংবাদ"
+}

@@ -4,9 +4,9 @@
     "headline": "कर्नाटकदेशे व्याघ्संरक्षणस्य विषये जागरूकतां जनयितुं आईएमएस तथा सम्सुङ इत्येतयोः साझेदारी भवति।",
     "pubDate": "14 जून, 2022",
     "image": "https://w0.peakpx.com/wallpaper/842/516/HD-wallpaper-mahadev-har-har-mahadev-lord-lord-shiva-shiv-shiva-shivaji-shivay.jpg",
-    "newsLink": "/press/कर्नाटकदेशे-व्याघ्संरक्षणस्य-विषये-जागरूकतां",
+    "newsLink": "/news/कर्नाटकदेशे-व्याघ्संरक्षणस्य-विषये-जागरूकतां",
     "lang": "hi",
-    "contentLink": "/data/press_articles/article-1.xml",
+    "contentLink": "/data/news_articles/article-1.xml",
     "downlodable": {
       "fileName": "बाघ जनगणना विवरण वित्तीय वर्ष - 2023-2024",
       "file": "/data/downlodables/dummy-file.pdf"
@@ -17,9 +17,9 @@
     "headline": "আইএমএস এবং স্যামসাং কর্নাটকে বাঘ সংরক্ষণের সচেতনতা বৃদ্ধির জন্য সহযোগিতা করেছে।",
     "pubDate": "14 জুন, 2022",
     "image": "https://64.media.tumblr.com/344ac5f0b7e26fdc02f69bb81d8f0705/316a69fa4df719b9-1e/s1280x1920/8a4c004e72df4152566d7cf90c179a7347d6db64.png",
-    "newsLink": "/press/আইএমএস-এবং-স্যামসাং",
+    "newsLink": "/news/আইএমএস-এবং-স্যামসাং",
     "lang": "bn",
-    "contentLink": "/data/press_articles/article-2.xml",
+    "contentLink": "/data/news_articles/article-2.xml",
     "downlodable": {
       "fileName": "বাঘ গণনা বিবৃতি বছর - 2023-2024",
       "file": "/data/downlodables/dummy-file.pdf"
@@ -30,27 +30,27 @@
     "headline": "आईएमएस और सैमसंग ने कर्नाटक में बाघ संरक्षण को बढ़ावा देने के लिए साझेदारी की।",
     "pubDate": "JUNE 15, 2022",
     "image": "https://cdn.pixabay.com/photo/2023/01/29/12/19/modi-7753158_1280.jpg",
-    "newsLink": "/press/आईएमएस-और-सैमसंग-ने-कर्नाटक-में-बाघ-संरक्षण",
+    "newsLink": "/news/आईएमएस-और-सैमसंग-ने-कर्नाटक-में-बाघ-संरक्षण",
     "lang": "hi",
-    "contentLink": "/data/press_articles/article-4.xml"
+    "contentLink": "/data/news_articles/article-4.xml"
   },
   {
     "id": "आईएमएस-आणि-सॅमसंगने-कर्नाटकमध्ये",
     "headline": "आईएमएस आणि सॅमसंगने कर्नाटकमध्ये वाघ संरक्षणाची जागृती वाढविण्यासाठी सहकार्य केले आहे.",
     "pubDate": "JUNE 16, 2022",
     "image": "https://i.ytimg.com/vi/1gyzZn032UY/maxresdefault.jpg",
-    "newsLink": "/press/आईएमएस-आणि-सॅमसंगने-कर्नाटकमध्ये",
+    "newsLink": "/news/आईएमएस-आणि-सॅमसंगने-कर्नाटकमध्ये",
     "lang": "mr",
-    "contentLink": "/data/press_articles/article-1.xml"
+    "contentLink": "/data/news_articles/article-1.xml"
   },
   {
     "id": "టైగర్-కాన్సర్వేషన్-ను-ఎగురుతుంది",
     "headline": "ఐఎంఎస్ మరియు సాంగ్ కర్నాటకలో టైగర్ కాన్సర్వేషన్ ను ఎగురుతుంది.",
     "pubDate": "జూన్ 17, 2022",
     "image": "https://cdn.pixabay.com/photo/2023/03/06/21/27/ai-generated-7834506_1280.jpg",
-    "newsLink": "/press/టైగర్-కాన్సర్వేషన్-ను-ఎగురుతుంది",
+    "newsLink": "/news/టైగర్-కాన్సర్వేషన్-ను-ఎగురుతుంది",
     "lang": "te",
-    "contentLink": "/data/press_articles/article-3.xml",
+    "contentLink": "/data/news_articles/article-3.xml",
     "downlodable": {
       "fileName": "పులుల గణన ప్రకటన FY - 2023-2024",
       "file": "/data/downlodables/dummy-file.pdf"
@@ -61,35 +61,35 @@
     "headline": "IMS and SAMSUNG partner up to raise awareness of Tiger Conservation in Karnataka.",
     "pubDate": "JUNE 18, 2022",
     "image": "https://mir-s3-cdn-cf.behance.net/projects/404/2164db169303439.Y3JvcCwxMDcyLDgzOCwwLDE5Mw.jpg",
-    "newsLink": "/press/IMS-and-SAMSUNG-Partner-up",
+    "newsLink": "/news/IMS-and-SAMSUNG-Partner-up",
     "lang": "or",
-    "contentLink": "/data/press_articles/article-4.xml"
+    "contentLink": "/data/news_articles/article-4.xml"
   },
   {
     "id": "IMS-மற்றும்-சாம்சங்-கர்நாடகத்தில்",
     "headline": "IMS மற்றும் சாம்சங் கர்நாடகத்தில் புலி பாதுகாப்புக்கு செயல்படுகிறது.",
     "pubDate": "JUNE 19, 2022",
     "image": "https://cdn.pixabay.com/photo/2023/03/06/21/27/ai-generated-7834506_1280.jpg",
-    "newsLink": "/press/IMS-மற்றும்-சாம்சங்-கர்நாடகத்தில்",
+    "newsLink": "/news/IMS-மற்றும்-சாம்சங்-கர்நாடகத்தில்",
     "lang": "ta",
-    "contentLink": "/data/press_articles/article-4.xml"
+    "contentLink": "/data/news_articles/article-4.xml"
   },
   {
     "id": "IMS-आणि-सॅमसंग-कर्नाटकात",
     "headline": "IMS आणि सॅमसंग कर्नाटकात वाघ संरक्षणासाठी सहकार्य करतात.",
     "pubDate": "JUNE 20, 2022",
     "image": "https://cdn.pixabay.com/photo/2023/03/06/21/27/ai-generated-7834506_1280.jpg",
-    "newsLink": "/press/IMS-आणि-सॅमसंग-कर्नाटकात",
+    "newsLink": "/news/IMS-आणि-सॅमसंग-कर्नाटकात",
     "lang": "mr",
-    "contentLink": "/data/press_articles/article-4.xml"
+    "contentLink": "/data/news_articles/article-4.xml"
   },
   {
     "id": "IMS-और-सैमसंग-कर्नाटक-में",
     "headline": "IMS और सैमसंग कर्नाटक में बाघ संरक्षण के लिए सहयोग करते हैं.",
     "pubDate": "JUNE 21, 2022",
     "image": "https://cdn.pixabay.com/photo/2023/03/06/21/27/ai-generated-7834506_1280.jpg",
-    "newsLink": "/press/IMS-और-सैमसंग-कर्नाटक-में",
+    "newsLink": "/news/IMS-और-सैमसंग-कर्नाटक-में",
     "lang": "hi",
-    "contentLink": "/data/press_articles/article-4.xml"
+    "contentLink": "/data/news_articles/article-4.xml"
   }
 ]

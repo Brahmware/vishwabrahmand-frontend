@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import { 
+import {
   DialogueActions,
   DialogueButton,
-  DialogueCard, 
-  DialogueContent, 
+  DialogueCard,
+  DialogueContent,
   DialogueTitle,
 } from "../../../../../components/common/dialogue";
+import { useTranslation } from "react-i18next";
 
 export interface PlatformDetails {
   platform: string;
@@ -25,6 +26,7 @@ const DialogueBox = (
   }
 ) => {
   const target = document.getElementById(platformDetails.id);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (open) {
@@ -42,12 +44,11 @@ const DialogueBox = (
       aria-labelledby="sharing-dialog-title"
       aria-describedby="sharing-dialog-description"
     >
-      <DialogueTitle>Error Sharing on {platformDetails.platform}</DialogueTitle>
+      <DialogueTitle>
+        {t('__NEWS_ARTICLE_SHARE_ERROR_TITLE', { socialMediaName: platformDetails.platform })}
+        </DialogueTitle>
       <DialogueContent>
-        We sincerely apologize for the inconvenience caused.
-        Please note that sharing on <strong>{platformDetails.platform}</strong> is currently undergoing maintenance.
-        We are working diligently to resolve the issue and restore full functionality as soon as possible.
-        Thank you for your patience and understanding.
+        {t('__NEWS_ARTICLE_SHARE_ERROR_MESSAGE', { socialMediaName: platformDetails.platform })}
       </DialogueContent>
       <DialogueActions>
         <DialogueButton
@@ -56,7 +57,7 @@ const DialogueBox = (
           variant="contained"
           color="secondary"
         >
-          Close
+          {t("__MENU_CLOSE")}
         </DialogueButton>
       </DialogueActions>
     </DialogueCard>

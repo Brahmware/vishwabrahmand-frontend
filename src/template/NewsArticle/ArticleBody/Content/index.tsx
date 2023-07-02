@@ -28,7 +28,7 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
     fontSize: '0.9rem',
   },
 
-  '& #first-paragraph-press-release-content::first-letter': {
+  '& #first-paragraph-news-release-content::first-letter': {
     color: theme.customColors.rakthalal,
     float: 'left',
     fontSize: '2.5rem',
@@ -117,7 +117,7 @@ const Content = (
       
       const firstParagraph = Array.from(listOfNodes).find((node) => node.nodeName === 'P');
       if (firstParagraph) {
-        firstParagraph.setAttribute('id', 'first-paragraph-press-release-content');
+        firstParagraph.setAttribute('id', 'first-paragraph-news-release-content');
       }
 
     }
