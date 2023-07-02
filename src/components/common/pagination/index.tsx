@@ -8,6 +8,7 @@ import {
   Typography,
   useTheme
 } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const PaginationContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -84,6 +85,7 @@ const Pagination = (
 ) => {
 
   const theme = useTheme();
+  const { t } = useTranslation();
 
   if (
     itemsData.length > itemsPerPage ||
@@ -93,7 +95,7 @@ const Pagination = (
       <PaginationContainer>
         <PaginationSelect>
           <StyledTypography variant="body2">
-            Display per page:
+            {t("__DISPLAY_PER_PAGE")}
           </StyledTypography>
           <StyledSelect
             value={itemsPerPage}

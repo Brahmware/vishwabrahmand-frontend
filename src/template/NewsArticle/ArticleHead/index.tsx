@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContainerMinHeight } from '../../../utils/useContainerMinHeight';
 import { Box, BoxProps, CardMedia, CardMediaProps, Typography, styled } from '@mui/material';
-import { NewsCard } from '../../../__mocks__/pages/presspage';
+import { NewsCard } from '../../../__mocks__/pages/newspage';
 
 interface NewsHeadlineViewProps extends BoxProps {
   containerheight?: number;

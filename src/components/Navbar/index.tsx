@@ -5,6 +5,7 @@ import NavbarButton from './NavbarButton';
 import Logo from '../../Assets/Logo';
 import HamburgerMenu from './HamburgerMenu';
 import useIsScrolled from '../../utils/useIsScrolled';
+import { useTranslation } from 'react-i18next';
 
 const AppBar = styled(MuiAppBar)(({ theme }) => ({
   backgroundColor: 'transparent',
@@ -62,6 +63,7 @@ const Navbar = () => {
 
   const isScrolled = useIsScrolled();
   const [open, setOpen] = useState(false);
+  const {t} = useTranslation();
 
   return (
     <AppBar >
@@ -77,9 +79,9 @@ const Navbar = () => {
           className="nav__panel"
           id='nav__panel'
         >
-          <NavbarButton to="/company">Company</NavbarButton>
-          <NavbarButton to="/brands">Brands</NavbarButton>
-          <NavbarButton to="/press">Press</NavbarButton>
+          <NavbarButton to="/company">{t('__NAVBAR_COMPANY')}</NavbarButton>
+          <NavbarButton to="/brands">{t('__NAVBAR_BRANDS')}</NavbarButton>
+          <NavbarButton to="/press">{t('__NAVBAR_PRESS')}</NavbarButton>
         </NavPanel>
         <HamburgerMenu open={open} setOpen={setOpen} />
       </ThemedToolbar>

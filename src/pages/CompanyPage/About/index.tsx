@@ -10,6 +10,7 @@ import Paragraph, {
 } from "../../../components/common/paragraph";
 
 import { AboutData, companyPageData } from "../../../__mocks__/pages/companypage";
+import { useTranslation } from "react-i18next";
 
 const SkeletonWrapper = styled(Box)(({ theme }) => ({
   width: "100%",
@@ -21,6 +22,7 @@ const SkeletonWrapper = styled(Box)(({ theme }) => ({
 const AboutSection = () => {
   const [aboutData, setAboutData] = useState<AboutData>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,7 +41,7 @@ const AboutSection = () => {
 
   return (
     <Article component="article">
-      <SectionTitle>About</SectionTitle>
+      <SectionTitle>{t("__ABOUT_PAGE_ABOUT_TITLE")}</SectionTitle>
       {isLoading ? (
         <SkeletonWrapper>
           <Skeleton
@@ -81,7 +83,7 @@ const AboutSection = () => {
                         <ListItemParagraph key={index}>{listItem}</ListItemParagraph>
                       ))
                     ) : (
-                      <Typography>No items to display.</Typography>
+                      <Typography>{t("__NOTHING_TO_DISPLAY")}</Typography>
                     )}
                   </ListParagraph>
                 );
@@ -89,7 +91,7 @@ const AboutSection = () => {
           </Paragraph>
         ))
       ) : (
-        <Typography>No data available.</Typography>
+        <Typography>{t("__NO_DATA_TO_DISPLAY")}</Typography>
       )}
     </Article>
   );

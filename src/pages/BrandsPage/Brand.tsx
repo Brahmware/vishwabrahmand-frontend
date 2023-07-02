@@ -4,6 +4,7 @@ import { RightArrowIcon } from '../../Assets/Logo/Icons';
 import React, { useState } from 'react';
 import getBorderBottom from '../../utils/borderBottom';
 import SocialButtons from '../../components/common/SocialButtons';
+import { useTranslation } from 'react-i18next';
 
 interface BrandsCardProps extends CardProps {
   lastcard?: boolean;
@@ -166,9 +167,10 @@ const BrandCard = ({
 }) => {
 
   const [isArrowHovered, setIsArrowHovered] = useState(false);
+  const { t } = useTranslation();
 
   if (!brandData) {
-    return <>Sorry! No data available</>;
+    return <>{t("__NO_DATA_TO_DISPLAY")}</>;
   }
 
   return (

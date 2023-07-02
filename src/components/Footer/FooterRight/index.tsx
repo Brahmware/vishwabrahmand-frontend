@@ -11,6 +11,7 @@ import { useState } from "react";
 import Localization from "./Localization";
 import IconButton from "../../common/buttons/IconButton";
 import { EmailIcon } from "../../../Assets/Logo/Icons";
+import { useTranslation } from "react-i18next";
 
 interface FooterRightWrapperProps {
   theme: Theme;
@@ -85,6 +86,7 @@ const CustomIconButton = styled(IconButton)(({ theme }) => ({
 const FooterRight = () => {
   const theme = useTheme();
   const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
+  const { t } = useTranslation();
 
   const handleCopyToClipboard = () => {
     const textToCopy = 'namaste@vishwabrahmand.com';
@@ -92,7 +94,7 @@ const FooterRight = () => {
     navigator.clipboard.writeText(textToCopy)
       .then(() => {
         console.log('Text copied to clipboard:', textToCopy);
-        setIsSnackbarOpen(true); 
+        setIsSnackbarOpen(true);
       })
       .catch((error) => {
         console.error('Error while copying Email to clipboard:', error);
@@ -100,7 +102,7 @@ const FooterRight = () => {
   };
 
   const handleCloseSnackbar = () => {
-    setIsSnackbarOpen(false); 
+    setIsSnackbarOpen(false);
   };
 
   return (
@@ -110,20 +112,20 @@ const FooterRight = () => {
         className="cursor-copy"
         fontWeight={theme.customWeight.sectionTitle}
         onClick={handleCopyToClipboard}
-        aria-label="Copy Email to Clipboard"
+        aria-label={t("__FOOTER_CONTACT_COPY_BUTTON")}
       >
         namaste@vishwabrahmand.com
       </CustomEmailString>
       <CustomIconButton
         className="cursor-copy"
         onClick={handleCopyToClipboard}
-        aria-label="Copy Email to Clipboard"
+        aria-label={t("__FOOTER_CONTACT_COPY_BUTTON")}
       >
-        <EmailIcon 
+        <EmailIcon
           height='1.25rem'
           width='1.25rem'
         />
-        Click to Copy
+        {t("__FOOTER_CONTACT_COPY_BUTTON")}
       </CustomIconButton>
       <StyledSnackbar
         open={isSnackbarOpen}
@@ -134,7 +136,7 @@ const FooterRight = () => {
           vertical: "bottom",
           horizontal: "center"
         }}
-        message="Email copied to Clipboard"
+        message={t("__FOOTER_CONTACT_COPY_BUTTON_MESSAGE")}
       />
     </FooterRightWrapper>
   );

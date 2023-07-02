@@ -18,6 +18,7 @@ export const DialogueTitle = styled(DialogTitle)(({ theme }) => ({
 export const DialogueContent = styled(DialogContent)(({ theme }) => ({
   color: theme.customColors.bhasma,
   fontSize: '0.875rem',
+  lineHeight: '1.5 !important',
   textAlign: 'justify',
   textAlignLast: 'start',
 

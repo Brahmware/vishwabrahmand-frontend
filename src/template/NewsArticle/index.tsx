@@ -3,7 +3,7 @@ import { useAddRootClass } from '../../utils/useAddRootClass';
 import ArticleHead from './ArticleHead';
 import ArticleBody from './ArticleBody';
 import { useParams } from 'react-router-dom';
-import { NewsCard, getSpecificPressRelease } from '../../__mocks__/pages/presspage';
+import { NewsCard, getSpecificNewsRelease } from '../../__mocks__/pages/newspage';
 import { useEffect, useState } from 'react';
 import RecentArticles from './RecentArticles';
 
@@ -35,7 +35,7 @@ const NewsArticle = () => {
   useEffect(() => {
     const getArticle = async () => {
       try {
-        const article = await getSpecificPressRelease(articleId || '');
+        const article = await getSpecificNewsRelease(articleId || '');
         setArticle(article);
       } catch (error) {
         console.log(error);

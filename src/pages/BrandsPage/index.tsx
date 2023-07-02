@@ -8,6 +8,7 @@ import Pagination from '../../components/common/pagination';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { useAddRootClass } from '../../utils/useAddRootClass';
 import config from '../../config';
+import {useTranslation} from "react-i18next";
 
 interface BrandsPageWrapperProps {
   containerminheight?: number;
@@ -34,6 +35,7 @@ const BrandsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(config.defaultStartPage);
   const [brandsPerPage, setBrandsPerPage] = useState(config.defaultNumberOfBrandsPerPage);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,7 +67,7 @@ const BrandsPage = () => {
   useAddRootClass('brands-page');
   return (
     <BrandsPageWrapper containerminheight={useContainerMinHeight()}>
-      <ThemedSectionTitle>Company Brands</ThemedSectionTitle>
+      <ThemedSectionTitle>{t("__BRANDS_PAGE_BRANDS_TITLE")}</ThemedSectionTitle>
       {isLoading ? (
         <>
           {[...Array(brandsPerPage)].map((_, index) => (
@@ -100,7 +102,7 @@ const BrandsPage = () => {
           />
         </>
       ) : (
-        <NoDataParagraph>No data found</NoDataParagraph>
+        <NoDataParagraph>{t("__NO_DATA_TO_DISPLAY")}</NoDataParagraph>
       )}
     </BrandsPageWrapper>
   );

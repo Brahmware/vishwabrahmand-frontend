@@ -10,7 +10,9 @@ const useRandomBackgroundImage = (): string => {
   useEffect(() => {
     const bgImageWrapper = config.bgWallpapers[randomIndex];
     setBgImage(bgImageWrapper);
-  }, [location.pathname, randomIndex]);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname]);
 
   return bgImage;
 };

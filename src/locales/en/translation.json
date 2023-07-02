@@ -1,0 +1,57 @@
+{
+  "__TRANSLATION_MENU_HEADER": "Please Choose a Display Language",
+  
+  "__TRANSLATION_MENU_SANSKRIT": "संस्कृत",
+  "__TRANSLATION_MENU_HINDI": "हिंदी",
+  "__TRANSLATION_MENU_BENGALI": "বাংলা",
+  "__TRANSLATION_MENU_ODIA": "ଓଡ଼ିଆ",
+  "__TRANSLATION_MENU_TELUGU": "తెలుగు",
+  "__TRANSLATION_MENU_TAMIL": "தமிழ்",
+  "__TRANSLATION_MENU_MALAYALAM": "മലയാളം",
+  "__TRANSLATION_MENU_KANNADA": "ಕನ್ನಡ",
+  "__TRANSLATION_MENU_ENGLISH": "English",
+  
+  "__MENU_CLOSE": "Close",
+  
+  "__NOTHING_TO_DISPLAY": "No items to display.",
+  "__NO_DATA_TO_DISPLAY": "No data available.",
+  "__DISPLAY_PER_PAGE": "Display per page:",
+
+  
+
+  "__NAVBAR_COMPANY": "Company",
+  "__NAVBAR_BRANDS": "Brands",
+  "__NAVBAR_PRESS": "Press",
+
+  "__FOOTER_COPYRIGHT": "Copyright © {{year}}",
+  "__FOOTER_COMPANY_NAME": "Vishwa Brahmand Pvt. Ltd.",
+  "__FOOTER_CONTACT_COPY_BUTTON": "Click to copy",
+  "__FOOTER_CONTACT_COPY_BUTTON_MESSAGE": "Copy Email to Clipboard",
+  "__FOOTER_TRANSLATION_MENU_BUTTON": "Eng (Ind)",
+
+  "__ABOUT_PAGE_ABOUT_TITLE": "About",
+
+  
+  "__ABOUT_PAGE_LEADERSHIP_TITLE": "Leadership",
+
+  "__ABOUT_PAGE_ALLIES_TITLE": "Allies",
+
+  "__ABOUT_PAGE_KEY_DOCUMENTS_TITLE": "Key Documents",
+
+
+
+  "__BRANDS_PAGE_BRANDS_TITLE": "Company Brands",
+
+
+
+  "__NEWS_PAGE_NEWS_TITLE": "News Releases",
+
+
+
+  "__NEWS_ARTICLE_SHARE_CTA_TITLE": "Share this News",
+  "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "Error Sharing on {{socialMediaName}}",
+  "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "We sincerely apologize for the inconvenience caused. Please note that sharing on {{socialMediaName}} is currently undergoing maintenance. We are working diligently to resolve the issue and restore full functionality as soon as possible. Thank you for your patience and understanding",
+
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "Recent Releases"
+
+}

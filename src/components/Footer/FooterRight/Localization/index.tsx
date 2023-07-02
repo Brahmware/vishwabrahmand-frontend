@@ -2,6 +2,7 @@ import { Box, Button, Typography, styled } from "@mui/material";
 import { TranslationIcon as LocalizationIcon } from "../../../../Assets/Logo/Icons";
 import { useState } from "react";
 import TranslationMenu from "./TranslationMenu";
+import { useTranslation } from "react-i18next";
 
 const LocalizationWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -35,6 +36,7 @@ const Localization = () => {
   const handleClose = () => {
     setOpen(false);
   };
+  const { t } = useTranslation();
 
   return (
     <LocalizationWrapper>
@@ -44,7 +46,7 @@ const Localization = () => {
         onClick={() => setOpen(true)}
       >
         <LocalizationIcon height='1.5em' />
-        <ButtonText>Eng (Ind)</ButtonText>
+        <ButtonText>{t("__FOOTER_TRANSLATION_MENU_BUTTON")}</ButtonText>
       </LocalizationButton>
       <TranslationMenu 
         open={open}

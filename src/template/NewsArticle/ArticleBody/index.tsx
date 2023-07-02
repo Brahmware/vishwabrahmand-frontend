@@ -4,7 +4,7 @@ import ArticleCTA from './ArticleCTA';
 import {
   useSvgComponentDimensions as useGetDimension
 } from '../../../utils/useSvgComponentDimensions';
-import { NewsCard } from '../../../__mocks__/pages/presspage';
+import { NewsCard } from '../../../__mocks__/pages/newspage';
 import { useState } from 'react';
 
 interface ArticleBodyWrapperProps extends BoxProps {

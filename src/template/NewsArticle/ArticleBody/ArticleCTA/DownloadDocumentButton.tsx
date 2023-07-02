@@ -1,5 +1,5 @@
 import { BoxProps, Button, ButtonBaseProps, styled } from "@mui/material";
-import { NewsCard } from "../../../../__mocks__/pages/presspage";
+import { NewsCard } from "../../../../__mocks__/pages/newspage";
 
 interface FlatButtonProps extends ButtonBaseProps {
   variant?: 'text' | 'outlined' | 'contained';

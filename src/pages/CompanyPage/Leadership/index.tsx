@@ -3,6 +3,7 @@ import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useThe
 import Section, { SectionTitle } from "../../../components/common/section";
 import { Leaders, companyPageData } from "../../../__mocks__/pages/companypage";
 import SocialButtons from "../../../components/common/SocialButtons";
+import {useTranslation} from "react-i18next";
 
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
@@ -120,6 +121,7 @@ const LeadershipSection = () => {
   const theme = useTheme();
   const [leadersData, setLeadersData] = useState<Leaders>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const {t} = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -195,7 +197,7 @@ const LeadershipSection = () => {
 
   return (
     <Section>
-      <SectionTitle>Leadership</SectionTitle>
+      <SectionTitle>{t("__ABOUT_PAGE_LEADERSHIP_TITLE")}</SectionTitle>
       {renderContent()}
     </Section>
   );

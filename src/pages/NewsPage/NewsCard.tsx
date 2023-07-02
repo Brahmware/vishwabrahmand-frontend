@@ -1,5 +1,5 @@
 import { Box, Card, CardMedia, CardMediaProps, Skeleton, Typography, styled } from "@mui/material";
-import { NewsCard } from "../../__mocks__/pages/presspage";
+import { NewsCard } from "../../__mocks__/pages/newspage";
 import { Link } from "react-router-dom";
 
 const NewsCardWrapper = styled(Card)(({ theme }) => ({

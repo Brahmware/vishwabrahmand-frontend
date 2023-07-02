@@ -1,5 +1,5 @@
 import { Box, Typography, styled, useTheme } from "@mui/material"
-import { COMPANY_NAME } from "../../utils/constants";
+import { useTranslation } from "react-i18next";
 
 const CopyrightWrapper = styled(Box)(({ theme }) => ({
 	...theme.textSelectionVarient.varient_bhashma_on_white,
@@ -23,10 +23,12 @@ const Copyright = () => {
 	const theme = useTheme();
 	const thisYear = new Date().getFullYear();
 
+	const {t} = useTranslation();
+
 	return (
 		<CopyrightWrapper>
-			<NoWrapTypography fontWeight={theme.customFontWeight.regular}>Copyright © {thisYear}</NoWrapTypography>
-			<NoWrapTypography className="noselect" fontWeight={theme.customFontWeight.bold}>{COMPANY_NAME}</NoWrapTypography>
+			<NoWrapTypography fontWeight={theme.customFontWeight.regular}>{t('__FOOTER_COPYRIGHT', { year: thisYear })}</NoWrapTypography>
+			<NoWrapTypography className="noselect" fontWeight={theme.customFontWeight.bold}>{t("__FOOTER_COMPANY_NAME")}</NoWrapTypography>
 		</CopyrightWrapper>
 	)
 }
