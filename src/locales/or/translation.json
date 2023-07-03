@@ -1,0 +1,47 @@
+{
+  "__TRANSLATION_MENU_HEADER": "ଆପଣଙ୍କ ଭାଷା ଚୟନ କରନ୍ତୁ",
+
+  "__TRANSLATION_MENU_SANSKRIT": "संस्कृत",
+  "__TRANSLATION_MENU_HINDI": "हिंदी",
+  "__TRANSLATION_MENU_BENGALI": "বাংলা",
+  "__TRANSLATION_MENU_ODIA": "ଓଡ଼ିଆ",
+  "__TRANSLATION_MENU_TELUGU": "తెలుగు",
+  "__TRANSLATION_MENU_TAMIL": "தமிழ்",
+  "__TRANSLATION_MENU_MALAYALAM": "മലയാളം",
+  "__TRANSLATION_MENU_KANNADA": "ಕನ್ನಡ",
+  "__TRANSLATION_MENU_ENGLISH": "English",
+
+  "__MENU_CLOSE": "ବନ୍ଦ କରନ୍ତୁ",
+
+  "__NOTHING_TO_DISPLAY": "ପ୍ରସ୍ତୁତ କରିବା କୁଛ ନାହିଁ।",
+  "__NO_DATA_TO_DISPLAY": "କୌଣସି ତଥ୍ୟ ନାହିଁ।",
+  "__DISPLAY_PER_PAGE": "ପ୍ରତି ପୃଷ୍ଠାରେ ପ୍ରସ୍ତୁତ କରାଯାଇବାରେ:",
+
+  "__NAVBAR_COMPANY": "କମ୍ପାନୀ",
+  "__NAVBAR_BRANDS": "ବ୍ରାଣ୍ଡ",
+  "__NAVBAR_PRESS": "ପ୍ରସାର",
+
+  "__FOOTER_COPYRIGHT": "କପିରାଇଟ © {{year}}",
+  "__FOOTER_COMPANY_NAME": "ବିଶ୍ବ ବ୍ରହ୍ମାଣ୍ଡ ପ୍ରାଇଭେଟ୍ ଲିମିଟେଡ୍",
+  "__FOOTER_CONTACT_COPY_BUTTON": "କପି କରନ୍ତୁ",
+  "__FOOTER_CONTACT_COPY_BUTTON_MESSAGE": "ଇମେଲ କପି କରାଯାଇଛି",
+  "__FOOTER_TRANSLATION_MENU_BUTTON": "ଓଡ଼ିଆ",
+
+  "__ABOUT_PAGE_ABOUT_TITLE": "ପ୍ରତିଷ୍ଠାନ",
+
+  "__ABOUT_PAGE_LEADERSHIP_TITLE": "ନେତୃତ୍ୱ",
+
+  "__ABOUT_PAGE_ALLIES_TITLE": "ସହଯୋଗୀ",
+
+  "__ABOUT_PAGE_KEY_DOCUMENTS_TITLE": "ମୂଳ ଦଲିଲ",
+
+  "__BRANDS_PAGE_BRANDS_TITLE": "ବାଣିଜ୍ୟିକ ବ୍ରାଣ୍ଡସମୂହ",
+
+  "__NEWS_PAGE_NEWS_TITLE": "ପ୍ରକାଶିତ ଖବର",
+
+  "__NEWS_ARTICLE_SHARE_CTA_TITLE": "ଏହା ସମ୍ପାଦନ କରନ୍ତୁ",
+  "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "{{socialMediaName}} ରେ ସେମାନଙ୍କୁ ଭାଗ କରିବାକୁ ତ୍ରୁଟି",
+  "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "ଏହି ବିଷୟରେ ଆମକୁ ଖେଦାପଣା ହେଉଛି। ଅନୁଗ୍ରହକରି ମନେ ଧ୍ୟାନ ଦେନ୍ତୁ ଯେ {{socialMediaName}} ରେ ସେ ମାନଙ୍କୁ ଭାଗ କରିବା ବର୍ତ୍ତମାନରେ ସୁରକ୍ଷା ପାଇଁ ପ୍ରସ୍ତୁତ ଅଛି। ଆମେ ଏହି ସମସ୍ୟାର ସମାଧାନ ଏବଂ ଯଥାଶୀଘ୍ର ସମ୍ପର୍କ ପୁନ ରିସ୍ଟୋର ସ୍ଥାପନ କରିବାକୁ କାର୍ଯ୍ୟ କରୁଛୁ। ଆପଣଙ୍କୁ ଆତ୍ମୀୟ ପ୍ରତିଷ୍ଠା ଏବଂ ବୁଝିବା ଜଣ୍ଟିଆ ପାଇଁ ଧନ୍ୟବାଦ।",
+
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "ହାଲରେ ପ୍ରକାଶିତ ଖବର"
+}

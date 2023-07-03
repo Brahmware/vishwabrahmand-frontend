@@ -106,6 +106,9 @@ body.more-width::-webkit-scrollbar-thumb {
   cursor: all-scroll !important;
 }
 
+/* Importing Multilingual Fonts */
+@import "./locales/fonts.css";
+
 /* Importing Global Styles */
 @import "./theme/global.css";
 
