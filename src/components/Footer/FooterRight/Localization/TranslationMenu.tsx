@@ -1,4 +1,4 @@
-import { styled } from '@mui/material';
+import { ButtonProps, styled } from '@mui/material';
 import {
   DialogueActions,
   DialogueButton,
@@ -22,6 +22,7 @@ const TranslationMenuContent = styled(DialogueContent)(({ theme }) => ({
   justifyContent: 'center',
   flexWrap: 'wrap',
   alignItems: 'center',
+  gap: '0.5em',
 }));
 
 const TranslationMenuButton = styled(DialogueButton)(({ theme }) => ({
@@ -35,27 +36,27 @@ const TranslationMenuActions = styled(DialogueActions)(({ theme }) => ({
 
 const LanguageButton = ({
   children,
-  onClick
+  onClick,
+  languageName,
 }: {
   children: React.ReactNode,
-  onClick?: () => void
-}) => (
-  <DialogueButton
-    variant='text'
-    onClick={onClick}
-    sx={{
-      textTransform: 'none',
-      fontSize: '1.125em',
-      height: '100%',
-      width: '100%',
-      padding: '0.5em 1em',
-      minWidth: '8em',
-      maxWidth: '10em',
-    }}
-  >
-    {children}
-  </DialogueButton>
-);
+  onClick?: () => void,
+  languageName: string,
+}) => {
+  const { i18n } = useTranslation();
+  const isActive = i18n.language === languageName;
+
+  return (
+    <TranslationMenuButton
+      disableElevation
+      onClick={onClick}
+      color={isActive ? 'secondary' : 'primary'}
+      variant={isActive ? 'outlined' : 'text'}
+    >
+      {children}
+    </TranslationMenuButton>
+  );
+};
 
 
 const TranslationMenu = (
@@ -88,46 +89,55 @@ const TranslationMenu = (
       <TranslationMenuContent>
         <LanguageButton
           onClick={() => handleLanguageChange(config.languageIsoCodes.sanskrit)}
+          languageName={config.languageIsoCodes.sanskrit}
         >
           {t('__TRANSLATION_MENU_SANSKRIT')}
         </LanguageButton>
         <LanguageButton
           onClick={() => handleLanguageChange(config.languageIsoCodes.hindi)}
+          languageName={config.languageIsoCodes.hindi}
         >
           {t('__TRANSLATION_MENU_HINDI')}
         </LanguageButton>
         <LanguageButton
           onClick={() => handleLanguageChange(config.languageIsoCodes.bengali)}
+          languageName={config.languageIsoCodes.bengali}
         >
           {t('__TRANSLATION_MENU_BENGALI')}
         </LanguageButton>
         <LanguageButton
           onClick={() => handleLanguageChange(config.languageIsoCodes.odia)}
+          languageName={config.languageIsoCodes.odia}
         >
           {t('__TRANSLATION_MENU_ODIA')}
         </LanguageButton>
         <LanguageButton
           onClick={() => handleLanguageChange(config.languageIsoCodes.telugu)}
+          languageName={config.languageIsoCodes.telugu}
         >
           {t('__TRANSLATION_MENU_TELUGU')}
         </LanguageButton>
         <LanguageButton
           onClick={() => handleLanguageChange(config.languageIsoCodes.tamil)}
+          languageName={config.languageIsoCodes.tamil}
         >
           {t('__TRANSLATION_MENU_TAMIL')}
         </LanguageButton>
         <LanguageButton
           onClick={() => handleLanguageChange(config.languageIsoCodes.malayalam)}
+          languageName={config.languageIsoCodes.malayalam}
         >
           {t('__TRANSLATION_MENU_MALAYALAM')}
         </LanguageButton>
         <LanguageButton
           onClick={() => handleLanguageChange(config.languageIsoCodes.kannada)}
+          languageName={config.languageIsoCodes.kannada}
         >
           {t('__TRANSLATION_MENU_KANNADA')}
         </LanguageButton>
         <LanguageButton
           onClick={() => handleLanguageChange(config.languageIsoCodes.english)}
+          languageName={config.languageIsoCodes.english}
         >
           {t('__TRANSLATION_MENU_ENGLISH')}
         </LanguageButton>

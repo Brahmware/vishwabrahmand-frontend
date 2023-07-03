@@ -26,10 +26,10 @@ const config = {
     'hindi': 'hi',
     'bengali': 'bn',
     'odia': 'or',
-    'telugu': 'bn',
-    'tamil': 'bn',
-    'malayalam': 'bn',
-    'kannada': 'bn',
+    'telugu': 'te',
+    'tamil': 'ta',
+    'malayalam': 'ml',
+    'kannada': 'kn',
     'english': 'en',
   }
 };
