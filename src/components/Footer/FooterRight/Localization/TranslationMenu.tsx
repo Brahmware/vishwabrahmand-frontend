@@ -22,7 +22,7 @@ const TranslationMenuContent = styled(DialogueContent)(({ theme }) => ({
   justifyContent: 'center',
   flexWrap: 'wrap',
   alignItems: 'center',
-  gap: '1em',
+  gap: '0.5em',
 }));
 
 const TranslationMenuButton = styled(DialogueButton)(({ theme }) => ({
