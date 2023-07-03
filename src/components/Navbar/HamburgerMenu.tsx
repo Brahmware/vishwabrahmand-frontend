@@ -109,7 +109,7 @@ const HamburgerMenu = (
       >
         <NavbarButton to="/company" menuToggleState={open} menuToggleFn={setOpen}>{t('__NAVBAR_COMPANY')}</NavbarButton>
         <NavbarButton to="/brands" menuToggleState={open} menuToggleFn={setOpen}>{t('__NAVBAR_BRANDS')}</NavbarButton>
-        <NavbarButton to="/press" menuToggleState={open} menuToggleFn={setOpen}>{t('__NAVBAR_PRESS')}</NavbarButton>
+        <NavbarButton to="/news" menuToggleState={open} menuToggleFn={setOpen}>{t('__NAVBAR_PRESS')}</NavbarButton>
       </MenuNavList>
     </Fragment>
   );
