@@ -7,6 +7,7 @@ import {
   DialogueTitle
 } from '../../../common/dialogue';
 import { useTranslation } from 'react-i18next';
+import config from '../../../../config';
 
 const TranslationMenuTitle = styled(DialogueTitle)(({ theme }) => ({
   fontSize: '1.5em',
@@ -35,7 +36,7 @@ const TranslationMenuActions = styled(DialogueActions)(({ theme }) => ({
 const LanguageButton = ({
   children,
   onClick
-}:{
+}: {
   children: React.ReactNode,
   onClick?: () => void
 }) => (
@@ -69,6 +70,15 @@ const TranslationMenu = (
 
   const { t, i18n } = useTranslation();
 
+  const handleLanguageChange = (language: string) => {
+    i18n.changeLanguage(language);
+    document.documentElement.lang = language;
+    document.body.classList.forEach((className) => {
+      document.body.classList.remove(className);
+    });
+    document.body.classList.add(language);
+  }
+
   return (
     <DialogueCard
       open={open}
@@ -79,15 +89,51 @@ const TranslationMenu = (
     >
       <TranslationMenuTitle>{t('__TRANSLATION_MENU_HEADER')}</TranslationMenuTitle>
       <TranslationMenuContent>
-        <LanguageButton onClick={() => i18n.changeLanguage('bn')}>{t('__TRANSLATION_MENU_SANSKRIT')}</LanguageButton>
-        <LanguageButton onClick={() => i18n.changeLanguage('bn')}>{t('__TRANSLATION_MENU_HINDI')}</LanguageButton>
-        <LanguageButton onClick={() => i18n.changeLanguage('bn')}>{t('__TRANSLATION_MENU_BENGALI')}</LanguageButton>
-        <LanguageButton onClick={() => i18n.changeLanguage('bn')}>{t('__TRANSLATION_MENU_ODIA')}</LanguageButton>
-        <LanguageButton onClick={() => i18n.changeLanguage('bn')}>{t('__TRANSLATION_MENU_TELUGU')}</LanguageButton>
-        <LanguageButton onClick={() => i18n.changeLanguage('bn')}>{t('__TRANSLATION_MENU_TAMIL')}</LanguageButton>
-        <LanguageButton onClick={() => i18n.changeLanguage('bn')}>{t('__TRANSLATION_MENU_MALAYALAM')}</LanguageButton>
-        <LanguageButton onClick={() => i18n.changeLanguage('bn')}>{t('__TRANSLATION_MENU_KANNADA')}</LanguageButton>
-        <LanguageButton onClick={() => i18n.changeLanguage('en')} >{t('__TRANSLATION_MENU_ENGLISH')}</LanguageButton>
+        <LanguageButton
+          onClick={() => handleLanguageChange(config.languageIsoCodes.sanskrit)}
+        >
+          {t('__TRANSLATION_MENU_SANSKRIT')}
+        </LanguageButton>
+        <LanguageButton
+          onClick={() => handleLanguageChange(config.languageIsoCodes.hindi)}
+        >
+          {t('__TRANSLATION_MENU_HINDI')}
+        </LanguageButton>
+        <LanguageButton
+          onClick={() => handleLanguageChange(config.languageIsoCodes.bengali)}
+        >
+          {t('__TRANSLATION_MENU_BENGALI')}
+        </LanguageButton>
+        <LanguageButton
+          onClick={() => handleLanguageChange(config.languageIsoCodes.odia)}
+        >
+          {t('__TRANSLATION_MENU_ODIA')}
+        </LanguageButton>
+        <LanguageButton
+          onClick={() => handleLanguageChange(config.languageIsoCodes.telugu)}
+        >
+          {t('__TRANSLATION_MENU_TELUGU')}
+        </LanguageButton>
+        <LanguageButton
+          onClick={() => handleLanguageChange(config.languageIsoCodes.tamil)}
+        >
+          {t('__TRANSLATION_MENU_TAMIL')}
+        </LanguageButton>
+        <LanguageButton
+          onClick={() => handleLanguageChange(config.languageIsoCodes.malayalam)}
+        >
+          {t('__TRANSLATION_MENU_MALAYALAM')}
+        </LanguageButton>
+        <LanguageButton
+          onClick={() => handleLanguageChange(config.languageIsoCodes.kannada)}
+        >
+          {t('__TRANSLATION_MENU_KANNADA')}
+        </LanguageButton>
+        <LanguageButton
+          onClick={() => handleLanguageChange(config.languageIsoCodes.english)}
+        >
+          {t('__TRANSLATION_MENU_ENGLISH')}
+        </LanguageButton>
       </TranslationMenuContent>
       <TranslationMenuActions>
         <TranslationMenuButton

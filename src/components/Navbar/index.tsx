@@ -52,8 +52,9 @@ const ThemedToolbar = styled(Box)(({ theme }) => ({
 export const NavPanel = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'space-between !important',
   gap: theme.customSpaces.md,
+  minWidth: '20em',
   [theme.breakpoints.down('md')]: {
     display: 'none !important',
   },
@@ -81,7 +82,7 @@ const Navbar = () => {
         >
           <NavbarButton to="/company">{t('__NAVBAR_COMPANY')}</NavbarButton>
           <NavbarButton to="/brands">{t('__NAVBAR_BRANDS')}</NavbarButton>
-          <NavbarButton to="/press">{t('__NAVBAR_PRESS')}</NavbarButton>
+          <NavbarButton to="/news">{t('__NAVBAR_PRESS')}</NavbarButton>
         </NavPanel>
         <HamburgerMenu open={open} setOpen={setOpen} />
       </ThemedToolbar>

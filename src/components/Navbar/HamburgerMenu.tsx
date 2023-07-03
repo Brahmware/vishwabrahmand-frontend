@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import NavbarButton from './NavbarButton';
 import { Spin as HamburgerIcon } from 'hamburger-react';
 import { useWindowHeight } from '../../utils/useWindowHeight';
+import { useTranslation } from 'react-i18next';
 
 interface MenuNavListProps extends BoxProps {
   open?: boolean;
@@ -74,7 +75,7 @@ const HamburgerMenu = (
 ) => {
 
   const theme = useTheme();
-
+  const { t } = useTranslation();
   const windowHeight = useWindowHeight();
 
   return (
@@ -106,9 +107,9 @@ const HamburgerMenu = (
         open={open}
         windowheight={windowHeight}
       >
-        <NavbarButton to="/company" menuToggleState={open} menuToggleFn={setOpen}>Company</NavbarButton>
-        <NavbarButton to="/brands" menuToggleState={open} menuToggleFn={setOpen}>Brands</NavbarButton>
-        <NavbarButton to="/press" menuToggleState={open} menuToggleFn={setOpen}>Press</NavbarButton>
+        <NavbarButton to="/company" menuToggleState={open} menuToggleFn={setOpen}>{t('__NAVBAR_COMPANY')}</NavbarButton>
+        <NavbarButton to="/brands" menuToggleState={open} menuToggleFn={setOpen}>{t('__NAVBAR_BRANDS')}</NavbarButton>
+        <NavbarButton to="/press" menuToggleState={open} menuToggleFn={setOpen}>{t('__NAVBAR_PRESS')}</NavbarButton>
       </MenuNavList>
     </Fragment>
   );

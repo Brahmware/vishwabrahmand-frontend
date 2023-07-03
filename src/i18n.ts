@@ -6,14 +6,22 @@ import enLinks from './locales/en/links.json';
 import en from './locales/en/translation.json';
 import bnLinks from './locales/bn/links.json';
 import bn from './locales/bn/translation.json';
+import hiLinks from './locales/hi/links.json';
+import hi from './locales/hi/translation.json';
+import orLinks from './locales/or/links.json';
+import or from './locales/or/translation.json';
+
 
 countries.registerLocale(require('i18n-iso-countries/langs/en.json'));
-countries.registerLocale(require('i18n-iso-countries/langs/it.json'));
-countries.registerLocale(require('i18n-iso-countries/langs/es.json'));
+countries.registerLocale(require('i18n-iso-countries/langs/bn.json'));
+countries.registerLocale(require('i18n-iso-countries/langs/hi.json'));
+// countries.registerLocale(require('i18n-iso-countries/langs/or.json'));
 
 const resources = {
   en: { translation: en, links: enLinks },
   bn: { translation: bn, links: bnLinks },
+  hi: { translation: hi, links: hiLinks },
+  or: { translation: or, links: orLinks },
 };
 
 i18n
@@ -29,7 +37,7 @@ i18n
     returnEmptyString: false,
     nsSeparator: false,
     resources,
-    supportedLngs: ['bn', 'en'],
+    supportedLngs: ['bn', 'en', 'hi', 'or'],
     fallbackLng: 'en',
     keySeparator: ':::',
     interpolation: {

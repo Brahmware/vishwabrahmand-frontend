@@ -20,7 +20,18 @@ const config = {
     '/images/homepage/homepage-background-8.webp',
     '/images/homepage/homepage-background-9.webp',
     '/images/homepage/homepage-background-10.webp',
-  ]
+  ],
+  languageIsoCodes: {
+    'sanskrit': 'bn',
+    'hindi': 'hi',
+    'bengali': 'bn',
+    'odia': 'or',
+    'telugu': 'bn',
+    'tamil': 'bn',
+    'malayalam': 'bn',
+    'kannada': 'bn',
+    'english': 'en',
+  }
 };
 
 export default config;

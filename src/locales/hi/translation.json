@@ -1,0 +1,47 @@
+{
+  "__TRANSLATION_MENU_HEADER": "अपनी भाषा चुनें",
+
+  "__TRANSLATION_MENU_SANSKRIT": "संस्कृत",
+  "__TRANSLATION_MENU_HINDI": "हिंदी",
+  "__TRANSLATION_MENU_BENGALI": "বাংলা",
+  "__TRANSLATION_MENU_ODIA": "ଓଡ଼ିଆ",
+  "__TRANSLATION_MENU_TELUGU": "తెలుగు",
+  "__TRANSLATION_MENU_TAMIL": "தமிழ்",
+  "__TRANSLATION_MENU_MALAYALAM": "മലയാളം",
+  "__TRANSLATION_MENU_KANNADA": "ಕನ್ನಡ",
+  "__TRANSLATION_MENU_ENGLISH": "English",
+
+  "__MENU_CLOSE": "बंद",
+
+  "__NOTHING_TO_DISPLAY": "प्रदर्शित करने के लिए कुछ नहीं है।",
+  "__NO_DATA_TO_DISPLAY": "कोई डेटा नहीं है।",
+  "__DISPLAY_PER_PAGE": "प्रति पेज दिखाएं:",
+
+  "__NAVBAR_COMPANY": "संस्थान",
+  "__NAVBAR_BRANDS": "ब्रांड",
+  "__NAVBAR_PRESS": "समाचार",
+
+  "__FOOTER_COPYRIGHT": "कॉपीराइट © {{year}}",
+  "__FOOTER_COMPANY_NAME": "विश्व ब्रह्मांड प्राइवेट लिमिटेड",
+  "__FOOTER_CONTACT_COPY_BUTTON": "कॉपी करें",
+  "__FOOTER_CONTACT_COPY_BUTTON_MESSAGE": "ईमेल कॉपी किया गया",
+  "__FOOTER_TRANSLATION_MENU_BUTTON": "हिंदी",
+
+  "__ABOUT_PAGE_ABOUT_TITLE": "संस्थान के बारे में",
+
+  "__ABOUT_PAGE_LEADERSHIP_TITLE": "नेतृत्व",
+
+  "__ABOUT_PAGE_ALLIES_TITLE": "सहयोगी",
+
+  "__ABOUT_PAGE_KEY_DOCUMENTS_TITLE": "मुख्य दस्तावेज़",
+
+  "__BRANDS_PAGE_BRANDS_TITLE": "व्यापारिक ब्रांड",
+
+  "__NEWS_PAGE_NEWS_TITLE": "प्रकाशित समाचार",
+
+  "__NEWS_ARTICLE_SHARE_CTA_TITLE": "इस समाचार को शेयर करें",
+  "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "{{socialMediaName}} पर शेयर करने में त्रुटि",
+  "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "हमें इस कठिनाई के लिए खेद है। कृपया ध्यान दें कि वर्तमान में {{ socialMediaName}} पर शेयर करना सुरक्षा की नजरिया से हो रहा है। हम समस्या का समाधान करने और संभावित संगतता की पुनर्स्थापना के लिए कार्यरत हैं। आपकी धैर्य और समझ के लिए धन्यवाद।",
+
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "हाल ही में प्रकाशित समाचार"
+}
