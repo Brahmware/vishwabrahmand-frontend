@@ -122,8 +122,8 @@ const FooterRight = () => {
         aria-label={t("__FOOTER_CONTACT_COPY_BUTTON")}
       >
         <EmailIcon
-          height='1.25rem'
-          width='1.25rem'
+          height='1.5rem'
+          width='1.5rem'
         />
         {t("__FOOTER_CONTACT_COPY_BUTTON")}
       </CustomIconButton>

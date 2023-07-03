@@ -4,16 +4,20 @@ body.en {
 
 body.bn {
   font-family: 'Noto Sans Bengali', sans-serif;
+  line-height: 1.33 !important;
 }
 
 body.hi {
   font-family: 'Noto Sans Devanagari', sans-serif;
+  line-height: 1.33 !important;
 }
 
 body.sa {
   font-family: 'Noto Sans Devanagari', sans-serif;
+  line-height: 1.33 !important;
 }
 
 body.or {
   font-family: 'Noto Sans Oriya', sans-serif;
+  line-height: 1.33 !important;
 }
