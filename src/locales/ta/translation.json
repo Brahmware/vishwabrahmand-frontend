@@ -1,0 +1,59 @@
+{
+  "__TRANSLATION_MENU_HEADER": "ஒரு மொழியை தேர்வுசெய்க",
+  
+  "__TRANSLATION_MENU_SANSKRIT": "संस्कृतम्",
+  "__TRANSLATION_MENU_HINDI": "हिंदी",
+  "__TRANSLATION_MENU_BENGALI": "বাংলা",
+  "__TRANSLATION_MENU_ODIA": "ଓଡ଼ିଆ",
+  "__TRANSLATION_MENU_TELUGU": "తెలుగు",
+  "__TRANSLATION_MENU_TAMIL": "தமிழ்",
+  "__TRANSLATION_MENU_MALAYALAM": "മലയാളം",
+  "__TRANSLATION_MENU_KANNADA": "ಕನ್ನಡ",
+  "__TRANSLATION_MENU_ENGLISH": "Eng (Ind)",
+  
+  "__MENU_CLOSE": "மூடு",
+  "__BUTTON_DOWNLOAD": "பதிவிறக்கம்",
+  
+
+  "__NOTHING_TO_DISPLAY": "காட்ட எந்த உருப்படியும் இல்லை.",
+  "__NO_DATA_TO_DISPLAY": "காட்ட தகவல் இல்லை.",
+  "__DISPLAY_PER_PAGE": "பக்கத்தில் காட்டப்பட வேண்டிய உருப்படிகள்:",
+
+  
+
+  "__NAVBAR_COMPANY": "கம்பெனி",
+  "__NAVBAR_BRANDS": "பிராண்ட்ஸ்",
+  "__NAVBAR_PRESS": "திருப்பகம்",
+
+  "__FOOTER_COPYRIGHT": "பாதுகாப்பு © {{year}}",
+  "__FOOTER_COMPANY_NAME": "விஸ்வ பிரமாண்ட் பிரைவேட் லிமிடெட்",
+  "__FOOTER_CONTACT_COPY_BUTTON": "நகலெடு",
+  "__FOOTER_CONTACT_COPY_BUTTON_MESSAGE": "மின்னஞ்சலை கிளிப்போர்ட்டில் நகலெடுக்க கிளிக் செய்யவும்",
+  "__FOOTER_TRANSLATION_MENU_BUTTON": "தமிழ்",
+
+  "__ABOUT_PAGE_ABOUT_TITLE": "பற்றி",
+
+  
+  "__ABOUT_PAGE_LEADERSHIP_TITLE": "முன்னாள் தலைவர்கள்",
+
+  "__ABOUT_PAGE_ALLIES_TITLE": "உடனார்வார்கள்",
+
+  "__ABOUT_PAGE_KEY_DOCUMENTS_TITLE": "முக்கிய ஆவணங்கள்",
+
+
+
+  "__BRANDS_PAGE_BRANDS_TITLE": "கம்பெனி பிராண்ட்ஸ்",
+
+
+
+  "__NEWS_PAGE_NEWS_TITLE": "செய்திகள்",
+
+
+
+  "__NEWS_ARTICLE_SHARE_CTA_TITLE": "இந்த செய்தியைப் பகிர்வீர்களா?",
+  "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "{{socialMediaName}} இல் பகிர்வதில் பிழை",
+  "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "க்ஷமிக்கவும், நீங்கள் சுருக்க சுருக்கமான சுருக்கத்தில் {{socialMediaName}} இல் தற்போதைய வடிவத்தில் செய்தியை பகிர்த்துள்ளீர்கள். மற்ற வழிகாட்டத்திற்கு முடிவுகளை செய்யுங்கள் மற்றும் முழுவதும் செயல்பாடுகளை செய்யுங்கள். மற்ற வழிகாட்டத்திற்கு பிரச்சினையை திரும்ப செய்யவும் மற்றும் உங்கள் ஆதரவு மற்றும் அறிவுக்கு நன்றி",
+
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "சமீபத்திய வெளியீடுகள்"
+
+}

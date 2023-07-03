@@ -21,3 +21,27 @@ body.or {
   font-family: 'Noto Sans Oriya', sans-serif;
   line-height: 1.33 !important;
 }
+
+body.te {
+  font-family: 'Noto Sans Telugu', sans-serif;
+  line-height: 1.33 !important;
+}
+
+body.ta {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  line-height: 1.33 !important;
+}
+
+body.ml {
+  font-family: 'Noto Sans Malayalam', sans-serif;
+  line-height: 1.33 !important;
+}
+
+body.kn {
+  font-family: 'Noto Sans Kannada', sans-serif;
+  line-height: 1.33 !important;
+}
+
+body.kn footer {
+  font-size: 0.9rem !important;
+}

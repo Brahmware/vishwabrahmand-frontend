@@ -1,0 +1,58 @@
+{
+  "__TRANSLATION_MENU_HEADER": "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  
+  "__TRANSLATION_MENU_SANSKRIT": "संस्कृतम्",
+  "__TRANSLATION_MENU_HINDI": "हिंदी",
+  "__TRANSLATION_MENU_BENGALI": "বাংলা",
+  "__TRANSLATION_MENU_ODIA": "ଓଡ଼ିଆ",
+  "__TRANSLATION_MENU_TELUGU": "తెలుగు",
+  "__TRANSLATION_MENU_TAMIL": "தமிழ்",
+  "__TRANSLATION_MENU_MALAYALAM": "മലയാളം",
+  "__TRANSLATION_MENU_KANNADA": "ಕನ್ನಡ",
+  "__TRANSLATION_MENU_ENGLISH": "Eng (Ind)",
+  
+  "__MENU_CLOSE": "ಮುಚ್ಚು",
+  "__BUTTON_DOWNLOAD": "ಡೌನ್‌ಲೋಡ್",
+  
+
+  "__NOTHING_TO_DISPLAY": "ಪ್ರದರ್ಶಿಸಲು ಯಾವುದೇ ವಿಷಯವಿಲ್ಲ.",
+  "__NO_DATA_TO_DISPLAY": "ಡೇಟಾ ಲಭ್ಯವಿಲ್ಲ.",
+  "__DISPLAY_PER_PAGE": "ಪೇಜಿನಲ್ಲಿ ಪ್ರದರ್ಶಿಸಬೇಕಾದ ವಿಷಯಗಳು:",
+
+  
+
+  "__NAVBAR_COMPANY": "ಕಂಪನಿ",
+  "__NAVBAR_BRANDS": "ಬ್ರಾಂಡ್‌ಗಳು",
+  "__NAVBAR_PRESS": "ಪ್ರೆಸ್",
+
+  "__FOOTER_COPYRIGHT": "ಕಾಪಿರೈಟ್ © {{year}}",
+  "__FOOTER_COMPANY_NAME": "ವಿಶ್ವ ಬ್ರಹ್ಮಾಂಡ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+  "__FOOTER_CONTACT_COPY_BUTTON": "ನಕಲಿಸಿ",
+  "__FOOTER_CONTACT_COPY_BUTTON_MESSAGE": "ಇಮೇಲ್ ನಕಲಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ",
+  "__FOOTER_TRANSLATION_MENU_BUTTON": "ಕನ್ನಡ",
+
+  "__ABOUT_PAGE_ABOUT_TITLE": "ನಮ್ಮ ಬಗ್ಗೆ",
+
+  
+  "__ABOUT_PAGE_LEADERSHIP_TITLE": "ನಾಯಕತ್ವ",
+
+  "__ABOUT_PAGE_ALLIES_TITLE": "ಸ್ನೇಹಿತರು",
+
+  "__ABOUT_PAGE_KEY_DOCUMENTS_TITLE": "ಮುಖ್ಯ ದಾಖಲೆಗಳು",
+
+
+
+  "__BRANDS_PAGE_BRANDS_TITLE": "ಕಂಪನಿ ಬ್ರಾಂಡ್‌ಗಳು",
+
+
+
+  "__NEWS_PAGE_NEWS_TITLE": "ಸುದ್ದಿಗಳು",
+
+
+
+  "__NEWS_ARTICLE_SHARE_CTA_TITLE": "ಈ ಸುದ್ದಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ",
+  "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "{{socialMediaName}}ಗೆ ಹಂಚಿಕೊಡುವುದರಲ್ಲಿ ತಪ್ಪಾಗಿದೆ",
+  "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "ಕ್ಷಮಿಸಿ, ನೀವು {{socialMediaName}}ಗೆ ಕೆಳಗಿನ ಸಂಕ್ಷೇಪಣೆಯನ್ನು ಹಂಚಿಕೊಟ್ಟಿದ್ದೀರಿ. ಬೇರೆ ಕೆಲಸಕ್ಕಾಗಿ ಪುನಃ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ನಿಮ್ಮ ಸಹಾಯವನ್ನು ಮುಗಿಸಿದ ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಧನ್ಯವಾದಗಳು.",
+
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "ಹೊಸ ಬಿಡುಗಡೆಗಳು"
+}
