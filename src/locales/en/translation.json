@@ -54,6 +54,10 @@
   "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "Error Sharing on {{socialMediaName}}",
   "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "We sincerely apologize for the inconvenience caused. Please note that sharing on {{socialMediaName}} is currently undergoing maintenance. We are working diligently to resolve the issue and restore full functionality as soon as possible. Thank you for your patience and understanding",
 
-  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "Recent Releases"
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "Recent Releases",
+
+
+  "__PAGE_404_TEXT": "Page not found.",
+  "__PAGE_404_LINK": "Go back to home page"
 
 }

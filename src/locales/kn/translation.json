@@ -54,5 +54,10 @@
   "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "{{socialMediaName}}ಗೆ ಹಂಚಿಕೊಡುವುದರಲ್ಲಿ ತಪ್ಪಾಗಿದೆ",
   "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "ಕ್ಷಮಿಸಿ, ನೀವು {{socialMediaName}}ಗೆ ಕೆಳಗಿನ ಸಂಕ್ಷೇಪಣೆಯನ್ನು ಹಂಚಿಕೊಟ್ಟಿದ್ದೀರಿ. ಬೇರೆ ಕೆಲಸಕ್ಕಾಗಿ ಪುನಃ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ನಿಮ್ಮ ಸಹಾಯವನ್ನು ಮುಗಿಸಿದ ಕಾರ್ಯಕಲಾಪಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಧನ್ಯವಾದಗಳು.",
 
-  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "ಹೊಸ ಬಿಡುಗಡೆಗಳು"
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "ಹೊಸ ಬಿಡುಗಡೆಗಳು",
+
+
+  "__PAGE_404_TEXT": "ಯಾವುದೇ ಪುಟ ಕಂಡುಬಂದಿಲ್ಲ.",
+  "__PAGE_404_LINK": "ಮುಖಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ"
+
 }

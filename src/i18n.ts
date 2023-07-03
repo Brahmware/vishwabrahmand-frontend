@@ -66,3 +66,5 @@ i18n
   });
 
 export default i18n;
+
+export type Lang = 'en' | 'sa' | 'hi' | 'bn' | 'or' | 'te' | 'ta' | 'ml' | 'kn';

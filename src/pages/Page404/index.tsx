@@ -7,6 +7,8 @@ import useTextScrambler from '../../utils/useTextScrambler';
 import { RightArrowIconThick } from '../../Assets/Logo/Icons';
 import { useAddRootClass } from '../../utils/useAddRootClass';
 import config from '../../config';
+import { useTranslation } from 'react-i18next';
+import { Lang } from '../../i18n';
 
 interface Page404WrapperProps extends BoxProps {
   containerheight?: number;
@@ -23,6 +25,10 @@ const Page404Wrapper = styled(Box)<Page404WrapperProps>(({ theme, containerheigh
   overflow: 'hidden',
   backgroundColor: theme.palette.background.default,
   gap: theme.customSpaces.lg,
+
+  '& *': {
+    whiteSpace: 'nowrap',
+  },
 
   [theme.breakpoints.down('md')]: {
     fontSize: '0.875rem',
@@ -79,26 +85,31 @@ const ArrowIcon = styled(RightArrowIconThick)(({ theme }) => ({
   marginLeft: 0,
 }));
 
+
 const Page404: React.FC = () => {
 
   useAddRootClass('page-404');
+  const { t, i18n } = useTranslation();
 
-  const characters = config.englishLetters.split('');
+  const lang = i18n.language as Lang;
+  const characters = config.letters[lang].split('');
+  const page404Text = t("__PAGE_404_TEXT");
+  const page404Link = t("__PAGE_404_LINK");
 
   const {
     text404,
     textLink
   } = useTextScrambler(
-    config.page404Text,
-    config.page404Link,
-    characters, 
+    page404Text,
+    page404Link,
+    characters,
     config.loadDelay
   );
 
   return (
     <Page404Wrapper containerheight={useContainerMinHeight()}>
       <Image404 className='noselect'>404</Image404>
-      <SectionTitle>{text404}</SectionTitle>
+      <SectionTitle >{text404}</SectionTitle>
       <ArrowLink to={config.page404LinkUrl} replace>
         {textLink}
         <ArrowIcon />

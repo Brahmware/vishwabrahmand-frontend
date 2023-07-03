@@ -54,5 +54,10 @@
   "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "{{socialMediaName}}ലേക്ക് പങ്കിടാൻ പിഴവു",
   "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "ക്ഷമിക്കണം, നിങ്ങൾ {{socialMediaName}}ലേക്ക് താഴെപ്പറഞ്ഞ ചെയ്തിട്ടുള്ള ചെറിയ സംരംഭത്തിൽ വരുന്നു. മറ്റൊരു വഴിയിൽ പുനർനിർത്താൻ ശ്രമിക്കുക അല്ലെങ്കിൽ നിങ്ങളുടെ സഹായം പ്രവർത്തനങ്ങൾ പൂർത്തിയാക്കാനും നന്ദിയുണ്ട്.",
 
-  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "പുതിയ പ്രസിദ്ധീകരണങ്ങൾ"
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "പുതിയ പ്രസിദ്ധീകരണങ്ങൾ",
+
+
+  "__PAGE_404_TEXT": "പേജ് കണ്ടെത്തിയില്ല.",
+  "__PAGE_404_LINK": "വീട്ടിലേക്ക് പോകൂ"
+
 }
