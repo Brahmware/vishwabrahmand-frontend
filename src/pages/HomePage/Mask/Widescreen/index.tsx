@@ -8,6 +8,7 @@ import Common from './common';
 import { useTranslation } from 'react-i18next';
 import En from './eng';
 import Bn from './bn';
+import Sa from './sa';
 
 const StyledSvg = styled('svg')(({ theme }) => ({
   height: '100%',
@@ -50,6 +51,8 @@ const Widescreen = () => {
                 return <En />
               case 'bn':
                 return <Bn />
+              case 'sa':
+                return <Sa />
               default:
                 return <En />
             }
