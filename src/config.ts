@@ -22,7 +22,7 @@ const config = {
     '/images/homepage/homepage-background-10.webp',
   ],
   languageIsoCodes: {
-    'sanskrit': 'bn',
+    'sanskrit': 'sa',
     'hindi': 'hi',
     'bengali': 'bn',
     'odia': 'or',

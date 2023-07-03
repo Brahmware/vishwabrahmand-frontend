@@ -1,0 +1,49 @@
+{
+  "__TRANSLATION_MENU_HEADER": "तवां भाषां चुनुते",
+
+  "__TRANSLATION_MENU_SANSKRIT": "संस्कृत",
+  "__TRANSLATION_MENU_HINDI": "हिंदी",
+  "__TRANSLATION_MENU_BENGALI": "বাংলা",
+  "__TRANSLATION_MENU_ODIA": "ଓଡ଼ିଆ",
+  "__TRANSLATION_MENU_TELUGU": "తెలుగు",
+  "__TRANSLATION_MENU_TAMIL": "தமிழ்",
+  "__TRANSLATION_MENU_MALAYALAM": "മലയാളം",
+  "__TRANSLATION_MENU_KANNADA": "ಕನ್ನಡ",
+  "__TRANSLATION_MENU_ENGLISH": "Eng (Ind)",
+
+  "__MENU_CLOSE": "बन्दम् कुरु",
+  "__BUTTON_DOWNLOAD": "अवलोकनम् कुरु",
+
+
+  "__NOTHING_TO_DISPLAY": "किञ्चिद् प्रदर्शनायामस्ति",
+  "__NO_DATA_TO_DISPLAY": "किञ्चित् आकर्षणीयं नास्ति",
+  "__DISPLAY_PER_PAGE": "प्रति पृष्ठे दर्शयेत्:",
+
+  "__NAVBAR_COMPANY": "अन्वयः",
+  "__NAVBAR_BRANDS": "विनिर्माणाः",
+  "__NAVBAR_PRESS": "समाचारम्",
+
+  "__FOOTER_COPYRIGHT": "कॉपिराइटः © {{year}}",
+  "__FOOTER_COMPANY_NAME": "विश्वः ब्रह्माण्डः प्राइवेटेड् लिमिटेड्",
+  "__FOOTER_CONTACT_COPY_BUTTON": "प्रतिलिपिकुर्वन्तु",
+  "__FOOTER_CONTACT_COPY_BUTTON_MESSAGE": "ईमेलः कृतः प्रतिलिपिः",
+  "__FOOTER_TRANSLATION_MENU_BUTTON": "संस्कृतम्",
+
+  "__ABOUT_PAGE_ABOUT_TITLE": "अन्वयस्य विषये",
+
+  "__ABOUT_PAGE_LEADERSHIP_TITLE": "नेतृत्वम्",
+
+  "__ABOUT_PAGE_ALLIES_TITLE": "सहायकाः",
+
+  "__ABOUT_PAGE_KEY_DOCUMENTS_TITLE": "मुख्याः दस्तावेजाः",
+
+  "__BRANDS_PAGE_BRANDS_TITLE": "व्यापारिका चिन्तनिः",
+
+  "__NEWS_PAGE_NEWS_TITLE": "प्रकाशिताः समाचारः",
+
+  "__NEWS_ARTICLE_SHARE_CTA_TITLE": "एषः समाचारः सादृश्यायितं कुरु",
+  "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "{{socialMediaName}} आपणे सादृश्यायितं करितुं अस्वीकारकं",
+  "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "दुःखमस्ति एषां कठिनतायाः करणे। कृपया ध्यानं दत्त्वा वर्तमाने {{socialMediaName}} सुरक्षया आवश्यकतायाः अदर्शनेन करितुं प्रवृत्तं चेष्टामस्ति। आप्यायस्व, आप्यायस्व, अतीव सावधानीमाकुरुष्व।",
+
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "नवोपकारकाः समाचाराः"
+}
