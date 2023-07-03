@@ -15,7 +15,6 @@ const config = {
     ml: 'അആഇഈഉഊഋൠഌൡഎഏഐഒഓഔംഃകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹക്ഷത്രജ്ഞ1234567890।॥',
     kn: 'ಅಆಇಈಉಊಋೠಌೡಎಏಐಒಓಔಂಃಕಖಗಘಙಚಛಜಝಞಟಠಡಢಣತಥದಧನಪಫಬಭಮಯರಲವಶಷಸಹಕ್ಷತ್ರಜ್ಞ1234567890।॥',
   },
-  englishLetters: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890-=+<>,./?[{()}]!@#$%^&*~`\\|_',
   page404Text: 'Page not found.',
   page404Link: 'Go back to home page',
   page404LinkUrl: '/',
