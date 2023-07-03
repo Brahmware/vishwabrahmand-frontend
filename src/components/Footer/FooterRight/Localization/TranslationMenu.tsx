@@ -70,7 +70,10 @@ const TranslationMenu = (
 
   const { t, i18n } = useTranslation();
 
-  const handleLanguageChange = (language: string) => i18n.changeLanguage(language);
+  const handleLanguageChange = (language: string) => {
+    i18n.changeLanguage(language);
+    handleClose();
+  };
 
 
   return (
