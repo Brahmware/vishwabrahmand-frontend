@@ -285,7 +285,7 @@ const customSpaces = {
 const customHeights = {
   navBarHeight: '4.5em',
   navPanelHeight: '3em',
-  footerHeight: '5em',
+  footerHeight: '7em',
   loadingBoxHeight: '5em',
   newsHeadlineHeight: '2em',
 };
