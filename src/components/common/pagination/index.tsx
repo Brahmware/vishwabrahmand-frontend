@@ -117,7 +117,7 @@ const Pagination = (
           variant='outlined'
           color='primary'
           onChange={handleChangePage}
-          sx={{ my: theme.customSpaces.sm }}
+          sx={{ my: theme.customSpaces.sm, flexWrap: 'nowrap' }}
         />
       </PaginationContainer>
     )

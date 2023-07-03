@@ -1,1 +1,59 @@
-{}
+{
+  "__TRANSLATION_MENU_HEADER": "దయచేసి ఒక ప్రదర్శన భాషను ఎంచుకోండి",
+  
+  "__TRANSLATION_MENU_SANSKRIT": "संस्कृतम्",
+  "__TRANSLATION_MENU_HINDI": "हिंदी",
+  "__TRANSLATION_MENU_BENGALI": "বাংলা",
+  "__TRANSLATION_MENU_ODIA": "ଓଡ଼ିଆ",
+  "__TRANSLATION_MENU_TELUGU": "తెలుగు",
+  "__TRANSLATION_MENU_TAMIL": "தமிழ்",
+  "__TRANSLATION_MENU_MALAYALAM": "മലയാളം",
+  "__TRANSLATION_MENU_KANNADA": "ಕನ್ನಡ",
+  "__TRANSLATION_MENU_ENGLISH": "Eng (Ind)",
+  
+  "__MENU_CLOSE": "మూసివేయి",
+  "__BUTTON_DOWNLOAD": "డౌన్లోడ్",
+  
+
+  "__NOTHING_TO_DISPLAY": "ప్రదర్శించడానికి ఏ అంశాలు లేవు.",
+  "__NO_DATA_TO_DISPLAY": "డేటా అందుబాటులో లేదు.",
+  "__DISPLAY_PER_PAGE": "పేజీ ప్రదర్శించాల్సిన అంశాలు:",
+
+  
+
+  "__NAVBAR_COMPANY": "కంపెనీ",
+  "__NAVBAR_BRANDS": "బ్రాండ్స్",
+  "__NAVBAR_PRESS": "ప్రెస్",
+
+  "__FOOTER_COPYRIGHT": "పాల్గొనబడ్డాయి © {{year}}",
+  "__FOOTER_COMPANY_NAME": "విశ్వ బ్రహ్మాండ్ ప్రైవేట్ లిమిటెడ్",
+  "__FOOTER_CONTACT_COPY_BUTTON": "కాపీ చేయడానికి క్లిక్ చేయండి",
+  "__FOOTER_CONTACT_COPY_BUTTON_MESSAGE": "కాపీ చేసుకోవడానికి ఇమెయిల్ను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి",
+  "__FOOTER_TRANSLATION_MENU_BUTTON": "తెలుగు",
+
+  "__ABOUT_PAGE_ABOUT_TITLE": "గురించి",
+
+  
+  "__ABOUT_PAGE_LEADERSHIP_TITLE": "నాయకత్వం",
+
+  "__ABOUT_PAGE_ALLIES_TITLE": "సహచరులు",
+
+  "__ABOUT_PAGE_KEY_DOCUMENTS_TITLE": "ముఖ్య పత్రాలు",
+
+
+
+  "__BRANDS_PAGE_BRANDS_TITLE": "కంపెనీ బ్రాండ్స్",
+
+
+
+  "__NEWS_PAGE_NEWS_TITLE": "వార్తల విడుదలలు",
+
+
+
+  "__NEWS_ARTICLE_SHARE_CTA_TITLE": "ఈ వార్తను షేర్ చేయండి",
+  "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "{{socialMediaName}}లో షేర్ చేయడంలో పిచ్చకామెంట్",
+  "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "మీకు కలిగిన అపాయంకరంగా మీకు చిన్న సంక్షేపం కోసం క్షమించండి. దయచేసి గమనికలపులో ఉన్నట్లు మీరు షేర్ చేయడం లో {{socialMediaName}} లో పనిముట్లు మీరు ప్రస్తుతం రూపొందిస్తున్నాయి. మరొకదానికి పనిముట్లు సమస్యను పరిష్కరించడం మరియు పూర్తి కార్యకలాపాన్ని తీసివేయడంతో మీరు క్షమించి మీ సహానుభూతి మరియు పరిజ్ఞానం కోసం ధన్యవాదాలు",
+
+  "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "ఇతర విడుదలలు"
+
+}
