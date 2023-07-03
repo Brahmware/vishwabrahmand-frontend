@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 const CopyrightWrapper = styled(Box)(({ theme }) => ({
 	...theme.textSelectionVarient.varient_bhashma_on_white,
+	flex: 1,
 	display: 'flex',
 	justifyContent: 'center',
 	alignItems: 'center',

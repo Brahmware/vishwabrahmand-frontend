@@ -18,14 +18,12 @@ const FooterWrapper = styled((props: FooterWrapperProps & React.HTMLAttributes<H
 
   [theme.breakpoints.down('md')]: {
     padding: `
-      ${theme.customPadding.xl} 0
       ${theme.customPadding.xl} ${theme.customPadding.xs}
     `,
   },
 
   [theme.breakpoints.down('sm')]: {
     padding: `
-      ${theme.customPadding.lg} 0
       ${theme.customPadding.lg} ${theme.customPadding.xs}
     `,
   },
@@ -38,7 +36,8 @@ const StyledBox = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  rowGap: theme.customSpaces.lg,
+  columnGap: theme.customSpaces.lg,
+  padding: `${theme.customPadding.sm} 0`,
   flexWrap: 'wrap',
 
   [theme.breakpoints.down('md')]: {

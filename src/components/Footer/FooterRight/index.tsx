@@ -18,6 +18,7 @@ interface FooterRightWrapperProps {
 }
 
 const FooterRightWrapper = styled(Box)<FooterRightWrapperProps>(({ theme }) => ({
+  flex: 1,
   color: theme.customColors.bhasma,
   backgroundColor: theme.customColors.white,
   display: 'flex',
