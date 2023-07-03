@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { styled } from '@mui/material';
 import { useScrollToTop } from '../../utils/useScrollToTop';
+import { useSetLanguageToHtml } from '../../utils/useSetLanguageToHtml';
+import useAddMoreWidthToScrollbar from '../../utils/useAddMoreWidthToScrollbar';
 
 const ContentPositioning = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -21,26 +23,10 @@ const ContentWrapper = ({
 }: {
   children: React.ReactNode;
 }) => {
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const contentWrapper = document.body;
-      const distanceToRightEdge = window.innerWidth - e.pageX;
-
-      if (contentWrapper && distanceToRightEdge < 15) {
-        contentWrapper.classList.add('more-width');
-      } else if (contentWrapper) {
-        contentWrapper.classList.remove('more-width');
-      }
-    };
-
-    document.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
+  
+  useAddMoreWidthToScrollbar();
   useScrollToTop();
+  useSetLanguageToHtml();
 
   return (
     <ContentPositioning>

@@ -70,14 +70,8 @@ const TranslationMenu = (
 
   const { t, i18n } = useTranslation();
 
-  const handleLanguageChange = (language: string) => {
-    i18n.changeLanguage(language);
-    document.documentElement.lang = language;
-    document.body.classList.forEach((className) => {
-      document.body.classList.remove(className);
-    });
-    document.body.classList.add(language);
-  }
+  const handleLanguageChange = (language: string) => i18n.changeLanguage(language);
+
 
   return (
     <DialogueCard

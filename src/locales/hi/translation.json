@@ -11,7 +11,9 @@
   "__TRANSLATION_MENU_KANNADA": "ಕನ್ನಡ",
   "__TRANSLATION_MENU_ENGLISH": "English",
 
-  "__MENU_CLOSE": "बंद",
+  "__MENU_CLOSE": "बंद करें",
+  "__BUTTON_DOWNLOAD": "डाउनलोड करें",
+
 
   "__NOTHING_TO_DISPLAY": "प्रदर्शित करने के लिए कुछ नहीं है।",
   "__NO_DATA_TO_DISPLAY": "कोई डेटा नहीं है।",

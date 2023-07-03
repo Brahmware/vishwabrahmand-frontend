@@ -1,5 +1,6 @@
 import { BoxProps, Button, ButtonBaseProps, styled } from "@mui/material";
 import { NewsCard } from "../../../../__mocks__/pages/newspage";
+import { useTranslation } from "react-i18next";
 
 interface FlatButtonProps extends ButtonBaseProps {
   variant?: 'text' | 'outlined' | 'contained';
@@ -28,6 +29,9 @@ interface DownloadDocumentButtonProps {
 }
 
 const DownloadDocumentButton = ({ file }: DownloadDocumentButtonProps) => {
+
+  const { t } = useTranslation();
+
   if (!file) {
     return null;
   }
@@ -48,7 +52,7 @@ const DownloadDocumentButton = ({ file }: DownloadDocumentButtonProps) => {
       disableElevation
       onClick={handleDownload}
     >
-      Download
+      {t("__BUTTON_DOWNLOAD")}
     </FlatButton>
   );
 }
