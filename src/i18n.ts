@@ -10,11 +10,14 @@ import hiLinks from './locales/hi/links.json';
 import hi from './locales/hi/translation.json';
 import orLinks from './locales/or/links.json';
 import or from './locales/or/translation.json';
+import saLinks from './locales/sa/links.json';
+import sa from './locales/sa/translation.json';
 
 
 countries.registerLocale(require('i18n-iso-countries/langs/en.json'));
 countries.registerLocale(require('i18n-iso-countries/langs/bn.json'));
 countries.registerLocale(require('i18n-iso-countries/langs/hi.json'));
+// countries.registerLocale(require('i18n-iso-countries/langs/sa.json'));
 // countries.registerLocale(require('i18n-iso-countries/langs/or.json'));
 
 const resources = {
@@ -22,6 +25,7 @@ const resources = {
   bn: { translation: bn, links: bnLinks },
   hi: { translation: hi, links: hiLinks },
   or: { translation: or, links: orLinks },
+  sa: { translation: sa, links: saLinks },
 };
 
 i18n
@@ -37,7 +41,7 @@ i18n
     returnEmptyString: false,
     nsSeparator: false,
     resources,
-    supportedLngs: ['bn', 'en', 'hi', 'or'],
+    supportedLngs: ['bn', 'en', 'hi', 'or', 'sa'],
     fallbackLng: 'en',
     keySeparator: ':::',
     interpolation: {
