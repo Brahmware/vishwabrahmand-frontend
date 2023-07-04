@@ -10,6 +10,7 @@ import En from './eng';
 import Bn from './bn';
 import Sa from './sa';
 import Hi from './hi';
+import Or from './or';
 
 const StyledSvg = styled('svg')(({ theme }) => ({
   height: '100%',
@@ -56,6 +57,8 @@ const Widescreen = () => {
                 return <Sa />
               case 'hi':
                 return <Hi />
+              case 'or':
+                return <Or />
               default:
                 return <En />
             }
