@@ -12,6 +12,7 @@ import Hi from './hi';
 import Or from './or';
 import Te from './te';
 import Ta from './ta';
+import Kn from './kn';
 
 const StyledSvg = styled('svg')(({ theme }) => ({
   height: '100%',
@@ -64,6 +65,8 @@ const Widescreen = () => {
                 return <Te />
               case 'ta':
                 return <Ta />
+              case 'kn':
+                return <Kn />
               default:
                 return <En />
             }
