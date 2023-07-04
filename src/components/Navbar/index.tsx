@@ -82,7 +82,7 @@ const Navbar = () => {
         >
           <NavbarButton to="/company">{t('__NAVBAR_COMPANY')}</NavbarButton>
           <NavbarButton to="/brands">{t('__NAVBAR_BRANDS')}</NavbarButton>
-          <NavbarButton to="/news">{t('__NAVBAR_PRESS')}</NavbarButton>
+          <NavbarButton to="/news">{t('__NAVBAR_NEWS')}</NavbarButton>
         </NavPanel>
         <HamburgerMenu open={open} setOpen={setOpen} />
       </ThemedToolbar>
