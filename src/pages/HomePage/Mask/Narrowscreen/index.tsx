@@ -7,6 +7,7 @@ import Definitions from './definitions';
 import { useTranslation } from 'react-i18next';
 import Bn from './bn';
 import En from './eng';
+import Sa from './sa';
 
 const StyledSvg = styled('svg')(({ theme }) => ({
   height: '100%',
@@ -49,6 +50,8 @@ const Narrowscreen = () => {
                 return <En />
               case 'bn':
                 return <Bn />
+              case 'sa':
+                return <Sa />
               default:
                 return <En />
             }
