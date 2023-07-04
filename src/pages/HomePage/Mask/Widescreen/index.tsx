@@ -1,6 +1,5 @@
 import React from 'react';
-import { styled, useTheme } from '@mui/material';
-import Eyelid from '../../../../components/Eye/Eyelid';
+import { styled } from '@mui/material';
 import Background from '../../Background';
 import useDelayedRerender from '../../../../utils/useDelayedRerender';
 import Definitions from './definitions';
@@ -11,6 +10,7 @@ import Bn from './bn';
 import Sa from './sa';
 import Hi from './hi';
 import Or from './or';
+import Te from './te';
 
 const StyledSvg = styled('svg')(({ theme }) => ({
   height: '100%',
@@ -59,6 +59,8 @@ const Widescreen = () => {
                 return <Hi />
               case 'or':
                 return <Or />
+              case 'te':
+                return <Te />
               default:
                 return <En />
             }
