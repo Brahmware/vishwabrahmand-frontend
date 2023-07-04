@@ -66,9 +66,9 @@ const Widescreen = () => {
               case 'ta':
                 return <Ta />
               case 'kn':
-                return <Ta />
-              default:
                 return <Kn />
+              default:
+                return <En />
             }
           })()
         }
