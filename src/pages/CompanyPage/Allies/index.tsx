@@ -14,7 +14,7 @@ const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(12em, 1fr))",
   gap: theme.customSpaces.md,
-  marginTop: theme.customSpaces.md,
+  marginTop: `calc(${theme.customSpaces.md} * 2)`,
   justifyItem: "space-between",
 }));
 
@@ -160,7 +160,7 @@ const AlliesSection = () => {
   }, []);
 
   return (
-    <Section>
+    <Section sx={{gap: 0}}>
       <SectionTitle>{t("__ABOUT_PAGE_ALLIES_TITLE")}</SectionTitle>
       {isLoading ? (
         <SectionContentWrapper>
