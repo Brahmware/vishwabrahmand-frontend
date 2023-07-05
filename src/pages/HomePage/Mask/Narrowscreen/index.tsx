@@ -13,6 +13,7 @@ import Or from './or';
 import Te from './te';
 import Ta from './ta';
 import Kn from './kn';
+import Ml from './ml';
 
 const StyledSvg = styled('svg')(({ theme }) => ({
   height: '100%',
@@ -67,6 +68,8 @@ const Narrowscreen = () => {
                 return <Ta />
               case 'kn':
                 return <Kn />
+              case 'ml':
+                return <Ml />
               default:
                 return <En />
             }
