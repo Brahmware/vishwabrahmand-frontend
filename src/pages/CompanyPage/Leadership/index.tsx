@@ -3,13 +3,13 @@ import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useThe
 import Section, { SectionTitle } from "../../../components/common/section";
 import { Leaders, companyPageData } from "../../../__mocks__/pages/companypage";
 import SocialButtons from "../../../components/common/SocialButtons";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(10em, 1fr))",
   gap: theme.customSpaces.md,
-  marginTop: `calc(${theme.customSpaces.md} * 2)`,
+  marginTop: theme.customSpaces.md,
   justifyItems: "space-between",
 }));
 
@@ -121,7 +121,7 @@ const LeadershipSection = () => {
   const theme = useTheme();
   const [leadersData, setLeadersData] = useState<Leaders>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -196,7 +196,7 @@ const LeadershipSection = () => {
   };
 
   return (
-    <Section sx={{ gap: 0 }}>
+    <Section>
       <SectionTitle>{t("__ABOUT_PAGE_LEADERSHIP_TITLE")}</SectionTitle>
       {renderContent()}
     </Section>

@@ -13,7 +13,7 @@ const SectionContentWrapper = styled('ul')(({ theme }) => ({
   color: theme.customColors.rakthalal,
   textDecoration: "underline",
   fontWeight: theme.customFontWeight.medium,
-  marginTop: `calc(${theme.customSpaces.md} * 2) !important`,
+
 }));
 
 const DocumentLink = styled('a')(({ theme }) => ({
@@ -52,7 +52,7 @@ const KeyDocumentsSection = () => {
   }, []);
 
   return (
-    <Section sx={{ gap: 0 }}>
+    <Section sx={{ gap: theme.customSpaces.lg }}>
       <SectionTitle>{t("__ABOUT_PAGE_KEY_DOCUMENTS_TITLE")}</SectionTitle>
       {isLoading ? (
         <SkeletonWrapper>
