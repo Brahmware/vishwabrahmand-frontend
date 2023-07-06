@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { styled } from '@mui/material';
 import { useScrollToTop } from '../../utils/useScrollToTop';
 import { useSetLanguageToHtml } from '../../utils/useSetLanguageToHtml';
