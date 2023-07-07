@@ -3,6 +3,14 @@
   "name": "Vishwa Brahmand's Corporate Website",
   "description": "A comprehensive corporate website showcasing Vishwa Brahmand's services and products.",
   "scope": "/",
+  "categories": [
+    "Sustainable Development",
+    "Innovation and Technology",
+    "Visionary Brands",
+    "Corporate Social Responsibility",
+    "Environmental Conservation",
+    "Social Impact and Responsibility"
+  ],
   "icons": [
     {
       "src": "favicon.ico",
