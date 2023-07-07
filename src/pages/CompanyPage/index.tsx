@@ -5,6 +5,8 @@ import AlliesSection from './Allies';
 import KeyDocumentsSection from './KeyDocuments';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { useAddRootClass } from '../../utils/useAddRootClass';
+import { Fragment } from 'react';
+import Head from './Head';
 
 interface CompanyPageWrapperProps {
   containerminheight?: number;
@@ -26,12 +28,15 @@ const CompanyPage = () => {
 
   useAddRootClass('company-page');
   return (
-    <CompanyPageWrapper containerminheight={useContainerMinHeight()}>
-      <AboutSection />
-      <LeadershipSection />
-      <AlliesSection />
-      <KeyDocumentsSection />
-    </CompanyPageWrapper>
+    <Fragment>
+      <Head />
+      <CompanyPageWrapper containerminheight={useContainerMinHeight()}>
+        <AboutSection />
+        <LeadershipSection />
+        <AlliesSection />
+        <KeyDocumentsSection />
+      </CompanyPageWrapper>
+    </Fragment>
   )
 };
 

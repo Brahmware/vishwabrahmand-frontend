@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Box, styled, useTheme } from '@mui/material';
 import Section, { SectionTitle } from '../../components/common/section';
 import LoadingComponent from '../../components/common/loading';
@@ -9,6 +9,7 @@ import { useAddRootClass } from '../../utils/useAddRootClass';
 import config from '../../config';
 import { useTranslation } from 'react-i18next';
 import { NewsCard, newsPageData } from '../../__mocks__/pages/newspage';
+import Head from './Head';
 
 interface NewsPageWrapperProps {
   containerminheight?: number;
@@ -98,33 +99,36 @@ const NewsPage = () => {
 
   useAddRootClass('news-page');
   return (
-    <NewsPageWrapper containerminheight={useContainerMinHeight()}>
-      <Section>
-        <SectionTitle>{t("__NEWS_PAGE_NEWS_TITLE")}</SectionTitle>
-        {isLoading && newsData.length === 0 ? (
-          <NewsCardsPlaceholder sx={{ pb: theme.customPadding.xxl }}>
-            {[...Array(12)].map((_, index) => (
-              <NewsCardSkeleton key={index} />
-            ))}
-          </NewsCardsPlaceholder>
-        ) : (
-          <NewsCards
-            dataLength={newsData.length}
-            next={fetchMoreNews}
-            hasMore={hasMore}
-            loader={<LoadingComponent loaderType='box' />}
-            endMessage={<p>{t("__NOTHING_TO_DISPLAY")}</p>}
-            scrollableTarget="root"
-          >
-            {newsData.map((newsCard, index) => (
-              <React.Fragment key={index}>
-                <NewsCardComponent cardData={newsCard} />
-              </React.Fragment>
-            ))}
-          </NewsCards>
-        )}
-      </Section>
-    </NewsPageWrapper>
+    <Fragment>
+      <Head />
+      <NewsPageWrapper containerminheight={useContainerMinHeight()}>
+        <Section>
+          <SectionTitle>{t("__NEWS_PAGE_NEWS_TITLE")}</SectionTitle>
+          {isLoading && newsData.length === 0 ? (
+            <NewsCardsPlaceholder sx={{ pb: theme.customPadding.xxl }}>
+              {[...Array(12)].map((_, index) => (
+                <NewsCardSkeleton key={index} />
+              ))}
+            </NewsCardsPlaceholder>
+          ) : (
+            <NewsCards
+              dataLength={newsData.length}
+              next={fetchMoreNews}
+              hasMore={hasMore}
+              loader={<LoadingComponent loaderType='box' />}
+              endMessage={<p>{t("__NOTHING_TO_DISPLAY")}</p>}
+              scrollableTarget="root"
+            >
+              {newsData.map((newsCard, index) => (
+                <React.Fragment key={index}>
+                  <NewsCardComponent cardData={newsCard} />
+                </React.Fragment>
+              ))}
+            </NewsCards>
+          )}
+        </Section>
+      </NewsPageWrapper>
+    </Fragment>
   );
 };
 
