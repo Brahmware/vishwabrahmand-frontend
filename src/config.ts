@@ -41,7 +41,8 @@ const config = {
     'malayalam': 'ml',
     'kannada': 'kn',
     'english': 'en',
-  }
+  },
+  publicUrl: 'https://www.vishwabrahmand.com',
 };
 
 export default config;

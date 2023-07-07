@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Box, styled } from '@mui/material';
 import { SectionTitle } from '../../components/common/section';
 import { Brand, brandsPageData } from '../../__mocks__/pages/brandspage';
@@ -8,7 +8,8 @@ import Pagination from '../../components/common/pagination';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { useAddRootClass } from '../../utils/useAddRootClass';
 import config from '../../config';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import Head from './Head';
 
 interface BrandsPageWrapperProps {
   containerminheight?: number;
@@ -58,7 +59,7 @@ const BrandsPage = () => {
 
   const handleChangeBrandsPerPage = (event: { target: { value: any } }) => {
     setBrandsPerPage(Number(event.target.value));
-    setPage(config.defaultStartPage); 
+    setPage(config.defaultStartPage);
   };
 
   const startIndex = (page - 1) * brandsPerPage;
@@ -66,45 +67,48 @@ const BrandsPage = () => {
 
   useAddRootClass('brands-page');
   return (
-    <BrandsPageWrapper containerminheight={useContainerMinHeight()}>
-      <ThemedSectionTitle>{t("__BRANDS_PAGE_BRANDS_TITLE")}</ThemedSectionTitle>
-      {isLoading ? (
-        <>
-          {[...Array(brandsPerPage)].map((_, index) => (
-            <BrandCardSkeleton key={index} isLast={index === [...Array(brandsPerPage)].length - 1} />
-          ))}
-        </>
-      ) : brandsData && brandsData.length > 0 ? (
-        <>
-          {brandsData.slice(startIndex, endIndex).map((brandData, index) => (
-            <React.Fragment key={index}>
-              <BrandCard
-                brandData={brandData}
-                isLast={
-                  index === Math.min(
-                    brandsPerPage,
-                    brandsData.slice(startIndex, endIndex).length
-                  ) - 1 ? true : false
-                }
-              />
-            </React.Fragment>
-          ))}
-          <Box sx={{
-            width: '100%',
-            flexGrow: 1,
-          }} />
-          <Pagination
-            itemsData={brandsData}
-            itemsPerPage={brandsPerPage}
-            page={page}
-            handleChangeItemsPerPage={handleChangeBrandsPerPage}
-            handleChangePage={handleChangePage}
-          />
-        </>
-      ) : (
-        <NoDataParagraph>{t("__NO_DATA_TO_DISPLAY")}</NoDataParagraph>
-      )}
-    </BrandsPageWrapper>
+    <Fragment>
+      <Head />
+      <BrandsPageWrapper containerminheight={useContainerMinHeight()}>
+        <ThemedSectionTitle>{t("__BRANDS_PAGE_BRANDS_TITLE")}</ThemedSectionTitle>
+        {isLoading ? (
+          <>
+            {[...Array(brandsPerPage)].map((_, index) => (
+              <BrandCardSkeleton key={index} isLast={index === [...Array(brandsPerPage)].length - 1} />
+            ))}
+          </>
+        ) : brandsData && brandsData.length > 0 ? (
+          <>
+            {brandsData.slice(startIndex, endIndex).map((brandData, index) => (
+              <React.Fragment key={index}>
+                <BrandCard
+                  brandData={brandData}
+                  isLast={
+                    index === Math.min(
+                      brandsPerPage,
+                      brandsData.slice(startIndex, endIndex).length
+                    ) - 1 ? true : false
+                  }
+                />
+              </React.Fragment>
+            ))}
+            <Box sx={{
+              width: '100%',
+              flexGrow: 1,
+            }} />
+            <Pagination
+              itemsData={brandsData}
+              itemsPerPage={brandsPerPage}
+              page={page}
+              handleChangeItemsPerPage={handleChangeBrandsPerPage}
+              handleChangePage={handleChangePage}
+            />
+          </>
+        ) : (
+          <NoDataParagraph>{t("__NO_DATA_TO_DISPLAY")}</NoDataParagraph>
+        )}
+      </BrandsPageWrapper>
+    </Fragment>
   );
 };
 
