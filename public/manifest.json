@@ -1,6 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Vishwa Brahmand",
+  "name": "Vishwa Brahmand's Corporate Website",
+  "description": "A comprehensive corporate website showcasing Vishwa Brahmand's services and products.",
+  "scope": "/",
   "icons": [
     {
       "src": "favicon.ico",
