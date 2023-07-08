@@ -72,6 +72,10 @@ const HeaderTextWrapper = styled(Box)(({ theme }) => ({
   gap: theme.customSpaces.md,
   overflowY: 'hidden',
   zIndex: 1,
+
+  '& ::selection': {
+    background: `${theme.customColors.rakthalal}80`,
+  },
 }));
 
 const NewsHeadline = styled(Typography)(({ theme }) => ({

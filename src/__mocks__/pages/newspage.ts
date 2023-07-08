@@ -3,6 +3,7 @@ import {default as news} from "../data/news.json";
 export type NewsCard = {
   id: string;
   headline: string;
+  keywords?: string[];
   pubDate: string;
   image: string;
   newsLink: string;
