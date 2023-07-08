@@ -100,7 +100,7 @@ const NewsPage = () => {
   useAddRootClass('news-page');
   return (
     <Fragment>
-      <Head />
+      <Head newsArticles={newsData} />
       <NewsPageWrapper containerminheight={useContainerMinHeight()}>
         <Section>
           <SectionTitle>{t("__NEWS_PAGE_NEWS_TITLE")}</SectionTitle>

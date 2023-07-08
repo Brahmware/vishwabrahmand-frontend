@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useTheme } from "@mui/material";
 import Section, { SectionTitle } from "../../../components/common/section";
 import { companyPageData, Ally } from "../../../__mocks__/pages/companypage";
@@ -111,7 +111,7 @@ const LoadingSkeleton = () => {
   const theme = useTheme();
 
   return (
-    <>
+    <Fragment>
       {[...Array(4)].map((_, index) => (
         <SkeletonCard key={index} elevation={0}>
           <SkeletonCardMedia>
@@ -135,7 +135,7 @@ const LoadingSkeleton = () => {
           </SkeletonCardContent>
         </SkeletonCard>
       ))}
-    </>
+    </Fragment>
   );
 };
 
