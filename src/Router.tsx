@@ -1,4 +1,4 @@
-import { HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { I18nextProvider as LocaleProvider } from 'react-i18next';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
@@ -17,6 +17,7 @@ import Page404 from './pages/Page404';
 import ScrollBarWrapper from './components/scrollbar';
 
 import i18n from './i18n';
+import config from './config';
 
 const Router = () => {
   return (
@@ -29,6 +30,12 @@ const Router = () => {
             <ScrollBarWrapper>
               <Navbar />
               <ContentWrapper>
+                <Helmet>
+                  <link rel="canonical" href={config.publicUrl} />
+                  <link rel="company" href={`${config.publicUrl}/company`} />
+                  <link rel="company" href={`${config.publicUrl}/brands`} />
+                  <link rel="company" href={`${config.publicUrl}/news`} />
+                </Helmet>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/company" element={<CompanyPage />} />

@@ -4,8 +4,9 @@ import ArticleHead from './ArticleHead';
 import ArticleBody from './ArticleBody';
 import { useParams } from 'react-router-dom';
 import { NewsCard, getSpecificNewsRelease } from '../../__mocks__/pages/newspage';
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import RecentArticles from './RecentArticles';
+import Head from './Head';
 
 const NewsArticleWrapper = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
@@ -45,18 +46,21 @@ const NewsArticle = () => {
   }, [articleId]);
 
   return (
-    <NewsArticleWrapper as='article'>
-      <ArticleHead
-        headline={article.headline}
-        pubDate={article.pubDate}
-        headerImage={article.image}
-      />
-      <ArticleBody 
-        contentLink={article.contentLink} 
-        downlodable={article.downlodable}
-      />
-      <RecentArticles />
-    </NewsArticleWrapper>
+    <Fragment>
+      <Head article={article} />
+      <NewsArticleWrapper as='article'>
+        <ArticleHead
+          headline={article.headline}
+          pubDate={article.pubDate}
+          headerImage={article.image}
+        />
+        <ArticleBody
+          contentLink={article.contentLink}
+          downlodable={article.downlodable}
+        />
+        <RecentArticles />
+      </NewsArticleWrapper>
+    </Fragment>
   )
 }
 

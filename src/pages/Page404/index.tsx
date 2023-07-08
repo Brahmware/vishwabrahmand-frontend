@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Box, BoxProps, Typography, styled } from '@mui/material';
 import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { Link } from 'react-router-dom';
@@ -9,6 +9,7 @@ import { useAddRootClass } from '../../utils/useAddRootClass';
 import config from '../../config';
 import { useTranslation } from 'react-i18next';
 import { Lang } from '../../i18n';
+import Head from './Head';
 
 interface Page404WrapperProps extends BoxProps {
   containerheight?: number;
@@ -107,14 +108,17 @@ const Page404: React.FC = () => {
   );
 
   return (
-    <Page404Wrapper containerheight={useContainerMinHeight()}>
-      <Image404 className='noselect'>404</Image404>
-      <SectionTitle >{text404}</SectionTitle>
-      <ArrowLink to={config.page404LinkUrl} replace>
-        {textLink}
-        <ArrowIcon />
-      </ArrowLink>
-    </Page404Wrapper>
+    <Fragment>
+      <Head />
+      <Page404Wrapper containerheight={useContainerMinHeight()}>
+        <Image404 className='noselect'>404</Image404>
+        <SectionTitle >{text404}</SectionTitle>
+        <ArrowLink to={config.page404LinkUrl} replace>
+          {textLink}
+          <ArrowIcon />
+        </ArrowLink>
+      </Page404Wrapper>
+    </Fragment>
   );
 };
 

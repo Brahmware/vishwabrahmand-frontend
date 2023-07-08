@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, Fragment } from 'react';
 import Section, { SectionTitle } from '../../../components/common/section';
 import { styled } from '@mui/material';
 import NewsCardComponent, { NewsCardSkeleton } from '../../../pages/NewsPage/NewsCard';
@@ -6,6 +6,7 @@ import { NewsCard, newsPageData } from '../../../__mocks__/pages/newspage';
 import RecentArticleCarousel, { RecentArticleCarouselSkeleton } from './RecentArticleCarousel';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import Head from './Head';
 
 
 const RecentArticlesSection = styled(Section)(({ theme }) => ({
@@ -40,9 +41,10 @@ const RecentArticles = () => {
   const slides = useMemo(
     () =>
       newsData.map((newsCard, index) => (
-        <React.Fragment key={index}>
+        <Fragment key={index}>
+          <Head key={index} link={newsCard.id} />
           <NewsCardComponent cardData={newsCard} />
-        </React.Fragment>
+        </Fragment>
       )),
     [newsData]
   );
@@ -50,9 +52,9 @@ const RecentArticles = () => {
   const skeletonSlides = useMemo(
     () =>
       [...Array(3)].map((_, index) => (
-        <React.Fragment key={index}>
+        <Fragment key={index}>
           <NewsCardSkeleton />
-        </React.Fragment>
+        </Fragment>
       )),
     []
   );
