@@ -47,28 +47,39 @@
     "pubDate": "15 August, 2022",
     "image": "/data/news_articles/vishwa-brahmand-unleashing-future-potential/cover.jpg",
     "newsLink": "/news/vishwa-brahmand-unleashing-future-potential",
-    "lang": "hi",
+    "lang": "en",
     "contentLink": "/data/news_articles/vishwa-brahmand-unleashing-future-potential/en.xml"
   },
   {
-    "id": "আইএমএস-এবং-স্যামসাং",
-    "headline": "আইএমএস এবং স্যামসাং কর্নাটকে বাঘ সংরক্ষণের সচেতনতা বৃদ্ধির জন্য সহযোগিতা করেছে।",
+    "id": "amplifying-scientific-innovation",
+    "headline": "Unearthing Hidden Gems: Amplifying Scientific Innovation Through IMS's Storytelling",
     "keywords": [
-      "বাঘ",
-      "গণনা",
-      "বিবরণ",
-      "অর্থবছর",
-      "2023-2024"
+      "Indian Media Syndicate (IMS)",
+      "Media revolution in India",
+      "Language barriers in broadcasting",
+      "AI in media industry",
+      "Real-time translation",
+      "Linguistic diversity in India",
+      "Inclusivity in media",
+      "Accessibility in broadcasting",
+      "Content creation and distribution",
+      "Future of broadcasting",
+      "Technological innovation in media",
+      "Artificial Intelligence in broadcasting",
+      "Breaking language barriers",
+      "Media landscape in India",
+      "IMS real-time translation",
+      "Multilingual content",
+      "Broadcasting in India",
+      "Indian media industry",
+      "Indian media innovation",
+      "IMS and inclusivity"
     ],
-    "pubDate": "14 জুন, 2022",
-    "image": "https://64.media.tumblr.com/344ac5f0b7e26fdc02f69bb81d8f0705/316a69fa4df719b9-1e/s1280x1920/8a4c004e72df4152566d7cf90c179a7347d6db64.png",
-    "newsLink": "/news/আইএমএস-এবং-স্যামসাং",
-    "lang": "bn",
-    "contentLink": "/data/news_articles/article-2.xml",
-    "downlodable": {
-      "fileName": "বাঘ গণনা বিবৃতি বছর - 2023-2024",
-      "file": "/data/downlodables/dummy-file.pdf"
-    }
+    "pubDate": "21 October, 2022",
+    "image": "/data/news_articles/amplifying-scientific-innovation/cover.jpg",
+    "newsLink": "/news/amplifying-scientific-innovation",
+    "lang": "en",
+    "contentLink": "/data/news_articles/amplifying-scientific-innovation/en.xml"
   },
   {
     "id": "आईएमएस-और-सैमसंग-ने-कर्नाटक-में-बाघ-संरक्षण",
