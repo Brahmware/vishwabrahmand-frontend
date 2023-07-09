@@ -8,7 +8,7 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
   textAlignLast: 'start',
 
   '& h1:first-of-type, & h2:first-of-type, & h3:first-of-type, & h4:first-of-type, & h5:first-of-type, & h6:first-of-type': {
-    marginTop: 0,
+    margin: 0,
   },
 
   '& h1:last-of-type, & h2:last-of-type, & h3:last-of-type, & h4:last-of-type, & h5:last-of-type, & h6:last-of-type': {
@@ -16,10 +16,10 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
   },
 
   '& h1, & h2, & h3, & h4, & h5, & h6': {
-    margin: `${theme.customSpaces.md} 0`,
+    textAlign: 'left',
+    padding: `${theme.customSpaces.xs} 0`,
 
     [theme.breakpoints.down('sm')]: {
-      textAlign: 'left',
       fontSize: '1.25rem',
     },
   },

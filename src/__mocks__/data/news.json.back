@@ -235,6 +235,10 @@
     "headline": "আইএমএস এবং স্যামসাং কর্নাটকে বাঘ সংরক্ষণের সচেতনতা বৃদ্ধির জন্য সহযোগিতা করেছে।",
     "pubDate": "JULY 17, 2022",
     "image": "https://static.vecteezy.com/system/resources/previews/024/065/114/original/majestic-portrait-of-hanuman-honoring-the-indian-monkey-god-s-courage-and-devotion-ai-generated-free-photo.jpg",
-    "newsLink": "/press/40"
+    "newsLink": "/press/40",
+    "downlodable": {
+      "fileName": "बाघ जनगणना विवरण वित्तीय वर्ष - 2023-2024",
+      "file": "/data/downlodables/dummy-file.pdf"
+    }
   }
 ]
