@@ -2,6 +2,8 @@ import React from 'react'
 import { useContainerMinHeight } from '../../../utils/useContainerMinHeight';
 import { Box, BoxProps, CardMedia, CardMediaProps, Typography, styled } from '@mui/material';
 import { NewsCard } from '../../../__mocks__/pages/newspage';
+import { useParallax } from '../../../utils/useParallax';
+import config from '../../../config';
 
 interface NewsHeadlineViewProps extends BoxProps {
   containerheight?: number;
@@ -50,14 +52,16 @@ const HeadImageWrapper = styled(Box)<HeadImageWrapperProps>(({ theme, containerh
 
 interface HeadImageProps extends CardMediaProps {
   containerheight?: number;
+  parallax?: number;
   component?: string;
   alt?: string;
 };
 
-const HeadImage = styled(CardMedia)<HeadImageProps>(({ theme, containerheight }) => ({
+const HeadImage = styled(CardMedia)<HeadImageProps>(({ parallax }) => ({
   width: '100%',
   height: '100%',
   objectFit: 'cover',
+  transform: `translateY(${parallax || 0}px)`,
 }));
 
 const HeaderTextWrapper = styled(Box)(({ theme }) => ({
@@ -117,6 +121,9 @@ const ArticleHead = (
           component="img"
           image={headerImage}
           alt={headline}
+          parallax={useParallax({
+            slag: config.parallaxSlag
+          })}
         />
       </HeadImageWrapper>
 

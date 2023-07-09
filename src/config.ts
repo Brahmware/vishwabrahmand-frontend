@@ -4,6 +4,9 @@ const config = {
   defaultNumberOfBrandsPerPage: 5,
   defaultStartPage: 1,
   defaultNewsPerPage: 12,
+
+  parallaxSlag: 5,
+
   letters: {
     en: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890-=+<>,./?[{()}]!@#$%^&*~`\\|_',
     sa: 'अआइईउऊऋॠऌॡएऐओऔंःकखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसहक्षत्रज्ञ1234567890।॥',
