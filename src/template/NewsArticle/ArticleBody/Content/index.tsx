@@ -101,6 +101,7 @@ const Content = (
       const listOfNodes = node.querySelectorAll('*');
 
       const images = Array.from(listOfNodes).filter((node) => node.nodeName === 'IMG');
+      
       images.forEach((image) => {
         const computedStyle = window.getComputedStyle(image);
 
