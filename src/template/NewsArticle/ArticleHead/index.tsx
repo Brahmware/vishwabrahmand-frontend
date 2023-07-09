@@ -76,6 +76,7 @@ const HeaderTextWrapper = styled(Box)(({ theme }) => ({
   gap: theme.customSpaces.md,
   overflowY: 'hidden',
   zIndex: 1,
+  textShadow: '0 0 0.75rem black',
 
   '& ::selection': {
     background: `${theme.customColors.rakthalal}80`,
