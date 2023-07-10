@@ -22,7 +22,7 @@ import config from './config';
 
 /* google tag manager in production */
 if (process.env.NODE_ENV === 'production') {
-  const gAnanlyticsID: string = process.env.REACT_APP_GOOGLE_TAG_MANAGER_ID as string;
+  const gAnanlyticsID: string = process.env.REACT_APP_GOOGLE_ANALYTICS_MEASUREMENT_ID as string;
   ReactGA.initialize(gAnanlyticsID);
 }
 
