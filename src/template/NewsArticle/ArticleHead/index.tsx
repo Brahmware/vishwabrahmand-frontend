@@ -93,12 +93,24 @@ const NewsHeadline = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     fontSize: '2rem',
   },
+
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '1.25rem',
+  },
 }));
 
 const PublishingDate = styled(Typography)(({ theme }) => ({
   fontSize: '1.25rem',
   color: theme.customColors.white,
   zIndex: 1,
+
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1.125rem',
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '1rem',
+  },
 }));
 
 const ArticleHead = (
