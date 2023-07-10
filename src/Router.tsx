@@ -3,6 +3,7 @@ import { I18nextProvider as LocaleProvider } from 'react-i18next';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
+import ReactGA from "react-ga4";
 
 import Navbar from './components/Navbar';
 import CompanyPage from './pages/CompanyPage';
@@ -18,6 +19,12 @@ import ScrollBarWrapper from './components/scrollbar';
 
 import i18n from './i18n';
 import config from './config';
+
+/* google tag manager in production */
+if (process.env.NODE_ENV === 'production') {
+  const gAnanlyticsID: string = process.env.REACT_APP_GOOGLE_TAG_MANAGER_ID as string;
+  ReactGA.initialize(gAnanlyticsID);
+}
 
 const Router = () => {
   return (
