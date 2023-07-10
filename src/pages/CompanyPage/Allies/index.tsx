@@ -72,6 +72,7 @@ const AllyName = styled(Typography)(({ theme }) => ({
   fontWeight: theme.customFontWeight.semiBold,
   textAlign: "center",
   height: "2em",
+  whiteSpace: "nowrap",
 }));
 
 const AreaOfService = styled(Typography)(({ theme }) => ({
