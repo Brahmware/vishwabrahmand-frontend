@@ -77,7 +77,7 @@
     }
   },
   {
-    "name": "IDFC Bank",
+    "name": "IDFC First Bank",
     "areaOfService": "Banking & Finance",
     "imageURL": "/images/allies/IDFC_Bank.svg",
     "socialHandles": {
@@ -135,6 +135,17 @@
     "name": "IISC",
     "areaOfService": "Research",
     "imageURL": "/images/allies/IISC.svg",
+    "socialHandles": {
+      "facebook": "maryjohnson_facebook",
+      "twitter": "maryjohnson_twitter",
+      "linkedin": "maryjohnson_linkedin",
+      "instagram": "maryjohnson_instagram"
+    }
+  },
+  {
+    "name": "Blackmagic Design",
+    "areaOfService": "Digital Cinema",
+    "imageURL": "/images/allies/Black_Magic.svg",
     "socialHandles": {
       "facebook": "maryjohnson_facebook",
       "twitter": "maryjohnson_twitter",
