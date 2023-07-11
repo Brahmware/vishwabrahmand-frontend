@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useTheme, CardMediaProps } from "@mui/material";
+import { Fragment, useEffect, useState } from "react";
+import { Box, Card, CardContent, CardMedia, Typography, styled, Skeleton, useTheme, CardMediaProps, TypographyProps } from "@mui/material";
 import Section, { SectionTitle } from "../../../components/common/section";
 import { Leaders, companyPageData } from "../../../__mocks__/pages/companypage";
 import SocialButtons from "../../../components/common/SocialButtons";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { useLeadernameHeight } from "../../../utils/getLeadernameHeight";
 
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
@@ -79,11 +80,15 @@ const SocialIconWrapper = styled(Box)(({ theme }) => ({
   gap: theme.customSpaces.md,
 }));
 
-const LeaderName = styled(Typography)(({ theme }) => ({
+interface LeadernemeProps extends TypographyProps {
+  dynamicheight: number;
+};
+
+const LeaderName = styled(Typography)<LeadernemeProps>(({ theme, dynamicheight }) => ({
   fontSize: "1em",
   fontWeight: theme.customFontWeight.semiBold,
   textAlign: "center",
-  height: "3em",
+  height: `${dynamicheight}px`,
 }));
 
 const LeaderDesignation = styled(Typography)(({ theme }) => ({
@@ -92,6 +97,7 @@ const LeaderDesignation = styled(Typography)(({ theme }) => ({
   textAlign: "center",
   fontWeight: theme.customFontWeight.medium,
   color: theme.customColors.rakthalal,
+  paddingTop: theme.customSpaces.sm,
 }));
 
 const SkeletonCard = styled(Card)(({ theme }) => ({
@@ -121,7 +127,8 @@ const LeadershipSection = () => {
   const theme = useTheme();
   const [leadersData, setLeadersData] = useState<Leaders>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
+  const [leadernameHeight, shouldRenderNext] = useLeadernameHeight();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -169,6 +176,7 @@ const LeadershipSection = () => {
           {skeletonCards}
         </SectionContentWrapper>
       );
+
     } else {
       return (
         <SectionContentWrapper>
@@ -182,11 +190,19 @@ const LeadershipSection = () => {
                 />
               </LeaderCardMediaImageWrapper>
               <LeaderCardContent>
-                <LeaderName> {leader.name} </LeaderName>
-                <LeaderDesignation> {leader.designation} </LeaderDesignation>
-                <InformationWrapper>
-                  <SocialButtons socialHandles={leader.socialHandles} />
-                </InformationWrapper>
+                <LeaderName dynamicheight={leadernameHeight} >
+                  <span className="leader__name">{leader.name}</span>
+                </LeaderName>
+                {
+                  shouldRenderNext && (
+                    <Fragment>
+                      <LeaderDesignation> {leader.designation} </LeaderDesignation>
+                      <InformationWrapper>
+                        <SocialButtons socialHandles={leader.socialHandles} />
+                      </InformationWrapper>
+                    </Fragment>
+                  )
+                }
               </LeaderCardContent>
             </LeaderCard>
           ))}
