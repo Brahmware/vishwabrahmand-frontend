@@ -1,9 +1,12 @@
-import React from 'react'
-import { useContainerMinHeight } from '../../../utils/useContainerMinHeight';
+import { useContainerMaxHeight } from '../../../utils/useContainerMinHeight';
 import { Box, BoxProps, CardMedia, CardMediaProps, Typography, styled } from '@mui/material';
 import { NewsCard } from '../../../__mocks__/pages/newspage';
 import { useParallax } from '../../../utils/useParallax';
 import config from '../../../config';
+import IconButton from '../../../components/common/buttons/IconButton';
+import { MouseIcon } from '../../../Assets/Logo/Icons';
+import { useTranslation } from 'react-i18next';
+import { ScrollToOptions } from '../../../utils/useScrollToTop';
 
 interface NewsHeadlineViewProps extends BoxProps {
   containerheight?: number;
@@ -66,7 +69,7 @@ const HeadImage = styled(CardMedia)<HeadImageProps>(({ parallax }) => ({
 
 const HeaderTextWrapper = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
-  paddingBottom: theme.customSpaces.xl,
+  paddingBottom: theme.customSpaces.md,
   width: '100%',
   height: '100%',
   display: 'flex',
@@ -113,6 +116,38 @@ const PublishingDate = styled(Typography)(({ theme }) => ({
   },
 }));
 
+const ScrollDownButton = styled(IconButton)(({ theme }) => ({
+  alignSelf: 'center',
+  animation: theme.animations.bouncing,
+
+  fontSize: '1.125rem',
+  gap: theme.customSpaces.xs,
+  borderRadius: '2em',
+  padding: `0.35rem 0.75rem 0.35rem ${theme.customSpaces.xs}`,
+  fontWeight: theme.customFontWeight.regular,
+  background: `${theme.customColors.bhasma}70`,
+  boxShadow: '0 0 1rem black',
+  backdropFilter: 'blur(0.125rem)',
+  color: theme.customColors.white,
+  borderColor: `${theme.customColors.white} !important`,
+  
+  '& svg path': {
+    transition: 'fill 0.3s ease-in-out',
+    fill: theme.customColors.white,
+  },
+  
+  '&:hover': {
+    background: theme.customColors.white,
+    color: theme.customColors.bhasma,
+    boxShadow: '0 0 0.133rem black',
+    animationPlayState: 'paused',
+
+    '& svg path': {
+      fill: theme.customColors.bhasma,
+    },
+  },
+}));
+
 const ArticleHead = (
   {
     headline,
@@ -125,7 +160,22 @@ const ArticleHead = (
   }
 ) => {
 
-  const containerHeight = useContainerMinHeight();
+  const containerHeight = useContainerMaxHeight();
+  const scrollTo: ScrollToOptions = {
+    top: containerHeight,
+    behavior: 'smooth'
+  };
+
+  const handleScrollClick = () => {
+    const scrollableBody = document.getElementById('scrollbar-component')?.childNodes[0] as HTMLElement;
+    if (scrollableBody) {
+      scrollableBody.scrollTo(scrollTo);
+    } else {
+      window.scrollTo(scrollTo);
+    }
+  };
+
+  const { t } = useTranslation();
 
   return (
     <NewsHeadlineView containerheight={containerHeight} >
@@ -147,6 +197,17 @@ const ArticleHead = (
         <PublishingDate variant="h4">
           {pubDate}
         </PublishingDate>
+        <ScrollDownButton
+          variant='outlined'
+          onClick={handleScrollClick}
+          aria-label={t("__NEWS_ARTICLE_SCROLL_DOWN_BUTTON_TEXT")}
+        >
+          <MouseIcon
+            height='1.5rem'
+            width='1.5rem'
+          />
+          {t("__NEWS_ARTICLE_SCROLL_DOWN_BUTTON_TEXT")}
+        </ScrollDownButton>
       </HeaderTextWrapper>
     </NewsHeadlineView>
   )

@@ -148,6 +148,7 @@ declare module '@mui/material/styles' {
       rotating: string;
       shapeShift: string;
       snapRotate: string;
+      bouncing: string;
     };
 
     grayScales: {
@@ -420,6 +421,7 @@ const animations = {
   rotating: 'rotation 120s infinite linear',
   shapeShift: 'shape__shift 10s linear infinite',
   snapRotate: 'snap__rotate 600ms ease-in-out',
+  bouncing: 'bouncing 1.5s infinite 1s',
 };
 
 const theme = createTheme({

@@ -41,6 +41,7 @@
 
   "__NEWS_PAGE_NEWS_TITLE": "प्रकाशित समाचार",
 
+  "__NEWS_ARTICLE_SCROLL_DOWN_BUTTON_TEXT": "नीचे स्क्रॉल करें",
   "__NEWS_ARTICLE_SHARE_CTA_TITLE": "इस समाचार को शेयर करें",
   "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "{{socialMediaName}} पर शेयर करने में त्रुटि",
   "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "हमें इस कठिनाई के लिए खेद है। कृपया ध्यान दें कि वर्तमान में {{ socialMediaName}} पर शेयर करना सुरक्षा की नजरिया से हो रहा है। हम समस्या का समाधान करने और संभावित संगतता की पुनर्स्थापना के लिए कार्यरत हैं। आपकी धैर्य और समझ के लिए धन्यवाद।",
