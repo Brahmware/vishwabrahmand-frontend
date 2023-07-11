@@ -292,19 +292,28 @@
     "contentLink": "/data/news_articles/Vishwa-Brahmand_s-strategic-collaborative-ecosystem/en.xml"
   },
   {
-    "id": "IMS-और-सैमसंग-कर्नाटक-में",
-    "headline": "IMS और सैमसंग कर्नाटक में बाघ संरक्षण के लिए सहयोग करते हैं.",
+    "id": "Brahmware-harnessing-the-power-of-technology-for-societal-betterment",
+    "headline": "Brahmware: Harnessing the Power of Technology for Societal Betterment",
     "keywords": [
-      "बाघ",
-      "जनगणना",
-      "विवरण",
-      "वित्तीय वर्ष",
-      "2023-2024"
+      "Brahmware",
+      "technology for societal betterment",
+      "Vishwa Brahmand",
+      "public utilities",
+      "census and population data",
+      "remote medical assistance",
+      "AI in healthcare",
+      "machine learning",
+      "digital technology in agriculture",
+      "data science",
+      "public transportation",
+      "renewable energy",
+      "sustainable future",
+      "equitable society"
     ],
     "pubDate": "JUNE 21, 2023",
-    "image": "https://cdn.pixabay.com/photo/2023/03/06/21/27/ai-generated-7834506_1280.jpg",
-    "newsLink": "/news/IMS-और-सैमसंग-कर्नाटक-में",
-    "lang": "hi",
-    "contentLink": "/data/news_articles/article-1.xml"
+    "image": "/data/news_articles/Brahmware-harnessing-the-power-of-technology-for-societal-betterment/cover.jpg",
+    "newsLink": "/news/Brahmware-harnessing-the-power-of-technology-for-societal-betterment",
+    "lang": "en",
+    "contentLink": "/data/news_articles/Brahmware-harnessing-the-power-of-technology-for-societal-betterment/en.xml"
   }
 ]
