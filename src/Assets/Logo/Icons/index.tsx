@@ -8,3 +8,4 @@ export { ReactComponent as ShareIcon } from './share-logo.svg';
 export { ReactComponent as RightArrowIcon } from './right-arrow.svg';
 export { ReactComponent as RightArrowIconThick } from './right-arrow-thick.svg';
 export { ReactComponent as EmailIcon } from './email-icon.svg';
+export { ReactComponent as MouseIcon } from './mouse-icon.svg';

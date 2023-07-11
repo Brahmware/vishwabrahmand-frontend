@@ -49,7 +49,7 @@
   "__NEWS_PAGE_NEWS_TITLE": "News Releases",
 
 
-
+  "__NEWS_ARTICLE_SCROLL_DOWN_BUTTON_TEXT": "Scroll Down",
   "__NEWS_ARTICLE_SHARE_CTA_TITLE": "Share this News",
   "__NEWS_ARTICLE_SHARE_ERROR_TITLE": "Error Sharing on {{socialMediaName}}",
   "__NEWS_ARTICLE_SHARE_ERROR_MESSAGE": "We sincerely apologize for the inconvenience caused. Please note that sharing on {{socialMediaName}} is currently undergoing maintenance. We are working diligently to resolve the issue and restore full functionality as soon as possible. Thank you for your patience and understanding",

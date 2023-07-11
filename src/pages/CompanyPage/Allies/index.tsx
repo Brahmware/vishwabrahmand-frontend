@@ -24,8 +24,42 @@ const AlliesCard = styled(Card)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  border: `1px solid ${theme.customColors.border}`,
+  border: `1.5px solid ${theme.customColors.border}`,
   minWidth: "200px",
+  transition: "border 0.3s ease-in 0.2s",
+
+  '&:hover': {
+    border: `1.5px solid ${theme.customColors.matmaila}`,
+
+    '& .ally__logo': {
+      filter: "none",
+      opacity: 1,
+    },
+
+    '& .ally__name': {
+      color: theme.customColors.bhasma,
+    },
+
+    '& .ally__area-of-service': {
+      color: theme.customColors.rakthalal,
+    },
+  },
+
+  [theme.breakpoints.down("md")]: {
+    '& .ally__logo': {
+      filter: "none",
+      opacity: 1,
+    },
+
+    '& .ally__name': {
+      color: theme.customColors.bhasma,
+    },
+
+    '& .ally__area-of-service': {
+      color: theme.customColors.rakthalal,
+    },
+  },
+
 }));
 
 const BrandCardContent = styled(CardContent)(({ theme }) => ({
@@ -47,16 +81,7 @@ const AllyCardMedia = styled(CardMedia)<AllyCardMediaProps>(({ theme }) => ({
   borderRadius: theme.customSizes.borderRadius,
   filter: theme.grayScales.g_100,
   opacity: 0.5,
-  transition: "opacity 0.6s ease 0.3s",
-  "&:hover": {
-    filter: "none",
-    opacity: 1,
-  },
-
-  [theme.breakpoints.down("md")]: {
-    filter: "none",
-    opacity: 1,
-  },
+  transition: "opacity 0.3s ease-in 0.2s",
 }));
 
 const InformationWrapper = styled(Box)(({ theme }) => ({
@@ -70,9 +95,11 @@ const InformationWrapper = styled(Box)(({ theme }) => ({
 const AllyName = styled(Typography)(({ theme }) => ({
   fontSize: "1em",
   fontWeight: theme.customFontWeight.semiBold,
+  color: theme.customColors.matmaila,
   textAlign: "center",
   height: "2em",
   whiteSpace: "nowrap",
+  transition: 'color 0.3s ease-in 0.2s',
 }));
 
 const AreaOfService = styled(Typography)(({ theme }) => ({
@@ -80,7 +107,8 @@ const AreaOfService = styled(Typography)(({ theme }) => ({
   fontSize: "0.65em",
   textAlign: "center",
   fontWeight: theme.customFontWeight.medium,
-  color: theme.customColors.rakthalal,
+  color: theme.customColors.slogan,
+  transition: 'color 0.3s ease-in 0.2s',
 }));
 
 const SkeletonCard = styled(Card)(({ theme }) => ({
@@ -172,13 +200,14 @@ const AlliesSection = () => {
           {alliesData.map((brand, index) => (
             <AlliesCard key={index} elevation={0}>
               <AllyCardMedia
+                className="ally__logo"
                 component="img"
                 image={brand.imageURL}
                 alt={brand.name}
               />
               <BrandCardContent>
-                <AllyName> {brand.name} </AllyName>
-                <AreaOfService> {brand.areaOfService} </AreaOfService>
+                <AllyName className="ally__name noselect"> {brand.name} </AllyName>
+                <AreaOfService className="ally__area-of-service"> {brand.areaOfService} </AreaOfService>
                 <InformationWrapper>
                   <SocialButtons socialHandles={brand.socialHandles} />
                 </InformationWrapper>
