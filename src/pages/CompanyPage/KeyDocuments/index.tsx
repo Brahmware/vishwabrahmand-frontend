@@ -12,8 +12,9 @@ const SectionContentWrapper = styled('ul')(({ theme }) => ({
   gap: theme.customSpaces.sm,
   color: theme.customColors.rakthalal,
   textDecoration: "underline",
+  textUnderlineOffset: "0.2rem",
   fontWeight: theme.customFontWeight.medium,
-
+  marginLeft: `${theme.customSpaces.xs} !important`,
 }));
 
 const DocumentLink = styled('a')(({ theme }) => ({

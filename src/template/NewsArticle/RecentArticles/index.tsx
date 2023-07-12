@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo, Fragment } from 'react';
-import Section, { SectionTitle } from '../../../components/common/section';
+import Section, { SectionTitle, SectionProps } from '../../../components/common/section';
 import { styled } from '@mui/material';
 import NewsCardComponent, { NewsCardSkeleton } from '../../../pages/NewsPage/NewsCard';
 import { GetNewsReleasesArgs, NewsCard, newsPageData } from '../../../__mocks__/pages/newspage';
@@ -8,14 +8,27 @@ import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Head from './Head';
 
+interface RecentArticlesSectionProps extends SectionProps {
+  notitle?: boolean;
+}
 
-const RecentArticlesSection = styled(Section)(({ theme }) => ({
+const RecentArticlesSection = styled(Section)<RecentArticlesSectionProps>(({
+  theme,
+  notitle = false,
+}) => ({
   ...theme.bodyProps,
   paddingTop: 0,
-  marginTop: theme.customSpaces.xl,
+  padding: !notitle ? theme.bodyProps.padding : 0,
+  marginTop: !notitle ? theme.customSpaces.xl : 0,
 }));
 
-const RecentArticles = () => {
+const RecentArticles = (
+  {
+    noTitle = false,
+  }: {
+    noTitle?: boolean;
+  }
+) => {
 
   const { t } = useTranslation();
 
@@ -60,8 +73,10 @@ const RecentArticles = () => {
   );
 
   return (
-    <RecentArticlesSection>
-      <SectionTitle>{t("__NEWS_ARTICLE_SHARE_RECENT_RELEASES")}</SectionTitle>
+    <RecentArticlesSection notitle={noTitle}>
+      {!noTitle && (
+        <SectionTitle>{t("__NEWS_ARTICLE_SHARE_RECENT_RELEASES")}</SectionTitle>
+      )}
       {isLoading && newsData.length === 0 ? (
         <RecentArticleCarouselSkeleton slides={skeletonSlides} />
       ) : (

@@ -1,4 +1,4 @@
-import { Box, Typography, styled } from "@mui/material";
+import { Box, BoxProps, Typography, styled } from "@mui/material";
 
 export const SectionTitle = styled(Typography)(({ theme }) => ({
   fontSize: theme.customSizes.sectionTitle,
@@ -18,3 +18,5 @@ const Section = styled(Box)(({ theme }) => ({
 }));
 
 export default Section;
+
+export interface SectionProps extends BoxProps {};

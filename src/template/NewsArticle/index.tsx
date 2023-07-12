@@ -7,6 +7,7 @@ import { NewsCard, getSpecificNewsRelease } from '../../__mocks__/pages/newspage
 import { Fragment, useEffect, useState } from 'react';
 import RecentArticles from './RecentArticles';
 import Head from './Head';
+import NoArticleFound from './NoArticleFound';
 
 const NewsArticleWrapper = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
@@ -32,18 +33,25 @@ const NewsArticle = () => {
   const { articleId } = useParams();
 
   const [article, setArticle] = useState({} as NewsCard);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const getArticle = async () => {
       try {
         const article = await getSpecificNewsRelease(articleId || '');
         setArticle(article);
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) { setError(true) }
+      setLoading(false);
     }
     getArticle();
   }, [articleId]);
+
+  /* What happens when the Article is loading */
+  if (loading) return <div>Loading...</div>
+
+  /* What happens when there is an error fetching the Article */
+  if (error) return <NoArticleFound />
 
   return (
     <Fragment>
