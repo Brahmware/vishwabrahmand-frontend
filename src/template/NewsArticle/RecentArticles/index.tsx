@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo, Fragment } from 'react';
 import Section, { SectionTitle } from '../../../components/common/section';
 import { styled } from '@mui/material';
 import NewsCardComponent, { NewsCardSkeleton } from '../../../pages/NewsPage/NewsCard';
-import { NewsCard, newsPageData } from '../../../__mocks__/pages/newspage';
+import { GetNewsReleasesArgs, NewsCard, newsPageData } from '../../../__mocks__/pages/newspage';
 import RecentArticleCarousel, { RecentArticleCarouselSkeleton } from './RecentArticleCarousel';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -26,7 +26,7 @@ const RecentArticles = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { newsReleases } = await newsPageData.getNewsReleases();
+        const { newsReleases } = await newsPageData.getNewsReleases({ sort: "DESC" as GetNewsReleasesArgs["sort"] });
         const otherReleases = newsReleases.filter((release) => release.id !== currentArticleId);
 
         setNewsData(otherReleases);
