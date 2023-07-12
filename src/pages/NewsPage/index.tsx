@@ -8,7 +8,7 @@ import { useContainerMinHeight } from '../../utils/useContainerMinHeight';
 import { useAddRootClass } from '../../utils/useAddRootClass';
 import config from '../../config';
 import { useTranslation } from 'react-i18next';
-import { NewsCard, newsPageData } from '../../__mocks__/pages/newspage';
+import { GetNewsReleasesArgs, NewsCard, newsPageData } from '../../__mocks__/pages/newspage';
 import Head from './Head';
 
 interface NewsPageWrapperProps {
@@ -65,7 +65,7 @@ const NewsPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { newsReleases }: { newsReleases: NewsCard[] } = await newsPageData.getNewsReleases();
+        const { newsReleases }: { newsReleases: NewsCard[] } = await newsPageData.getNewsReleases({ sort: 'DESC' } as GetNewsReleasesArgs);
         setNewsData(newsReleases);
         setIsLoading(false);
       } catch (error) {
@@ -84,7 +84,17 @@ const NewsPage = () => {
       const start = (nextPage - 1) * newsPerPage;
       const end = nextPage * newsPerPage;
 
-      const { newsReleases }: { newsReleases: NewsCard[] } = await newsPageData.getNewsReleases(false, start, end);
+      const {
+        newsReleases
+      }: {
+        newsReleases: NewsCard[]
+      } = await newsPageData.getNewsReleases(
+        {
+          startIndex: start,
+          endIndex: end,
+          sort: 'DESC'
+        } as GetNewsReleasesArgs
+      );
       if (newsReleases.length > 0) {
         setNewsData((prevNewsData) => [...prevNewsData, ...newsReleases]);
         setPage(nextPage);
