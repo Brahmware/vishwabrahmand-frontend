@@ -57,6 +57,17 @@
   "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "പുതിയ പ്രസിദ്ധീകരണങ്ങൾ",
 
 
+  "__NEWS_ARTICLE_NOT_FOUND_TITLE": "ലേഖനം കണ്ടെത്താനായില്ല!",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_ERROR": "അത്യുദാരമായി അറിയിപ്പിക്കുന്നുവെന്ന് അപരാധമായി പറയുന്നു: നിങ്ങൾ തിരയുന്ന ലേഖനം ഇല്ലാതെയാണ്.",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_HOOK": "പക്ഷെ! നിങ്ങളുടെ ആഗ്രഹങ്ങളെ അടിസ്ഥാനമാക്കി, ഇവിടെ നിന്നും പുതിയ ലേഖനങ്ങൾ നേരിട്ടുള്ളുവെന്ന് അറിയിക്കുന്നു.",
+
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINKS_TITLE": "സംബന്ധിച്ച കണ്ണികൾ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_HOME_TEXT": "ഞങ്ങളുടെ ബ്രഹ്മാണ്ഡത്തിലേക്ക് സന്ദർശിക്കൂ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_COMPANY_TEXT": "വിശ്വബ്രഹ്മാണ്ഡം കുറിച്ചും കൂടുതലറിയൂ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_BRANDS_TEXT": "ഞങ്ങളുടെ ദർശനക്ഷമമായ ബ്രാൻഡുകൾ കൂടുതലറിയൂ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_NEWS_TEXT": "മുതൽമുടക്കം അറിയാൻ പഠിയ്ക്കൂ",
+
+
   "__PAGE_404_TEXT": "പേജ് കണ്ടെത്തിയില്ല.",
   "__PAGE_404_LINK": "വീട്ടിലേക്ക് പോകൂ"
 

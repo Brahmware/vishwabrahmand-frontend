@@ -50,6 +50,17 @@
 
 
 
+  "__NEWS_ARTICLE_NOT_FOUND_TITLE": "लेखः न लभ्यते!",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_ERROR": "अत्युत्तमामनाया ज्ञापयामः यत्त्वं तद्दर्शनार्थं अनुभवेः लेखः गतोऽयं विद्यते।",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_HOOK": "तथापि! तव रुच्यः आधारितं इमे नवीनाः लेखाः तव मनोऽनुकंपां जर्जरयन्ति।",
+
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINKS_TITLE": "सम्बद्धा लिङ्काः",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_HOME_TEXT": "आम्रमण्डले गच्छामः",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_COMPANY_TEXT": "विश्वाम्रमण्डे अधिकं जानीमः",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_BRANDS_TEXT": "प्रत्ययहीनानि ब्राण्डानि अधिकं जानीमः",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_NEWS_TEXT": "आकर्षकाणि लेखानि पठताम्",
+
+
   "__PAGE_404_TEXT": "पृष्ठं न प्राप्तम्।",
   "__PAGE_404_LINK": "मुखपृष्ठं प्रति पुनः गच्छन्तु"
 

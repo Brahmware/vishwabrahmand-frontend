@@ -48,6 +48,16 @@
   "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "ହାଲରେ ପ୍ରକାଶିତ ଖବର",
 
 
+  "__NEWS_ARTICLE_NOT_FOUND_TITLE": "ଲେଖା ପାଇଁ ପାଇଲା ନାହିଁ!",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_ERROR": "ଦୁଃଖରେ ଆପଣଙ୍କୁ ଜଣାଇବାକୁ କହିବାରେ, ଆପଣଙ୍କର ଖୋଜିବା ଲେଖା ଗୁମାଇଥିବା ଅଛନ୍ତି।",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_HOOK": "ତଥାପି! ଆପଣଙ୍କର ଆକର୍ଷଣ ପରିଚୟରେ, ଏହିମାଧ୍ୟମରେ ଆପଣଙ୍କର ଚିନ୍ତା ଉଦ୍ଭଟ ହେବା ସମ୍ଭବ।",
+
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINKS_TITLE": "ସଂବନ୍ଧିତ ଲିଙ୍କ୍",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_HOME_TEXT": "ଆମର ବ୍ରହ୍ମାଣ୍ଡର ଭ୍ରମଣ କରନ୍ତୁ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_COMPANY_TEXT": "ଭିଶ୍ଵବ୍ରହ୍ମାଣ୍ଡ ବିଷୟରେ ଆଧିକ ଜାଣନ୍ତୁ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_BRANDS_TEXT": "ଆମର ଦୃଷ୍ଟିବଦ୍ଧ ବ୍ରାଣ୍ଡଗୁଡିକ ବିଷୟରେ ଆଧିକ ଜାଣନ୍ତୁ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_NEWS_TEXT": "ସରପ୍ରିୟ ଲେଖାଗୁଡ଼ିକ ପଢନ୍ତୁ",
+
 
   "__PAGE_404_TEXT": "ପୃଷ୍ଠାଟି ମିଳିଲା ନାହିଁ।",
   "__PAGE_404_LINK": "ମୂଳପୃଷ୍ଠାକୁ ଯାଆନ୍ତୁ"

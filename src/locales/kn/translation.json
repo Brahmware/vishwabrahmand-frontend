@@ -57,6 +57,18 @@
   "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "ಹೊಸ ಬಿಡುಗಡೆಗಳು",
 
 
+
+  "__NEWS_ARTICLE_NOT_FOUND_TITLE": "ಲೇಖನ ಕಂಡುಬಂದಿಲ್ಲ!",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_ERROR": "ಅಪಾಯವನ್ನು ತಿಳಿಸಲು ನಾವು ಅತ್ಯಂತ ದುಃಖಿಸುತ್ತೇವೆ: ನೀವು ಹುಡುಕುತ್ತಿರುವ ಲೇಖನ ಕಂಡುಬರುವುದಿಲ್ಲ.",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_HOOK": "ಆದರೆ! ನಿಮ್ಮ ಆಸಕ್ತಿಗೆ ಆಧಾರಿತವಾಗಿ, ಇಲ್ಲಿಂದ ಹೊಸ ಲೇಖನಗಳನ್ನು ನೀಡಲಾಗುತ್ತಿದೆ.",
+
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINKS_TITLE": "ಸಂಬಂಧಿತ ಲಿಂಕುಗಳು",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_HOME_TEXT": "ನಮ್ಮ ಬ್ರಹ್ಮಾಂಡವನ್ನು ಸಂದರ್ಶಿಸಿ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_COMPANY_TEXT": "ವಿಶ್ವಬ್ರಹ್ಮಾಂಡ ಬಗ್ಗೆ ಹೆಚ್ಚು ತಿಳಿಯಿರಿ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_BRANDS_TEXT": "ನಮ್ಮ ದೃಷ್ಟಿಗೆ ಮೀರಿದ ಬ್ರಾಂಡ್‌ಗಳ ಬಗ್ಗೆ ಹೆಚ್ಚು ತಿಳಿಯಿರಿ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_NEWS_TEXT": "ಮೊದಲಿನಿಂದಲೂ ಹೊಸದಾಗಿ ಲೇಖನಗಳನ್ನು ಓದಿ",
+
+
   "__PAGE_404_TEXT": "ಯಾವುದೇ ಪುಟ ಕಂಡುಬಂದಿಲ್ಲ.",
   "__PAGE_404_LINK": "ಮುಖಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ"
 

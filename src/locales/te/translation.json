@@ -59,6 +59,17 @@
 
 
 
+  "__NEWS_ARTICLE_NOT_FOUND_TITLE": "వ్యాసం కనపడలేదు!",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_ERROR": "మా ఆప్లోడ్ చేయని వ్యాసం మీకు కనపడలేదుగా ఉంది.",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_HOOK": "కానీ! మీ ఆసక్తిలో నిపుణులు రచించిన కొత్త వ్యాసాలు ఇక్కడ ఉన్నాయి.",
+
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINKS_TITLE": "సంబంధిత లింక్స్",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_HOME_TEXT": "మా బ్రహ్మాండంలో ఒక యాత్రకు రంగులు పడండి",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_COMPANY_TEXT": "విశ్వబ్రహ్మాండం గురించి మరుగుకోండి",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_BRANDS_TEXT": "మా దృష్టికోనంలో ఉన్న బ్రాండ్ల గురించి మరుగుకోండి",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_NEWS_TEXT": "ఆకర్షణీయ వ్యాసాలను చదవండి",
+
+
   "__PAGE_404_TEXT": "పేజీ ఏదీ కనుగొనబడలేదు.",
   "__PAGE_404_LINK": "తిరిగి హోమ్ పేజీకి"
 

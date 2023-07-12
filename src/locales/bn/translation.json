@@ -57,6 +57,17 @@
   "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "সাম্প্রতিক কিছু সংবাদ",
 
 
+  "__NEWS_ARTICLE_NOT_FOUND_TITLE": "প্রবন্ধ পাওয়া যায়নি!",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_ERROR": "আপনাকে জানাতে অত্যন্ত দুঃখিত যে, আপনি যে প্রবন্ধটি খুঁজছেন তা <strong>অনুপস্থিত।</strong>",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_HOOK": "তবে! আপনার আগ্রহের উপর ভিত্তি করে, এই সাম্প্রতিক প্রবন্ধগুলি আপনার চিন্তাগুলি উদ্বেলিত করতে পারে।",
+
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINKS_TITLE": "সম্পর্কিত লিংকসমূহ",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_HOME_TEXT": "আমাদের ব্রহ্মাণ্ডে ভ্রমণ করুন",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_COMPANY_TEXT": "ভিশ্বব্রহ্মাণ্ড সম্পর্কে আরও জানুন",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_BRANDS_TEXT": "আমাদের দৃষ্টিবদ্ধ ব্র্যান্ডগুলি সম্পর্কে আরও জানুন",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_NEWS_TEXT": "উত্সাহব্যঞ্জক প্রবন্ধগুলি পড়ুন",
+
+
   "__PAGE_404_TEXT": "পেজ খুঁজে পাওয়া যায়নি।",
   "__PAGE_404_LINK": "হোম পেজে ফিরে যান"
 
