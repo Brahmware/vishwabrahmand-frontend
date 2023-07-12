@@ -73,7 +73,6 @@ const TranslationMenu = (
 
   const handleLanguageChange = (language: string) => {
     i18n.changeLanguage(language);
-    handleClose();
     window.location.reload();
   };
 

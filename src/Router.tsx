@@ -2,7 +2,6 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { I18nextProvider as LocaleProvider } from 'react-i18next';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import theme from './theme';
 import ReactGA from "react-ga4";
 
 import Navbar from './components/Navbar';
@@ -19,6 +18,7 @@ import ScrollBarWrapper from './components/scrollbar';
 
 import i18n from './i18n';
 import config from './config';
+import { useDynamicTheme } from './utils/useDynamicTheme';
 
 /* google tag manager in production */
 if (process.env.NODE_ENV === 'production') {
@@ -27,11 +27,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const Router = () => {
+
   return (
     <HelmetProvider>
       <LocaleProvider i18n={i18n}>
         <BrowserRouter>
-          <ThemeProvider theme={theme}>
+          <ThemeProvider theme={useDynamicTheme()}>
             <CssBaseline />
             <CursorLocationProvider />
             <ScrollBarWrapper>

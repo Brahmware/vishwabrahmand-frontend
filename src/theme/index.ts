@@ -46,6 +46,7 @@ declare module '@mui/material/styles' {
       padding: string,
       margin: string,
     };
+    
     customPadding: {
       xs: string,
       sm: string,
@@ -299,6 +300,11 @@ const itemBodyProps = {
   margin: '2em',
 };
 
+const itemBodyPropsMobile = {
+  padding: `${customPadding.lg} 0 ${customPadding.xl} 0`,
+  margin: '2em',
+};
+
 const bodyProps = {
   maxWidth: '75.5em',
   padding: '0.8em',
@@ -424,7 +430,7 @@ const animations = {
   bouncing: 'bouncing 1.5s infinite 1s',
 };
 
-const theme = createTheme({
+const themeOptions = {
   props,
   palette,
   customColors,
@@ -445,6 +451,14 @@ const theme = createTheme({
   heightBreakpoints,
   mediaQueries,
   animations,
+}
+
+export const theme = createTheme(themeOptions);
+
+
+export const mobileTheme = createTheme({
+  ...themeOptions,
+  itemBodyProps: itemBodyPropsMobile,
 });
 
 export default theme;
