@@ -8,6 +8,7 @@ import { Fragment, useEffect, useState } from 'react';
 import RecentArticles from './RecentArticles';
 import Head from './Head';
 import NoArticleFound from './NoArticleFound';
+import ArticleLoading from './ArticleLoading';
 
 const NewsArticleWrapper = styled(Box)(({ theme }) => ({
   ...theme.bodyProps,
@@ -48,7 +49,7 @@ const NewsArticle = () => {
   }, [articleId]);
 
   /* What happens when the Article is loading */
-  if (loading) return <div>Loading...</div>
+  if (loading) return <ArticleLoading />
 
   /* What happens when there is an error fetching the Article */
   if (error) return <NoArticleFound />
