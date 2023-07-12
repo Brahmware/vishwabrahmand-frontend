@@ -2,9 +2,9 @@ import { Box, BoxProps, styled } from "@mui/material"
 import { Fragment } from "react";
 import { Helmet } from "react-helmet-async";
 import Section, { SectionTitle } from "../../../components/common/section";
-import { useContainerMinHeight } from "../../../utils/useContainerMinHeight";
 import RecentArticles from "../RecentArticles";
 import { Link } from "react-router-dom";
+import { useTranslation, Trans } from "react-i18next";
 
 interface NoArticleFoundProps extends BoxProps {
   containerheight?: string | number;
@@ -65,6 +65,9 @@ const RelatedLink = styled(Link)(({ theme }) => ({
 }));
 
 const NoArticleFound = () => {
+
+  const { t } = useTranslation();
+
   return (
     <Fragment>
       <Helmet>
@@ -72,20 +75,24 @@ const NoArticleFound = () => {
       </Helmet>
       <NoArticleFoundWrapper>
         <NoArticleSection>
-          <SectionTitle>Article not found!</SectionTitle>
+          <SectionTitle>{t("__NEWS_ARTICLE_NOT_FOUND_TITLE")}</SectionTitle>
           <ReboundMessages>
-            <ErrorMessage>We are extremely sorry to let you know that the article you are looking for has gone <strong>missing.</strong></ErrorMessage>
-            <HookMessage>However! based upon your interese these are some of the recent articles that might tickle your thoughts.</HookMessage>
+            <ErrorMessage>
+              <Trans
+                i18nKey="__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_ERROR"
+              />
+            </ErrorMessage>
+            <HookMessage>{t("__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_HOOK")}</HookMessage>
           </ReboundMessages>
           <RecentArticles noTitle />
         </NoArticleSection>
         <NoArticleSection>
-          <SectionTitle>Related Links</SectionTitle>
+          <SectionTitle>{t("__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINKS_TITLE")}</SectionTitle>
           <RelatedLinksList>
-            <li><RelatedLink to='/' replace>Let's take a tour of our Brahmand</RelatedLink></li>
-            <li><RelatedLink to='/company' replace>Know more about Vishwabrahmand</RelatedLink></li>
-            <li><RelatedLink to='/brands' replace>Learn more about our visionary brands</RelatedLink></li>
-            <li><RelatedLink to='/news' replace>Read exciting articles</RelatedLink></li>
+            <li><RelatedLink to='/' replace>{t("__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_HOME_TEXT")}</RelatedLink></li>
+            <li><RelatedLink to='/company' replace>{t("__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_COMPANY_TEXT")}</RelatedLink></li>
+            <li><RelatedLink to='/brands' replace>{t("__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_BRANDS_TEXT")}</RelatedLink></li>
+            <li><RelatedLink to='/news' replace>{t("__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_NEWS_TEXT")}</RelatedLink></li>
           </RelatedLinksList>
         </NoArticleSection>
       </NoArticleFoundWrapper>

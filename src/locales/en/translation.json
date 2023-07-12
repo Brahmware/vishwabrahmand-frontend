@@ -57,6 +57,17 @@
   "__NEWS_ARTICLE_SHARE_RECENT_RELEASES": "Recent Releases",
 
 
+  "__NEWS_ARTICLE_NOT_FOUND_TITLE": "Article not found!",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_ERROR": "We are extremely sorry to let you know that the article you are looking for has gone <strong>missing.</strong>",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_HOOK": "However! based upon your interese these are some of the recent articles that might tickle your thoughts.",
+
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINKS_TITLE": "Related Links",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_HOME_TEXT": "Let's take a tour of our Brahmand",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_COMPANY_TEXT": "Know more about Vishwabrahmand",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_BRANDS_TEXT": "Learn more about our visionary brands",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_NEWS_TEXT": "Read exciting articles",
+
+
   "__PAGE_404_TEXT": "Page not found.",
   "__PAGE_404_LINK": "Go back to home page"
 

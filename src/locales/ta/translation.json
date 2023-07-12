@@ -58,6 +58,17 @@
 
 
 
+  "__NEWS_ARTICLE_NOT_FOUND_TITLE": "கட்டுரை கண்டறியப்படவில்லை!",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_ERROR": "மன்னிக்கவும், நீங்கள் தேடும் கட்டுரை காணப்படவில்லை.",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_HOOK": "ஆனால்! உங்கள் ஆர்வத்திற்கு அட்டகாசமான சமீபத்திய கட்டுரைகளைக் காணலாம்.",
+
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINKS_TITLE": "தொடர்பான இணைப்புகள்",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_HOME_TEXT": "எங்கள் பிரமாண்டப் பூமியைப் பற்றி சுற்றி நோக்குக",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_COMPANY_TEXT": "விஸ்வப்ரமாண்டம் பற்றி மேலும் அறியலாம்",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_BRANDS_TEXT": "எங்கள் முன்னேற்றவாடிகளை மேற்கொள்ளுங்கள்",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_NEWS_TEXT": "மகிழ்ச்சியான கட்டுரைகளைப் படிக்கவும்",
+
+
   "__PAGE_404_TEXT": "பக்கம் இல்லை.",
   "__PAGE_404_LINK": "வீட்டிற்கு செல்"
 

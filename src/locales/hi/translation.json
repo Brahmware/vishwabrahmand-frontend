@@ -50,6 +50,17 @@
 
 
 
+  "__NEWS_ARTICLE_NOT_FOUND_TITLE": "लेख नहीं मिला!",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_ERROR": "हम आपको यह सूचित करके बहुत खेद हैं कि आप द्वारा खोजे गए लेख गायब हो गया है।",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_MESSAGE_HOOK": "हालांकि! आपके रुचियों पर आधारित हम यहां कुछ हालिया लेखों की सूची प्रस्तुत कर रहे हैं जो आपके विचारों को प्रचोदित कर सकती हैं।",
+
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINKS_TITLE": "संबंधित लिंक",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_HOME_TEXT": "हमारे ब्रह्मांड के एक यात्रा पर चलें",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_COMPANY_TEXT": "विश्वब्रह्मांड के बारे में और जानें",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_BRANDS_TEXT": "हमारे दृष्टिभद्ध ब्रांड्स के बारे में और जानें",
+  "__NEWS_ARTICLE_NOT_FOUND_REBOUND_LINK_NEWS_TEXT": "रोचक लेख पढ़ें",
+
+
   "__PAGE_404_TEXT": "कोई पेज नहीं मिला।",
   "__PAGE_404_LINK": "होम पेज पर वापस जाएं"
 
