@@ -387,10 +387,8 @@ Vishwa Brahmand Corporate Website
   CPU: Intel Core i7-10700K (3.8GHz)
   ```
 ## References
-- [paper-1]()
-- [paper-2]()
-- [code-1](https://github.com)
-- [code-2](https://github.com)
+- https://vishwabrahmand.com
+- https://brahmware.com
   
 ## License
 ```
