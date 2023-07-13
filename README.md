@@ -1,4 +1,4 @@
-Vishwa Brahmaand Corporate Website
+Vishwa Brahmand Corporate Website
 ===
 ## Project Information
 - Title:  `Vishwa Brahmand: Empowering humanity towards sustainable innovation and development`
