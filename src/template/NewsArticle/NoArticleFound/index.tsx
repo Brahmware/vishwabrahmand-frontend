@@ -50,12 +50,16 @@ const RelatedLinksList = styled('ul')(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "start",
-  gap: theme.customSpaces.sm,
   color: theme.customColors.rakthalal,
   textDecoration: "underline",
   textUnderlineOffset: "0.2rem",
   fontWeight: theme.customFontWeight.medium,
   marginLeft: `${theme.customSpaces.xs} !important`,
+
+  '& li:not(:last-child)': {
+    marginBottom: theme.customSpaces.sm,
+  },
+
 }));
 
 const RelatedLink = styled(Link)(({ theme }) => ({

@@ -47,7 +47,9 @@ const NewsCards = styled(InfiniteScroll)(({ theme }) => ({
   flexWrap: 'wrap',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: theme.customSpaces.md,
+  '& > *': {
+    margin: theme.customSpaces.xs,
+  },
 }));
 
 

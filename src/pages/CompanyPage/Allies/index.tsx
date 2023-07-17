@@ -10,6 +10,11 @@ type CardMediaProps = {
   alt: string;
 };
 
+const AllySectionWrap = styled(Section)(({ theme }) => ({
+  width: "100%",
+  padding: `${theme.customSpaces.lg} 0`,
+}));
+
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(12em, 1fr))",
@@ -189,7 +194,7 @@ const AlliesSection = () => {
   }, []);
 
   return (
-    <Section>
+    <AllySectionWrap>
       <SectionTitle>{t("__ABOUT_PAGE_ALLIES_TITLE")}</SectionTitle>
       {isLoading ? (
         <SectionContentWrapper>
@@ -216,7 +221,7 @@ const AlliesSection = () => {
           ))}
         </SectionContentWrapper>
       )}
-    </Section>
+    </AllySectionWrap>
   );
 };
 

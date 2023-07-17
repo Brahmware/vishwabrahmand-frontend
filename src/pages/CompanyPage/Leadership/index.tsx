@@ -6,6 +6,11 @@ import SocialButtons from "../../../components/common/SocialButtons";
 import { useTranslation } from "react-i18next";
 import { useLeadernameHeight } from "../../../utils/getLeadernameHeight";
 
+const LeadershipSectionWrap = styled(Section)(({ theme }) => ({
+  width: "100%",
+  padding: `${theme.customSpaces.lg} 0`,
+}));
+
 const SectionContentWrapper = styled(Box)(({ theme }) => ({
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(10em, 1fr))",
@@ -212,10 +217,10 @@ const LeadershipSection = () => {
   };
 
   return (
-    <Section>
+    <LeadershipSectionWrap>
       <SectionTitle>{t("__ABOUT_PAGE_LEADERSHIP_TITLE")}</SectionTitle>
       {renderContent()}
-    </Section>
+    </LeadershipSectionWrap>
   );
 };
 
