@@ -4,6 +4,7 @@ export const SectionTitle = styled(Typography)(({ theme }) => ({
   fontSize: theme.customSizes.sectionTitle,
   fontWeight: theme.customFontWeight.medium,
   color: theme.customColors.slogan,
+  paddingBottom: theme.customSpaces.sm,
 
   [theme.breakpoints.down("sm")]: {
     fontSize: theme.customSizes.sectionTitleMobile,
@@ -13,7 +14,6 @@ export const SectionTitle = styled(Typography)(({ theme }) => ({
 const Section = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
-  gap: theme.customSpaces.md,
   width: '100%',
 }));
 

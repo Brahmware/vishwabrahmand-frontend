@@ -7,7 +7,10 @@ export const SocialIconWrapper = styled(Box)(({ theme }) => ({
   marginTop: theme.customSpaces.sm,
   display: "flex",
   justifyContent: "center",
-  gap: theme.customSpaces.md,
+  
+  '& > *': {
+    margin: `0 0.75rem`,
+  },
 
   '& .nohover svg': {
     '& *': {

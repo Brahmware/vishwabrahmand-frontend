@@ -4,17 +4,26 @@ import { KeyDocuments, companyPageData } from '../../../__mocks__/pages/companyp
 import { Box, Skeleton, styled, useTheme } from '@mui/material';
 import {useTranslation} from "react-i18next";
 
+const KeyDocumentsSectionWrap = styled(Section)(({ theme }) => ({
+  width: '100%',
+  padding: `${theme.customSpaces.lg} 0`,
+}));
+
 const SectionContentWrapper = styled('ul')(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "start",
-  gap: theme.customSpaces.sm,
   color: theme.customColors.rakthalal,
   textDecoration: "underline",
   textUnderlineOffset: "0.2rem",
   fontWeight: theme.customFontWeight.medium,
   marginLeft: `${theme.customSpaces.xs} !important`,
+
+  '& li:not(:last-child)': {
+    marginBottom: theme.customSpaces.sm,
+  },
+
 }));
 
 const DocumentLink = styled('a')(({ theme }) => ({
@@ -53,7 +62,7 @@ const KeyDocumentsSection = () => {
   }, []);
 
   return (
-    <Section sx={{ gap: theme.customSpaces.lg }}>
+    <KeyDocumentsSectionWrap>
       <SectionTitle>{t("__ABOUT_PAGE_KEY_DOCUMENTS_TITLE")}</SectionTitle>
       {isLoading ? (
         <SkeletonWrapper>
@@ -79,7 +88,7 @@ const KeyDocumentsSection = () => {
           ))}
         </SectionContentWrapper>
       )}
-    </Section>
+    </KeyDocumentsSectionWrap>
   )
 }
 

@@ -38,7 +38,6 @@ const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open, windowheight }
   top: theme.customHeights.navBarHeight,
   alignItems: 'start',
   justifyContent: 'center',
-  gap: theme.customSpaces.md,
   padding: open ? `${theme.customPadding.sm} ${theme.customPadding.md}` : 0,
   borderBottom: open ? `1px solid ${theme.customColors.lightBorder}` : 0,
   backgroundColor: `${theme.customColors.white}dd`,
@@ -46,6 +45,11 @@ const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open, windowheight }
   backdropFilter: 'blur(16px)',
   overflow: 'hidden',
   height: open ? theme.customHeights.navPanelHeight : 0,
+
+  '& > *': {
+    margin: `0 ${theme.customSpaces.sm}`,
+  },
+
   transition: `
     all ${theme.timing.short}ms ease-in,
     border ${theme.timing.short}ms ease-in
@@ -60,7 +64,10 @@ const MenuNavList = styled(Box)<MenuNavListProps>(({ theme, open, windowheight }
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: theme.customSpaces.lg,
+
+    '& > *': {
+      margin: `${theme.customSpaces.sm} 0`,
+    },
   },
 }));
 

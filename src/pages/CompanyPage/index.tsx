@@ -21,7 +21,6 @@ const CompanyPageWrapper = styled(Box)<CompanyPageWrapperProps>(({ theme, contai
   flexDirection: 'column',
   alignItems: 'start',
   justifyContent: 'center',
-  gap: theme.customSpaces.xl
 }));
 
 const CompanyPage = () => {

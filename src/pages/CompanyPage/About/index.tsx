@@ -12,11 +12,15 @@ import Paragraph, {
 import { AboutData, companyPageData } from "../../../__mocks__/pages/companypage";
 import { useTranslation } from "react-i18next";
 
+const AboutArticle = styled(Article)(({ theme }) => ({
+  paddingBottom: theme.customSpaces.lg,
+}));
+
 const SkeletonWrapper = styled(Box)(({ theme }) => ({
   width: "100%",
   display: "flex",
   flexDirection: "column",
-  gap: theme.customSpaces.sm,
+  gap: theme.customSpaces.md,
 }));
 
 const AboutSection = () => {
@@ -40,7 +44,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <Article component="article">
+    <AboutArticle component="article">
       <SectionTitle>{t("__ABOUT_PAGE_ABOUT_TITLE")}</SectionTitle>
       {isLoading ? (
         <SkeletonWrapper>
@@ -93,7 +97,7 @@ const AboutSection = () => {
       ) : (
         <Typography>{t("__NO_DATA_TO_DISPLAY")}</Typography>
       )}
-    </Article>
+    </AboutArticle>
   );
 };
 
