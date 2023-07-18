@@ -26,6 +26,7 @@ const SectionContentWrapper = styled(Box)(({ theme }) => ({
 const AlliesCard = styled(Card)(({ theme }) => ({
   maxWidth: "100%",
   height: "100%",
+  minHeight: "250px",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
