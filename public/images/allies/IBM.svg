@@ -1,0 +1,54 @@
+<svg id="aa1705ae-d64a-4d18-831f-ec146c958489" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .e221ae7f-50c3-42ba-90ac-ce780fa8a5f8 {
+        fill: #1f70c1;
+      }
+    </style>
+  </defs>
+  <g>
+    <g>
+      <polygon id="b823b9a5-8eca-4108-8c03-37d5c0b9a2b4" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="28.513 334.54 116.966 334.54 116.966 347.202 28.513 347.202 28.513 334.54"/>
+      <polygon id="e781c9f7-38bb-401f-90eb-cf048e9ee3ea" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="28.513 310.253 116.966 310.253 116.966 322.959 28.513 322.959 28.513 310.253"/>
+      <polygon id="a924061d-cbe9-4885-a727-bb1a439e3998" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="53.747 286.01 91.688 286.01 91.688 298.717 53.747 298.717 53.747 286.01"/>
+      <polygon id="adea6a58-b6e4-4f69-aa95-c52f9e42152b" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="53.747 261.768 91.688 261.768 91.688 274.475 53.747 274.475 53.747 261.768"/>
+      <polygon id="f22c2f40-ca7c-420e-9247-243b6941dc5e" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="53.747 237.525 91.688 237.525 91.688 250.232 53.747 250.232 53.747 237.525"/>
+      <polygon id="b2d1b7c1-a49d-438a-ba12-588d69400d45" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="53.747 213.238 91.688 213.238 91.688 225.945 53.747 225.945 53.747 213.238"/>
+      <rect id="aef8d567-9c32-49c2-b74a-cac75eaa6c23" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" x="28.51317" y="188.99522" width="88.45305" height="12.70706"/>
+      <rect id="a522aa9f-9273-4f61-8326-e7d49e420718" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" x="28.51317" y="164.75301" width="88.45305" height="12.70705"/>
+    </g>
+    <g>
+      <path id="b0d7876a-f643-45ab-93aa-cbecb1e8fad5" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" d="M129.5832,322.95928H265.61991a45.1444,45.1444,0,0,0,5.047-12.707H129.5832Z"/>
+      <path id="ad4f9d32-c9ae-4362-8c2e-45e1660cdde6" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" d="M255.031,261.76781H154.86219v12.707H265.62038A50.84776,50.84776,0,0,0,255.031,261.76781Z"/>
+      <path id="f2640e89-52f9-4c2c-ade2-79ac42233b2b" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" d="M154.86219,237.52514v12.70705H255.031a47.27923,47.27923,0,0,0,10.58937-12.70705Z"/>
+      <path id="e19291ee-cad0-4831-ac16-5c88a461d017" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" d="M265.62038,188.99522H129.5832v12.70706H270.66688A54.99287,54.99287,0,0,0,265.62038,188.99522Z"/>
+      <path id="f095c53f-020c-4e9b-b778-7f591e981c56" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" d="M223.80428,164.753H129.5832v12.70706H256.29252A47.83456,47.83456,0,0,0,223.80428,164.753Z"/>
+      <rect id="b261d144-5c33-4003-9ed0-d9624c157ae5" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" x="154.86219" y="213.23789" width="37.89551" height="12.70705"/>
+      <path id="e7818533-bdb3-4a20-851b-cc98f6941fe0" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" d="M230.69827,225.945h39.6529a47.51662,47.51662,0,0,0,1.71234-12.70706H230.69825l0,12.70706Z"/>
+      <polygon id="b15cc14a-190f-46ad-85b7-5d389514e59f" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="154.862 286.01 192.758 286.01 192.758 298.717 154.862 298.717 154.862 286.01"/>
+      <path id="fe63d4d9-609b-4010-a356-4a12bfb579e1" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" d="M230.69827,286.01v12.707h41.36524a47.52022,47.52022,0,0,0-1.71234-12.707Z"/>
+      <path id="b9c749eb-b08c-4abf-ad21-f365a54654e2" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" d="M129.5832,347.11188l94.22108.13511a47.863,47.863,0,0,0,32.53328-12.70706H129.5832Z"/>
+    </g>
+    <g>
+      <polygon id="e4c638f8-71bf-425f-89d4-821780166e03" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="281.256 334.54 344.43 334.54 344.43 347.202 281.256 347.202 281.256 334.54"/>
+      <polygon id="f8b4f334-e00c-4d4f-b863-0d43f48c77a9" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="281.256 310.253 344.43 310.253 344.43 322.959 281.256 322.959 281.256 310.253"/>
+      <polygon id="b9746836-059d-4c5e-bea4-8b247905c1ae" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="306.49 286.01 344.43 286.01 344.43 298.717 306.49 298.717 306.49 286.01"/>
+      <polygon id="f273aa1f-653e-4f32-bac4-06b8e31530f5" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="306.49 261.768 344.43 261.768 344.43 274.475 306.49 274.475 306.49 261.768"/>
+      <polygon id="ba767762-cfac-4b7e-b542-f6b43a628195" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="362.004 188.995 281.256 188.995 281.256 201.702 366.375 201.702 362.004 188.995"/>
+      <polygon id="ef2076c6-5e6c-4ebd-aaac-4d078ab7f711" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="353.623 164.753 281.256 164.753 281.256 177.46 357.994 177.46 353.623 164.753"/>
+      <polygon id="b09e53c1-4048-40fe-ae14-451562690c4a" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="420.222 334.54 483.441 334.54 483.441 347.202 420.222 347.202 420.222 334.54"/>
+      <polygon id="b97ebb9e-06ea-4fb8-a8b3-31a8480c5b0f" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="420.222 310.253 483.441 310.253 483.441 322.959 420.222 322.959 420.222 310.253"/>
+      <polygon id="be62096e-932e-4e58-9df7-99460b6e3a18" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="420.222 286.01 458.162 286.01 458.162 298.717 420.222 298.717 420.222 286.01"/>
+      <polygon id="fc9f3b56-efc7-4e73-965f-489f98670126" data-name="Rectangle-path" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="420.222 261.768 458.162 261.768 458.162 274.475 420.222 274.475 420.222 261.768"/>
+      <polygon id="a6835553-698a-4dad-a505-6a6550c0f0ab" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="420.222 250.232 458.162 250.232 458.162 237.525 420.222 237.525 420.222 237.525 385.886 237.525 382.326 247.799 378.766 237.525 344.43 237.525 344.43 237.525 306.49 237.525 306.49 250.232 344.43 250.232 344.43 238.561 348.441 250.232 416.212 250.232 420.222 238.561 420.222 250.232"/>
+      <polygon id="aabd7f74-daf8-4897-af29-824a51bd7740" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="458.162 213.238 394.267 213.238 389.896 225.945 458.162 225.945 458.162 213.238"/>
+      <polygon id="a58c4aa6-a0b1-4486-a95f-8814b2d8656d" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="411.075 164.753 406.704 177.46 483.441 177.46 483.441 164.753 411.075 164.753"/>
+      <polygon id="facd1d85-20a7-4215-bee5-7027098453fd" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="382.326 347.112 386.697 334.54 377.955 334.54 382.326 347.112"/>
+      <polygon id="a6aca8fd-e764-480c-9a89-e7aa0a8020d2" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="373.945 322.959 390.707 322.959 395.213 310.253 369.484 310.253 373.945 322.959"/>
+      <polygon id="fda5d48d-53b1-453d-a53a-9299aed0b8d0" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="365.428 298.717 399.224 298.717 403.685 286.01 360.967 286.01 365.428 298.717"/>
+      <polygon id="b88b1a43-f90d-479b-b394-9226d05f722a" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="356.957 274.475 407.74 274.475 412.066 261.768 352.586 261.768 356.957 274.475"/>
+      <polygon id="ab3643a1-1faf-41a5-9d02-e2e11df62264" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="306.49 225.945 374.756 225.945 370.385 213.238 306.49 213.238 306.49 225.945"/>
+      <polygon id="aa621908-ea6f-4c76-8bdc-893c5d65039b" data-name="Shape" class="e221ae7f-50c3-42ba-90ac-ce780fa8a5f8" points="398.322 201.702 483.441 201.702 483.441 188.995 402.648 188.995 398.322 201.702"/>
+    </g>
+  </g>
+</svg>
