@@ -152,5 +152,192 @@
       "linkedin": "maryjohnson_linkedin",
       "instagram": "maryjohnson_instagram"
     }
+  },
+  {
+    "name": "Adobe",
+    "areaOfService": "Creative Applications",
+    "imageURL": "/images/allies/Adobe_Inc.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "IBM",
+    "areaOfService": "Computation Services",
+    "imageURL": "/images/allies/IBM.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Infosys",
+    "areaOfService": "Digital Technology",
+    "imageURL": "/images/allies/Infosys.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Airtel",
+    "areaOfService": "Tele-Communications",
+    "imageURL": "/images/allies/Airtel.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "HCL Technologies",
+    "areaOfService": "Digital Technology",
+    "imageURL": "/images/allies/HCL_Technologies.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Pratham",
+    "areaOfService": "Education",
+    "imageURL": "/images/allies/Pratham.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Goonj",
+    "areaOfService": "Social Welfare",
+    "imageURL": "/images/allies/Goonj.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Akshya Patra",
+    "areaOfService": "Social Welfare",
+    "imageURL": "/images/allies/Akshya_Patra_Foundation.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Gram Vikas",
+    "areaOfService": "Rural Development",
+    "imageURL": "/images/allies/Gram_Vikas.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Water Aid",
+    "areaOfService": "Water & Sanitation",
+    "imageURL": "/images/allies/Water_Aid.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Biocon",
+    "areaOfService": "Biotechnology",
+    "imageURL": "/images/allies/Biocon.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Teri",
+    "areaOfService": "Energy Research",
+    "imageURL": "/images/allies/Teri.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Teach for India",
+    "areaOfService": "Education",
+    "imageURL": "/images/allies/Teach_for_India.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "WWF India",
+    "areaOfService": "Ecological Conservation",
+    "imageURL": "/images/allies/WWF.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Digital Green",
+    "areaOfService": "Agrotech",
+    "imageURL": "/images/allies/Digital_Green.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Tata Power",
+    "areaOfService": "Energy",
+    "imageURL": "/images/allies/Tata_Power.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
+  },
+  {
+    "name": "Godrej",
+    "areaOfService": "Consumer Technology",
+    "imageURL": "/images/allies/Godrej.svg",
+    "socialHandles": {
+      "facebook": "janesmith_facebook",
+      "twitter": "janesmith_twitter",
+      "linkedin": "janesmith_linkedin",
+      "instagram": "janesmith_instagram"
+    }
   }
 ]
