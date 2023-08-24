@@ -5,8 +5,9 @@ Vishwa Brahmand Corporate Website
 - Author:  `Vishwa Brahmand | Sanchayan Bhunia`
 
 ## Install & Dependence
-- yarn install
-
+```
+yarn
+```
 ## Directory Hierarchy
 ```
 |—— .env.local
@@ -98,5 +99,5 @@ Vishwa Brahmand Corporate Website
   
 ## License
 ```
-MIT License
+Brahmware Proprietary License Agreement
 ```
